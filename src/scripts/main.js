@@ -71,14 +71,14 @@
 
    // Scan Animation start
   const scanBar = document.getElementById('scan-bar');
-  let position = 100;
+  let position = 60;
 
   function animateScan() {
-    position -= 0.4;
+    position -= 0.1;
 
     // Reset when fully above
-    if (position < -20) {
-      position = 100;
+    if (position < 15) {
+      position = 60;
     }
 
     scanBar.style.top = `${position}%`;
@@ -158,6 +158,66 @@
     });
   // countup ended
 
+//-------------------industries-----------------------------
+//..................
+const container = document.getElementById("cardContainer");
+const cards = document.querySelectorAll("[data-card]");
+
+// Width classes
+const normalWidth = "w-[260px]";
+const activeWidth = "w-[435px]";
+
+// Initial setup: all cards small, first one active
+cards.forEach((c, i) => {
+  c.classList.add(normalWidth);
+  if (i === 0) {
+    c.classList.replace(normalWidth, activeWidth);
+    c.classList.add("active-card");
+  }
+});
+
+// Hover logic
+cards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    // Remove active from all
+    cards.forEach((c) => {
+      c.classList.remove(activeWidth, "active-card");
+      c.classList.add(normalWidth);
+    });
+
+    // Set hovered card as active
+    card.classList.remove(normalWidth);
+    card.classList.add(activeWidth, "active-card");
+  });
+});
+//---------
+ const arrowBtn = document.getElementById('arrowBtn');
+  const tagButtons = document.getElementById('tagButtons');
+
+  // Show on hover in
+  arrowBtn.addEventListener('mouseenter', () => {
+    tagButtons.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+    tagButtons.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+  });
+
+  // Hide on leave of parent wrapper
+  arrowBtn.parentElement.addEventListener('mouseleave', () => {
+    tagButtons.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+    tagButtons.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+  });
+//-----
+
+//............
+  // Accordion
+  // ----------------------------------------
+  const accordion = document.querySelectorAll("[data-accordion]");
+  accordion.forEach((header) => {
+    header.addEventListener("click", () => {
+      const accordionItem = header.parentElement;
+      accordionItem.classList.toggle("active");
+    });
+  });
+
   // Tab
   // ----------------------------------------
   function setActiveTab(tabGroup, tabName) {
@@ -223,15 +283,6 @@
     tab.addEventListener("keydown", tabsHandler);
   });
 
-  // Accordion
-  // ----------------------------------------
-  const accordion = document.querySelectorAll("[data-accordion]");
-  accordion.forEach((header) => {
-    header.addEventListener("click", () => {
-      const accordionItem = header.parentElement;
-      accordionItem.classList.toggle("active");
-    });
-  });
 
   // Modal
   // ----------------------------------------

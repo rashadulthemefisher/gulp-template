@@ -1,11 +1,5 @@
-<!-- Swiper CSS CDN -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-/>
-
 <section class="section-sm py-16">
-  <div class="container mx-auto">
+  <div class="container overflow-x-visible">
     @@include('section-header.html', {
       "title": "Trusted by 5900+ businesses",
       "subtitle": "Leveraging data-driven insights, we streamline resource distribution and support your path to a greener footprint.",
@@ -13,21 +7,12 @@
       "skewRotate": "-rotate-6"
     })
 
-    <div class="flex flex-col lg:flex-row gap-10 mt-10">
+    <div class="flex flex-col lg:flex-row gap-10 mt-10 md:h-[275px]">
       <!-- Testimonials Slider -->
-      <div class="lg:w-2/3 w-full">
+      <div class="lg:w-[70%] w-full rounded-3xl">
         <div class="swiper testimonial-slider">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              @@include('components/testimonial-card.html')
-            </div>
-            <div class="swiper-slide">
-              @@include('components/testimonial-card.html')
-            </div>
-            <div class="swiper-slide">
-              @@include('components/testimonial-card.html')
-            </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide rounded-3xl">
               @@include('components/testimonial-card.html')
             </div>
           </div>
@@ -36,50 +21,13 @@
       </div>
 
       <!-- Facts & Numbers -->
-      <div class="lg:w-1/3 w-full bg-[#C4FC00] p-8 rounded-lg text-gray-900">
-        <h3 class="text-xl font-semibold mb-2">Facts and Numbers</h3>
-        <h1 class="text-4xl font-bold mb-4">7200+</h1>
-        <p class="text-lg leading-relaxed">
-          Deployments in healthcare, retail, and finance industries.
-        </p>
+      <div class="lg:w-[30%] w-full bg-[#C4FC00] p-8 rounded-3xl text-gray-900 flex flex-col justify-between">
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Facts and Numbers</h3>
+        <div>
+          <h1 class="text-[80px] font-bold mb-4 text-gray-800">7200+</h1>
+          <p class="text-lg leading-relaxed">Deployments in healthcare, retail, and finance industries.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Swiper JS CDN -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-<!-- Swiper CSS -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-/>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-<script>
-  const swiper = new Swiper(".testimonial-slider", {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    spaceBetween: 24,
-    loop: true,
-    freeMode: false,
-    pagination: {
-      el: ".testimonial-slider-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-      },
-      992: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-      },
-    },
-  });
-</script>
-
