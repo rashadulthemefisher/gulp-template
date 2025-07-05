@@ -1,0 +1,105 @@
+<section class="section-sm">
+  <div class="container">
+    <div class="py-16">
+      <div class="flex flex-col lg:flex-row items-start gap-12">
+
+        <!-- Left Side -->
+        <div class="lg:w-1/2">
+          @@include('section-header.html', {
+            "title": "Answers to your common queries",
+            "subtitle": "For any unanswered questions, reach out to our support team via email. We'll respond as soon as possible to assist you.",
+            "skewText": "FAQ",
+            "skewRotate": "rotate-6"
+          })
+
+          <button class="mt-6 bg-white dark:bg-gray-200 text-black dark:text-gray-800 border border-gray-300 dark:border-gray-600 px-6 py-2 rounded-lg font-medium shadow hover:shadow-md transition">
+            Contact us
+          </button>
+        </div>
+
+        <!-- Right Side: FAQ Accordion -->
+        <div class="lg:w-1/2 w-full space-y-4" id="faqContainer">
+
+          <!-- FAQ Item 1 -->
+          <div class="group faq-item p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-white dark:bg-gray-800 group-[.open]:bg-green-50 dark:group-[.open]:bg-green-900" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-lg text-black dark:text-white">
+                What industries does Optivus serve?
+              </h3>
+              <span class="text-2xl text-gray-500 transition-transform duration-300 group-[.open]:rotate-45 toggle-icon">+</span>
+            </div>
+            <div class="mt-2 text-gray-600 dark:text-gray-300 overflow-hidden max-h-0 group-[.open]:max-h-[500px] transition-all duration-500 ease-in-out answer">
+              Optivus serves various industries including healthcare, finance, and logistics, offering AI-driven optimization solutions tailored to each sector.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="group faq-item p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-white dark:bg-gray-800 group-[.open]:bg-green-50 dark:group-[.open]:bg-green-900" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-lg text-black dark:text-white">
+                What is Optivus, and what does the company do?
+              </h3>
+              <span class="text-2xl text-gray-500 transition-transform duration-300 group-[.open]:rotate-45 toggle-icon">+</span>
+            </div>
+            <div class="mt-2 text-gray-600 dark:text-gray-300 overflow-hidden max-h-0 group-[.open]:max-h-[500px] transition-all duration-500 ease-in-out answer">
+              Optivus is an AI-powered technology company that develops smart automation and data intelligence tools for businesses.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="group faq-item p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-white dark:bg-gray-800 group-[.open]:bg-green-50 dark:group-[.open]:bg-green-900" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-lg text-black dark:text-white">
+                How can I get started with Optivus solutions?
+              </h3>
+              <span class="text-2xl text-gray-500 transition-transform duration-300 group-[.open]:rotate-45 toggle-icon">+</span>
+            </div>
+            <div class="mt-2 text-gray-600 dark:text-gray-300 overflow-hidden max-h-0 group-[.open]:max-h-[500px] transition-all duration-500 ease-in-out answer">
+              You can schedule a free demo or consultation through our website to explore the best solutions for your business needs.
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="group faq-item p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-white dark:bg-gray-800 group-[.open]:bg-green-50 dark:group-[.open]:bg-green-900" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-lg text-black dark:text-white">
+                What makes Optivus’ AI solutions unique?
+              </h3>
+              <span class="text-2xl text-gray-500 transition-transform duration-300 group-[.open]:rotate-45 toggle-icon">+</span>
+            </div>
+            <div class="mt-2 text-gray-600 dark:text-gray-300 overflow-hidden max-h-0 group-[.open]:max-h-[500px] transition-all duration-500 ease-in-out answer">
+              Our AI is trained on industry-specific data and continually learns from user behavior, providing highly personalized and accurate insights.
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="group faq-item p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-white dark:bg-gray-800 group-[.open]:bg-green-50 dark:group-[.open]:bg-green-900" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <h3 class="font-semibold text-lg text-black dark:text-white">
+                Do you provide ongoing support after implementation?
+              </h3>
+              <span class="text-2xl text-gray-500 transition-transform duration-300 group-[.open]:rotate-45 toggle-icon">+</span>
+            </div>
+            <div class="mt-2 text-gray-600 dark:text-gray-300 overflow-hidden max-h-0 group-[.open]:max-h-[500px] transition-all duration-500 ease-in-out answer">
+              Yes, we offer 24/7 customer support, regular updates, and dedicated account managers to ensure long-term success.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+  function toggleFAQ(clickedItem) {
+    const allItems = document.querySelectorAll('.faq-item');
+    allItems.forEach(item => {
+      if (item !== clickedItem) {
+        item.classList.remove('open');
+      }
+    });
+    clickedItem.classList.toggle('open');
+  }
+</script>

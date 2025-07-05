@@ -157,6 +157,13 @@
       });
     });
   // countup ended
+// FAQ
+   document.querySelectorAll('.group').forEach((faq) => {
+    const button = faq.querySelector('button');
+    button.addEventListener('click', () => {
+      faq.classList.toggle('open');
+    });
+  });
 
 //-------------------industries-----------------------------
 //..................
