@@ -17,7 +17,7 @@
           <h1 class="mb-4 text-h3 lg:text-[100px]">
             Work Smarter, Not Harder
           </h1>
-          <p class="mb-8 max-w-[520px] mx-auto text-gray-600 dark:text-gray-400 font-normal tracking-wide">
+          <p class="mb-8 px-4 md:px-0 max-w-[520px] mx-auto text-gray-600 dark:text-gray-400 font-normal tracking-wide">
             Join hundreds of companies who've doubled their efficiency while cutting costs by <span class="counter"
               data-target="40">0</span>% through smart AI
             integration.
@@ -131,33 +131,47 @@
         <!-- Success Label -->
         <h3 class="text-[20px] font-normal mb-4">Our Success Rate</h3>
 
-        <!-- Success Cards Row -->
-        <div class="flex flex-col md:flex-row justify-between gap-3">
-          <!-- Succeed Card (53%) -->
+       <!-- Success Cards Row -->
+      <div class="flex flex-col md:flex-row justify-between gap-3">
+        <!-- Succeed Card -->
+        <div
+          class="w-full md:w-[53%] text-start px-2 text-[12px] dark:text-gray-200 text-gray-800 font-bold relative bg-white dark:bg-gray-900"
+        >
           <div
-            class="w-full md:w-[53%] text-start px-2 text-[12px] dark:text-gray-200 text-gray-800 font-bold border-l-3 border-dotted border-b-gray-200 relative">
-            Succeed<br><span class="text-[28px]"><span class="counter" data-target="63">0</span>%</span>
-            <div class="w-full h-[35px] bg-green-300 rounded-xl mt-2"></div>
-            <div class="absolute h-[18px] w-[12px] bg-white rounded-lg right-4 bottom-[10px]"></div>
-          </div>
-
-          <!-- In Progress Card (23.5%) -->
-          <div
-            class="w-full md:w-[23.5%] text-start px-2 text-[12px] dark:text-gray-200 text-gray-800 font-bold border-l-3 border-dotted border-b-gray-200 relative my-8 md:my-0">
-            In Progress<br><span class="text-[28px]"><span class="counter" data-target="24">0</span>%</span>
-            <div class="w-full h-[35px] bg-blue-400 rounded-xl mt-2"></div>
-            <div class="absolute h-[18px] w-[12px] bg-white rounded-lg right-4 bottom-[10px]"></div>
-          </div>
-
-          <!-- Failed Card (23.5%) -->
-          <div
-            class="w-full md:w-[23.5%] text-start px-2 text-[12px] dark:text-gray-200 text-gray-800 font-bold border-l-3 border-dotted border-b-gray-200 relative">
-            Failed<br><span class="text-[28px]"><span class="counter" data-target="13">0</span>%</span>
-            <div class="w-full h-[35px] bg-gray-400 rounded-xl mt-2"></div>
-            <div class="absolute h-[18px] w-[12px] bg-white rounded-lg right-4 bottom-[10px]"></div>
-          </div>
+            class="absolute top-0 left-0 h-full w-[2px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
+          ></div>
+          Succeed<br />
+          <span class="text-[28px]"><span class="counter" data-target="63">0</span>%</span>
+          <div class="w-full h-[35px] bg-green-300 rounded-xl mt-2"></div>
+          <div class="absolute h-[18px] w-[12px] bg-white dark:bg-gray-900 rounded-lg right-4 bottom-[10px]"></div>
         </div>
 
+        <!-- In Progress Card -->
+        <div
+          class="w-full md:w-[23.5%] text-start px-2 text-[12px] dark:text-gray-200 text-gray-800 font-bold relative my-8 md:my-0 bg-white dark:bg-gray-900"
+        >
+          <div
+            class="absolute top-0 left-0 h-full w-[2px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
+          ></div>
+          In Progress<br />
+          <span class="text-[28px]"><span class="counter" data-target="24">0</span>%</span>
+          <div class="w-full h-[35px] bg-blue-400 rounded-xl mt-2"></div>
+          <div class="absolute h-[18px] w-[12px] bg-white dark:bg-gray-900 rounded-lg right-4 bottom-[10px]"></div>
+        </div>
+
+        <!-- Failed Card -->
+        <div
+          class="w-full md:w-[23.5%] text-start px-2 text-[12px] dark:text-gray-200 text-gray-800 font-bold relative bg-white dark:bg-gray-900"
+        >
+          <div
+            class="absolute top-0 left-0 h-full w-[2px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
+          ></div>
+          Failed<br />
+          <span class="text-[28px]"><span class="counter" data-target="13">0</span>%</span>
+          <div class="w-full h-[35px] bg-gray-400 rounded-xl mt-2"></div>
+          <div class="absolute h-[18px] w-[12px] bg-white dark:bg-gray-900 rounded-lg right-4 bottom-[10px]"></div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
@@ -220,7 +234,7 @@
 
           <!-- Text Block -->
           <div>
-            <h3 class="text-[24px] max-w-[220px] text-gray-200 font-normal leading-7">
+            <h3 class="md:text-[24px] max-w-[220px] text-gray-200 font-normal leading-9 md:leading-7">
               Enabling Smarter Waste Management
             </h3>
             <h5 class="text-[12px] font-normal mt-2 text-[#C3DAD9]">
@@ -228,10 +242,21 @@
             </h5>
           </div>
 
-          <!-- Arrow Button -->
-          <button>
-            <i class="fa fa-arrow-right text-2xl p-4 rounded-full text-gray-800 bg-gray-200 -rotate-45"
-              aria-hidden="true"></i>
+              <!-- Arrow Button -->
+          <button
+            class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            aria-label="Go to details">
+            <!-- Outgoing Icon -->
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+              transition-all duration-900
+              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
+
+            <!-- Incoming Icon -->
+            <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 font-normal text-2xl text-gray-800
+              -translate-x-1/2 translate-y-16 opacity-0
+              transition-all duration-900
+              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
+
           </button>
 
         </div>
@@ -297,7 +322,7 @@
 <section class="section-sm">
   <div class="container">
     @@include('section-header.html', {
-    "title": "Industries We Work Innn",
+    "title": "Industries We Work In",
     "subtitle": "Using machine learning to track usage patterns, our platform reduces energy overus and improves operational sustainability.",
     "skewText": "Key Sectors",
     "skewRotate": "rotate-6"
@@ -437,19 +462,20 @@
           </div>
 
           <!-- Arrow Button like 1st card -->
-          <button
+           <button
             class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800 -translate-x-1/2 -translate-y-1/2
-               transition-all duration-900
-               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+              transition-all duration-900
+              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 font-normal text-2xl text-gray-800
-               -translate-x-1/2 translate-y-16 opacity-0
-               transition-all duration-900
-               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
+              -translate-x-1/2 translate-y-16 opacity-0
+              transition-all duration-900
+              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
+
           </button>
         </div>
       </div>
@@ -484,18 +510,19 @@
 
           <!-- Arrow Button like 1st card -->
           <button
-            class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer "
+            class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800 -translate-x-1/2 -translate-y-1/2
-               transition-all duration-900
-               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+              transition-all duration-900
+              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 font-normal text-2xl text-gray-800
-               -translate-x-1/2 translate-y-16 opacity-0
-               transition-all duration-900
-               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
+              -translate-x-1/2 translate-y-16 opacity-0
+              transition-all duration-900
+              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
+
           </button>
         </div>
       </div>
@@ -528,19 +555,20 @@
           </div>
 
           <!-- Arrow Button like 1st card -->
-          <button
+            <button
             class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800 -translate-x-1/2 -translate-y-1/2
-               transition-all duration-900
-               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+              transition-all duration-900
+              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 font-normal text-2xl text-gray-800
-               -translate-x-1/2 translate-y-16 opacity-0
-               transition-all duration-900
-               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
+              -translate-x-1/2 translate-y-16 opacity-0
+              transition-all duration-900
+              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
+
           </button>
         </div>
       </div>
@@ -740,5 +768,131 @@
 </section>
  <!-- Getting started is super simple section ended -->
 @@include('Testimonials.html')
-@@include('Faq.html')
+<!-- Product Blog Started -->
+<section class="section-sm">
+<div class="container">
+  <div class="my-10 text-center">
+      <h4
+        class="text-[12px] bg-[#2E85FA] dark:text-gray-100 px-4 py-1 text-gray-800 max-w-[180px] inline-block transform skew-x-[-20deg] rotate-6 shadow-md">
+        <span class="inline-block transform skew-x-[12deg]">Blogs</span>
+      </h4>
+      <h1 class="text-4xl md:text-6xl font-bold mt-5">Latest news from the industry</h1>
+      <p class="text-xl max-w-2xl mx-auto my-5">By analyzing historical trends and real-time data, our solution enables smarter energy planning and reduced overhead.</p>
+    </div>
+      <!-- FLEX CONTAINER -->
+      <div class="w-full flex flex-wrap gap-6 mt-10">
+        <!-- CARD 1 -->
+        <div class="group relative flex-1 min-w-[300px] h-[560px] rounded-3xl bg-white transition-all duration-900 shadow-md">
+          <img src="images/technologies/technologies1.avif" alt="Predictive Analytics"
+            class="w-full h-full object-cover rounded-3xl" />
 
+          <div
+            class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-white/90 via-white/90 to-transparent text-black rounded-3xl">
+            <button class="py-1 px-4 bg-gray-200 rounded-full mb-4 text-[14px]">Technology</button>
+            <h3 class="text-xl font-semibold text-gray-800 max-w-[310px]">AI for Startups: Cost-Effective Tools to Accelerate Growth</h3>
+            <p class="text-sm text-gray-500 max-w-[310px] mt-5">Exploring the intersection of AI and environmental real-world applications.</p>
+          </div>
+
+          <div class="absolute top-0 right-0 p-4">
+            <button
+              class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon rotate-45 cursor-pointer">
+              <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 text-2xl text-gray-800 -translate-x-1/2 -translate-y-1/2 transition-all duration-900 group-hover/icon:-translate-y-16 group-hover/icon:opacity-0"></i>
+              <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 text-2xl text-gray-800 -translate-x-1/2 translate-y-16 opacity-0 transition-all duration-900 group-hover/icon:translate-y-0 group-hover/icon:opacity-100"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="group relative flex-1 min-w-[300px] h-[560px] bg-white transition-all duration-900 shadow-md rounded-3xl">
+          <img src="images/technologies/technologies2.avif" alt="Cloud AI Integration"
+            class="w-full h-full object-cover rounded-3xl" />
+
+          <div
+            class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t rounded-3xl from-white/90 via-white/90 to-transparent text-black">
+            <button class="py-1 px-4 bg-gray-200 rounded-full mb-4 text-[14px]">Machine Learning</button>
+            <h3 class="text-xl font-semibold text-gray-800 max-w-[310px]">AI in Action: Real-World Use Cases Across Industries</h3>
+            <p class="text-sm text-gray-500 max-w-[310px] mt-5">Investigating machine learning applications in climate modeling.</p>
+          </div>
+
+          <div class="absolute top-0 right-0 p-4">
+            <button
+              class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon rotate-45 cursor-pointer">
+              <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 text-2xl text-gray-800 -translate-x-1/2 -translate-y-1/2 transition-all duration-900 group-hover/icon:-translate-y-16 group-hover/icon:opacity-0"></i>
+              <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 text-2xl text-gray-800 -translate-x-1/2 translate-y-16 opacity-0 transition-all duration-900 group-hover/icon:translate-y-0 group-hover/icon:opacity-100"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="group relative flex-1 min-w-[300px] h-[560px] rounded-3xl bg-white transition-all duration-900 shadow-md">
+          <img src="images/technologies/technologies3.avif" alt="Optivus AI Assistant"
+            class="w-full h-full object-cover rounded-3xl" />
+
+          <div
+            class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-white/90 via-white/90 to-transparent text-black rounded-3xl">
+            <button class="py-1 px-4 bg-gray-200 rounded-full mb-4 text-[14px]">Data Science</button>
+            <h3 class="text-xl font-semibold text-gray-800 max-w-[310px]">The Intersection of AI and IoT: Building Smarter Systems</h3>
+            <p class="text-sm text-gray-500 max-w-[310px] mt-5">Enhancing urban mobility through smart traffic systems.</p>
+          </div>
+
+          <div class="absolute top-0 right-0 p-4">
+            <button
+              class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon rotate-45 cursor-pointer">
+              <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 text-2xl text-gray-800 -translate-x-1/2 -translate-y-1/2 transition-all duration-900 group-hover/icon:-translate-y-16 group-hover/icon:opacity-0"></i>
+              <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 text-2xl text-gray-800 -translate-x-1/2 translate-y-16 opacity-0 transition-all duration-900 group-hover/icon:translate-y-0 group-hover/icon:opacity-100"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+</div>
+</section>
+<!-- Product Blog Ended -->
+@@include('Faq.html')
+<!-- Ready to transform Started -->
+<section class="section-sm">
+  <div class="container md:p-10 rounded-3xl border border-gray-800"
+  style="background-image: url('images/ai-bg.svg');">
+      <div class="flex flex-col md:md:flex-row items-center p-10">
+      <div class="flex-1 md:max-w-[520px]">
+        <h2 class="my-2">Ready to transform your business with AI?</h2>
+        <p class="text-[14px] md:max-w-[420px]">Discover how Optivus can help you drive innovation, streamline operations, and achieve your goals.</p>
+            <!-- Get Started Now -->
+          <button class="px-5 py-4 mt-10 rounded-2xl text-lg font-semibold text-gray-800 bg-[#C4FC00] hover:bg-lime-300"
+            target="_blank" rel="noopener noreferrer">
+            Get Started Now
+          </button>
+      </div>
+      <div class="flex-1 flex flex-row items-end justify-center gap-6 mt-10 md:mt-0">
+        <!-- Reusable Card -->
+        <div class="relative w-32 h-32 bg-[#2E85FA] rounded-3xl flex flex-col justify-end text-white shadow-lg overflow-hidden">
+          <!-- Black Bar -->
+          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
+
+          <!-- Bottom Content -->
+          <div class="mb-4 text-center">
+            <h3 class="text-2xl font-bold">30%</h3>
+            <p class="text-sm">Cost Saving</p>
+          </div>
+        </div>
+
+        <div class="relative w-32 h-50 bg-[#70DB80] rounded-3xl flex flex-col justify-end text-white shadow-lg overflow-hidden">
+          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
+          <div class="mb-4 text-center">
+            <h3 class="text-2xl font-bold">50%</h3>
+            <p class="text-sm">Success Rate</p>
+          </div>
+        </div>
+
+        <div class="relative w-32 h-72 bg-[#FDE44B] rounded-3xl flex flex-col justify-end text-white shadow-lg overflow-hidden">
+          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
+          <div class="mb-4 text-center">
+            <h3 class="text-2xl font-bold">10k+</h3>
+            <p class="text-sm">Deployments</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Ready to transform Ended -->

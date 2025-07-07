@@ -7,9 +7,7 @@
   //   document.querySelector(".preloader").style.display = "none";
   // });
 
-  // Dropdown Menu Toggler For Mobile
-  // ----------------------------------------
-  const dropdownMenuToggler = document.querySelectorAll(
+const dropdownMenuToggler = document.querySelectorAll(
     ".nav-dropdown > .nav-link",
   );
 
@@ -19,35 +17,33 @@
     });
   });
 
+  // toggle mobile nav
+//  const navToggleBtn = document.getElementById("nav-toggle-btn");
+//   const navMenu = document.getElementById("mobile-menu");
+//   const hamburgerIcon = document.getElementById("hamburger-icon");
+//   const closeIcon = document.getElementById("close-icon");
+
+//   navToggleBtn.addEventListener("click", () => {
+//     const isOpen = navMenu.classList.contains("hidden");
+
+//     if (isOpen) {
+//       navMenu.classList.remove("hidden");
+//       hamburgerIcon.classList.add("hidden");
+//       closeIcon.classList.remove("hidden");
+//       navToggleBtn.setAttribute("aria-expanded", "true");
+//     } else {
+//       navMenu.classList.add("hidden");
+//       hamburgerIcon.classList.remove("hidden");
+//       closeIcon.classList.add("hidden");
+//       navToggleBtn.setAttribute("aria-expanded", "false");
+//     }
+//   });
+
+
   // Theme switcher
   // ----------------------------------------
-  var darkMode = false;
-  var themeSwitch = document.querySelectorAll("[data-theme-switcher]");
-  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    darkMode = true;
-  }
-  if (localStorage.getItem("theme") === "dark") {
-    darkMode = true;
-  } else if (localStorage.getItem("theme") === "light") {
-    darkMode = false;
-  }
-  if (darkMode) {
-    document.documentElement.classList.toggle("dark");
-  }
-  document.addEventListener("DOMContentLoaded", () => {
-    [].forEach.call(themeSwitch, function (ts) {
-      ts.checked = darkMode ? true : false;
-      ts.addEventListener("click", () => {
-        document.documentElement.classList.toggle("dark");
-        localStorage.setItem(
-          "theme",
-          document.documentElement.classList.contains("dark")
-            ? "dark"
-            : "light",
-        );
-      });
-    });
-  });
+  document.documentElement.classList.add("dark");
+  localStorage.setItem("theme", "dark");
 
   // Testimonial Slider
   // ----------------------------------------
@@ -157,13 +153,6 @@
       });
     });
   // countup ended
-// FAQ
-   document.querySelectorAll('.group').forEach((faq) => {
-    const button = faq.querySelector('button');
-    button.addEventListener('click', () => {
-      faq.classList.toggle('open');
-    });
-  });
 
 //-------------------industries-----------------------------
 //..................
@@ -197,6 +186,13 @@ cards.forEach((card) => {
     card.classList.add(activeWidth, "active-card");
   });
 });
+// FAQ
+   document.querySelectorAll('.group').forEach((faq) => {
+    const button = faq.querySelector('button');
+    button.addEventListener('click', () => {
+      faq.classList.toggle('open');
+    });
+  });
 //---------
  const arrowBtn = document.getElementById('arrowBtn');
   const tagButtons = document.getElementById('tagButtons');
