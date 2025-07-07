@@ -1,43 +1,26 @@
 (function () {
   "use strict";
-
-  //  Preloader
-  // ----------------------------------------
-  // window.addEventListener("load", (e) => {
-  //   document.querySelector(".preloader").style.display = "none";
-  // });
-
-const dropdownMenuToggler = document.querySelectorAll(
-    ".nav-dropdown > .nav-link",
-  );
-
-  dropdownMenuToggler.forEach((toggler) => {
-    toggler?.addEventListener("click", (e) => {
-      e.target.closest(".nav-item").classList.toggle("active");
-    });
-  });
-
   // toggle mobile nav
-//  const navToggleBtn = document.getElementById("nav-toggle-btn");
-//   const navMenu = document.getElementById("mobile-menu");
-//   const hamburgerIcon = document.getElementById("hamburger-icon");
-//   const closeIcon = document.getElementById("close-icon");
+ const navToggleBtn = document.getElementById("nav-toggle-btn");
+  const navMenu = document.getElementById("mobile-menu");
+  const hamburgerIcon = document.getElementById("hamburger-icon");
+  const closeIcon = document.getElementById("close-icon");
 
-//   navToggleBtn.addEventListener("click", () => {
-//     const isOpen = navMenu.classList.contains("hidden");
+  navToggleBtn.addEventListener("click", () => {
+    const isOpen = navMenu.classList.contains("hidden");
 
-//     if (isOpen) {
-//       navMenu.classList.remove("hidden");
-//       hamburgerIcon.classList.add("hidden");
-//       closeIcon.classList.remove("hidden");
-//       navToggleBtn.setAttribute("aria-expanded", "true");
-//     } else {
-//       navMenu.classList.add("hidden");
-//       hamburgerIcon.classList.remove("hidden");
-//       closeIcon.classList.add("hidden");
-//       navToggleBtn.setAttribute("aria-expanded", "false");
-//     }
-//   });
+    if (isOpen) {
+      navMenu.classList.remove("hidden");
+      hamburgerIcon.classList.add("hidden");
+      closeIcon.classList.remove("hidden");
+      navToggleBtn.setAttribute("aria-expanded", "true");
+    } else {
+      navMenu.classList.add("hidden");
+      hamburgerIcon.classList.remove("hidden");
+      closeIcon.classList.add("hidden");
+      navToggleBtn.setAttribute("aria-expanded", "false");
+    }
+  });
 
 
   // Theme switcher
@@ -187,12 +170,22 @@ cards.forEach((card) => {
   });
 });
 // FAQ
-   document.querySelectorAll('.group').forEach((faq) => {
-    const button = faq.querySelector('button');
-    button.addEventListener('click', () => {
-      faq.classList.toggle('open');
+document.querySelectorAll(".faq-item").forEach((item) => {
+  const button = item.querySelector("button");
+
+  button.addEventListener("click", () => {
+    // Close all other open items
+    document.querySelectorAll(".faq-item.open").forEach((openItem) => {
+      if (openItem !== item) {
+        openItem.classList.remove("open");
+      }
     });
+
+    // Toggle current item
+    item.classList.toggle("open");
   });
+});
+
 //---------
  const arrowBtn = document.getElementById('arrowBtn');
   const tagButtons = document.getElementById('tagButtons');
@@ -220,72 +213,7 @@ cards.forEach((card) => {
       accordionItem.classList.toggle("active");
     });
   });
-
-  // Tab
-  // ----------------------------------------
-  function setActiveTab(tabGroup, tabName) {
-    const tabsNav = tabGroup.querySelector("[data-tab-nav]");
-    const tabsContent = tabGroup.querySelector("[data-tab-content]");
-
-    tabsNav.querySelectorAll("[data-tab]").forEach((tabNavItem) => {
-      tabNavItem.classList.remove("active");
-    });
-    tabsContent.querySelectorAll("[data-tab-panel]").forEach((tabPane) => {
-      tabPane.classList.remove("active");
-    });
-
-    const selectedTabNavItem = tabsNav.querySelector(`[data-tab="${tabName}"]`);
-    selectedTabNavItem.classList.add("active");
-    const selectedTabPane = tabsContent.querySelector(
-      `[data-tab-panel="${tabName}"]`,
-    );
-    selectedTabPane.classList.add("active");
-  }
-  const tabGroups = document.querySelectorAll("[data-tab-group]");
-  tabGroups.forEach((tabGroup) => {
-    const tabsNav = tabGroup.querySelector("[data-tab-nav]");
-    const tabsNavItem = tabsNav.querySelectorAll("[data-tab]");
-    const activeTabName = tabsNavItem[0].getAttribute("data-tab");
-
-    setActiveTab(tabGroup, activeTabName);
-
-    tabsNavItem.forEach((tabNavItem) => {
-      tabNavItem.addEventListener("click", () => {
-        const tabName = tabNavItem.dataset.tab;
-        setActiveTab(tabGroup, tabName);
-      });
-    });
-  });
-
-  const tablist = document.querySelectorAll("[data-tab-nav] [data-tab]");
-  function tabsHandler(event) {
-    let index = Array.from(tablist).indexOf(this);
-    let numbTabs = tablist.length;
-    let nextId;
-    if (numbTabs > 1) {
-      if (event.key === "ArrowRight") {
-        nextId = tablist[(index + 1) % numbTabs];
-        if (index === numbTabs - 1) {
-          nextId = tablist[0];
-        }
-        nextId.focus();
-        nextId.click();
-      }
-      if (event.key === "ArrowLeft") {
-        nextId = tablist[(index - 1 + numbTabs) % numbTabs];
-        if (index === 0) {
-          nextId = tablist[numbTabs - 1];
-        }
-        nextId.focus();
-        nextId.click();
-      }
-    }
-  }
-
-  tablist.forEach(function (tab) {
-    tab.addEventListener("keydown", tabsHandler);
-  });
-
+// ber
 
   // Modal
   // ----------------------------------------
