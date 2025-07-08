@@ -143,8 +143,8 @@ const container = document.getElementById("cardContainer");
 const cards = document.querySelectorAll("[data-card]");
 
 // Width classes
-const normalWidth = "w-[260px]";
-const activeWidth = "w-[435px]";
+const normalWidth = "w-[280px]";
+const activeWidth = "w-[363px]";
 
 // Initial setup: all cards small, first one active
 cards.forEach((c, i) => {

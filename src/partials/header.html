@@ -1,24 +1,27 @@
-<header class="header sticky top-0 z-30 bg-[#111721]">
+<header
+  x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 10 })"
+  :class="isSticky ? 'bg-[#111721]' : 'bg-transparent'"
+  class="header sticky top-0 z-30 transition-all duration-300">
  <nav class="container mx-auto px-4 md:px-0 flex items-center justify-between">
 
    <!-- Left Side: Logo + Nav -->
-   <div class="flex items-center gap-8 lg:gap-12 lg:flex-1">
+   <div class="flex items-center gap-8 lg:gap-18 lg:flex-1">
      <!-- Logo -->
      <a class="navbar-brand block" href="/">
-       <img src="images/h-logo.svg" class="hidden dark:inline-block" width="110" height="20" alt="themeplate" />
-       <img src="images/logo.png" class="dark:hidden block" width="110" height="20" alt="themeplate" />
+       <img src="images/h-logo.svg" class="hidden dark:inline-block" width="132" height="36" alt="themeplate" />
      </a>
 
      <!-- Nav Links (desktop) -->
      <ul
        id="nav-menu"
-       class="hidden lg:flex flex-row gap-6 items-center text-black dark:text-white"
+       class="hidden lg:flex flex-row gap-2 items-center text-black dark:text-white "
      >
        <!-- All Pages -->
-       <li class="relative group">
-         <div class="hidden lg:flex items-center gap-1 cursor-pointer px-2 py-1">
+       <li i class="relative group opacity-80 text-[16px] font-thin leading-7 hover:text-[#C4FC00] border border-gray-800 rounded-md">
+         <div class="hidden lg:flex items-center gap-3 cursor-pointer px-3 py-1 ">
            All Pages
-           <i class="fa fa-angle-up transition-transform duration-300 group-hover:rotate-180" aria-hidden="true"></i>
+           <i class="fa fa-chevron-down transition-transform duration-300 group-hover:rotate-180 text-[12px]" aria-hidden="true"></i>
          </div>
 
          <!-- Desktop Mega Menu -->
@@ -61,22 +64,16 @@
        </li>
 
        <!-- Other Links -->
-       <li><a href="pricing.html">Pricing</a></li>
-       <li><a href="elements.html">Services</a></li>
-       <li><a href="rashadul.html">Reviews</a></li>
+       <li class="opacity-80 text-[16px] font-thin leading-7 hover:text-[#C4FC00] border border-gray-800 rounded-md px-3 py-1 cursor-pointer"><a href="pricing.html">Pricing</a></li>
+       <li class="opacity-80 text-[16px] font-thin leading-7 hover:text-[#C4FC00] border border-gray-800 rounded-md px-3 py-1 cursor-pointer"><a href="elements.html">Services</a></li>
+       <li class="opacity-80 text-[16px] font-thin leading-7 hover:text-[#C4FC00] border border-gray-800 rounded-md px-3 py-1 cursor-pointer"><a href="rashadul.html">Reviews</a></li>
      </ul>
    </div>
 
    <!-- Right Side: CTA Button (desktop only) -->
-   <div class="hidden lg:flex lg:items-center">
-     <a
-       class="bg-black dark:bg-white text-white dark:text-black py-3 px-5 rounded-[16px] transition hover:opacity-90"
-       href="contact.html"
-     >
-       Get The Template
-     </a>
-   </div>
-
+    <div class="hidden lg:flex lg:items-center">
+    <a class="px-6 py-3 rounded-[14px] text-lg text-gray-800 bg-gray-100 hover:bg-lime-300 transition font-normal tracking-tight" target="_blank" rel="noopener noreferrer" href="/"> Get This Template</a>
+    </div>
    <!-- Hamburger Toggle (mobile only) -->
    <button
      id="nav-toggle-btn"
@@ -130,4 +127,4 @@
      </li>
    </ul>
  </div>
-</header> 
+</header>

@@ -5,24 +5,36 @@
  */
 :host,
 :root {
+  /* Font Awesome brand font */
   --fa-style-family-brands: "Font Awesome 6 Brands";
   --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+
+  /* Custom font settings */
+  --font-family-primary: "Rethink Sans", "Rethink Sans Placeholder", sans-serif;
+  --font-family-primary-type: sans-serif;
+  --font-family-secondary: "Rethink Sans", "Rethink Sans Placeholder", sans-serif;
+  --font-family-secondary-type: sans-serif;
+
+  --font-size-base: 16px;
+  --font-size-scale: 1.2;
 }
+
 @font-face {
   font-family: "Font Awesome 6 Brands";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400; /* Updated to match actual font weight */
   font-display: block;
   src:
-    url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/webfonts/fa-brands-400.woff2)
-      format("woff2"),
-    url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/webfonts/fa-brands-400.ttf)
-      format("truetype");
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/webfonts/fa-brands-400.woff2") format("woff2"),
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/webfonts/fa-brands-400.ttf") format("truetype");
 }
+
 .fa-brands,
 .fab {
+  font-family: "Font Awesome 6 Brands";
   font-weight: 400;
 }
+
 .fa-monero:before {
   content: "\f3d0";
 }
