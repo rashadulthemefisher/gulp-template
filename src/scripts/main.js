@@ -1,5 +1,15 @@
 (function () {
   "use strict";
+// //Javascriptmotion
+// const {animate}=motion;
+
+// const elements=document.querySelector(".animationdiv div");
+
+// animate(
+// elements,
+// {opacity:1,rotate:4},
+// {type: "spring",stiffness:300}
+// )
   // toggle mobile nav
  const navToggleBtn = document.getElementById("nav-toggle-btn");
   const navMenu = document.getElementById("mobile-menu");
@@ -21,7 +31,6 @@
       navToggleBtn.setAttribute("aria-expanded", "false");
     }
   });
-
 
   // Theme switcher
   // ----------------------------------------
@@ -66,6 +75,7 @@
 
   animateScan();
   // Scan Animation end
+
   function animateCount(element, start, end, duration, suffix = '') {
     let startTime = null;
     const step = (timestamp) => {
@@ -139,36 +149,46 @@
 
 //-------------------industries-----------------------------
 //..................
-const container = document.getElementById("cardContainer");
-const cards = document.querySelectorAll("[data-card]");
+  const cards = document.querySelectorAll("[data-card]");
 
-// Width classes
-const normalWidth = "w-[280px]";
-const activeWidth = "w-[363px]";
+  cards.forEach((card, index) => {
+    // ✅ Default active for first card (both mobile and desktop)
+    // if (index === 0) {
+    //   card.classList.add("hover:h-[363px]", "md:w-[363px]", "md:hover:h-[620px]");
+    //   card.classList.remove("h-[280px]", "md:w-[280px]");
+    // }
+  if (index === 0) {
+      card.classList.add("md:w-[363px]", "md:h-[620px]");
+      card.classList.remove("md:w-[280px]");
+    }
 
-// Initial setup: all cards small, first one active
-cards.forEach((c, i) => {
-  c.classList.add(normalWidth);
-  if (i === 0) {
-    c.classList.replace(normalWidth, activeWidth);
-    c.classList.add("active-card");
-  }
-});
-
-// Hover logic
-cards.forEach((card) => {
-  card.addEventListener("mouseenter", () => {
-    // Remove active from all
-    cards.forEach((c) => {
-      c.classList.remove(activeWidth, "active-card");
-      c.classList.add(normalWidth);
+    // ✅ Desktop: Hover effect
+    card.addEventListener("mouseenter", () => {
+      if (window.innerWidth >= 768) {
+        cards.forEach((c) => {
+          c.classList.remove("md:w-[363px]", "md:h-[620px]");
+          c.classList.add("md:w-[280px]", "md:h-[620px]");
+          c.classList.remove("active");
+        });
+        card.classList.add("md:w-[363px]", "md:h-[620px]");
+        card.classList.remove("md:w-[280px]");
+        card.classList.add("active");
+      }
     });
 
-    // Set hovered card as active
-    card.classList.remove(normalWidth);
-    card.classList.add(activeWidth, "active-card");
+    // ✅ Mobile: Tap effect
+    card.addEventListener("click", () => {
+      if (window.innerWidth < 768) {
+        cards.forEach((c) => {
+          c.classList.remove("h-[363px]");
+          c.classList.add("h-[280px]");
+        });
+        card.classList.remove("h-[280px]");
+        card.classList.add("h-[363px]");
+      }
+    });
   });
-});
+
 // FAQ
 document.querySelectorAll(".faq-item").forEach((item) => {
   const button = item.querySelector("button");
@@ -214,41 +234,4 @@ document.querySelectorAll(".faq-item").forEach((item) => {
     });
   });
 // ber
-
-  // Modal
-  // ----------------------------------------
-  const openModalButtons = document.querySelectorAll("[data-modal-open]");
-  const closeModalButtons = document.querySelectorAll("[data-modal-close]");
-
-  function openModal(modal) {
-    if (modal === null) {
-      return null;
-    }
-    const overlay = modal.querySelector("[data-modal-overlay]");
-    modal.style.display = "block";
-    overlay.style.display = "block";
-  }
-
-  function closeModal(modal) {
-    if (modal === null) {
-      return null;
-    }
-    const overlay = modal.querySelector("[data-modal-overlay]");
-    modal.style.display = "none";
-    overlay.style.display = "none";
-  }
-
-  openModalButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const modal = button.nextElementSibling;
-      openModal(modal);
-    });
-  });
-
-  closeModalButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const modal = button.closest("[data-modal]");
-      closeModal(modal);
-    });
-  });
 })();

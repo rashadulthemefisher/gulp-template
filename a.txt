@@ -1,15 +1,11 @@
-<!-- Alpine.js CDN -->
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
 <header
-  x-data="{ isScrolled: false }"
-  x-init="window.addEventListener('scroll', () => {
-    isScrolled = window.scrollY > 10
-  })"
-  :class="isScrolled
-    ? 'fixed top-0 bg-[#111721] shadow-md translate-y-0'
-    : 'absolute top-0 bg-transparent translate-y-[-10px]'"
-  class="w-full z-50 transition-all duration-900 ease-in-out header"
+  x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => isSticky = window.scrollY > 10)"
+  :class="{
+    'sticky top-0 bg-[#111721] shadow-md': isSticky,
+    'absolute top-0 bg-transparent shadow-none': !isSticky
+  }"
+  class="header z-30 w-full transition-all duration-500 ease-in-out transform"
 >
  <nav class="container mx-auto px-4 md:px-0 flex items-center justify-between">
 
@@ -26,7 +22,7 @@
        class="hidden lg:flex flex-row gap-2 items-center text-black dark:text-white "
      >
        <!-- All Pages -->
-       <li i class="relative group text-[16px] font-thin leading-7 hover:text-[#C4FC00] border border-gray-800 rounded-md">
+       <li i class="relative group opacity-80 text-[16px] font-thin leading-7 hover:text-[#C4FC00] border border-gray-800 rounded-md">
          <div class="hidden lg:flex items-center gap-3 cursor-pointer px-3 py-1 ">
            All Pages
            <i class="fa fa-chevron-down transition-transform duration-300 group-hover:rotate-180 text-[12px]" aria-hidden="true"></i>
