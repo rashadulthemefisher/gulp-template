@@ -15,7 +15,7 @@
           </div>
         </div>
         <div class="my-5 md:my-2">
-            <h1 class="mb-4 text-[50px] lg:text-[116px] font-normal md:w-[760px] mx-auto md:leading-[116px] heading">
+            <h1 class="mb-4 text-[50px] lg:text-[116px] font-normal md:w-[760px] mx-auto md:leading-[116px] heading transition ease-in-out translate-y-7">
               Work Smarter, Not Harder
             </h1>
             <p class="mb-8 px-4 md:px-0 max-w-[520px] mx-auto text-[#A9A9A9] font-normal tracking-wide leading-[34px] paragraph">
@@ -179,20 +179,7 @@
 </section>
 <!-- Ai faces section ended -->
 <!-- Brand images Section started -->
-<section class="section-sm mx-4 md:mx-20">
-  <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-0">
-    <img src="images/brands/brand1.svg" alt="Brand Logo"
-      class="w-auto h-auto invert brightness-200 dark:invert-0 opacity-40" />
-    <img src="images/brands/brand2.svg" alt="Brand Logo"
-      class="w-auto h-auto invert brightness-200 dark:invert-0 opacity-40 md:border-l-2 md:px-6 md:border-gray-400" />
-    <img src="images/brands/brand3.svg" alt="Brand Logo"
-      class="w-auto h-auto invert brightness-100 dark:invert-0 opacity-40 md:border-l-2 md:px-6 md:border-gray-400" />
-    <img src="images/brands/brand4.svg" alt="Brand Logo"
-      class="w-auto h-auto invert brightness-200 dark:invert-0 opacity-40 md:border-l-2 md:px-6 md:border-gray-400" />
-    <img src="images/brands/brand5.svg" alt="Brand Logo"
-      class="w-auto h-auto invert brightness-200 dark:invert-0 opacity-40 md:border-l-2 md:px-6 md:border-gray-400" />
-  </div>
-</section>
+@@include('brand-images-section.html')
 <!-- Brand images Section ended -->
 
 <!-- Smartermanagement Section Started -->
@@ -246,22 +233,11 @@
           </div>
 
               <!-- Arrow Button -->
-          <button
-            class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
-            aria-label="Go to details">
-            <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
-              transition-all duration-900
-              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
-
-            <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 font-thin text-2xl text-gray-800
-              -translate-x-1/2 translate-y-16 opacity-0
-              transition-all duration-900
-              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
-          </button>
-
+            @@include('components/arrow-button.html',{
+          "min-w":"min-w-16",
+          "min-h":"min-h-16",
+          "bottom-top":"top-[20px]",
+        })
         </div>
         <!-- Animated floating card -->
         <div
@@ -322,53 +298,13 @@
 </section>
 <!-- Smartermanagement Section Ended -->
 <!-- Industries Work Section started -->
-<section class="section-sm">
-  <div class="container">
-    @@include('section-header.html', {
-    "title": "Industries we worked on",
-    "subtitle": "Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.",
-    "skewText": "Key Sectors",
-    "skewRotate": "rotate-6"
-    })
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Card 1 -->
-      <div class="rounded-3xl border border-gray-800 p-8 shadow-md bg-[#171D26]">
-        <img src="images/health-care.svg" alt="Healthcare Icon">
-        <h2 class="text-2xl mt-7 font-medium">Healthcare Industry</h2>
-        <p class="text-[16px] max-w-sm mt-5 mx-auto">AI diagnostics, patient management, and predictive health analytics.</p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="rounded-3xl border border-gray-800 p-8 shadow-md bg-[#171D26]">
-        <img src="images/retail.svg" alt="Retail Icon">
-        <h2 class="text-2xl mt-7 font-medium">Retail Business</h2>
-        <p class="text-[16px] max-w-sm mt-5 mx-auto">Smart logistics, supply chain automation, and real-time inventory.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="rounded-3xl border border-gray-800 p-8 shadow-md bg-[#171D26]">
-        <img src="images/education.svg" alt="Education Icon">
-        <h2 class="text-2xl mt-7 font-medium">Education Industry</h2>
-        <p class="text-[16px] max-w-sm mt-5 mx-auto">Personalized learning tools, adaptive assessments, and virtual tutoring.</p>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="rounded-3xl border border-gray-800 p-8 shadow-md bg-[#171D26]">
-        <img src="images/finance.svg" alt="Finance Icon">
-        <h2 class="text-2xl mt-7 font-medium">Finance Management</h2>
-        <p class="text-[16px] max-w-sm mt-5 mx-auto">Renewable energy grids, emission monitoring, and sustainable resources.</p>
-      </div>
-    </div>
-  </div>
-</section>
+@@include('Industries.html')
 <!-- Industries Work Section ended -->
 
 <!-- Product Section Started -->
 <section class="section-sm">
   <div class="container">
-  @@include('section-header.html', {
+  @@include('components/left-section-header.html', {
     "title": "Technologies we’ve built",
     "subtitle": "Using machine learning to track usage patterns, our platform reduces energy overuse and improves operational sustainability.",
     "skewText": "Featured Technologies",
@@ -412,22 +348,12 @@
             </button>
           </div>
 
-          <!-- Arrow Button -->
-          <button
-            class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
-            aria-label="Go to details">
-            <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
-              transition-all duration-900
-              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
-
-            <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 font-thin text-2xl text-gray-800
-              -translate-x-1/2 translate-y-16 opacity-0
-              transition-all duration-900
-              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
-          </button>
+   <!-- Arrow Button -->
+          @@include('components/arrow-button.html',{
+          "min-w":"min-w-16",
+          "min-h":"min-h-16",
+          "bottom-top":"top-[20px]",
+        })
         </div>
       </div>
       <!-- CARD 2 -->
@@ -459,22 +385,12 @@
             </button>
           </div>
 
-          <!-- Arrow Button like 1st card -->
-           <button
-            class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
-            aria-label="Go to details">
-            <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
-              transition-all duration-900
-              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
-
-            <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 font-thin text-2xl text-gray-800
-              -translate-x-1/2 translate-y-16 opacity-0
-              transition-all duration-900
-              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
-          </button>
+          <!-- Arrow Button -->
+            @@include('components/arrow-button.html',{
+          "min-w":"min-w-16",
+          "min-h":"min-h-16",
+          "bottom-top":"top-[20px]",
+        })
         </div>
       </div>
 
@@ -507,22 +423,12 @@
             </button>
           </div>
 
-          <!-- Arrow Button like 1st card -->
-          <button
-            class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
-            aria-label="Go to details">
-            <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
-              transition-all duration-900
-              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
-
-            <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 font-thin text-2xl text-gray-800
-              -translate-x-1/2 translate-y-16 opacity-0
-              transition-all duration-900
-              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
-          </button>
+          <!-- Arrow Button -->
+            @@include('components/arrow-button.html',{
+          "min-w":"min-w-16",
+          "min-h":"min-h-16",
+          "bottom-top":"top-[20px]",
+        })
         </div>
       </div>
 
@@ -555,21 +461,11 @@
           </div>
 
           <!-- Arrow Button like 1st card -->
-            <button
-            class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
-            aria-label="Go to details">
-            <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
-              transition-all duration-900
-              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
-
-            <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 font-thin text-2xl text-gray-800
-              -translate-x-1/2 translate-y-16 opacity-0
-              transition-all duration-900
-              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
-          </button>
+             @@include('components/arrow-button.html',{
+          "min-w":"min-w-16",
+          "min-h":"min-h-16",
+          "bottom-top":"top-[20px]",
+        })
         </div>
       </div>
 
@@ -582,7 +478,7 @@
  <!-- Getting started is super simple section started -->
 <section class="section-sm">
   <div class="container">
-    @@include('section-header.html', {
+    @@include('components/left-section-header.html', {
     "title": "Getting started is super simple",
     "subtitle": "By automating equipment schedules and monitoring consumption, we help businesses lower utility costs and environmental impact.",
     "skewText": "Get Started",
@@ -769,138 +665,11 @@
  <!-- Getting started is super simple section ended -->
 @@include('Testimonials.html')
 <!-- Product Blog Started -->
-<section class="section-sm">
-<div class="container">
-       <div class="my-16 text-center">
-      <h4
-        class="text-[12px] bg-[#2E85FA] dark:text-gray-100 px-4 py-1 text-gray-800 @@text-margin max-w-[180px] inline-block transform skew-x-[-20deg] rotate-6 shadow-md">
-        <span class="inline-block mx-6 transform skew-x-[12deg]">Blogs</span>
-      </h4>
-      <h1 class="text-4xl md:text-6xl font-thin tracking-tight mt-5">Latest news from the industry</h1>
-      <p class="text-[18px] mx-auto max-w-[600px] tracking-wide my-5 block">By analyzing historical trends and real-time data, our solution enables smarter energy planning and reduced overhead.</p>
-    </div>
-      <!-- FLEX CONTAINER -->
-      <div class="w-full flex flex-wrap gap-6 mt-10">
-        <!-- CARD 1 -->
-        <div class="group relative flex-1 min-w-[300px] h-[560px] rounded-3xl bg-white transition-all duration-900 shadow-md">
-          <img src="images/technologies/technologies1.avif" alt="Predictive Analytics"
-            class="w-full h-full object-cover rounded-3xl" />
-
-          <div
-            class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-white/90 via-white/90 to-transparent text-black rounded-3xl">
-            <button class="py-1 px-4 bg-gray-200 rounded-full mb-4 text-[14px]">Technology</button>
-            <h3 class="text-xl font-semibold text-gray-800 max-w-[310px]">AI for Startups: Cost-Effective Tools to Accelerate Growth</h3>
-            <p class="text-sm text-gray-500 max-w-[310px] mt-5">Exploring the intersection of AI and environmental real-world applications.</p>
-          </div>
-
-          <div class="absolute top-0 right-0 p-4">
-            <button
-              class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon rotate-45 cursor-pointer">
-              <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 text-2xl text-gray-800 -translate-x-1/2 -translate-y-1/2 transition-all duration-900 group-hover/icon:-translate-y-16 group-hover/icon:opacity-0"></i>
-              <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 text-2xl text-gray-800 -translate-x-1/2 translate-y-16 opacity-0 transition-all duration-900 group-hover/icon:translate-y-0 group-hover/icon:opacity-100"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="group relative flex-1 min-w-[300px] h-[560px] bg-white transition-all duration-900 shadow-md rounded-3xl">
-          <img src="images/technologies/technologies2.avif" alt="Cloud AI Integration"
-            class="w-full h-full object-cover rounded-3xl" />
-
-          <div
-            class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t rounded-3xl from-white/90 via-white/90 to-transparent text-black">
-            <button class="py-1 px-4 bg-gray-200 rounded-full mb-4 text-[14px]">Machine Learning</button>
-            <h3 class="text-xl font-semibold text-gray-800 max-w-[310px]">AI in Action: Real-World Use Cases Across Industries</h3>
-            <p class="text-sm text-gray-500 max-w-[310px] mt-5">Investigating machine learning applications in climate modeling.</p>
-          </div>
-
-          <div class="absolute top-0 right-0 p-4">
-            <button
-              class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon rotate-45 cursor-pointer">
-              <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 text-2xl text-gray-800 -translate-x-1/2 -translate-y-1/2 transition-all duration-900 group-hover/icon:-translate-y-16 group-hover/icon:opacity-0"></i>
-              <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 text-2xl text-gray-800 -translate-x-1/2 translate-y-16 opacity-0 transition-all duration-900 group-hover/icon:translate-y-0 group-hover/icon:opacity-100"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="group relative flex-1 min-w-[300px] h-[560px] rounded-3xl bg-white transition-all duration-900 shadow-md">
-          <img src="images/technologies/technologies3.avif" alt="Optivus AI Assistant"
-            class="w-full h-full object-cover rounded-3xl" />
-
-          <div
-            class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-white/90 via-white/90 to-transparent text-black rounded-3xl">
-            <button class="py-1 px-4 bg-gray-200 rounded-full mb-4 text-[14px]">Data Science</button>
-            <h3 class="text-xl font-semibold text-gray-800 max-w-[310px]">The Intersection of AI and IoT: Building Smarter Systems</h3>
-            <p class="text-sm text-gray-500 max-w-[310px] mt-5">Enhancing urban mobility through smart traffic systems.</p>
-          </div>
-
-          <div class="absolute top-0 right-0 p-4">
-            <button
-              class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon rotate-45 cursor-pointer">
-              <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 text-2xl text-gray-800 -translate-x-1/2 -translate-y-1/2 transition-all duration-900 group-hover/icon:-translate-y-16 group-hover/icon:opacity-0"></i>
-              <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 text-2xl text-gray-800 -translate-x-1/2 translate-y-16 opacity-0 transition-all duration-900 group-hover/icon:translate-y-0 group-hover/icon:opacity-100"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-</div>
-</section>
+@@include('Blog.html')
 <!-- Product Blog Ended -->
 @@include('Faq.html')
 <!-- Ready to transform Started -->
-<section class="section-sm">
-  <div class="container md:p-10 rounded-3xl border border-gray-800 md:h-[480px] relative overflow-hidden">
-
-    <!-- Background with animation -->
-    <div class="absolute inset-0 bg-cover bg-center animate-bgZoom" style="background-image: url('images/ai-bg.svg'); z-index: 0;"></div>
-
-    <!-- Content on top -->
-    <div class="relative z-10 flex flex-col md:flex-row items-center justify-center p-5 md:p-10 h-full">
-
-      <!-- Left Content -->
-      <div class="flex-1 md:max-w-[520px] flex flex-col justify-center items-start text-left">
-        <h2 class="md:text-5xl font-normal">Ready to transform your business with AI?</h2>
-        <p class="text-[14px] md:max-w-[420px] my-6">Discover how Optivus can help you drive innovation, streamline operations, and achieve your goals.</p>
-        <button class="px-5 py-4 rounded-2xl text-lg font-semibold text-gray-800 bg-[#C4FC00] hover:bg-lime-300"
-          target="_blank" rel="noopener noreferrer">
-          Get Started Now
-        </button>
-      </div>
-
-      <!-- Right Cards -->
-      <div class="flex-1 flex flex-row items-end justify-center md:justify-end gap-5 md:gap-10 mt-10 md:mt-0">
-        <!-- Card 1 -->
-        <div class="relative w-[110px] md:w-[142px] h-[114px] bg-[#2E85FA] rounded-3xl flex flex-col justify-end shadow-lg overflow-hidden">
-          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
-          <div class="mb-4 text-center">
-            <h3 class="text-[36px] font-normal text-gray-800">30%</h3>
-            <p class="text-sm text-gray-600">Cost Saving</p>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="relative w-[110px] md:w-[142px] h-[285px] bg-[#70DB80] rounded-3xl flex flex-col justify-end text-white shadow-lg overflow-hidden">
-          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
-          <div class="mb-4 text-center">
-            <h3 class="text-[36px] font-normal text-gray-800">75%</h3>
-            <p class="text-sm text-gray-600">Success Rate</p>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="relative w-[110px] md:w-[142px] h-[380px] bg-[#FDE44B] rounded-3xl flex flex-col justify-end text-white shadow-lg overflow-hidden">
-          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
-          <div class="mb-4 text-center">
-            <h3 class="text-[36px] font-normal text-gray-800">10k+</h3>
-            <p class="text-sm text-gray-600">Deployments</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+@@include('components/transform-ai.html')
 <!-- Ready to transform Ended -->
 
 <div class="fixed bottom-5 right-5 ">

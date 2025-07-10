@@ -1,0 +1,76 @@
+<section class="section-sm">
+<div class="container">
+  @@include('components/middle-section-header.html', {
+      "title": "Latest news from the industry",
+      "subtitle": "By analyzing historical trends and real-time data, our solution enables smarter energy planning and reduced overhead.",
+      "skewText": "Blogs",
+      "skewRotate": "rotate-6"
+      })
+      <!-- FLEX CONTAINER -->
+      <div class="w-full flex flex-wrap gap-6 mt-10">
+        <!-- CARD 1 -->
+        <div class="group relative flex-1 min-w-[300px] h-[560px] rounded-3xl bg-white transition-all duration-900 shadow-md">
+          <img src="images/blogs/technology.avif" alt="Predictive Analytics"
+            class="w-full h-full object-cover rounded-3xl" />
+
+          <div
+            class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-white/90 via-white/90 to-transparent text-black rounded-3xl">
+            <button class="py-1 px-4 bg-gray-200 rounded-full mb-4 text-[14px]">Technology</button>
+            <h3 class="text-xl font-semibold text-gray-800 max-w-[310px]">AI for Startups: Cost-Effective Tools to Accelerate Growth</h3>
+            <p class="text-sm text-gray-500 max-w-[310px] mt-5">Exploring the intersection of AI and environmental real-world applications.</p>
+          </div>
+
+          <div class="absolute top-0 right-0 p-4">
+             @@include('components/arrow-button.html',{
+          "min-w":"min-w-16",
+          "min-h":"min-h-16",
+          "bottom-top":"top-[20px]",
+        })
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="group relative flex-1 min-w-[300px] h-[560px] bg-white transition-all duration-900 shadow-md rounded-3xl">
+          <img src="images/blogs/machine.avif" alt="Cloud AI Integration"
+            class="w-full h-full object-cover rounded-3xl" />
+
+          <div
+            class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t rounded-3xl from-white/90 via-white/90 to-transparent text-black">
+            <button class="py-1 px-4 bg-gray-200 rounded-full mb-4 text-[14px]">Machine Learning</button>
+            <h3 class="text-xl font-semibold text-gray-800 max-w-[310px]">AI in Action: Real-World Use Cases Across Industries</h3>
+            <p class="text-sm text-gray-500 max-w-[310px] mt-5">Investigating machine learning applications in climate modeling.</p>
+          </div>
+
+          <div class="absolute top-0 right-0 p-4">
+             @@include('components/arrow-button.html',{
+          "min-w":"min-w-16",
+          "min-h":"min-h-16",
+          "bottom-top":"top-[20px]",
+        })
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="group relative flex-1 min-w-[300px] h-[560px] rounded-3xl bg-white transition-all duration-900 shadow-md">
+          <img src="images/blogs/data.avif" alt="Optivus AI Assistant"
+            class="w-full h-full object-cover rounded-3xl" />
+
+          <div
+            class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-white/90 via-white/90 to-transparent text-black rounded-3xl">
+            <button class="py-1 px-4 bg-gray-200 rounded-full mb-4 text-[14px]">Data Science</button>
+            <h3 class="text-xl font-semibold text-gray-800 max-w-[310px]">The Intersection of AI and IoT: Building Smarter Systems</h3>
+            <p class="text-sm text-gray-500 max-w-[310px] mt-5">Enhancing urban mobility through smart traffic systems.</p>
+          </div>
+
+          <div class="absolute top-0 right-0 p-4">
+              @@include('components/arrow-button.html',{
+          "min-w":"min-w-16",
+          "min-h":"min-h-16",
+          "bottom-top":"top-[20px]",
+        })
+          </div>
+        </div>
+      </div>
+
+</div>
+</section>
