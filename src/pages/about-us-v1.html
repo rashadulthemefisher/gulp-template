@@ -1,25 +1,110 @@
-<section class="section-sm pt-36">
+<section class="section-sm pt-36 relative overflow-hidden">
+ <div class="absolute inset-0 w-full h-[20%] bg-cover bg-center animate-bgZoom origin-center -z-10 animationdiv"
+    style="background-image: url('images/ai-bg.svg');"></div>
 <div class="container">
 @@include('components/middle-section-header.html', {
       "title": "About Us",
       "subtitle": "By analyzing historical trends and real-time data, our solution enables smarter energy planning and reduced overhead.",
       "skewText": "About Us",
-      "skewRotate": "-rotate-6"
+      "skewRotate": "-rotate-3"
       })
-<div class="m-20 flex flex-col md:flex-row gap-10 items-center justify-between">
-    <div class="w-[80%]">
-<h2 class="font-normal text-[48px] tracking-normal opacity-90">At Optivus, we believe that technology is more than just a tool, it’s a catalyst for transformation. Founded with a vision to empower industries through AI.</h2>
+      <div class="md:mx-20 my-20 flex flex-col md:flex-row gap-10 items-center justify-between">
+    <div class="w-full md:w-[80%]">
+<h2 class="font-normal text-[20px] md:text-[48px] tracking-normal opacity-90">At Optivus, we believe that technology is more <span class="text-[#C4FC00]">than just a tool</span>, it’s a catalyst for transformation. Founded with a vision to empower <span class="text-[#C4FC00]">industries</span> through AI.</h2>
     </div>
-    <div class="w-[20%] space-y-4 text-end">
+    <div class="w-full md:w-[20%] space-y-4 text-center md:text-end">
         <div class="">
-          <h1 class="text-[#C4FC00] font-normal text-[60px]">200+</h1>
+          <h1 class="text-[#C4FC00] font-normal text-[40px] md:text-[60px]">200+</h1>
           <p class="text-[18px] mx-auto max-w-[600px] tracking-wide">Satisfied customers</p>
         </div>
         <div>
-          <h1 class="text-[#C4FC00] font-normal text-[60px]">63%</h1>
+          <h1 class="text-[#C4FC00] font-normal text-[40px] md:text-[60px]">63%</h1>
           <p class="text-[18px] mx-auto max-w-[600px] tracking-wide">Project Success Rate</p>
         </div>
     </div>
     </div>
+<!-- Images Section Started -->
+      <div class="flex flex-col md:flex-row gap-10 items-center justify-between">
+        <div class="flex-1">
+        <img class="rounded-3xl h-[550px] object-cover" src="images/about/about-v1-1.avif" alt="">
+        </div>
+        <div class="flex-1">
+        <img class="rounded-3xl h-[550px] object-cover" src="images/about/about-v1-2.avif" alt="">
+        </div>
+      </div>
+<!-- Images Section Ended -->
+    <!-- Brand images Section started -->
+      <div class="my-10">
+      @@include('brand-images-section.html')
+      </div>
+    <!-- Brand images Section ended -->
+    <!-- Our mission Section started -->
+  <div class="flex flex-col md:flex-row gap-10 justify-start items-start my-20">
+
+    <!-- Left Section Header -->
+    <div class="w-full md:w-[30%]">
+      <h4
+        class="text-[12px] bg-[#2E85FA] dark:text-gray-100 px-4 py-1 text-gray-800 @@text-margin max-w-[180px] inline-block transform skew-x-[-20deg] rotate-3 shadow-md">
+        <span class="inline-block transform skew-x-[12deg]">Mission</span>
+      </h4>
+      <h1 class="text-4xl md:text-6xl font-thin tracking-tight mt-5">Our Mission</h1>
+    </div>
+
+    <!-- Right Text Content -->
+    <div class="text-[16px] md:text-[20px] text-gray-200 tracking-normal font-thin leading-[34px] opacity-60 space-y-6 flex-1 max-w-[702px]">
+      <p>
+        To lead the future of AI innovation and inspire global progress through intelligent solutions. By pushing the boundaries of AI, we aim to create a world where technology enhances lives, businesses, and the environment.
+      </p>
+      <p>
+        To enable businesses to harness the full potential of AI for innovation, growth, and impact. We are dedicated to creating AI technologies that are ethical, scalable, and impactful, bridging the gap between human ingenuity and technological excellence.
+      </p>
+    </div>
+
+  </div>
+<!-- Our Mission Section ended -->
+
+<!-- Rated Section Started -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Card 1 -->
+      <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
+        <h2 class="text-[80px] text-[#C4FC00] font-medium">12k+</h2>
+        <p class="text-[18px] mt-1 opacity-80">Successful Projects</p>
+      </div>
+
+      <!-- Card 2 -->
+        <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
+        <h2 class="text-[80px] text-[#C4FC00] font-medium">30%</h2>
+        <p class="text-[18px] mt-1 opacity-80">Efficiency Gains</p>
+      </div>
+
+      <!-- Card 3 -->
+     <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
+        <h2 class="text-[80px] text-[#C4FC00] font-medium">24%</h2>
+        <p class="text-[18px] mt-1 opacity-80">Contribution to AI Growth</p>
+      </div>
+
+      <!-- Card 4 -->
+        <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
+        <h2 class="text-[80px] text-[#C4FC00] font-medium">98%</h2>
+        <p class="text-[18px] mt-1 opacity-80">Client Satisfaction Rate</p>
+      </div>
+    </div>
+<!-- Rated Section ended -->
+<!-- Meet our team Section Started -->
+<div class="my-20">
+    @@include('components/middle-section-header.html', {
+    "title": "Meet our team",
+    "subtitle": "Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.",
+    "skewText": "Team",
+    "skewRotate": "rotate-6"
+    })
+<div id="home-page">
+@@include('Team.html')
+</div>
+</div>
+<!-- Meet our team Section ended -->
+<!-- Product Blog Started -->
+@@include('Blog.html')
+<!-- Product Blog Ended -->
 </div>
 </section>

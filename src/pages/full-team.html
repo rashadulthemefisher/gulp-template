@@ -1,0 +1,58 @@
+<section class="section-sm pt-36 relative overflow-hidden">
+  <div class="absolute inset-0 w-full h-[20%] bg-cover bg-center animate-bgZoom origin-center -z-10 animationdiv"
+    style="background-image: url('images/ai-bg.svg');"></div>
+  <div class="container">
+    <!-- Meet our team Section Started -->
+    @@include('components/middle-section-header.html', {
+    "title": "Meet the amazing team",
+    "subtitle": "Join hundreds of companies who've doubled their efficiency while cutting costs by 40% through smart AI integration",
+    "skewText": "Team",
+    "skewRotate": "rotate-6"
+    })
+    <div id="team-page">
+      @@include('Team.html')
+    </div>
+    <!-- Meet our team Section ended -->
+    <div class="flex flex-col md:flex-row gap-12 items-center justify-between my-20">
+      <div class="flex-1 space-y-20">
+        <h3 class="text-[28px] md:text-[36px] font-normal text-gray-200">We believe in the power of collaboration and innovation. Together, we <span class="text-[#BCF10F]">aim to
+            redefine</span> what’s possible with AI.</h3>
+        <div class="max-w-[280px]">
+          <h3 class="text-[36px] font-normal text-gray-200">
+            Want to join us?
+          </h3>
+          <p class="text-[16px] font-normal text-gray-200 mt-2 opacity-80">Explore our careers page to be part of the Optivus team.</p>
+          <a class="inline-block font-normal text-[16px] mt-10 bg-[#BCF10F] text-white dark:text-black py-2 px-6 rounded-[10px]"
+            href="contact.html">Join Optivus
+          </a>
+        </div>
+      </div>
+      <div class="flex-1 flex justify-end">
+    <img
+      class="rounded-4xl object-cover h-[533px] w-[600px]"
+      src="images/team/team-section.avif"
+      alt=""
+    />
+  </div>
+    </div>
+    <!-- Industries Work Section started -->
+    <section class="section-sm">
+      <div class="container">
+        @@include('components/left-section-header.html', {
+        "title": "What industries do we work on",
+        "subtitle": "Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.",
+        "skewText": "Key Sectors",
+        "skewRotate": "rotate-6"
+        })
+    @@include('Industries.html')
+      </div>
+    </section>
+    <!-- Industries Work Section ended -->
+    <!-- Faq section Started -->
+    @@include('Faq.html')
+    <!-- Faq section Ended -->
+    <!-- Ready to transform Started -->
+    @@include('components/transform-ai.html')
+    <!-- Ready to transform Ended -->
+  </div>
+</section>

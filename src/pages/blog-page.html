@@ -1,0 +1,153 @@
+<!-- Blog -->
+<section class="section pt-36 relative overflow-hidden">
+  <div class="absolute inset-0 w-full h-[20%] bg-cover bg-center animate-bgZoom origin-center -z-10 animationdiv"
+    style="background-image: url('images/ai-bg.svg');"></div>
+  <div class="container">
+    @@include('components/middle-section-header.html', {
+    "title": "Latest news from the industry",
+    "subtitle": "Last updated on: October 12, 2024",
+    "skewText": "Blogs",
+    "skewRotate": "rotate-6"
+    })
+    <div>
+      <!-- Blog Section -->
+      <div class="w-full relative cursor-pointer">
+        <div class="swiper default-carousel">
+          <!-- Slides -->
+          <div class="swiper-wrapper mt-10">
+            <div class="swiper-slide">
+              <div class="bg-indigo-50 rounded-3xl h-[550px] flex justify-center items-center">
+                <img class="h-[550px] w-full rounded-3xl object-cover relative" src="images/blogs/data.avif" alt="">
+                <div class="absolute bottom-0 p-32 shadow-3xl bg-black/50 rounded-b-3xl transform w-full"></div>
+                <div class="absolute top-0 left-0 p-6 text-white">
+                  <div class="flex flex-row gap-2">
+                    <p class="text-[14px] bg-gray-200 px-4 py-1 rounded-full text-gray-800 font-normal tracking-wider">
+                      Technology</p>
+                    <p class="text-[14px] bg-gray-200 px-4 py-1 rounded-full text-gray-800 font-normal tracking-wider">
+                      Artificial Intelligence</p>
+                  </div>
+                </div>
+                <div class="absolute bottom-10 left-5 p-6 ">
+                  <div class="max-w-[800px] space-y-2">
+                    <h3 class="text-[40px]">AI for Startups: Cost-Effective Tools to Accelerate Growth</h3>
+                    <p class="text-[14px] opacity-90 tracking-wider">Exploring the intersection of AI and environmental
+                      real-world applications.</p>
+                    <a class="inline-block mt-2 bg-black font-normal dark:bg-white text-white dark:text-black py-2 px-4 rounded-[10px]"
+                      href="contact.html">
+                      Read full blog
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="bg-indigo-50 rounded-3xl h-[550px] flex justify-center items-center">
+                <img class="h-[550px] w-full rounded-3xl object-cover relative" src="images/blogs/machine.avif" alt="">
+                <div class="absolute bottom-0 p-32 shadow-3xl bg-black/50 rounded-b-3xl transform w-full"></div>
+                <div class="absolute top-0 left-0 p-6 text-white">
+                  <div class="flex flex-row gap-2">
+                    <p class="text-[14px] bg-gray-200 px-4 py-1 rounded-full text-gray-800 font-normal tracking-wider">
+                      Technology</p>
+                    <p class="text-[14px] bg-gray-200 px-4 py-1 rounded-full text-gray-800 font-normal tracking-wider">
+                      Artificial Intelligence</p>
+                  </div>
+                </div>
+                <div class="absolute bottom-10 left-5 p-6 ">
+                  <div class="max-w-[800px] space-y-2">
+                    <h3 class="text-[40px]">AI for Startups: Cost-Effective Tools to Accelerate Growth</h3>
+                    <p class="text-[14px] opacity-90 tracking-wider">Exploring the intersection of AI and environmental
+                      real-world applications.</p>
+                    <a class="inline-block mt-2 bg-black font-normal dark:bg-white text-white dark:text-black py-2 px-4 rounded-[10px]"
+                      href="contact.html">
+                      Read full blog
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+             <div class="bg-indigo-50 rounded-3xl h-[550px] flex justify-center items-center">
+                <img class="h-[550px] w-full rounded-3xl object-cover relative" src="images/blogs/technology.avif" alt="">
+                <div class="absolute bottom-0 p-32 shadow-3xl bg-black/50 rounded-b-3xl transform w-full"></div>
+                <div class="absolute top-0 left-0 p-6 text-white">
+                  <div class="flex flex-row gap-2">
+                    <p class="text-[14px] bg-gray-200 px-4 py-1 rounded-full text-gray-800 font-normal tracking-wider">
+                      Technology</p>
+                    <p class="text-[14px] bg-gray-200 px-4 py-1 rounded-full text-gray-800 font-normal tracking-wider">
+                      Artificial Intelligence</p>
+                  </div>
+                </div>
+                <div class="absolute bottom-10 left-5 p-6 ">
+                  <div class="max-w-[800px] space-y-2">
+                    <h3 class="text-[40px]">AI for Startups: Cost-Effective Tools to Accelerate Growth</h3>
+                    <p class="text-[14px] opacity-90 tracking-wider">Exploring the intersection of AI and environmental
+                      real-world applications.</p>
+                    <a class="inline-block mt-2 bg-black font-normal dark:bg-white text-white dark:text-black py-2 px-4 rounded-[10px]"
+                      href="contact.html">
+                      Read full blog
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pagination -->
+          <div class="swiper-pagination mt-6"></div>
+        </div>
+      </div>
+    </div>
+<!-- Product Blog Started -->
+<div class="w-full mt-20">
+  @@include('components/middle-section-header.html', {
+      "title": "Other blogs & insights",
+      "subtitle": "Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.",
+      "skewText": "Blogs",
+      "skewRotate": "rotate-6"
+      })
+<div id="blog-section">
+@@include('Blog.html')
+</div>
+</div>
+
+<!-- Product Blog Ended -->
+  </div>
+</section>
+
+<!-- /Blog -->
+<style>
+  .swiper-wrapper {
+    width: 100%;
+    height: max-content !important;
+    padding-bottom: 64px !important;
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+    position: relative;
+  }
+
+  .swiper-pagination-bullet {
+    background: white !important;
+  }
+
+</style>
+
+<!--JAVASCRIPT CODE-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".default-carousel", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  });
+</script>
+

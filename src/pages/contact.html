@@ -1,53 +1,40 @@
-@@include('page-header.html', { "title": "Contact" })
-
-<section class="section-sm">
+<section class="section-sm relative overflow-hidden pt-36">
+ <div class="absolute inset-0 w-full h-[60%] bg-cover bg-center animate-bgZoom origin-center -z-10 animationdiv"
+    style="background-image: url('images/ai-bg.svg');"></div>
   <div class="container">
-    <div class="row">
-      <div class="mx-auto md:col-10 lg:col-6">
-        <form action="#" method="POST">
-          <div class="mb-6">
-            <label for="name" class="form-label">
-              Full Name <span class="text-red-500">*</span>
-            </label>
-            <input
-              id="name"
-              name="name"
-              class="form-input"
-              placeholder="John Doe"
-              type="text"
-            />
-          </div>
-          <div class="mb-6">
-            <label for="email" class="form-label">
-              Working Mail <span class="text-red-500">*</span>
-            </label>
-            <input
-              id="email"
-              name="email"
-              class="form-input"
-              placeholder="john.doe@email.com"
-              type="email"
-            />
-          </div>
-          <div class="mb-6">
-            <label for="message" class="form-label">
-              Anything else? <span class="text-red-500">*</span>
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              class="form-input"
-              placeholder="Message goes here..."
-              rows="8"
-            ></textarea>
-          </div>
-           <div class="my-5">
-            <label for="text">Hello</label>
-            <input type="text" class="form-input">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-    </div>
+  @@include('components/middle-section-header.html', {
+      "title": "Need a help? Contact us",
+      "subtitle": "Join hundreds of companies who've doubled their efficiency while cutting costs by 40% through smart AI integration",
+      "skewText": "Contact us",
+      "skewRotate": "rotate-6"
+      })
+<div class="p-20 mt-20 flex flex-col md:flex-row-reverse bg-[#171D26]/70 rounded-[32px] items-center justify-between space-y-10 md:space-y-0">
+  <div class="w-full md:w-1/2">
+    <form action="#" method="post" class="space-y-4">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg">
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg">
+      <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded-lg"></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">Send Message</button>
+    </form>
+  </div>
+  <div class="w-full md:w-1/2 space-y-5">
+    <h6>Reach out to us</h6>
+    <h3>support@optivus.ai</h3>
+<h6>Headquarters:</h6>
+<h6>123 Innovation Drive, Tech City, CA 94016, USA</h6>
+<h6>Phone:</h6>
+<h6>+1 (800) 555-OPTIVUS+1 (800) 555-OPTIVUS</h6>
+<div>
+<h5>Working Hours:</h5>
+<h6>Monday to Friday:
+9 AM - 6 PM (PST)</h6>
+</div>
+</div>
   </div>
 </section>
+<!-- Faq section Started -->
+@@include('Faq.html')
+<!-- Faq section Ended -->
+<!-- Ready to transform Started -->
+@@include('components/transform-ai.html')
+<!-- Ready to transform Ended -->

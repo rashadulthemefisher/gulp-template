@@ -1,0 +1,30 @@
+<section class="section-sm pt-36 relative overflow-hidden">
+  <div class="absolute inset-0 w-full h-[20%] bg-cover bg-center animate-bgZoom origin-center -z-10 animationdiv"
+       style="background-image: url('images/ai-bg.svg');"></div>
+  <div class="container">
+    @@include('components/middle-section-header.html', {
+      "title": "Getting started is simple",
+      "subtitle": "Join hundreds of companies who've doubled their efficiency while cutting costs by 40% through smart AI integration",
+      "skewText": "Getting started",
+      "skewRotate": "-rotate-3"
+    })
+    @@include('Faq-v1.html')
+    <!-- Product Blog Started -->
+<div class="w-full my-20">
+  @@include('components/middle-section-header.html', {
+      "title": "Other blogs & insights",
+      "subtitle": "Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.",
+      "skewText": "Blogs",
+      "skewRotate": "rotate-6"
+      })
+<div id="blog-page">
+@@include('Blog.html')
+</div>
+</div>
+<!-- Product Blog Ended -->
+    @@include('Faq.html')
+<!-- Ready to transform Started -->
+@@include('components/transform-ai.html')
+<!-- Ready to transform Ended -->
+</div>
+</section>

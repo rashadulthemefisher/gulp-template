@@ -13,11 +13,21 @@
 <div class="mt-20">
 @@include('Review-card.html')
 </div>
+<!-- Product Blog Started -->
+<div class="w-full mt-20">
+  @@include('components/middle-section-header.html', {
+      "title": "Other blogs & insights",
+      "subtitle": "Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.",
+      "skewText": "Blogs",
+      "skewRotate": "rotate-6"
+      })
+<div id="blog-page">
+@@include('Blog.html')
+</div>
+</div>
+<!-- Product Blog Ended -->
 </div>
 </section>
-<!-- Product Blog Started -->
-@@include('Blog.html')
-<!-- Product Blog Ended -->
 <!-- Ready to transform Started -->
 @@include('components/transform-ai.html')
 <!-- Ready to transform Ended -->
