@@ -6,7 +6,8 @@
       "title": "About Us",
       "subtitle": "By analyzing historical trends and real-time data, our solution enables smarter energy planning and reduced overhead.",
       "skewText": "About Us",
-      "skewRotate": "-rotate-3"
+      "skewRotate": "-rotate-3",
+      "text-size": "text-[60px]"
       })
       <div class="md:mx-20 my-20 flex flex-col md:flex-row gap-10 items-center justify-between">
     <div class="w-full md:w-[80%]">
@@ -14,11 +15,13 @@
     </div>
     <div class="w-full md:w-[20%] space-y-4 text-center md:text-end">
         <div class="">
-          <h1 class="text-[#C4FC00] font-normal text-[40px] md:text-[60px]">200+</h1>
+          <h1 class="text-[#C4FC00] font-normal text-[40px] md:text-[60px]"><span class="counter text-[#B6F312]" data-target="200">0</span><span
+              class="text-[#B6F312]">+</span></h1>
           <p class="text-[18px] mx-auto max-w-[600px] tracking-wide">Satisfied customers</p>
         </div>
         <div>
-          <h1 class="text-[#C4FC00] font-normal text-[40px] md:text-[60px]">63%</h1>
+          <h1 class="text-[#C4FC00] font-normal text-[40px] md:text-[60px]"><span class="counter text-[#B6F312]" data-target="63">0</span><span
+              class="text-[#B6F312]">%</span></h1>
           <p class="text-[18px] mx-auto max-w-[600px] tracking-wide">Project Success Rate</p>
         </div>
     </div>
@@ -67,25 +70,29 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Card 1 -->
       <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
-        <h2 class="text-[80px] text-[#C4FC00] font-medium">12k+</h2>
+        <h2 class="text-[80px] text-[#C4FC00] font-medium"><span class="counter text-[#B6F312]" data-target="12">0</span><span
+              class="text-[#B6F312]">k+</span></h2>
         <p class="text-[18px] mt-1 opacity-80">Successful Projects</p>
       </div>
 
       <!-- Card 2 -->
         <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
-        <h2 class="text-[80px] text-[#C4FC00] font-medium">30%</h2>
+        <h2 class="text-[80px] text-[#C4FC00] font-medium"><span class="counter text-[#B6F312]" data-target="30">0</span><span
+              class="text-[#B6F312]">%</span></h2>
         <p class="text-[18px] mt-1 opacity-80">Efficiency Gains</p>
       </div>
 
       <!-- Card 3 -->
      <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
-        <h2 class="text-[80px] text-[#C4FC00] font-medium">24%</h2>
+        <h2 class="text-[80px] text-[#C4FC00] font-medium"><span class="counter text-[#B6F312]" data-target="24">0</span><span
+              class="text-[#B6F312]">%</span></h2>
         <p class="text-[18px] mt-1 opacity-80">Contribution to AI Growth</p>
       </div>
 
       <!-- Card 4 -->
         <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
-        <h2 class="text-[80px] text-[#C4FC00] font-medium">98%</h2>
+        <h2 class="text-[80px] text-[#C4FC00] font-medium"><span class="counter text-[#B6F312]" data-target="98">0</span><span
+              class="text-[#B6F312]">%</span></h2>
         <p class="text-[18px] mt-1 opacity-80">Client Satisfaction Rate</p>
       </div>
     </div>
@@ -96,7 +103,8 @@
     "title": "Meet our team",
     "subtitle": "Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.",
     "skewText": "Team",
-    "skewRotate": "rotate-6"
+    "skewRotate": "rotate-6",
+    "text-size": "text-[60px]"
     })
 <div id="home-page">
 @@include('Team.html')
@@ -104,7 +112,46 @@
 </div>
 <!-- Meet our team Section ended -->
 <!-- Product Blog Started -->
+<section class="section-sm">
+<div class="container">
+  @@include('components/middle-section-header.html', {
+      "title": "Latest news from the industry",
+      "subtitle": "By analyzing historical trends and real-time data, our solution enables smarter energy planning and reduced overhead.",
+      "skewText": "Blogs",
+      "skewRotate": "rotate-6",
+      "text-size": "text-[60px]"
+      })
+<div id="blog-page">
 @@include('Blog.html')
+</div>
+</div>
+</section>
 <!-- Product Blog Ended -->
 </div>
 </section>
+
+<script>
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 50; // Lower = faster
+console.log("object");
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+        const increment = Math.ceil(target / speed);
+
+        if (current < target) {
+          counter.innerText = current + increment;
+          setTimeout(updateCount, 30); // Animation speed
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    });
+  });
+</script>
+

@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Run when the DOM is fully loaded
-  document.addEventListener('DOMContentLoaded', initCountAnimations);
+  // document.addEventListener('DOMContentLoaded', initCountAnimations);
   // countup started
       document.addEventListener("DOMContentLoaded", () => {
       const counters = document.querySelectorAll('.counter');
