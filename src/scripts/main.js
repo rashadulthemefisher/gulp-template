@@ -37,6 +37,69 @@
   document.documentElement.classList.add("dark");
   localStorage.setItem("theme", "dark");
 
+//team cards
+  document.addEventListener("DOMContentLoaded", function () {
+    const homeSection = document.getElementById('home-page');
+    if (!homeSection) return; // Only limit cards on home page
+
+    const cards = homeSection.querySelectorAll(".team-card");
+    const maxVisible = 4;
+
+    cards.forEach((card, index) => {
+      if (index >= maxVisible) {
+        card.style.display = "none";
+      }
+    });
+  });
+
+// Blog cards
+document.addEventListener("DOMContentLoaded", function () {
+  // CASE 1: blog-page (just 3 cards, no button)
+  const blogPage = document.getElementById("blog-page");
+  if (blogPage) {
+    const cards = blogPage.querySelectorAll(".blog-card");
+    const maxShow = 3;
+
+    cards.forEach((card, index) => {
+      card.style.display = index < maxShow ? "block" : "none";
+    });
+
+    // Hide Load More if present accidentally
+    const wrapper = document.getElementById("blog-load-more-wrapper");
+    if (wrapper) wrapper.style.display = "none";
+
+    return; // Exit here, don’t run rest
+  }
+
+  // CASE 2: blog-section (6 initial, load more if >6)
+  const blogSection = document.getElementById("blog-section");
+  if (blogSection) {
+    const cards = blogSection.querySelectorAll(".blog-card");
+    const loadMoreWrapper = document.getElementById("blog-load-more-wrapper");
+    const loadMoreBtn = document.getElementById("blog-load-more-btn");
+    const maxInitial = 6;
+
+    // If cards ≤ 6, show all & hide button
+    if (cards.length <= maxInitial) {
+      loadMoreWrapper.style.display = "none";
+    } else {
+      // Show only initial cards
+      cards.forEach((card, index) => {
+        card.style.display = index < maxInitial ? "block" : "none";
+      });
+
+      // Show hidden cards on button click
+      loadMoreBtn.addEventListener("click", () => {
+        cards.forEach((card) => (card.style.display = "block"));
+        loadMoreWrapper.style.display = "none";
+      });
+    }
+  }
+});
+
+
+
+
   // Testimonial Slider
   // ----------------------------------------
   new Swiper(".testimonial-slider", {
@@ -122,7 +185,7 @@
   }
 
   // Run when the DOM is fully loaded
-  document.addEventListener('DOMContentLoaded', initCountAnimations);
+  // document.addEventListener('DOMContentLoaded', initCountAnimations);
   // countup started
       document.addEventListener("DOMContentLoaded", () => {
       const counters = document.querySelectorAll('.counter');

@@ -1,0 +1,34 @@
+<section class="section-sm pt-36 overflow-hidden relative">
+ <div class="absolute inset-0 w-full h-[20%] bg-cover bg-center animate-bgZoom origin-center -z-10 animationdiv"
+    style="background-image: url('images/ai-bg.svg');"></div>
+<div class="container">
+       <div class="text-center">
+      <h4
+        class="text-[12px] bg-[#70DB80] text-gray-800 px-4 py-1 @@text-margin max-w-[180px] inline-block transform skew-x-[-20deg] rotate-6 shadow-md">
+        <span class="inline-block mx-6 transform skew-x-[12deg]">Testimonials</span>
+      </h4>
+      <h1 class="text-4xl md:text-[80px] font-normal tracking-tight mt-5">Hear from our clients</h1>
+      <p class="text-[18px] mx-auto max-w-[600px] tracking-wide my-5 block opacity-80">Join hundreds of companies who've doubled their efficiency while cutting costs by 40% through smart AI integration</p>
+    </div>
+<div class="mt-20">
+@@include('Review-card.html')
+</div>
+<!-- Product Blog Started -->
+<div class="w-full mt-20">
+  @@include('components/middle-section-header.html', {
+      "title": "Other blogs & insights",
+      "subtitle": "Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.",
+      "skewText": "Blogs",
+      "skewRotate": "rotate-6",
+      "text-size": "text-[60px]"
+      })
+<div id="blog-page">
+@@include('Blog.html')
+</div>
+</div>
+<!-- Product Blog Ended -->
+</div>
+</section>
+<!-- Ready to transform Started -->
+@@include('components/transform-ai.html')
+<!-- Ready to transform Ended -->

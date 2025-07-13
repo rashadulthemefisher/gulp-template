@@ -15,7 +15,7 @@
           </div>
         </div>
         <div class="my-5 md:my-2">
-            <h1 class="mb-4 text-[50px] lg:text-[116px] font-normal md:w-[760px] mx-auto md:leading-[116px] heading">
+            <h1 class="mb-4 text-[50px] lg:text-[116px] font-normal md:w-[760px] mx-auto md:leading-[116px] heading transition ease-in-out translate-y-7">
               Work Smarter, Not Harder
             </h1>
             <p class="mb-8 px-4 md:px-0 max-w-[520px] mx-auto text-[#A9A9A9] font-normal tracking-wide leading-[34px] paragraph">
@@ -179,20 +179,7 @@
 </section>
 <!-- Ai faces section ended -->
 <!-- Brand images Section started -->
-<section class="section-sm mx-4 md:mx-20">
-  <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-0">
-    <img src="images/brands/brand1.svg" alt="Brand Logo"
-      class="w-auto h-auto invert brightness-200 dark:invert-0 opacity-40" />
-    <img src="images/brands/brand2.svg" alt="Brand Logo"
-      class="w-auto h-auto invert brightness-200 dark:invert-0 opacity-40 md:border-l-2 md:px-6 md:border-gray-400" />
-    <img src="images/brands/brand3.svg" alt="Brand Logo"
-      class="w-auto h-auto invert brightness-100 dark:invert-0 opacity-40 md:border-l-2 md:px-6 md:border-gray-400" />
-    <img src="images/brands/brand4.svg" alt="Brand Logo"
-      class="w-auto h-auto invert brightness-200 dark:invert-0 opacity-40 md:border-l-2 md:px-6 md:border-gray-400" />
-    <img src="images/brands/brand5.svg" alt="Brand Logo"
-      class="w-auto h-auto invert brightness-200 dark:invert-0 opacity-40 md:border-l-2 md:px-6 md:border-gray-400" />
-  </div>
-</section>
+@@include('brand-images-section.html')
 <!-- Brand images Section ended -->
 
 <!-- Smartermanagement Section Started -->
@@ -246,22 +233,11 @@
           </div>
 
               <!-- Arrow Button -->
-          <button
-            class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
-            aria-label="Go to details">
-            <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
-              transition-all duration-900
-              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
-
-            <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 font-thin text-2xl text-gray-800
-              -translate-x-1/2 translate-y-16 opacity-0
-              transition-all duration-900
-              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
-          </button>
-
+            @@include('components/arrow-button.html',{
+          "min-w":"min-w-16",
+          "min-h":"min-h-16",
+          "bottom-top":"top-[20px]",
+        })
         </div>
         <!-- Animated floating card -->
         <div
@@ -324,43 +300,13 @@
 <!-- Industries Work Section started -->
 <section class="section-sm">
   <div class="container">
-    @@include('section-header.html', {
+    @@include('components/left-section-header.html', {
     "title": "Industries we worked on",
     "subtitle": "Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.",
     "skewText": "Key Sectors",
     "skewRotate": "rotate-6"
     })
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Card 1 -->
-      <div class="rounded-3xl border border-gray-800 p-8 shadow-md bg-[#171D26]">
-        <img src="images/health-care.svg" alt="Healthcare Icon">
-        <h2 class="text-2xl mt-7 font-medium">Healthcare Industry</h2>
-        <p class="text-[16px] max-w-sm mt-5 mx-auto">AI diagnostics, patient management, and predictive health analytics.</p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="rounded-3xl border border-gray-800 p-8 shadow-md bg-[#171D26]">
-        <img src="images/retail.svg" alt="Retail Icon">
-        <h2 class="text-2xl mt-7 font-medium">Retail Business</h2>
-        <p class="text-[16px] max-w-sm mt-5 mx-auto">Smart logistics, supply chain automation, and real-time inventory.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="rounded-3xl border border-gray-800 p-8 shadow-md bg-[#171D26]">
-        <img src="images/education.svg" alt="Education Icon">
-        <h2 class="text-2xl mt-7 font-medium">Education Industry</h2>
-        <p class="text-[16px] max-w-sm mt-5 mx-auto">Personalized learning tools, adaptive assessments, and virtual tutoring.</p>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="rounded-3xl border border-gray-800 p-8 shadow-md bg-[#171D26]">
-        <img src="images/finance.svg" alt="Finance Icon">
-        <h2 class="text-2xl mt-7 font-medium">Finance Management</h2>
-        <p class="text-[16px] max-w-sm mt-5 mx-auto">Renewable energy grids, emission monitoring, and sustainable resources.</p>
-      </div>
-    </div>
+@@include('Industries.html')
   </div>
 </section>
 <!-- Industries Work Section ended -->
@@ -368,7 +314,7 @@
 <!-- Product Section Started -->
 <section class="section-sm">
   <div class="container">
-  @@include('section-header.html', {
+  @@include('components/left-section-header.html', {
     "title": "Technologies we’ve built",
     "subtitle": "Using machine learning to track usage patterns, our platform reduces energy overuse and improves operational sustainability.",
     "skewText": "Featured Technologies",
@@ -412,22 +358,12 @@
             </button>
           </div>
 
-          <!-- Arrow Button -->
-          <button
-            class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
-            aria-label="Go to details">
-            <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
-              transition-all duration-900
-              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
-
-            <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 font-thin text-2xl text-gray-800
-              -translate-x-1/2 translate-y-16 opacity-0
-              transition-all duration-900
-              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
-          </button>
+   <!-- Arrow Button -->
+          @@include('components/arrow-button.html',{
+          "min-w":"min-w-16",
+          "min-h":"min-h-16",
+          "bottom-top":"top-[20px]",
+        })
         </div>
       </div>
       <!-- CARD 2 -->
@@ -459,22 +395,12 @@
             </button>
           </div>
 
-          <!-- Arrow Button like 1st card -->
-           <button
-            class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
-            aria-label="Go to details">
-            <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
-              transition-all duration-900
-              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
-
-            <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 font-thin text-2xl text-gray-800
-              -translate-x-1/2 translate-y-16 opacity-0
-              transition-all duration-900
-              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
-          </button>
+          <!-- Arrow Button -->
+            @@include('components/arrow-button.html',{
+          "min-w":"min-w-16",
+          "min-h":"min-h-16",
+          "bottom-top":"top-[20px]",
+        })
         </div>
       </div>
 
@@ -507,22 +433,12 @@
             </button>
           </div>
 
-          <!-- Arrow Button like 1st card -->
-          <button
-            class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
-            aria-label="Go to details">
-            <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
-              transition-all duration-900
-              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
-
-            <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 font-thin text-2xl text-gray-800
-              -translate-x-1/2 translate-y-16 opacity-0
-              transition-all duration-900
-              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
-          </button>
+          <!-- Arrow Button -->
+            @@include('components/arrow-button.html',{
+          "min-w":"min-w-16",
+          "min-h":"min-h-16",
+          "bottom-top":"top-[20px]",
+        })
         </div>
       </div>
 
@@ -555,21 +471,11 @@
           </div>
 
           <!-- Arrow Button like 1st card -->
-            <button
-            class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
-            aria-label="Go to details">
-            <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
-              transition-all duration-900
-              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
-
-            <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 font-thin text-2xl text-gray-800
-              -translate-x-1/2 translate-y-16 opacity-0
-              transition-all duration-900
-              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
-          </button>
+             @@include('components/arrow-button.html',{
+          "min-w":"min-w-16",
+          "min-h":"min-h-16",
+          "bottom-top":"top-[20px]",
+        })
         </div>
       </div>
 
@@ -582,325 +488,39 @@
  <!-- Getting started is super simple section started -->
 <section class="section-sm">
   <div class="container">
-    @@include('section-header.html', {
+    @@include('components/left-section-header.html', {
     "title": "Getting started is super simple",
     "subtitle": "By automating equipment schedules and monitoring consumption, we help businesses lower utility costs and environmental impact.",
     "skewText": "Get Started",
     "skewRotate": "rotate-6"
     })
-    <div>
-      <div class="">
-          <!-- FAQ Item 1 -->
-          <div class="faq-item group border-b border-b-gray-300 dark:border-gray-700 pb-6">
-            <!-- Question -->
-            <button class="flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-6 md:gap-10 cursor-pointer transition-all">
-              <!-- Left Block: Step + Heading -->
-              <div class="w-full md:w-[40%] text-start">
-                <h4 class="text-[20px] bg-[#C4FC00] text-gray-800 px-6 py-2 max-w-[180px] inline-block transform skew-x-[-20deg] -rotate-6 shadow-md">
-                  <span class="inline-block transform skew-x-[12deg]">Step 01</span>
-                </h4>
-                <h1 class="text-2xl md:text-[36px] font-normal mt-5 text-gray-800 dark:text-white">
-                  Book a free meeting with our experts
-                </h1>
-              </div>
-
-              <!-- Middle Text -->
-              <div class="w-full md:w-[43%] text-gray-600 dark:text-gray-300 mt-2 md:mt-14 opacity-80 text-start">
-                We begin by understanding your business challenges and objectives. Our team collaborates with you to identify areas where AI can make the most impact, ensuring tailored solutions for your needs.
-              </div>
-
-              <!-- Icon -->
-              <div class="w-full md:w-[17%] flex md:justify-end mt-4 md:mt-0">
-                <i class="fa fa-arrow-up text-[22px] bg-gray-800 text-white px-6 py-5 rounded-full rotate-180 group-[.open]:rotate-0 group-[.open]:bg-gray-100 group-[.open]:text-gray-900 dark:group-[.open]:bg-white dark:group-[.open]:text-gray-900 transform transition-all duration-900 ease-in-out"></i>
-              </div>
-            </button>
-
-            <!-- Answer/Image -->
-            <div class="overflow-hidden max-h-0 group-[.open]:max-h-[1000px] w-full transition-all duration-900 ease-in-out relative">
-              <img class="w-full h-[500px] rounded-xl mt-4 shadow-lg transition-all duration-900 ease-in-out" src="images/faq/faq-1.avif" alt="FAQ Answer" />
-              <div class="absolute bottom-0 md:left-16">
-                <div class="flex flex-row items-center gap-2 mb-5">
-                  <div class="px-5 py-1 rounded-full bg-gray-100 text-gray-900">Recycle</div>
-                  <div class="px-5 py-1 rounded-full bg-gray-100 text-gray-900">Climate</div>
-                  <div class="px-5 py-1 rounded-full bg-gray-100 text-gray-900">Renewable Energy</div>
-                </div>
-                <img class="h-[80%] w-[90%]" src="images/faq/faq-1-1.avif" alt="faq" />
-              </div>
-              <div class="absolute top-[5%] left-[20%] md:left-auto md:top-auto md:bottom-6 md:right-6 bg-white text-black dark:text-black p-4 rounded-3xl shadow-lg max-w-[180px]">
-                <p class="text-lg font-semibold text-gray-800">Results:</p>
-                <p class="text-sm text-gray-500 mt-2 mb-4">Improvement saw in recycling rates</p>
-                <p class="text-4xl text-gray-200 bg-[#70DB80] w-auto rounded-xl text-center mt-2 p-2">+<span class="counter" data-target="400">0</span>%</p>
-              </div>
-            </div>
-          </div>
-          <!-- FAQ Item 2 -->
-          <div class="faq-item group border-b border-b-gray-300 dark:border-gray-700 pb-6 mt-6">
-            <!-- Question -->
-            <button class="flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-6 md:gap-10 cursor-pointer transition-all">
-              <!-- Left Block: Step + Heading -->
-              <div class="w-full md:w-[40%] text-start">
-                <h4 class="text-[20px] bg-[#70DB80] text-gray-800 px-6 py-2 max-w-[180px] inline-block transform skew-x-[-20deg] rotate-6 shadow-md">
-                  <span class="inline-block transform skew-x-[12deg]">Step 02</span>
-                </h4>
-                <h1 class="text-2xl md:text-[36px] font-normal mt-5 text-gray-800 dark:text-white">
-                  Discover the opportunity together
-                </h1>
-              </div>
-
-              <!-- Middle Text -->
-              <div class="w-full md:w-[43%] text-gray-600 dark:text-gray-300 mt-2 md:mt-14 opacity-80 text-start">
-                Choose from our range of cutting-edge products and services. Whether it’s predictive analytics, computer vision, or custom AI solutions, we help you find the perfect match for your goals.
-              </div>
-
-              <!-- Icon -->
-              <div class="w-full md:w-[17%] flex md:justify-end mt-4 md:mt-0">
-                <i class="fa fa-arrow-up text-[22px] bg-gray-800 text-white px-6 py-5 rounded-full rotate-180 group-[.open]:rotate-0 group-[.open]:bg-gray-100 group-[.open]:text-gray-900 dark:group-[.open]:bg-white dark:group-[.open]:text-gray-900 transform transition-all duration-900 ease-in-out"></i>
-              </div>
-            </button>
-
-            <!-- Answer/Image -->
-            <div class="overflow-hidden max-h-0 group-[.open]:max-h-[1000px] w-full transition-all duration-900 ease-in-out relative">
-              <img class="w-full h-[500px] rounded-xl mt-4 shadow-lg transition-all duration-900 ease-in-out" src="images/faq/faq-2.avif" alt="FAQ Answer" />
-              <div class="absolute bottom-0 md:left-16">
-                <div class="flex flex-row items-center gap-2 mb-5">
-                  <div class="px-5 py-1 rounded-full bg-gray-100 text-gray-900">Automation</div>
-                  <div class="px-5 py-1 rounded-full bg-gray-100 text-gray-900">Integration</div>
-                  <div class="px-5 py-1 rounded-full bg-gray-100 text-gray-900">Optimization</div>
-                </div>
-                <img class="h-[80%] w-[90%]" src="images/faq/faq-2-2.avif" alt="faq" />
-              </div>
-              <div class="absolute top-[5%] left-[20%] md:left-auto md:top-auto md:bottom-6 md:right-6 bg-white text-black dark:text-black p-4 rounded-3xl shadow-lg max-w-[180px]">
-                <p class="text-lg font-semibold text-gray-800">Results:</p>
-                <p class="text-sm text-gray-500 mt-2 mb-4">Improvement saw in recycling rates</p>
-                <p class="text-4xl text-gray-200 bg-[#70DB80] w-auto rounded-xl text-center mt-2 p-2">+<span class="counter" data-target="400">0</span>%</p>
-              </div>
-            </div>
-          </div>
-          <!-- FAQ Item 3 -->
-          <div class="faq-item group border-b border-b-gray-300 dark:border-gray-700 pb-6 mt-6">
-            <!-- Question -->
-            <button class="flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-6 md:gap-10 cursor-pointer transition-all">
-              <!-- Left Block: Step + Heading -->
-              <div class="w-full md:w-[40%] text-start">
-                <h4 class="text-[20px] bg-[#2E85FA] text-gray-800 px-6 py-2 max-w-[180px] inline-block transform skew-x-[-20deg] -rotate-6 shadow-md">
-                  <span class="inline-block transform skew-x-[12deg]">Step 03</span>
-                </h4>
-                <h1 class="text-2xl md:text-[36px] font-normal mt-5 text-gray-800 dark:text-white">
-                  Implement AI without disruptions to your workflow
-                </h1>
-              </div>
-
-              <!-- Middle Text -->
-              <div class="w-full md:w-[43%] text-gray-600 dark:text-gray-300 mt-2 md:mt-14 opacity-80 text-start">
-                Our experts guide you through the integration process, ensuring that our AI solutions are seamlessly embedded into your existing systems with minimal downtime or disruption.
-              </div>
-
-              <!-- Icon -->
-              <div class="w-full md:w-[17%] flex md:justify-end mt-4 md:mt-0">
-                <i class="fa fa-arrow-up text-[22px] bg-gray-800 text-white px-6 py-5 rounded-full rotate-180 group-[.open]:rotate-0 group-[.open]:bg-gray-100 group-[.open]:text-gray-900 dark:group-[.open]:bg-white dark:group-[.open]:text-gray-900 transform transition-all duration-900 ease-in-out"></i>
-              </div>
-            </button>
-
-            <!-- Answer/Image -->
-            <div class="overflow-hidden max-h-0 group-[.open]:max-h-[1000px] w-full transition-all duration-900 ease-in-out relative">
-              <img class="w-full h-[500px] rounded-xl mt-4 shadow-lg transition-all duration-900 ease-in-out" src="images/faq/faq-3.webp" alt="FAQ Answer" />
-              <div class="absolute bottom-0 md:left-16">
-                <div class="flex flex-row items-center gap-2 mb-5">
-                  <div class="px-5 py-1 rounded-full bg-gray-100 text-gray-900">Intelligence</div>
-                  <div class="px-5 py-1 rounded-full bg-gray-100 text-gray-900">Productivity</div>
-                  <div class="px-5 py-1 rounded-full bg-gray-100 text-gray-900">Efficiency</div>
-                </div>
-                <img class="h-[80%] w-[90%]" src="images/faq/faq-3-3.avif" alt="faq" />
-              </div>
-              <div class="absolute top-[5%] left-[20%] md:left-auto md:top-auto md:bottom-6 md:right-6 bg-white text-black dark:text-black p-4 rounded-3xl shadow-lg max-w-[180px]">
-                <p class="text-lg font-semibold text-gray-800">Results:</p>
-                <p class="text-sm text-gray-500 mt-2 mb-4">Improvement saw in recycling rates</p>
-                <p class="text-4xl text-gray-200 bg-[#70DB80] w-auto rounded-xl text-center mt-2 p-2">+<span class="counter" data-target="400">0</span>%</p>
-              </div>
-            </div>
-          </div>
-          <!-- FAQ Item 4 -->
-          <div class="faq-item group border-b border-b-gray-300 dark:border-gray-700 pb-6 mt-6">
-            <!-- Question -->
-            <button class="flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-6 md:gap-10 cursor-pointer transition-all">
-              <!-- Left Block: Step + Heading -->
-              <div class="w-full md:w-[40%] text-start">
-                <h4 class="text-[20px] bg-[#FFE44B] text-gray-800 px-6 py-2 max-w-[180px] inline-block transform skew-x-[-20deg] rotate-6 shadow-md">
-                  <span class="inline-block transform skew-x-[12deg]">Step 04</span>
-                </h4>
-                <h1 class="text-2xl md:text-[36px] font-normal mt-5 text-gray-800 dark:text-white">
-                  Track your success and continuously improve
-                </h1>
-              </div>
-
-              <!-- Middle Text -->
-              <div class="w-full md:w-[43%] text-gray-600 dark:text-gray-300 mt-2 md:mt-14 opacity-80 text-start">
-                Once implemented, we provide ongoing support and analytics to measure your success. Using data-driven insights, we help you fine-tune and expand your AI capabilities as your business grows.
-              </div>
-
-              <!-- Icon -->
-              <div class="w-full md:w-[17%] flex md:justify-end mt-4 md:mt-0">
-                <i class="fa fa-arrow-up text-[22px] bg-gray-800 text-white px-6 py-5 rounded-full rotate-180 group-[.open]:rotate-0 group-[.open]:bg-gray-100 group-[.open]:text-gray-900 dark:group-[.open]:bg-white dark:group-[.open]:text-gray-900 transform transition-all duration-900 ease-in-out"></i>
-              </div>
-            </button>
-
-            <!-- Answer/Image -->
-            <div class="overflow-hidden max-h-0 group-[.open]:max-h-[1000px] w-full transition-all duration-900 ease-in-out relative">
-              <img class="w-full h-[500px] rounded-xl mt-4 shadow-lg transition-all duration-900 ease-in-out" src="images/faq/faq-4.webp" alt="FAQ Answer" />
-              <div class="absolute bottom-0 md:left-16">
-                <div class="flex flex-row items-center gap-2 mb-5">
-                  <div class="px-5 py-1 rounded-full bg-gray-100 text-gray-900">Scalability</div>
-                  <div class="px-5 py-1 rounded-full bg-gray-100 text-gray-900">Continuity</div>
-                  <div class="px-5 py-1 rounded-full bg-gray-100 text-gray-900">Adaptation</div>
-                </div>
-                <img class="h-[80%] w-[90%]" src="images/faq/faq-4-4.avif" alt="faq" />
-              </div>
-              <div class="absolute top-[5%] left-[20%] md:left-auto md:top-auto md:bottom-6 md:right-6 bg-white text-black dark:text-black p-4 rounded-3xl shadow-lg max-w-[180px]">
-                <p class="text-lg font-semibold text-gray-800">Results:</p>
-                <p class="text-sm text-gray-500 mt-2 mb-4">Improvement saw in recycling rates</p>
-                <p class="text-4xl text-gray-200 bg-[#70DB80] w-auto rounded-xl text-center mt-2 p-2">+<span class="counter" data-target="400">0</span>%</p>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
+@@include('Faq-v1.html')
   </div>
 </section>
+
  <!-- Getting started is super simple section ended -->
 @@include('Testimonials.html')
 <!-- Product Blog Started -->
 <section class="section-sm">
 <div class="container">
-       <div class="my-16 text-center">
-      <h4
-        class="text-[12px] bg-[#2E85FA] dark:text-gray-100 px-4 py-1 text-gray-800 @@text-margin max-w-[180px] inline-block transform skew-x-[-20deg] rotate-6 shadow-md">
-        <span class="inline-block mx-6 transform skew-x-[12deg]">Blogs</span>
-      </h4>
-      <h1 class="text-4xl md:text-6xl font-thin tracking-tight mt-5">Latest news from the industry</h1>
-      <p class="text-[18px] mx-auto max-w-[600px] tracking-wide my-5 block">By analyzing historical trends and real-time data, our solution enables smarter energy planning and reduced overhead.</p>
-    </div>
-      <!-- FLEX CONTAINER -->
-      <div class="w-full flex flex-wrap gap-6 mt-10">
-        <!-- CARD 1 -->
-        <div class="group relative flex-1 min-w-[300px] h-[560px] rounded-3xl bg-white transition-all duration-900 shadow-md">
-          <img src="images/technologies/technologies1.avif" alt="Predictive Analytics"
-            class="w-full h-full object-cover rounded-3xl" />
-
-          <div
-            class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-white/90 via-white/90 to-transparent text-black rounded-3xl">
-            <button class="py-1 px-4 bg-gray-200 rounded-full mb-4 text-[14px]">Technology</button>
-            <h3 class="text-xl font-semibold text-gray-800 max-w-[310px]">AI for Startups: Cost-Effective Tools to Accelerate Growth</h3>
-            <p class="text-sm text-gray-500 max-w-[310px] mt-5">Exploring the intersection of AI and environmental real-world applications.</p>
-          </div>
-
-          <div class="absolute top-0 right-0 p-4">
-            <button
-              class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon rotate-45 cursor-pointer">
-              <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 text-2xl text-gray-800 -translate-x-1/2 -translate-y-1/2 transition-all duration-900 group-hover/icon:-translate-y-16 group-hover/icon:opacity-0"></i>
-              <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 text-2xl text-gray-800 -translate-x-1/2 translate-y-16 opacity-0 transition-all duration-900 group-hover/icon:translate-y-0 group-hover/icon:opacity-100"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="group relative flex-1 min-w-[300px] h-[560px] bg-white transition-all duration-900 shadow-md rounded-3xl">
-          <img src="images/technologies/technologies2.avif" alt="Cloud AI Integration"
-            class="w-full h-full object-cover rounded-3xl" />
-
-          <div
-            class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t rounded-3xl from-white/90 via-white/90 to-transparent text-black">
-            <button class="py-1 px-4 bg-gray-200 rounded-full mb-4 text-[14px]">Machine Learning</button>
-            <h3 class="text-xl font-semibold text-gray-800 max-w-[310px]">AI in Action: Real-World Use Cases Across Industries</h3>
-            <p class="text-sm text-gray-500 max-w-[310px] mt-5">Investigating machine learning applications in climate modeling.</p>
-          </div>
-
-          <div class="absolute top-0 right-0 p-4">
-            <button
-              class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon rotate-45 cursor-pointer">
-              <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 text-2xl text-gray-800 -translate-x-1/2 -translate-y-1/2 transition-all duration-900 group-hover/icon:-translate-y-16 group-hover/icon:opacity-0"></i>
-              <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 text-2xl text-gray-800 -translate-x-1/2 translate-y-16 opacity-0 transition-all duration-900 group-hover/icon:translate-y-0 group-hover/icon:opacity-100"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="group relative flex-1 min-w-[300px] h-[560px] rounded-3xl bg-white transition-all duration-900 shadow-md">
-          <img src="images/technologies/technologies3.avif" alt="Optivus AI Assistant"
-            class="w-full h-full object-cover rounded-3xl" />
-
-          <div
-            class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-white/90 via-white/90 to-transparent text-black rounded-3xl">
-            <button class="py-1 px-4 bg-gray-200 rounded-full mb-4 text-[14px]">Data Science</button>
-            <h3 class="text-xl font-semibold text-gray-800 max-w-[310px]">The Intersection of AI and IoT: Building Smarter Systems</h3>
-            <p class="text-sm text-gray-500 max-w-[310px] mt-5">Enhancing urban mobility through smart traffic systems.</p>
-          </div>
-
-          <div class="absolute top-0 right-0 p-4">
-            <button
-              class="relative w-16 h-16 bg-gray-200 rounded-full overflow-hidden group/icon rotate-45 cursor-pointer">
-              <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 text-2xl text-gray-800 -translate-x-1/2 -translate-y-1/2 transition-all duration-900 group-hover/icon:-translate-y-16 group-hover/icon:opacity-0"></i>
-              <i class="fa fa-arrow-right -rotate-90 absolute top-5 left-1/2 text-2xl text-gray-800 -translate-x-1/2 translate-y-16 opacity-0 transition-all duration-900 group-hover/icon:translate-y-0 group-hover/icon:opacity-100"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
+  @@include('components/middle-section-header.html', {
+      "title": "Latest news from the industry",
+      "subtitle": "By analyzing historical trends and real-time data, our solution enables smarter energy planning and reduced overhead.",
+      "skewText": "Blogs",
+      "skewRotate": "rotate-6",
+      "text-size": "text-[60px]"
+      })
+<div id="blog-page">
+@@include('Blog.html')
+</div>
 </div>
 </section>
 <!-- Product Blog Ended -->
+<!-- Faq section Started -->
 @@include('Faq.html')
+<!-- Faq section Ended -->
 <!-- Ready to transform Started -->
-<section class="section-sm">
-  <div class="container md:p-10 rounded-3xl border border-gray-800 md:h-[480px] relative overflow-hidden">
-
-    <!-- Background with animation -->
-    <div class="absolute inset-0 bg-cover bg-center animate-bgZoom" style="background-image: url('images/ai-bg.svg'); z-index: 0;"></div>
-
-    <!-- Content on top -->
-    <div class="relative z-10 flex flex-col md:flex-row items-center justify-center p-5 md:p-10 h-full">
-
-      <!-- Left Content -->
-      <div class="flex-1 md:max-w-[520px] flex flex-col justify-center items-start text-left">
-        <h2 class="md:text-5xl font-normal">Ready to transform your business with AI?</h2>
-        <p class="text-[14px] md:max-w-[420px] my-6">Discover how Optivus can help you drive innovation, streamline operations, and achieve your goals.</p>
-        <button class="px-5 py-4 rounded-2xl text-lg font-semibold text-gray-800 bg-[#C4FC00] hover:bg-lime-300"
-          target="_blank" rel="noopener noreferrer">
-          Get Started Now
-        </button>
-      </div>
-
-      <!-- Right Cards -->
-      <div class="flex-1 flex flex-row items-end justify-center md:justify-end gap-5 md:gap-10 mt-10 md:mt-0">
-        <!-- Card 1 -->
-        <div class="relative w-[110px] md:w-[142px] h-[114px] bg-[#2E85FA] rounded-3xl flex flex-col justify-end shadow-lg overflow-hidden">
-          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
-          <div class="mb-4 text-center">
-            <h3 class="text-[36px] font-normal text-gray-800">30%</h3>
-            <p class="text-sm text-gray-600">Cost Saving</p>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="relative w-[110px] md:w-[142px] h-[285px] bg-[#70DB80] rounded-3xl flex flex-col justify-end text-white shadow-lg overflow-hidden">
-          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
-          <div class="mb-4 text-center">
-            <h3 class="text-[36px] font-normal text-gray-800">75%</h3>
-            <p class="text-sm text-gray-600">Success Rate</p>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="relative w-[110px] md:w-[142px] h-[380px] bg-[#FDE44B] rounded-3xl flex flex-col justify-end text-white shadow-lg overflow-hidden">
-          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
-          <div class="mb-4 text-center">
-            <h3 class="text-[36px] font-normal text-gray-800">10k+</h3>
-            <p class="text-sm text-gray-600">Deployments</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+@@include('components/transform-ai.html')
 <!-- Ready to transform Ended -->
 
 <div class="fixed bottom-5 right-5 ">

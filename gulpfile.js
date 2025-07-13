@@ -69,16 +69,17 @@ function pages() {
         },
       }),
     )
-    .pipe(
-      wrapper({
-        header:
-          "<!DOCTYPE html>\n<html lang=\"zxx\">\n@@include('head.html')\n@@include('header.html')\n<body>",
-        footer:
-          node_env === "dev"
-            ? "@@include('components/tw-size-indicator.html')\n @@include('footer.html')\n</body>\n</html>"
-            : "@@include('footer.html')\n</body>\n</html>",
-      }),
-    )
+ .pipe(
+  wrapper({
+    header:
+      "<!DOCTYPE html>\n<html lang=\"zxx\" class=\"scroll-smooth\">\n@@include('head.html')\n@@include('header.html')\n<body class=\"min-h-screen\">",
+    footer:
+      node_env === "dev"
+        ? "@@include('components/tw-size-indicator.html')\n@@include('footer.html')\n</body>\n</html>"
+        : "@@include('footer.html')\n</body class=\"min-h-screen\">\n</html>",
+  })
+)
+
     .pipe(
       fileInclude({
         basepath: "src/partials/",

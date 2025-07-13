@@ -22,12 +22,12 @@ h1,
 
 h2,
 .h2 {
-  @apply text-h2-sm md:text-h2;
+  @apply text-h2-sm md:text-[48px] font-semibold;
 }
 
 h3,
 .h3 {
-  @apply text-h3-sm md:text-h3;
+  @apply text-h3-sm md:text-[36px] font-normal;
 }
 
 h4,
@@ -52,6 +52,9 @@ strong {
 
 code {
   @apply after:border-none;
+}
+p{
+  @apply text-[18px] opacity-80 font-thin tracking-wide;
 }
 
 blockquote > p {
