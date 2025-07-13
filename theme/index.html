@@ -68,14 +68,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link
-    href="https://fonts.googleapis.com/css2?family="Rethink Sans", "Rethink Sans Placeholder", sans-serif&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap&display=swap"
     rel="stylesheet"
   />
-  <link
-    href="https://fonts.googleapis.com/css2?family="Rethink Sans", "Rethink Sans Placeholder", sans-serif&display=swap"
-    rel="stylesheet"
-  />
-
   <!-- styles -->
   <!-- Swiper slider -->
   <link rel="stylesheet" href="plugins/swiper/swiper-bundle.css" />
@@ -90,23 +85,14 @@
   <link href="styles/main.css" rel="stylesheet" />
 </head>
 
-<!-- Alpine.js CDN -->
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
 <header
-  x-data="{ isScrolled: false }"
-  x-init="window.addEventListener('scroll', () => {
-    isScrolled = window.scrollY > 10
-  })"
-  :class="isScrolled
-    ? 'fixed top-0 bg-[#111721] shadow-md translate-y-0'
-    : 'absolute top-0 bg-transparent translate-y-[-10px]'"
-  class="w-full z-50 transition-all duration-900 ease-in-out header"
+  id="main-header"
+  class="header"
 >
- <nav class="container mx-auto px-4 md:px-0 flex items-center justify-between">
+  <nav class="navbar container transition-all duration-300">
 
    <!-- Left Side: Logo + Nav -->
-   <div class="flex items-center gap-8 lg:gap-18 lg:flex-1">
+   <div class="flex items-center gap-8 lg:gap-[70px] lg:flex-1">
      <!-- Logo -->
      <a class="navbar-brand block" href="/">
        <img src="images/h-logo.svg" class="hidden dark:inline-block" width="132" height="36" alt="themeplate" />
@@ -118,11 +104,11 @@
        class="hidden lg:flex flex-row gap-2 items-center text-black dark:text-white "
      >
        <!-- All Pages -->
-       <li i class="relative group text-[16px] font-thin leading-7 hover:text-[#C4FC00] border border-gray-800 rounded-md">
-         <div class="hidden lg:flex items-center gap-3 cursor-pointer px-3 py-1 ">
+       <li class="relative group nav-link">
+         <a class="hidden lg:flex items-center gap-[11px] px-3 py-1 ">
            All Pages
-           <i class="fa fa-chevron-down transition-transform duration-300 group-hover:rotate-180 text-[12px]" aria-hidden="true"></i>
-         </div>
+           <i class="fa fa-chevron-down transition-transform duration-300 group-hover:rotate-180 text-[10px]" aria-hidden="true"></i>
+         </a>
 
          <!-- Desktop Mega Menu -->
          <div
@@ -164,15 +150,33 @@
        </li>
 
        <!-- Other Links -->
-       <li class="opacity-80 text-[16px] font-thin leading-7 hover:text-[#C4FC00] border border-gray-800 rounded-md px-3 py-1 cursor-pointer"><a href="pricing.html">Pricing</a></li>
-       <li class="opacity-80 text-[16px] font-thin leading-7 hover:text-[#C4FC00] border border-gray-800 rounded-md px-3 py-1 cursor-pointer"><a href="services.html">Services</a></li>
-       <li class="opacity-80 text-[16px] font-thin leading-7 hover:text-[#C4FC00] border border-gray-800 rounded-md px-3 py-1 cursor-pointer"><a href="reviews.html">Reviews</a></li>
+       <li class="nav-link"><a href="pricing.html">Pricing</a></li>
+       <li class="nav-link"><a href="services.html">Services</a></li>
+     <li class="nav-link">
+      <a href="reviews.html">
+        Reviews
+      </a>
+    </li>
+
+
      </ul>
    </div>
 
    <!-- Right Side: CTA Button (desktop only) -->
     <div class="hidden lg:flex lg:items-center">
-    <a class="px-6 py-3 rounded-[14px] text-lg text-gray-800 bg-gray-100 hover:bg-lime-300 transition font-normal tracking-tight" target="_blank" rel="noopener noreferrer" href="/"> Get This Template</a>
+   <a
+  class="flex items-center justify-center gap-2 px-6 py-3 w-[178.438px] h-[51.18px] text-[12px] font-semibold bg-[radial-gradient(50%_50%_at_50%_50%,_#fff_0%,_#fff_100%)] rounded-[14px] shadow-[inset_0_0_35px_1px_rgba(18,24,33,0.2)] transition cursor-pointer"
+  target="_blank"
+  rel="noopener noreferrer"
+  href="/"
+>
+  <span
+    class="block text-[16px] leading-[27.2px] font-semibold text-[#121821] whitespace-nowrap tracking-normal"
+  >
+    Get This Template
+  </span>
+</a>
+
     </div>
    <!-- Hamburger Toggle (mobile only) -->
    <button
@@ -229,20 +233,42 @@
  </div>
 </header>
 
-<body class="min-h-screen"><!-- Banner started -->
-<section class="section-sm relative overflow-hidden pt-36">
-  <!-- 🔄 Background image with animation -->
- <div class="absolute inset-0 w-full h-full bg-cover bg-center animate-bgZoom origin-center -z-10 animationdiv"
-    style="background-image: url('images/ai-bg.svg');"></div>
+<script>
+  const header = document.getElementById('main-header');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header.classList.add('bg-[#111721]', 'shadow-md');
+    } else {
+      header.classList.remove('bg-[#111721]', 'shadow-md');
+    }
+  });
+</script>
+
+<body class="min-h-screen">
+
+<!-- Banner started -->
+  <section class="section-sm relative overflow-hidden pt-36">
+  <!-- 🔄 Background image with horizontal width animation -->
+  <div class="absolute top-0 inset-0 w-full h-full bg-cover bg-center animate-horizontal-expand origin-center -z-10"
+       style="background-image: url('images/banner.svg');">
+  </div>
+  <!-- Glow Layers: all absolute inside section -->
+<div class="pointer-events-none absolute left-1/2 -top-0 -translate-x-1/2 -translate-y-1/2 rotate-[19deg] w-[400px] h-[100px] bg-white/15 blur-3xl rounded-full z-0"></div>
+
+<div class="pointer-events-none absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 rotate-[19deg] w-[500px] h-[500px] bg-white/5 blur-3xl rounded-full z-0"></div>
+
+<div class="pointer-events-none absolute -right-[20%] top-[30%] -translate-x-1/2 -translate-y-1/2 rotate-[150deg] w-[500px] h-[500px] bg-white/2 blur-3xl rounded-full z-0"></div>
+
  <div class="container z-50">
     <div class="row justify-center">
-      <div class="lg:col-7 md:col-9 mb-8 text-center">
+      <div class="md:max-w-[844px] mb-8 text-center flex flex-col items-center">
         <div
-          class="p-3 border border-gray-300 dark:border-gray-800 flex flex-row items-center max-w-[215px] mx-auto rounded-lg gap-3">
-          <img src="images/medel.svg" alt="medel-svg" class="drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+          class="py-3 px-4 border border-gray-300 dark:border-gray-800 flex flex-row items-center max-w-[250px] mx-auto rounded-lg gap-5">
+          <img src="images/medal.svg" alt="medel-svg" style="filter: drop-shadow(0 0 10px #EACE2E);">
           <div class="text-start">
-            <h6 class="text-[10px] text-gray-400 mb-1 font-thin">Product Hunt</h6>
-            <h4 class="text-[15px] text-gray-400 font-thin">#1 Product of the Day</h4>
+            <h6 class="text-[10px] text-gray-400 mb-1 font-bold">Product Hunt</h6>
+            <h4 class="text-[16px] text-gray-400 font-semibold">#1 Product of the Day</h4>
           </div>
         </div>
         <div class="my-5 md:my-2">
@@ -266,7 +292,7 @@
 
           <!-- Watch Video Button -->
           <button @click="open = true"
-            class="text-lg font-thin text-gray-900 dark:text-gray-300 transition flex items-center gap-2 cursor-pointer">
+            class="text-lg font-normal text-gray-900 dark:text-gray-300 transition flex items-center gap-2 cursor-pointer">
             <i class="fas fa-play-circle text-2xl"></i>
             Watch our video
           </button>
@@ -306,7 +332,7 @@
       <div
         class="border border-gray-300 dark:border-gray-800 bg-[#1B212A] rounded-3xl overflow-hidden flex-1 flex flex-col justify-between">
         <div class="p-7">
-          <h4 class="text-[14px] dark:text-gray-400 text-gray-800 font-thin">Real-time analytics</h4>
+          <h4 class="text-[14px] dark:text-gray-400 text-gray-800 font-normal">Real-time analytics</h4>
           <h2 class="text-[24px] font-normal mt-2">
             AI market is expected to grow by <span class="counter text-[#B6F312]" data-target="59">0</span><span
               class="text-[#B6F312]">%</span> in 2025
@@ -325,7 +351,7 @@
         <div class="absolute top-[10px] left-1/2 -translate-x-1/2 z-10 mt-2">
           <div class="flex flex-row items-center gap-2">
             <h2 class="text-2xl font-bold tracking-tight dark:text-black text-white"><span class="counter" data-target="100">0</span>%</h2>
-            <h4 class="text-[12px] dark:text-gray-700 text-white font-thin">Face has been Matched</h4>
+            <h4 class="text-[12px] dark:text-gray-700 text-white font-normal">Face has been Matched</h4>
           </div>
         </div>
         <img class="absolute top-[70px] left-1/2 -translate-x-1/2 z-10" src="images/ai-face-dot.svg" alt="Face Dots">
@@ -370,7 +396,7 @@
           <div
             class="absolute top-0 left-0 h-full w-[2px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
           ></div>
-          <span class="font-thin text-[14px] opacity-75">Succeed</span><br />
+          <span class="font-normal text-[14px] opacity-75">Succeed</span><br />
           <span class="text-[36px] font-extralight"><span class="counter" data-target="63">0</span>%</span>
           <div class="w-full h-[35px] bg-green-300 rounded-xl mt-2"></div>
           <div class="absolute h-[18px] w-[10px] bg-white rounded-sm right-4 bottom-[10px]"></div>
@@ -383,7 +409,7 @@
           <div
             class="absolute top-0 left-0 h-full w-[2px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
           ></div>
-          <span class="font-thin text-[14px] opacity-75">In Progress</span>
+          <span class="font-normal text-[14px] opacity-75">In Progress</span>
           <br />
           <span class="text-[36px] font-extralight"><span class="counter" data-target="24">0</span>%</span>
           <div class="w-full h-[35px] bg-blue-400 rounded-xl mt-2"></div>
@@ -397,7 +423,7 @@
           <div
             class="absolute top-0 left-0 h-full w-[2px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
           ></div>
-          <span class="font-thin text-[14px] opacity-75">Failed</span>
+          <span class="font-normal text-[14px] opacity-75">Failed</span>
           <br />
           <span class="text-[36px] font-extralight"><span class="counter" data-target="13">0</span>%</span>
           <div class="w-full h-[35px] bg-gray-400 rounded-xl mt-2"></div>
@@ -446,7 +472,7 @@
       <div class="md:w-[32%] space-y-6">
         <img src="images/siteforge.svg" alt="">
         <div class="py-14">
-          <h2 class="text-[16px] md:text-[24px] font-thin leading-8">
+          <h2 class="text-[16px] md:text-[24px] font-normal leading-8">
             Optivus helped SiteForge to integrate advanced
             <span class="text-lime-400">AI analytics</span> to optimize their energy consumption by
             <span class="counter text-lime-400 font-bold" data-target="76">0</span><span
@@ -469,10 +495,10 @@
 
           <!-- Text Block -->
           <div>
-            <h3 class="md:text-[24px] max-w-[220px] text-gray-200 font-thin leading-9 md:leading-7">
+            <h3 class="md:text-[24px] max-w-[220px] text-gray-200 font-normal leading-9 md:leading-7">
               Enabling Smarter Waste Management
             </h3>
-            <h5 class="text-[12px] font-thin mt-2 text-[#C3DAD9]">
+            <h5 class="text-[12px] font-normal mt-2 text-[#C3DAD9]">
               Expected Valuation
             </h5>
           </div>
@@ -483,12 +509,12 @@
             class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-thin text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
@@ -529,7 +555,7 @@
             <img src="images/icons/world.svg" alt="world icon">
           </div>
           <div class="my-5 md:max-w-[235px]">
-            <h3 class="text-[22px] font-thin mb-4">Analyze real-time data</h3>
+            <h3 class="text-[22px] font-normal mb-4">Analyze real-time data</h3>
             <p class="text-gray-400">
               Through real-time analytics and smart routing, our system optimizes logistics to cut fuel usage and lower
               emissions.
@@ -542,7 +568,7 @@
             <img src="images/icons/king.svg" alt="world icon">
           </div>
           <div class="my-5 md:max-w-[235px]">
-            <h3 class="text-[22px] font-thin mb-4">Global sustainability goals</h3>
+            <h3 class="text-[22px] font-normal mb-4">Global sustainability goals</h3>
             <p class="text-gray-400">
               With AI-powered forecasting and adaptive controls, our tools ensure efficient energy use across
               facilities.
@@ -562,7 +588,7 @@
         class="text-[12px] bg-[#2E85FA] dark:text-gray-100 px-4 py-1 text-gray-800 @@text-margin max-w-[180px] inline-block transform skew-x-[-20deg] rotate-6 shadow-md">
         <span class="inline-block transform skew-x-[12deg]">Key Sectors</span>
       </h4>
-      <h1 class="text-4xl md:text-6xl font-thin tracking-tight mt-5">Industries we worked on</h1>
+      <h1 class="text-4xl md:text-6xl font-normal tracking-tight mt-5">Industries we worked on</h1>
       <p class="text-[18px] max-w-[600px] tracking-wide my-5">Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.</p>
     </div>
 
@@ -610,7 +636,7 @@
         class="text-[12px] bg-[#2E85FA] dark:text-gray-100 px-4 py-1 text-gray-800 @@text-margin max-w-[180px] inline-block transform skew-x-[-20deg] -rotate-6 shadow-md">
         <span class="inline-block transform skew-x-[12deg]">Featured Technologies</span>
       </h4>
-      <h1 class="text-4xl md:text-6xl font-thin tracking-tight mt-5">Technologies we’ve built</h1>
+      <h1 class="text-4xl md:text-6xl font-normal tracking-tight mt-5">Technologies we’ve built</h1>
       <p class="text-[18px] max-w-[600px] tracking-wide my-5">Using machine learning to track usage patterns, our platform reduces energy overuse and improves operational sustainability.</p>
     </div>
 
@@ -658,12 +684,12 @@
             class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-thin text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
@@ -707,12 +733,12 @@
             class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-thin text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
@@ -757,12 +783,12 @@
             class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-thin text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
@@ -806,12 +832,12 @@
             class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-thin text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
@@ -835,7 +861,7 @@
         class="text-[12px] bg-[#2E85FA] dark:text-gray-100 px-4 py-1 text-gray-800 @@text-margin max-w-[180px] inline-block transform skew-x-[-20deg] rotate-6 shadow-md">
         <span class="inline-block transform skew-x-[12deg]">Get Started</span>
       </h4>
-      <h1 class="text-4xl md:text-6xl font-thin tracking-tight mt-5">Getting started is super simple</h1>
+      <h1 class="text-4xl md:text-6xl font-normal tracking-tight mt-5">Getting started is super simple</h1>
       <p class="text-[18px] max-w-[600px] tracking-wide my-5">By automating equipment schedules and monitoring consumption, we help businesses lower utility costs and environmental impact.</p>
     </div>
 
@@ -1027,7 +1053,7 @@
         class="text-[12px] bg-[#2E85FA] dark:text-gray-100 px-4 py-1 text-gray-800 @@text-margin max-w-[180px] inline-block transform skew-x-[-20deg] -rotate-6 shadow-md">
         <span class="inline-block transform skew-x-[12deg]">Testimonials</span>
       </h4>
-      <h1 class="text-4xl md:text-6xl font-thin tracking-tight mt-5">Trusted by 5900+ businesses</h1>
+      <h1 class="text-4xl md:text-6xl font-normal tracking-tight mt-5">Trusted by 5900+ businesses</h1>
       <p class="text-[18px] max-w-[600px] tracking-wide my-5">Leveraging data-driven insights, we streamline resource distribution and support your path to a greener footprint.</p>
     </div>
 
@@ -1063,7 +1089,7 @@
           <img src="images/avatar.png" class="rounded-full w-[50px] h-[50px]" alt="avatar" />
           <div class="ml-4">
             <h3 class="font-normal text-[16px]">Ronald Richards</h3>
-            <p class="text-[14px] font-thin">Project Manager</p>
+            <p class="text-[14px] font-normal">Project Manager</p>
           </div>
         </div>
       </div>
@@ -1084,7 +1110,7 @@
           <img src="images/avatar.png" class="rounded-full w-[50px] h-[50px]" alt="avatar" />
           <div class="ml-4">
             <h3 class="font-normal text-[16px]">Jane Cooper</h3>
-            <p class="text-[14px] font-thin">Project Manager</p>
+            <p class="text-[14px] font-normal">Project Manager</p>
           </div>
         </div>
       </div>
@@ -1105,7 +1131,7 @@
           <img src="images/avatar.png" class="rounded-full w-[50px] h-[50px]" alt="avatar" />
           <div class="ml-4">
             <h3 class="font-normal text-[16px]">James Franklin</h3>
-            <p class="text-[14px] font-thin">Market Manager</p>
+            <p class="text-[14px] font-normal">Market Manager</p>
           </div>
         </div>
       </div>
@@ -1126,7 +1152,7 @@
           <img src="images/avatar.png" class="rounded-full w-[50px] h-[50px]" alt="avatar" />
           <div class="ml-4">
             <h3 class="font-normal text-[16px]">Peter Parker</h3>
-            <p class="text-[14px] font-thin">ID:152-43-4488</p>
+            <p class="text-[14px] font-normal">ID:152-43-4488</p>
           </div>
         </div>
       </div>
@@ -1197,12 +1223,12 @@
             class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-thin text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
@@ -1232,12 +1258,12 @@
             class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-thin text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
@@ -1266,12 +1292,12 @@
             class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-thin text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
@@ -1299,12 +1325,12 @@
             class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-thin text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
@@ -1333,12 +1359,12 @@
             class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-thin text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
@@ -1367,12 +1393,12 @@
             class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-thin text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
@@ -1400,12 +1426,12 @@
             class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-thin text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
@@ -1434,12 +1460,12 @@
             class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-thin text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
@@ -1468,12 +1494,12 @@
             class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-thin text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
@@ -1729,9 +1755,23 @@
 <h3 class="text-[12px] px-6 py-3 bg-gray-100 rounded-lg text-gray-800 max-w-[150px] ml-auto mt-2">Made in Framer</h3>
 
 </div>
+
+
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+
+<div
+  class="fixed left-0 top-0 z-50 flex w-[30px] items-center justify-center bg-gray-200 py-[2.5px] text-[12px] uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200"
+>
+  <span class="block sm:hidden">all</span>
+  <span class="hidden sm:block md:hidden">sm</span>
+  <span class="hidden md:block lg:hidden">md</span>
+  <span class="hidden lg:block xl:hidden">lg</span>
+  <span class="hidden xl:block 2xl:hidden">xl</span>
+  <span class="hidden 2xl:block">2xl</span>
+</div>
+
 <footer class="mt-10 px-4 md:px-0">
 <div class="container">
  <div class="pt-14 flex flex-col md:flex-row gap-5 pb-20">
@@ -1816,5 +1856,5 @@
 <!-- Main Script -->
 <script src="scripts/main.js"></script>
 
-</body class="min-h-screen">
+</body>
 </html>

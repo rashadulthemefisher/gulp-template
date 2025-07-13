@@ -1,17 +1,27 @@
+<!-- @@include('starsvg.html') -->
+
 <!-- Banner started -->
-<section class="section-sm relative overflow-hidden pt-36">
-  <!-- 🔄 Background image with animation -->
- <div class="absolute inset-0 w-full h-full bg-cover bg-center animate-bgZoom origin-center -z-10 animationdiv"
-    style="background-image: url('images/ai-bg.svg');"></div>
+  <section class="section-sm relative overflow-hidden pt-36">
+  <!-- 🔄 Background image with horizontal width animation -->
+  <div class="absolute top-0 inset-0 w-full h-full bg-cover bg-center animate-horizontal-expand origin-center -z-10"
+       style="background-image: url('images/banner.svg');">
+  </div>
+  <!-- Glow Layers: all absolute inside section -->
+<div class="pointer-events-none absolute left-1/2 -top-0 -translate-x-1/2 -translate-y-1/2 rotate-[19deg] w-[400px] h-[100px] bg-white/15 blur-3xl rounded-full z-0"></div>
+
+<div class="pointer-events-none absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 rotate-[19deg] w-[500px] h-[500px] bg-white/5 blur-3xl rounded-full z-0"></div>
+
+<div class="pointer-events-none absolute -right-[20%] top-[30%] -translate-x-1/2 -translate-y-1/2 rotate-[150deg] w-[500px] h-[500px] bg-white/2 blur-3xl rounded-full z-0"></div>
+
  <div class="container z-50">
     <div class="row justify-center">
-      <div class="lg:col-7 md:col-9 mb-8 text-center">
+      <div class="md:max-w-[844px] mb-8 text-center flex flex-col items-center">
         <div
-          class="p-3 border border-gray-300 dark:border-gray-800 flex flex-row items-center max-w-[215px] mx-auto rounded-lg gap-3">
-          <img src="images/medel.svg" alt="medel-svg" class="drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+          class="py-3 px-4 border border-gray-300 dark:border-gray-800 flex flex-row items-center max-w-[250px] mx-auto rounded-lg gap-5">
+          <img src="images/medal.svg" alt="medel-svg" style="filter: drop-shadow(0 0 10px #EACE2E);">
           <div class="text-start">
-            <h6 class="text-[10px] text-gray-400 mb-1 font-thin">Product Hunt</h6>
-            <h4 class="text-[15px] text-gray-400 font-thin">#1 Product of the Day</h4>
+            <h6 class="text-[10px] text-gray-400 mb-1 font-bold">Product Hunt</h6>
+            <h4 class="text-[16px] text-gray-400 font-semibold">#1 Product of the Day</h4>
           </div>
         </div>
         <div class="my-5 md:my-2">
@@ -35,7 +45,7 @@
 
           <!-- Watch Video Button -->
           <button @click="open = true"
-            class="text-lg font-thin text-gray-900 dark:text-gray-300 transition flex items-center gap-2 cursor-pointer">
+            class="text-lg font-normal text-gray-900 dark:text-gray-300 transition flex items-center gap-2 cursor-pointer">
             <i class="fas fa-play-circle text-2xl"></i>
             Watch our video
           </button>
@@ -75,7 +85,7 @@
       <div
         class="border border-gray-300 dark:border-gray-800 bg-[#1B212A] rounded-3xl overflow-hidden flex-1 flex flex-col justify-between">
         <div class="p-7">
-          <h4 class="text-[14px] dark:text-gray-400 text-gray-800 font-thin">Real-time analytics</h4>
+          <h4 class="text-[14px] dark:text-gray-400 text-gray-800 font-normal">Real-time analytics</h4>
           <h2 class="text-[24px] font-normal mt-2">
             AI market is expected to grow by <span class="counter text-[#B6F312]" data-target="59">0</span><span
               class="text-[#B6F312]">%</span> in 2025
@@ -94,7 +104,7 @@
         <div class="absolute top-[10px] left-1/2 -translate-x-1/2 z-10 mt-2">
           <div class="flex flex-row items-center gap-2">
             <h2 class="text-2xl font-bold tracking-tight dark:text-black text-white"><span class="counter" data-target="100">0</span>%</h2>
-            <h4 class="text-[12px] dark:text-gray-700 text-white font-thin">Face has been Matched</h4>
+            <h4 class="text-[12px] dark:text-gray-700 text-white font-normal">Face has been Matched</h4>
           </div>
         </div>
         <img class="absolute top-[70px] left-1/2 -translate-x-1/2 z-10" src="images/ai-face-dot.svg" alt="Face Dots">
@@ -139,7 +149,7 @@
           <div
             class="absolute top-0 left-0 h-full w-[2px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
           ></div>
-          <span class="font-thin text-[14px] opacity-75">Succeed</span><br />
+          <span class="font-normal text-[14px] opacity-75">Succeed</span><br />
           <span class="text-[36px] font-extralight"><span class="counter" data-target="63">0</span>%</span>
           <div class="w-full h-[35px] bg-green-300 rounded-xl mt-2"></div>
           <div class="absolute h-[18px] w-[10px] bg-white rounded-sm right-4 bottom-[10px]"></div>
@@ -152,7 +162,7 @@
           <div
             class="absolute top-0 left-0 h-full w-[2px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
           ></div>
-          <span class="font-thin text-[14px] opacity-75">In Progress</span>
+          <span class="font-normal text-[14px] opacity-75">In Progress</span>
           <br />
           <span class="text-[36px] font-extralight"><span class="counter" data-target="24">0</span>%</span>
           <div class="w-full h-[35px] bg-blue-400 rounded-xl mt-2"></div>
@@ -166,7 +176,7 @@
           <div
             class="absolute top-0 left-0 h-full w-[2px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
           ></div>
-          <span class="font-thin text-[14px] opacity-75">Failed</span>
+          <span class="font-normal text-[14px] opacity-75">Failed</span>
           <br />
           <span class="text-[36px] font-extralight"><span class="counter" data-target="13">0</span>%</span>
           <div class="w-full h-[35px] bg-gray-400 rounded-xl mt-2"></div>
@@ -201,7 +211,7 @@
       <div class="md:w-[32%] space-y-6">
         <img src="images/siteforge.svg" alt="">
         <div class="py-14">
-          <h2 class="text-[16px] md:text-[24px] font-thin leading-8">
+          <h2 class="text-[16px] md:text-[24px] font-normal leading-8">
             Optivus helped SiteForge to integrate advanced
             <span class="text-lime-400">AI analytics</span> to optimize their energy consumption by
             <span class="counter text-lime-400 font-bold" data-target="76">0</span><span
@@ -224,10 +234,10 @@
 
           <!-- Text Block -->
           <div>
-            <h3 class="md:text-[24px] max-w-[220px] text-gray-200 font-thin leading-9 md:leading-7">
+            <h3 class="md:text-[24px] max-w-[220px] text-gray-200 font-normal leading-9 md:leading-7">
               Enabling Smarter Waste Management
             </h3>
-            <h5 class="text-[12px] font-thin mt-2 text-[#C3DAD9]">
+            <h5 class="text-[12px] font-normal mt-2 text-[#C3DAD9]">
               Expected Valuation
             </h5>
           </div>
@@ -272,7 +282,7 @@
             <img src="images/icons/world.svg" alt="world icon">
           </div>
           <div class="my-5 md:max-w-[235px]">
-            <h3 class="text-[22px] font-thin mb-4">Analyze real-time data</h3>
+            <h3 class="text-[22px] font-normal mb-4">Analyze real-time data</h3>
             <p class="text-gray-400">
               Through real-time analytics and smart routing, our system optimizes logistics to cut fuel usage and lower
               emissions.
@@ -285,7 +295,7 @@
             <img src="images/icons/king.svg" alt="world icon">
           </div>
           <div class="my-5 md:max-w-[235px]">
-            <h3 class="text-[22px] font-thin mb-4">Global sustainability goals</h3>
+            <h3 class="text-[22px] font-normal mb-4">Global sustainability goals</h3>
             <p class="text-gray-400">
               With AI-powered forecasting and adaptive controls, our tools ensure efficient energy use across
               facilities.
@@ -567,6 +577,9 @@
 <h3 class="text-[12px] px-6 py-3 bg-gray-100 rounded-lg text-gray-800 max-w-[150px] ml-auto mt-2">Made in Framer</h3>
 
 </div>
+
+
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+

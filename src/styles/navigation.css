@@ -1,14 +1,14 @@
 .header {
-  @apply bg-body dark:bg-darkmode-body py-6;
+  @apply fixed top-0 bg-transparent w-full z-50 transition-all duration-300 ease-in-out;
 }
 
 /* navbar items */
 .navbar {
-  @apply relative flex flex-wrap items-center justify-between;
+  @apply relative flex flex-wrap items-center justify-between py-6;
 }
 
 .navbar-brand {
-  @apply text-text-dark dark:text-darkmode-text-dark text-xl font-semibold;
+  @apply text-text-dark dark:text-darkmode-text-dark text-xl font-semibold opacity-800;
   image {
     @apply max-h-full max-w-full;
   }
@@ -19,7 +19,10 @@
 }
 
 .nav-link {
-  @apply dark:bg-gray-900 dark:text-white text-black bg-gray-200;
+  @apply flex flex-row flex-nowrap items-center justify-center gap-x-[10px] gap-y-[10px] bg-[#1B212A] border border-gray-800 text-[16px] antialiased rounded-[8px] relative cursor-pointer;
+}
+.nav-link a{
+  @apply block text-white no-underline whitespace-nowrap text-center px-3 py-1 blur-[0.5px] hover:text-[#C4FC00] ;
 }
 
 .nav-dropdown {

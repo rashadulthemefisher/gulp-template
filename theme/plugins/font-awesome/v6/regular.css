@@ -6,7 +6,6 @@
 :host,
 :root {
   --font-family-primary: "Rethink Sans", "Rethink Sans Placeholder", sans-serif;
-  --font-family-secondary: "Rethink Sans", "Rethink Sans Placeholder", sans-serif;
   --font-size-base: 16px;
   --font-size-scale: 1.2;
 }

@@ -31,9 +31,9 @@
   },
 "fonts": {
   "font_family": {
-    "primary": "\"Rethink Sans\", \"Rethink Sans Placeholder\", sans-serif",
+    "primary": "Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap",
     "primary_type": "sans-serif",
-    "secondary": "\"Rethink Sans\", \"Rethink Sans Placeholder\", sans-serif",
+    "secondary": "Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap",
     "secondary_type": "sans-serif"
   },
   "font_size": {

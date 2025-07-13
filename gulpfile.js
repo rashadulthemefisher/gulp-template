@@ -88,7 +88,6 @@ function pages() {
     .pipe(
       template({
         fontPrimary: theme.fonts.font_family.primary,
-        fontSecondary: theme.fonts.font_family.secondary,
       }),
     )
     .pipe(comments(headerComments))

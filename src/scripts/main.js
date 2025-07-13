@@ -1,15 +1,5 @@
 (function () {
   "use strict";
-// //Javascriptmotion
-// const {animate}=motion;
-
-// const elements=document.querySelector(".animationdiv div");
-
-// animate(
-// elements,
-// {opacity:1,rotate:4},
-// {type: "spring",stiffness:300}
-// )
   // toggle mobile nav
  const navToggleBtn = document.getElementById("nav-toggle-btn");
   const navMenu = document.getElementById("mobile-menu");

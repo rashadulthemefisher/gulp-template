@@ -1,0 +1,54 @@
+<style>
+  @keyframes floatStar {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.6);
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-120px) scale(1.2);
+    }
+  }
+
+  .float-star {
+    animation: floatStar 4s ease-in-out forwards;
+    color: red;
+    position: absolute;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
+    z-index: 9999999;
+  }
+</style>
+<!-- ⭐ Floating Red Stars Container -->
+<div id="floating-stars" class="fixed inset-0 pointer-events-none z-[999999]"></div>
+<script>
+  const container = document.getElementById("floating-stars");
+
+  function createStar() {
+    const star = document.createElement("div");
+    const size = Math.random() * 8 + 12; // 12px to 20px
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+
+    star.textContent = "★";
+    star.className = "float-star";
+    star.style.left = `${x}px`;
+    star.style.top = `${y}px`;
+    star.style.fontSize = `${size}px`;
+
+    container.appendChild(star);
+
+    setTimeout(() => {
+      star.remove();
+    }, 4000);
+  }
+
+  setInterval(() => {
+    const count = Math.floor(Math.random() * 3) + 3; // 3–5 stars at a time
+    for (let i = 0; i < count; i++) {
+      createStar();
+    }
+  }, 2000);
+</script>
