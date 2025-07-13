@@ -8,9 +8,6 @@
 yarn.lock
 package-lock.json
 
-# production
-/theme
-
 # misc
 .DS_Store
 *.pem
