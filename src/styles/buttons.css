@@ -13,3 +13,13 @@
 .btn-outline-primary {
   @apply border-dark text-text-dark hover:bg-dark dark:hover:text-text-dark bg-transparent hover:text-white dark:border-darkmode-primary dark:text-white dark:hover:bg-darkmode-primary;
 }
+/* product Hunt */
+.button-custom {
+  @apply py-3 px-5 bg-dark/50 border-border flex flex-row items-center max-w-[250px] mx-auto rounded-lg gap-6 transform transition-transform;
+}
+.primary-button{
+@apply flex items-center justify-center gap-2 px-6 py-3 w-[178.438px] h-[51.18px] text-[12px] font-semibold bg-[radial-gradient(50%_50%_at_50%_50%,_#fff_0%,_#fff_100%)] rounded-[14px] shadow-[inset_0_0_35px_1px_rgba(18,24,33,0.2)] transition cursor-pointer
+}
+.secondary-button{
+@apply flex items-center justify-center gap-2 px-6 py-3 text-[#121821] text-[16px] rounded-[14px] font-semibold  transition cursor-pointer
+}
