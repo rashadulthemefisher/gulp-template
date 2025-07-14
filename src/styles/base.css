@@ -1,10 +1,13 @@
 html {
-  scroll-behavior: smooth;
-  @apply text-base-sm md:text-base;
+  /* Keyword values */
+scroll-behavior: auto;
+scroll-behavior: smooth;
+  @apply text-base-sm md:text-base antialiased;
 }
 
 body {
-  @apply bg-body text-base font-primary font-normal leading-relaxed text-text opacity-800;
+ font-family: 'Rethink Sans', sans-serif;
+  @apply bg-body text-base font-primary font-normal tracking-normal text-text opacity-800;
 }
 
 h1,
@@ -13,7 +16,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-primary font-semibold leading-tight text-text-dark dark:text-darkmode-text-dark;
+  @apply font-primary font-medium text-text-dark;
 }
 
 h1,
@@ -55,7 +58,7 @@ code {
   @apply after:border-none;
 }
 p{
-  @apply text-[18px] opacity-80 font-normal tracking-wide;
+  @apply opacity-80 font-normal tracking-normal text-text-dark;
 }
 
 blockquote > p {
