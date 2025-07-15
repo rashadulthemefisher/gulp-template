@@ -14,7 +14,7 @@
   }
 }
 .navbar-nav {
-  @apply bg-[#1B212A] border border-gray-800 antialiased rounded-[8px] relative cursor-pointer;
+  @apply bg-[#1B212A] border border-border/75 border-[2px] antialiased rounded-[8px] relative cursor-pointer;
 }
 .nav-link{
   @apply block text-white no-underline whitespace-nowrap text-center px-3 py-1 hover:text-[#C4FC00] ;

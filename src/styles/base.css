@@ -1,3 +1,6 @@
+*{
+  @apply box-border;
+}
 html {
   /* Keyword values */
 scroll-behavior: auto;
@@ -7,7 +10,7 @@ scroll-behavior: smooth;
 
 body {
  font-family: 'Rethink Sans', sans-serif;
-  @apply bg-body text-base font-primary font-normal tracking-normal text-text opacity-800;
+  @apply bg-body font-primary font-normal tracking-normal text-text opacity-800;
 }
 
 h1,
