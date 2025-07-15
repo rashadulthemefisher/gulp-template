@@ -211,8 +211,8 @@ document.addEventListener("DOMContentLoaded", function () {
     //   card.classList.remove("h-[280px]", "md:w-[280px]");
     // }
   if (index === 0) {
-      card.classList.add("md:w-[363px]", "md:h-[620px]");
-      card.classList.remove("md:w-[280px]");
+      card.classList.add("md:w-[363px]", "md:h-[650px]");
+      card.classList.remove("md:w-[282px]");
     }
 
     // ✅ Desktop: Hover effect

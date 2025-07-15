@@ -101,11 +101,11 @@
      <!-- Nav Links (desktop) -->
      <ul
        id="nav-menu"
-       class="hidden lg:flex flex-row gap-2 items-center text-black dark:text-white "
+       class="hidden lg:flex flex-row gap-2 items-center text-black dark:text-white"
      >
        <!-- All Pages -->
        <li class="relative group navbar-nav">
-         <a class="hidden lg:flex items-center gap-[11px] px-3 py-1 nav-link">
+         <a class="hidden lg:flex items-center gap-[10px] px-3 py-1 nav-link">
            All Pages
            <i class="fa fa-chevron-down transition-transform duration-300 group-hover:rotate-180 text-[10px]" aria-hidden="true"></i>
          </a>
@@ -239,7 +239,7 @@
   const header = document.getElementById('main-header');
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
+    if (window.scrollY > 90) {
       header.classList.add('bg-[#111721]', 'shadow-md');
     } else {
       header.classList.remove('bg-[#111721]', 'shadow-md');
@@ -289,43 +289,30 @@
 <!-- Images Section Ended -->
     <!-- Brand images Section started -->
       <div class="my-10">
-      <section class="px-[30px] pt-[48px] pb-[100px]">
+      <section class="pt-[48px] pb-[100px]">
   <div class="container">
-    <div class="flex flex-col md:flex-row items-center justify-center gap-[27px] mx-20">
-      
-      <!-- First logo (no border) -->
-      <img src="https://framerusercontent.com/images/mudcdmL2lpHM3g2uUvhNGa6dJE.svg" alt="Brand Logo"
-        class="max-w-[206px] w-full h-auto invert brightness-200 dark:invert-0 opacity-40" />
+    <div class="brand-wrapper">
+      <img src="images/brands/brand1.svg" alt="Brand Logo" class="brand-logo" />
 
-      <!-- Logo 2 -->
-      <div class="flex items-center relative">
-        <!-- short left border -->
-        <div class="hidden md:block absolute -left-[13.5px] h-5 w-px bg-gray-400"></div>
-        <img src="https://framerusercontent.com/images/yJVD5Nm1uX3ypa5tKtNZkxZDV4.svg" alt="Brand Logo"
-          class="max-w-[206px] w-full h-auto invert brightness-200 dark:invert-0 opacity-40 pl-[27px]" />
+      <div class="flex items-center relative px-7">
+        <div class="brand-separator"></div>
+        <img src="images/brands/brand2.svg" alt="Brand Logo" class="brand-logo" />
       </div>
 
-      <!-- Logo 3 -->
-      <div class="flex items-center relative">
-        <div class="hidden md:block absolute -left-[13.5px] h-5 w-px bg-gray-400"></div>
-        <img src="https://framerusercontent.com/images/5Q6tZnqmOd3ubNrxwf5RgzzqYY.svg" alt="Brand Logo"
-          class="max-w-[206px] w-full h-auto invert brightness-200 dark:invert-0 opacity-40 pl-[27px]" />
+      <div class="flex items-center relative px-7">
+        <div class="brand-separator"></div>
+        <img src="images/brands/brand3.svg" alt="Brand Logo" class="brand-logo" />
       </div>
 
-      <!-- Logo 4 -->
-      <div class="flex items-center relative">
-        <div class="hidden md:block absolute -left-[13.5px] h-5 w-px bg-gray-400"></div>
-        <img src="https://framerusercontent.com/images/HkijFwAOQD8n5hFAv25H2qsvHow.svg" alt="Brand Logo"
-          class="max-w-[206px] w-full h-auto invert brightness-200 dark:invert-0 opacity-40 pl-[27px]" />
+      <div class="flex items-center relative px-7">
+        <div class="brand-separator"></div>
+        <img src="images/brands/brand4.svg" alt="Brand Logo" class="brand-logo" />
       </div>
 
-      <!-- Logo 5 -->
-      <div class="flex items-center relative">
-        <div class="hidden md:block absolute -left-[13.5px] h-5 w-[1px] bg-gray-400 opacity-30"></div>
-        <img src="https://framerusercontent.com/images/C3WSw1EzxD0pZdbcSQsoRRjQo.svg" alt="Brand Logo"
-          class="max-w-[206px] w-full h-auto invert brightness-200 dark:invert-0 opacity-40 pl-[27px]" />
+      <div class="flex items-center relative px-7">
+        <div class="brand-separator"></div>
+        <img src="images/brands/brand5.svg" alt="Brand Logo" class="brand-logo" />
       </div>
-
     </div>
   </div>
 </section>
@@ -603,10 +590,10 @@
     <div class="absolute top-0 right-0 p-4">
          <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
@@ -638,10 +625,10 @@
           <div class="absolute top-0 right-0 p-4">
                 <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
@@ -672,10 +659,10 @@
           <div class="absolute top-0 right-0 p-4">
                  <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
@@ -705,10 +692,10 @@
           <div class="absolute top-0 right-0 p-4">
                 <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
@@ -739,10 +726,10 @@
           <div class="absolute top-0 right-0 p-4">
                 <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
@@ -773,10 +760,10 @@
           <div class="absolute top-0 right-0 p-4">
                  <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
@@ -806,10 +793,10 @@
           <div class="absolute top-0 right-0 p-4">
                  <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
@@ -840,10 +827,10 @@
           <div class="absolute top-0 right-0 p-4">
                  <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
@@ -874,10 +861,10 @@
                 <div class="absolute top-0 right-0 p-4">
                        <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-gray-200 rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-normal text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 

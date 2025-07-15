@@ -1,7 +1,7 @@
 <!-- @@include('starsvg.html') -->
 
 <!-- Banner started -->
-  <section class="section-sm relative overflow-hidden pt-36">
+  <section  class="section-sm relative overflow-hidden pt-36">
   <!-- 🔄 Background image with horizontal width animation -->
   <div class="absolute top-0 inset-0 w-full h-full bg-cover bg-center animate-horizontal-expand origin-center -z-10"
        style="background-image: url('images/banner.svg');">
@@ -82,7 +82,7 @@
 </section>
 <!-- Banner ended -->
  <!-- Ai faces section started -->
- <section class="section-sm">
+ <section class="mb-14">
   <div class="container flex flex-col md:flex-row  gap-[22px]">
         <!-- Chart Card -->
       <div class="border-border/75 border-[2px] border bg-secondary-bg rounded-3xl overflow-hidden flex flex-col gap-[10px] justify-between pt-[15px] md:min-w-[320px]">
@@ -113,13 +113,13 @@
 
         <!-- Yellow scan bar -->
         <div id="scan-bar"
-          class="absolute top-full left-1/2 -translate-x-1/2 w-[260px] h-[80px] bg-yellow-300/50 rounded-md z-20 pointer-events-none blur-sm transition-transform duration-300">
+          class="absolute top-full left-1/2 -translate-x-1/2 w-[260px] h-[80px] bg-orange-200/90 rounded-md z-20 pointer-events-none blur-sm transition-transform duration-300">
         </div>
         <!-- White bottom gradient overlay -->
         <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10"></div>
         <!-- Bottom Gradient Overlay with Text -->
         <div
-          class="absolute bottom-4 left-0 w-full h-[158px] bg-gradient-to-t from-white to-transparent z-10 flex justify-center items-end pb-2">
+          class="absolute bottom-0 pb-4 left-0 w-full h-[158px] bg-gradient-to-t from-white to-transparent z-10 flex justify-center items-end pb-2">
           <div class="w-[240px] text-left ml-14">
             <h2 class="text-2xl tracking-[-0.5px] font-medium leading-[34px] text-gray-900">AI Face Detection</h2>
             <p class="text-sm text-text-dark">Identity Verification</p>
@@ -161,7 +161,7 @@
         <!-- In Progress Card -->
          <div class="w-full md:max-w-[156px] text-start pl-1 text-[12px] dark:text-gray-200 text-gray-800 font-bold relative"
         >
-        
+
           <div
             class="absolute top-0 left-0 h-full w-[1px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
           ></div>
@@ -179,7 +179,7 @@
          <!-- Failed Card -->
          <div class="w-full md:max-w-[125px] text-start pl-[5px] text-[12px] dark:text-gray-200 text-gray-800 font-bold relative"
         >
-        
+
           <div
             class="absolute top-0 left-0 h-full w-[1px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
           ></div>
@@ -206,109 +206,91 @@
 
 <!-- Smartermanagement Section Started -->
 <section class="section-sm">
-  <div class="container">
-<div class="md:my-[100px]">
-<h4
-      class="text-[12px] bg-[#70DB80] px-4 py-1 text-gray-800 max-w-[180px] inline-block transform skew-x-[-20deg] -rotate-6 shadow-md">
-      <span class="inline-block transform skew-x-[12deg]">Saves Environment</span>
-    </h4>
-
-    <h1 class="text-3xl md:text-6xl mt-5 leading-tight font-normal max-w-[790px] tracking-tight">
-      Bringing change in the industry by making impactful solutions
-    </h1>
-</div>
-    <div class="flex flex-col lg:flex-row items-center justify-center py-12 gap-10 md:gap-14">
-
-      <!-- Left 33% -->
-      <div class="md:w-[32%] space-y-6">
-        <img src="images/siteforge.svg" alt="">
-        <div class="py-14">
-          <h2 class="text-[16px] md:text-[24px] font-normal leading-8">
+  <div class="container flex flex-col gap-[100px]">
+ @@include('components/left-section-header.html', {
+    "title": "Bringing change in the industry by making impactful solutions",
+    "subtitle": "",
+    "skewText": "Saves Environment",
+    "bg-color": "bg-[#70DB80]",
+    "text-color": "text-[#fff]",
+    "skewRotate": "rotate-6"
+    })
+    <div class="flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-0">
+      <div class="md:max-w-[380px] w-full flex flex-col gap-[60px]">
+          <div>
+          <img src="images/siteforge.svg" alt="">
+          </div>
+          <div class="flex flex-col gap-20">
+          <div class="flex flex-col gap-10">
+          <h4 class="h5 md:text-2xl text-text-light tracking-[-0.5px] font-medium leading-[33.6px]">
             Optivus helped SiteForge to integrate advanced
             <span class="text-lime-400">AI analytics</span> to optimize their energy consumption by
             <span class="counter text-lime-400 font-bold" data-target="76">0</span><span
               class="text-lime-400 font-bold">%</span> last year.
-          </h2>
-          <p class="text-gray-400 mt-10 text-[12px] md:text-[16px]">
+          </h4>
+          <p class="text-text-dark leading-[27px]">
             By predicting energy demand and automating resource allocation, our tools help reduce waste and minimize
             carbon footprints.
           </p>
         </div>
-        <button class="bg-[#B9ED09] text-gray-900  px-5 py-3 font-normal rounded-[14px] hover:bg-lime-300 transition">
+        <button class="bg-[#B9ED09] text-gray-900  px-5 py-3 font-semibold rounded-[14px] hover:bg-lime-300 transition max-w-[156px] leading-[27px]">
           Read Full Story
         </button>
+        </div>
       </div>
 
-      <!-- Center 34% -->
-      <div class="md:w-[36%] relative overflow-hidden rounded-3xl">
+      <div class="md:max-w-[420px] w-full relative overflow-hidden rounded-[40px]">
         <img src="images/smarter.avif" alt="Green Tree" class="w-full object-cover rounded-3xl" />
         <div class="absolute top-0 text-black flex flex-row items-start justify-between gap-6 p-8 w-full">
 
           <!-- Text Block -->
           <div>
-            <h3 class="md:text-[24px] max-w-[220px] text-gray-200 font-normal leading-9 md:leading-7">
+            <h3 class="md:text-2xl text-text-light max-w-[220px] font-medium leading-[34px]">
               Enabling Smarter Waste Management
             </h3>
-            <h5 class="text-[12px] font-normal mt-2 text-[#C3DAD9]">
+            <h5 class="text-sm leading-[21px] font-normal mt-2 text-text-light">
               Expected Valuation
             </h5>
           </div>
 
               <!-- Arrow Button -->
             @@include('components/arrow-button.html',{
-          "min-w":"min-w-16",
-          "min-h":"min-h-16",
+          "min-w":"min-w-[60px]",
+          "min-h":"min-h-[60px]",
           "bottom-top":"top-[20px]",
         })
         </div>
         <!-- Animated floating card -->
         <div
           class="absolute bottom-6 left-6 animate-[float_6s_ease-in-out_infinite] bg-white text-black dark:text-black p-4 rounded-3xl shadow-lg max-w-[180px]">
-          <p class="text-lg font-semibold text-gray-800">Results:</p>
-          <p class="text-sm text-gray-500 mt-2 mb-4">Improvement saw in recycling rates</p>
-          <p class="text-4xl text-gray-200 bg-[#70DB80] w-auto rounded-xl text-center mt-2 p-2">+<span class="counter"
+          <p class="text-xl font-semibold leading-[34px] text-black">Results:</p>
+          <p class="text-sm text-[#121821] mt-2 mb-4">Improvement saw in recycling rates</p>
+          <p class="text-4xl text-text-light leading-[43px] font-medium bg-[#70DB80] w-auto rounded-xl text-center mt-2 p-2">+<span class="counter"
               data-target="400">0</span>%</p>
         </div>
-
-        <!-- Floating animation keyframe -->
-        <style>
-          @keyframes float {
-
-            0%,
-            100% {
-              transform: translate(0, 0);
-            }
-
-            50% {
-              transform: translate(8px, 8px);
-            }
-          }
-
-        </style>
       </div>
 
-      <!-- Right 33% -->
-      <div class="md:w-[32%] md:space-y-12">
-        <div class="flex flex-col items-start gap-4 md:ml-10">
-          <div class="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
+      <div class="md:max-w-[302px] w-full flex flex-col gap-[60px]">
+        <div class="flex flex-col items-start p-8 gap-6">
+          <div class="w-14 h-14 bg-[#1B212A] rounded-full flex items-center justify-center">
             <img src="images/icons/world.svg" alt="world icon">
           </div>
-          <div class="my-5 md:max-w-[235px]">
-            <h3 class="text-[22px] font-normal mb-4">Analyze real-time data</h3>
-            <p class="text-gray-400">
+          <div class="flex flex-col gap-4">
+            <h3 class="text-2xl text-text-light font-medium tracking-[-0.5px] leading-[34px]">Analyze real-time data</h3>
+            <p class="text-base leading-[27px] text-text-dark">
               Through real-time analytics and smart routing, our system optimizes logistics to cut fuel usage and lower
               emissions.
             </p>
           </div>
         </div>
         <hr class="text-gray-800">
-        <div class="flex flex-col items-start gap-4 mt-10 md:mt-0 md:ml-10">
-          <div class="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
+ <div class="flex flex-col items-start p-8 gap-6">
+          <div class="w-14 h-14 bg-[#1B212A] rounded-full flex items-center justify-center">
             <img src="images/icons/king.svg" alt="world icon">
           </div>
-          <div class="my-5 md:max-w-[235px]">
-            <h3 class="text-[22px] font-normal mb-4">Global sustainability goals</h3>
-            <p class="text-gray-400">
+          <div class="flex flex-col gap-4">
+            <h3 class="text-2xl text-text-light font-medium tracking-[-0.5px] leading-[34px]">Global sustainability goals</h3>
+            <p class="text-base leading-[27px] text-text-dark">
               With AI-powered forecasting and adaptive controls, our tools ensure efficient energy use across
               facilities.
             </p>
@@ -321,72 +303,86 @@
 <!-- Smartermanagement Section Ended -->
 <!-- Industries Work Section started -->
 <section class="section-sm">
-  <div class="container">
-    @@include('components/left-section-header.html', {
+  <div class="container flex flex-col gap-[64px]">
+<div>
+ @@include('components/left-section-header.html', {
     "title": "Industries we worked on",
     "subtitle": "Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.",
     "skewText": "Key Sectors",
-    "skewRotate": "rotate-6"
+    "bg-color": "bg-[#2E85FA]",
+    "text-color": "text-[#fff]",
+    "skewRotate": "-rotate-6"
     })
+</div>
+<div>
 @@include('Industries.html')
+</div>
   </div>
 </section>
 <!-- Industries Work Section ended -->
 
 <!-- Product Section Started -->
 <section class="section-sm">
-  <div class="container">
-  @@include('components/left-section-header.html', {
+  <div class="container flex flex-col gap-20">
+<div class="flex flex-col gap-10">
+ @@include('components/left-section-header.html', {
     "title": "Technologies we’ve built",
     "subtitle": "Using machine learning to track usage patterns, our platform reduces energy overuse and improves operational sustainability.",
     "skewText": "Featured Technologies",
+    "bg-color": "bg-[#C4FC00]",
+    "text-color": "text-[#121821]",
     "skewRotate": "-rotate-6"
     })
 
-    <button class="font-normal text-[16px] bg-gray-200 text-gray-800 px-6 py-3 rounded-[14px] cursor-pointer">View All Products</button>
+<div>
+<button class="text-[#121821] px-5 py-3 font-semibold rounded-[14px] secondary-button bg-white transition leading-[27px]">
+  View All Products
+</button>
+
+</div>
+</div>
     <!-- FLEX CONTAINER -->
-    <div class="flex flex-col md:flex-row gap-6 overflow-y-auto overflow-x-auto mt-16" id="cardContainer">
+    <div class="flex flex-col md:flex-row gap-6 overflow-y-auto overflow-x-auto" id="cardContainer">
 
       <!-- CARD 1 -->
-      <div class="card group relative rounded-[40px] overflow-hidden flex-shrink-0 bg-white transition-all duration-900 shadow-md md:w-[280px] md:hover:w-[363px] h-[280px] hover:h-[363px] md:h-[620px] md:hover:h-[620px]"
+      <div class="card group relative rounded-[40px] overflow-hidden flex-shrink-0 bg-white transition-all duration-900 shadow-md md:w-[282px] md:hover:w-[363px] h-[280px] hover:h-[363px] md:h-[650px] md:hover:h-[650px]"
         data-card>
         <!-- Background Image -->
         <img src="images/technologies/technologies1.avif" alt="Predictive Analytics"
           class="w-full h-full object-cover" />
+            <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 bg-gradient-to-t from-white/90 via-white/70 to-transparent text-black transition-colors duration-900 flex flex-col justify-between">
+              <!-- Top Section -->
+              <div class="flex justify-between items-center w-full">
+                <!-- Left: Buttons -->
+              <div id="tagButtons"
+                class="flex space-x-2 opacity-0 pointer-events-none translate-x-36 transition-all duration-900
+                  group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-x-10
+                  group-[.active]:opacity-100 group-[.active]:pointer-events-auto group-[.active]:translate-x-0">
+                  <button
+                    class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition-transform duration-900 delay-100 transform group-hover:translate-x-0 translate-x-4">
+                    AI
+                  </button>
+                  <button
+                    class="bg-gray-200 text-gray-900 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition-transform duration-900 delay-200 transform group-hover:translate-x-0 translate-x-4">
+                    Technology
+                  </button>
+                </div>
 
-        <!-- Bottom Content -->
-        <div
-          class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-white/90 via-white/70 to-transparent text-black transition-colors duration-900">
-          <h3 class="text-[32px] font-normal text-gray-800 transition-colors duration-900">
-            Predictive Analytics Engine
-          </h3>
-          <p class="text-sm text-gray-500 transition-colors duration-900 mt-3">Expected Valuation</p>
-        </div>
-
-        <!-- Top Section -->
-        <div class="absolute top-0 left-0 right-0 p-4 flex justify-between items-center w-full">
-          <!-- Left: Buttons -->
-         <div id="tagButtons"
-          class="flex space-x-2 opacity-0 pointer-events-none translate-x-36 transition-all duration-900
-            group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-x-10
-            group-[.active]:opacity-100 group-[.active]:pointer-events-auto group-[.active]:translate-x-0">
-            <button
-              class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition-transform duration-900 delay-100 transform group-hover:translate-x-0 translate-x-4">
-              AI
-            </button>
-            <button
-              class="bg-gray-200 text-gray-900 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition-transform duration-900 delay-200 transform group-hover:translate-x-0 translate-x-4">
-              Technology
-            </button>
-          </div>
-
-   <!-- Arrow Button -->
-          @@include('components/arrow-button.html',{
-          "min-w":"min-w-16",
-          "min-h":"min-h-16",
-          "bottom-top":"top-[20px]",
-        })
-        </div>
+        <!-- Arrow Button -->
+                @@include('components/arrow-button.html',{
+                "min-w":"min-w-16",
+                "min-h":"min-h-16",
+                "bottom-top":"top-[20px]",
+              })
+              </div>
+              <!-- Bottom Content -->
+              <div class="bg-gradient-to-t from-white/90 via-white/70 to-transparent text-black transition-colors duration-900">
+                <h3 class="text-[32px] font-normal text-gray-800 transition-colors duration-900">
+                  Predictive Analytics Engine
+                </h3>
+                <p class="text-sm text-gray-500 transition-colors duration-900 mt-3">Expected Valuation</p>
+              </div>
+      </div>
       </div>
       <!-- CARD 2 -->
       <div class="card group relative rounded-[40px] overflow-hidden flex-shrink-0 bg-white transition-all duration-900 shadow-md md:w-[280px] md:hover:w-[363px] h-[280px] hover:h-[363px] md:h-[620px] md:hover:h-[620px]"
@@ -500,8 +496,6 @@
         })
         </div>
       </div>
-
-
     </div>
 
   </div>

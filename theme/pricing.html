@@ -101,11 +101,11 @@
      <!-- Nav Links (desktop) -->
      <ul
        id="nav-menu"
-       class="hidden lg:flex flex-row gap-2 items-center text-black dark:text-white "
+       class="hidden lg:flex flex-row gap-2 items-center text-black dark:text-white"
      >
        <!-- All Pages -->
        <li class="relative group navbar-nav">
-         <a class="hidden lg:flex items-center gap-[11px] px-3 py-1 nav-link">
+         <a class="hidden lg:flex items-center gap-[10px] px-3 py-1 nav-link">
            All Pages
            <i class="fa fa-chevron-down transition-transform duration-300 group-hover:rotate-180 text-[10px]" aria-hidden="true"></i>
          </a>
@@ -239,7 +239,7 @@
   const header = document.getElementById('main-header');
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
+    if (window.scrollY > 90) {
       header.classList.add('bg-[#111721]', 'shadow-md');
     } else {
       header.classList.remove('bg-[#111721]', 'shadow-md');
@@ -350,43 +350,30 @@
   </div>
 </section>
 <!-- Brand images Section started -->
-<section class="px-[30px] pt-[48px] pb-[100px]">
+<section class="pt-[48px] pb-[100px]">
   <div class="container">
-    <div class="flex flex-col md:flex-row items-center justify-center gap-[27px] mx-20">
-      
-      <!-- First logo (no border) -->
-      <img src="https://framerusercontent.com/images/mudcdmL2lpHM3g2uUvhNGa6dJE.svg" alt="Brand Logo"
-        class="max-w-[206px] w-full h-auto invert brightness-200 dark:invert-0 opacity-40" />
+    <div class="brand-wrapper">
+      <img src="images/brands/brand1.svg" alt="Brand Logo" class="brand-logo" />
 
-      <!-- Logo 2 -->
-      <div class="flex items-center relative">
-        <!-- short left border -->
-        <div class="hidden md:block absolute -left-[13.5px] h-5 w-px bg-gray-400"></div>
-        <img src="https://framerusercontent.com/images/yJVD5Nm1uX3ypa5tKtNZkxZDV4.svg" alt="Brand Logo"
-          class="max-w-[206px] w-full h-auto invert brightness-200 dark:invert-0 opacity-40 pl-[27px]" />
+      <div class="flex items-center relative px-7">
+        <div class="brand-separator"></div>
+        <img src="images/brands/brand2.svg" alt="Brand Logo" class="brand-logo" />
       </div>
 
-      <!-- Logo 3 -->
-      <div class="flex items-center relative">
-        <div class="hidden md:block absolute -left-[13.5px] h-5 w-px bg-gray-400"></div>
-        <img src="https://framerusercontent.com/images/5Q6tZnqmOd3ubNrxwf5RgzzqYY.svg" alt="Brand Logo"
-          class="max-w-[206px] w-full h-auto invert brightness-200 dark:invert-0 opacity-40 pl-[27px]" />
+      <div class="flex items-center relative px-7">
+        <div class="brand-separator"></div>
+        <img src="images/brands/brand3.svg" alt="Brand Logo" class="brand-logo" />
       </div>
 
-      <!-- Logo 4 -->
-      <div class="flex items-center relative">
-        <div class="hidden md:block absolute -left-[13.5px] h-5 w-px bg-gray-400"></div>
-        <img src="https://framerusercontent.com/images/HkijFwAOQD8n5hFAv25H2qsvHow.svg" alt="Brand Logo"
-          class="max-w-[206px] w-full h-auto invert brightness-200 dark:invert-0 opacity-40 pl-[27px]" />
+      <div class="flex items-center relative px-7">
+        <div class="brand-separator"></div>
+        <img src="images/brands/brand4.svg" alt="Brand Logo" class="brand-logo" />
       </div>
 
-      <!-- Logo 5 -->
-      <div class="flex items-center relative">
-        <div class="hidden md:block absolute -left-[13.5px] h-5 w-[1px] bg-gray-400 opacity-30"></div>
-        <img src="https://framerusercontent.com/images/C3WSw1EzxD0pZdbcSQsoRRjQo.svg" alt="Brand Logo"
-          class="max-w-[206px] w-full h-auto invert brightness-200 dark:invert-0 opacity-40 pl-[27px]" />
+      <div class="flex items-center relative px-7">
+        <div class="brand-separator"></div>
+        <img src="images/brands/brand5.svg" alt="Brand Logo" class="brand-logo" />
       </div>
-
     </div>
   </div>
 </section>
@@ -620,14 +607,34 @@
 </section>
 <section class="section-sm py-16">
   <div class="container overflow-x-visible">
-      <div class="my-16">
-      <h4
-        class="text-[12px] bg-[#2E85FA] dark:text-gray-100 px-4 py-1 text-gray-800 @@text-margin max-w-[180px] inline-block transform skew-x-[-20deg] -rotate-6 shadow-md">
-        <span class="inline-block transform skew-x-[12deg]">Testimonials</span>
-      </h4>
-      <h1 class="text-4xl md:text-6xl font-normal tracking-tight mt-5">Trusted by 5900+ businesses</h1>
-      <p class="text-[18px] max-w-[600px] tracking-wide my-5">Leveraging data-driven insights, we streamline resource distribution and support your path to a greener footprint.</p>
-    </div>
+    <div class="flex flex-col gap-4 max-w-[790px]">
+  <h4
+    class="text-[12px] @@bg-color px-3 py-[2px] text-[#121821] inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md">
+    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color">Testimonials</span>
+  </h4>
+  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight text-text-light">Trusted by 5900+ businesses</h1>
+  <p class="text-[18px] max-w-[600px] text-text-dark leading-[31px] tracking-wide">Leveraging data-driven insights, we streamline resource distribution and support your path to a greener footprint.</p>
+</div>
+
+<style>
+p, h1, h4 {
+  display: block;
+}
+
+p:empty, h1:empty, h4:empty {
+  display: none;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('p, h1, h4').forEach(el => {
+    if (!el.textContent.trim()) {
+      el.style.display = 'none';
+    }
+  });
+});
+</script>
 
 
     <div class="flex flex-col lg:flex-row gap-10 mt-10">

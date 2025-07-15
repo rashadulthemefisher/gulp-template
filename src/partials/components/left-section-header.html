@@ -1,8 +1,28 @@
-  <div class="my-16">
-      <h4
-        class="text-[12px] bg-[#2E85FA] dark:text-gray-100 px-4 py-1 text-gray-800 @@text-margin max-w-[180px] inline-block transform skew-x-[-20deg] @@skewRotate shadow-md">
-        <span class="inline-block transform skew-x-[12deg]">@@skewText</span>
-      </h4>
-      <h1 class="text-4xl md:text-6xl font-normal tracking-tight mt-5">@@title</h1>
-      <p class="text-[18px] max-w-[600px] tracking-wide my-5">@@subtitle</p>
-    </div>
+<div class="flex flex-col gap-4 max-w-[790px]">
+  <h4
+    class="text-[12px] @@bg-color px-3 py-[2px] text-[#121821] inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md">
+    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color">@@skewText</span>
+  </h4>
+  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight text-text-light">@@title</h1>
+  <p class="text-[18px] max-w-[600px] text-text-dark leading-[31px] tracking-wide">@@subtitle</p>
+</div>
+
+<style>
+p, h1, h4 {
+  display: block;
+}
+
+p:empty, h1:empty, h4:empty {
+  display: none;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('p, h1, h4').forEach(el => {
+    if (!el.textContent.trim()) {
+      el.style.display = 'none';
+    }
+  });
+});
+</script>
