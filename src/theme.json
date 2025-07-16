@@ -1,49 +1,47 @@
 {
   "colors": {
     "default": {
-     "theme_color": {
-        "primary": "#111721",
-        "body": "#111721",
-        "border": "#232930",
-        "light": "#222222",
-        "dark": "#1B212A",
-        "primary-bg": "#BBF10A",
-        "secondary-bg": "#1B212A"
-
+      "theme_color": {
+        "primary": "rgb(17, 23, 33)",
+        "body": "rgb(17, 23, 33)",
+        "border": "rgb(35, 41, 48)",
+        "light": "rgb(34, 34, 34)",
+        "dark": "rgb(27, 33, 42)",
+        "btn-primary": "rgb(187, 241, 10)",
+        "btn-secondary": "rgb(239, 239, 239)",
+        "secondary-bg": "rgb(27, 33, 42)"
       },
       "text_color": {
-        "text": "",
-         "text-dark": "#AAAAAA",
-        "text-light": "#FFFFFF"
+        "default": "rgb(170, 170, 170)",
+        "text-dark": "rgb(18, 24, 33)",
+        "text-light": "rgb(255, 255, 255)"
       }
     },
-  "darkmode": {
+    "darkmode": {
       "theme_color": {
-        "primary": "#111721",
-        "body": "#111721",
-        "border": "#fff",
-        "light": "#222222",
-        "dark": "#fff"
+        "primary": "rgb(17, 23, 33)",
+        "body": "rgb(17, 23, 33)",
+        "border": "rgb(255, 255, 255)",
+        "light": "rgb(34, 34, 34)",
+        "dark": "rgb(255, 255, 255)"
       },
       "text_color": {
-        "text": "",
-        "text-dark": "#AAAAAA",
-        "text-light": "#FFFFFF"
-
+        "default": "rgb(170, 170, 170)",
+        "text-dark": "rgb(18, 24, 33)",
+        "text-light": "rgb(255, 255, 255)"
       }
     }
   },
-"fonts": {
-  "font_family": {
-    "primary": "Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap",
-    "primary_type": "sans-serif",
-    "secondary": "Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap",
-    "secondary_type": "sans-serif"
-  },
-  "font_size": {
-    "base": "16px",
-    "scale": "1.250"
+  "fonts": {
+    "font_family": {
+      "primary": "Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap",
+      "primary_type": "sans-serif",
+      "secondary": "Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap",
+      "secondary_type": "sans-serif"
+    },
+    "font_size": {
+      "base": "16px",
+      "scale": "1.250"
+    }
   }
-}
-
 }

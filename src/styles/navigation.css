@@ -8,42 +8,17 @@
 }
 
 .navbar-brand {
-  @apply text-text-dark dark:text-darkmode-text-dark text-xl font-semibold opacity-800;
+  @apply   text-xl font-semibold opacity-800;
   image {
     @apply max-h-full max-w-full;
   }
 }
 .navbar-nav {
-  @apply bg-[#1B212A] border border-border/75 border-[1px] antialiased rounded-[8px] relative cursor-pointer;
+  @apply bg-secondary-bg border-border/70 border-[1px] antialiased rounded-[8px] relative cursor-pointer;
 }
 .nav-link{
-  @apply block text-white no-underline whitespace-nowrap text-center px-3 py-1 hover:text-[#C4FC00] ;
+  @apply block text-white no-underline whitespace-nowrap text-center px-3 py-1 hover:text-[#C4FC00] opacity-[1];
 }
-
-.nav-dropdown {
-  @apply mr-0;
-}
-
-.nav-dropdown > svg {
-  @apply pointer-events-none;
-}
-
-.nav-dropdown.active .nav-dropdown-list {
-  @apply block;
-}
-
-.nav-dropdown-list {
-  @apply bg-body dark:bg-darkmode-body z-10 min-w-[180px] rounded p-4 shadow-sm hidden lg:invisible lg:absolute lg:block lg:opacity-0;
-}
-
-.nav-dropdown-item {
-  @apply [&:not(:last-child)]:mb-2;
-}
-
-.nav-dropdown-link {
-  @apply text-text-dark hover:text-primary dark:text-darkmode-text dark:hover:text-darkmode-primary block py-1 font-semibold transition;
-}
-
 /* theme-switcher */
 .theme-switcher {
   @apply inline-flex;

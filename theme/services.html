@@ -87,28 +87,32 @@
 
 <header
   id="main-header"
-  class="header"
+  class="header md:px-[30px] px-5 py-6"
 >
-  <nav class="navbar container transition-all duration-300">
+  <nav class="flex flex-row items-center justify-between">
 
-   <!-- Left Side: Logo + Nav -->
-   <div class="flex items-center gap-8 lg:gap-[70px] lg:flex-1">
+<div class="flex flex-row items-center justify-between container">
+     <!-- Left Side: Logo + Nav -->
+   <div class="flex flex-row gap-[70px]">
      <!-- Logo -->
-     <a class="navbar-brand block" href="/">
+     <a class="w-[131px] h-9" href="/">
        <img src="images/h-logo.svg" width="132" height="36" alt="themeplate" />
      </a>
 
      <!-- Nav Links (desktop) -->
-     <ul
-       id="nav-menu"
-       class="hidden lg:flex flex-row gap-2 items-center text-black dark:text-white"
+     <ul id="nav-menu"
+       class="hidden lg:flex flex-row gap-[6px] items-center"
      >
        <!-- All Pages -->
        <li class="relative group navbar-nav">
-         <a class="hidden lg:flex items-center gap-[10px] px-3 py-1 nav-link">
-           All Pages
-           <i class="fa fa-chevron-down transition-transform duration-300 group-hover:rotate-180 text-[10px]" aria-hidden="true"></i>
-         </a>
+        <a class="hidden lg:flex items-center gap-[10px] px-3 py-1 nav-link max-w-[115.4px] group">
+  All Pages
+  <div>
+    <svg class="transition group-hover:rotate-180 group-hover:stroke-[#C4FC00]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255,255,255)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </div>
+</a>
 
          <!-- Desktop Mega Menu -->
          <div
@@ -167,23 +171,24 @@
    <!-- Right Side: CTA Button (desktop only) -->
     <div class="hidden lg:flex lg:items-center">
    <a
-    class="secondary-button bg-white"
+    class="secondary-button"
     target="_blank"
     rel="noopener noreferrer"
     href="/"
   >
     <span
-      class="block text-[16px] leading-[27.2px] font-semibold text-[#121821] whitespace-nowrap tracking-normal"
+      class="block text-[16px] leading-[27.2px] font-semibold whitespace-nowrap tracking-normal"
     >
       Get This Template
     </span>
   </a>
 
     </div>
+</div>
    <!-- Hamburger Toggle (mobile only) -->
    <button
      id="nav-toggle-btn"
-     class="lg:hidden flex items-center text-text-dark dark:text-white"
+     class="lg:hidden flex items-center   dark:text-white"
      aria-label="Toggle menu"
      aria-expanded="false"
    >
@@ -676,12 +681,12 @@
 <section class="section-sm">
   <div class="container">
     <div class="flex flex-col gap-4 max-w-[790px]">
-  <h4
-    class="text-[12px] @@bg-color px-3 py-[2px] text-[#121821] inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md before:absolute before:bottom-1/2 before:-right-1 before:w-4 before:h-4 before:bg-white before:[clip-path:polygon(100%_0,0_100%,100%_100%)] before:content-['']">
-    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color">Key Sectors</span>
-  </h4>
-  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight text-text-light">Industries we worked on</h1>
-  <p class="text-[18px] max-w-[600px] text-text-dark leading-[31px] tracking-wide">Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.</p>
+<h4
+  class="text-[12px] @@bg-color px-3 py-[2px]   inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
+  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color">Key Sectors</span>
+</h4>
+  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight  ">Industries we worked on</h1>
+  <p class="text-[18px] max-w-[600px]   leading-[31px] tracking-wide">Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.</p>
 </div>
 
 <style>
@@ -691,6 +696,20 @@ p, h1, h4 {
 
 p:empty, h1:empty, h4:empty {
   display: none;
+}
+.custom-before {
+  position: relative;
+}
+.custom-before::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  width: 10px;
+  height: 12px;
+  background: #fff;
+  transform: rotate(135deg);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
 </style>
 
@@ -712,8 +731,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <img class="w-[60px] h-[60px]" src="images/health-care.svg" alt="Healthcare Icon">
         </div>
         <div class="flex flex-col gap-4">
-                <h2 class="text-2xl font-medium text-text-light leading-[34px]">Healthcare Industry</h2>
-                <p class="text-base max-w-sm mx-auto text-text-dark leading-[27px]">AI diagnostics, patient management, and predictive health analytics.</p>
+                <h2 class="text-2xl font-medium   leading-[34px]">Healthcare Industry</h2>
+                <p class="text-base max-w-sm mx-auto   leading-[27px]">AI diagnostics, patient management, and predictive health analytics.</p>
         </div>
       </div>
     <!-- Card 2 -->
@@ -722,8 +741,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <img class="w-[60px] h-[60px]" src="images/retail.svg" alt="Healthcare Icon">
         </div>
         <div class="flex flex-col gap-4">
-                <h2 class="text-2xl font-medium text-text-light leading-[34px]">Retail Business</h2>
-                <p class="text-base max-w-sm mx-auto text-text-dark leading-[27px]">Smart logistics, supply chain automation, and real-time inventory.</p>
+                <h2 class="text-2xl font-medium   leading-[34px]">Retail Business</h2>
+                <p class="text-base max-w-sm mx-auto   leading-[27px]">Smart logistics, supply chain automation, and real-time inventory.</p>
         </div>
       </div>
      <!-- Card 3 -->
@@ -732,8 +751,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <img class="w-[60px] h-[60px]" src="images/education.svg" alt="Healthcare Icon">
         </div>
         <div class="flex flex-col gap-4">
-                <h2 class="text-2xl font-medium text-text-light leading-[34px]">Education Industry</h2>
-                <p class="text-base max-w-sm mx-auto text-text-dark leading-[27px]">Personalized learning tools, adaptive assessments, and virtual tutoring.</p>
+                <h2 class="text-2xl font-medium   leading-[34px]">Education Industry</h2>
+                <p class="text-base max-w-sm mx-auto   leading-[27px]">Personalized learning tools, adaptive assessments, and virtual tutoring.</p>
         </div>
       </div>
  <!-- Card 4 -->
@@ -742,8 +761,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <img class="w-[60px] h-[60px]" src="images/finance.svg" alt="Healthcare Icon">
         </div>
         <div class="flex flex-col gap-4">
-                <h2 class="text-2xl font-medium text-text-light leading-[34px]">Finance Management</h2>
-                <p class="text-base max-w-sm mx-auto text-text-dark leading-[27px]">Renewable energy grids, emission monitoring, and sustainable resources.</p>
+                <h2 class="text-2xl font-medium   leading-[34px]">Finance Management</h2>
+                <p class="text-base max-w-sm mx-auto   leading-[27px]">Renewable energy grids, emission monitoring, and sustainable resources.</p>
         </div>
       </div>
     </div>

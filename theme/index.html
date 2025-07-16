@@ -87,28 +87,32 @@
 
 <header
   id="main-header"
-  class="header"
+  class="header md:px-[30px] px-5 py-6"
 >
-  <nav class="navbar container transition-all duration-300">
+  <nav class="flex flex-row items-center justify-between">
 
-   <!-- Left Side: Logo + Nav -->
-   <div class="flex items-center gap-8 lg:gap-[70px] lg:flex-1">
+<div class="flex flex-row items-center justify-between container">
+     <!-- Left Side: Logo + Nav -->
+   <div class="flex flex-row gap-[70px]">
      <!-- Logo -->
-     <a class="navbar-brand block" href="/">
+     <a class="w-[131px] h-9" href="/">
        <img src="images/h-logo.svg" width="132" height="36" alt="themeplate" />
      </a>
 
      <!-- Nav Links (desktop) -->
-     <ul
-       id="nav-menu"
-       class="hidden lg:flex flex-row gap-2 items-center text-black dark:text-white"
+     <ul id="nav-menu"
+       class="hidden lg:flex flex-row gap-[6px] items-center"
      >
        <!-- All Pages -->
        <li class="relative group navbar-nav">
-         <a class="hidden lg:flex items-center gap-[10px] px-3 py-1 nav-link">
-           All Pages
-           <i class="fa fa-chevron-down transition-transform duration-300 group-hover:rotate-180 text-[10px]" aria-hidden="true"></i>
-         </a>
+        <a class="hidden lg:flex items-center gap-[10px] px-3 py-1 nav-link max-w-[115.4px] group">
+  All Pages
+  <div>
+    <svg class="transition group-hover:rotate-180 group-hover:stroke-[#C4FC00]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255,255,255)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </div>
+</a>
 
          <!-- Desktop Mega Menu -->
          <div
@@ -167,23 +171,24 @@
    <!-- Right Side: CTA Button (desktop only) -->
     <div class="hidden lg:flex lg:items-center">
    <a
-    class="secondary-button bg-white"
+    class="secondary-button"
     target="_blank"
     rel="noopener noreferrer"
     href="/"
   >
     <span
-      class="block text-[16px] leading-[27.2px] font-semibold text-[#121821] whitespace-nowrap tracking-normal"
+      class="block text-[16px] leading-[27.2px] font-semibold whitespace-nowrap tracking-normal"
     >
       Get This Template
     </span>
   </a>
 
     </div>
+</div>
    <!-- Hamburger Toggle (mobile only) -->
    <button
      id="nav-toggle-btn"
-     class="lg:hidden flex items-center text-text-dark dark:text-white"
+     class="lg:hidden flex items-center   dark:text-white"
      aria-label="Toggle menu"
      aria-expanded="false"
    >
@@ -250,54 +255,55 @@
 <body class="min-h-screen">
 
 <!-- Banner started -->
-  <section  class="section-sm relative overflow-hidden pt-36">
+  <section  class="section relative overflow-hidden">
   <!-- 🔄 Background image with horizontal width animation -->
   <div class="absolute top-0 inset-0 w-full h-full bg-cover bg-center animate-horizontal-expand origin-center -z-10"
        style="background-image: url('images/banner.svg');">
   </div>
   <!-- Glow Layers: all absolute inside section -->
-<div class="glow-layer left-1/2 -top-0"></div>
+<div class="glow-layer left-1/2 -top-20"></div>
 
 <div class="glow-layer left-[10%] top-0"></div>
 
 <div class="glow-layer -right-[20%] top-[30%]"></div>
 
- <div class="container z-50">
-    <div class="row justify-center">
-      <div class="md:max-w-[844px] text-center flex flex-col gap-6 items-center">
+<div class="container flex flex-col gap-20">
+   <div class="z-10">
+    <div class="justify-center">
+      <div class="text-center flex flex-col gap-6 items-center">
         <div
-          class="button-custom z-50">
+          class="z-50 py-3 px-4 bg-secondary-bg border-border gap-5 flex flex-row items-center rounded-lg">
           <div>
-        <img src="images/medal.svg" alt="medel-svg" style="filter: drop-shadow(0 0 10px #EACE2E);">
+        <img class="w-[21px] h-[28px] mx-[5px]" src="images/medal.svg" alt="medel-svg" style="filter: drop-shadow(0 0 10px #EACE2E);">
           </div>
-          <div class="text-start">
-            <p class="text-[10px] mb-[2px] font-bold">Product Hunt</p>
-            <p class="font-semibold">#1 Product of the Day</p>
+          <div class="text-start text-default">
+            <p class="text-[10px] leading-[17px] font-bold">Product Hunt</p>
+            <p class="font-semibold leading-[27px]">#1 Product of the Day</p>
           </div>
         </div>
       <div class="flex flex-col gap-8 items-center">
       <div class="flex flex-col gap-4">
-            <h1 class="header-text">
+            <h1 class="header-text md:max-w-[844px] mx-auto">
               Work Smarter, Not Harder
             </h1>
-            <p class="max-w-[574px] mx-auto text-[20px] leading-[34px]">
+            <p class="max-w-[574px] mx-auto text-[20px] leading-[34px] opacity-[1]">
               Join hundreds of companies who've doubled their efficiency while cutting costs by
               <span class="counter" data-target="40">0</span>% through smart AI integration.
             </p>
         </div>
         <!-- ✅ Alpine.js for modal toggle -->
         <!-- ✅ Button Group with Modal -->
-        <div x-data="{ open: false }" class="flex flex-col md:flex-row items-center justify-center gap-6 text-center rounded-lg">
+        <div x-data="{ open: false }" class="flex flex-col md:flex-row items-center justify-center gap-6 text-center rounded-lg leading-[27px]">
 
           <!-- Get Started Now -->
-          <a class="secondary-button bg-primary-bg"
+          <a class="primary-button"
             target="_blank" rel="noopener noreferrer" href="/">
             Get Started Now
           </a>
 
           <!-- Watch Video Button -->
           <button @click="open = true"
-            class="text-lg font-normal text-text-light transition flex items-center gap-[10px] cursor-pointer">
+            class="text-lg font-semibold leading-[31px] transition flex items-center gap-[10px] cursor-pointer">
             <div class="text-[8px] h-5 w-5">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--token-ce3aeeb3-0c3f-4ec5-b949-664887120135, rgb(255, 255, 255))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
             </div>
@@ -324,19 +330,15 @@
             </div>
           </div>
         </div>
-</div>
+    </div>
       </div>
     </div>
   </div>
-</section>
-<!-- Banner ended -->
- <!-- Ai faces section started -->
- <section class="mb-14">
-  <div class="container flex flex-col md:flex-row  gap-[22px]">
+    <div class=" flex flex-col md:flex-row  gap-[22px]">
         <!-- Chart Card -->
       <div class="border-border/75 border-[2px] border bg-secondary-bg rounded-3xl overflow-hidden flex flex-col gap-[10px] justify-between pt-[15px] md:min-w-[320px]">
         <div class="max-w-[260px] tracking-[-0.5px] mx-auto pt-3">
-          <small class="text-text-dark">Real-time analytics</small>
+          <p class="text-text-light text-sm leading-[21px] opacity-[0.6]">Real-time analytics</p>
           <h5 class="card-header">
             AI market is expected to grow by
             <span class="counter text-[#B6F312]" data-target="59">0</span><span class="text-[#B6F312]">%</span> in 2025
@@ -347,7 +349,7 @@
         </div>
       </div>
          <!-- Face Scan Card -->
-      <div class="relative overflow-hidden rounded-3xl border h-[463px] min-w-[320px]">
+      <div class="relative overflow-hidden rounded-3xl border-border shadow h-[463px] min-w-[320px]">
         <!-- Background Image -->
         <img src="images/ai-face.avif" alt="AI Face" class="w-full h-full object-cover">
 
@@ -355,7 +357,7 @@
         <div class="absolute top-[10px] left-1/2 -translate-x-1/2 z-10 mt-2">
           <div class="flex flex-row items-center gap-2">
             <h2 class="text-[28px] font-extrabold tracking-tight text-gray-900"><span class="counter" data-target="100">0</span><span class="italic">%</span></h2>
-            <h4 class="text-xs text-[#5B5A58]">Face has been Matched</h4>
+            <p class="text-xs text-text-dark opacity-[0.6] leading-[14px]">Face has been Matched</p>
           </div>
         </div>
         <img class="absolute top-[70px] left-1/2 -translate-x-1/2 z-10" src="images/ai-face-dot.svg" alt="Face Dots">
@@ -371,7 +373,7 @@
           class="absolute bottom-0 pb-4 left-0 w-full h-[158px] bg-gradient-to-t from-white to-transparent z-10 flex justify-center items-end pb-2">
           <div class="w-[240px] text-left ml-14">
             <h2 class="text-2xl tracking-[-0.5px] font-medium leading-[34px] text-gray-900">AI Face Detection</h2>
-            <p class="text-sm text-text-dark">Identity Verification</p>
+            <p class="text-sm  ">Identity Verification</p>
           </div>
         </div>
       </div>
@@ -386,7 +388,7 @@
       <!-- Bottom Section (Success Rate Info) -->
       <div class="flex flex-col gap-[28px]">
         <!-- Success Label -->
-        <h3 class="text-xl text-text-light font-semibold">Our Success Rate</h3>
+        <h3 class="text-xl   font-semibold">Our Success Rate</h3>
 
        <!-- Success Cards Row -->
       <div class="flex flex-col md:flex-row justify-between">
@@ -398,8 +400,8 @@
           ></div>
          <div class="flex flex-col gap-[27px]">
            <div>
-            <span class="text-sm text-text-dark">Succeed</span><br />
-            <span class="text-4xl text-text-light font-medium"><span class="counter" data-target="63">0</span>%</span>
+            <span class="text-sm  ">Succeed</span><br />
+            <span class="text-4xl   font-medium"><span class="counter" data-target="63">0</span>%</span>
           </div>
           <div>
             <div class="max-w-[236px] h-10 bg-[#70DB80] rounded-xl mt-2"></div>
@@ -416,8 +418,8 @@
           ></div>
          <div class="flex flex-col gap-[27px]">
            <div>
-            <span class="text-sm text-text-dark">In Progress</span><br />
-            <span class="text-4xl text-text-light font-medium"><span class="counter" data-target="24">0</span>%</span>
+            <span class="text-sm  ">In Progress</span><br />
+            <span class="text-4xl   font-medium"><span class="counter" data-target="24">0</span>%</span>
           </div>
           <div>
             <div class="max-w-[152px] h-10 bg-[#2E85FA] rounded-xl mt-2"></div>
@@ -434,8 +436,8 @@
           ></div>
          <div class="flex flex-col gap-[27px]">
            <div>
-            <span class="text-sm text-text-dark">Failed</span><br />
-            <span class="text-4xl text-text-light font-medium"><span class="counter" data-target="13">0</span>%</span>
+            <span class="text-sm  ">Failed</span><br />
+            <span class="text-4xl   font-medium"><span class="counter" data-target="13">0</span>%</span>
           </div>
           <div>
             <div class="max-w-[120px] h-10 bg-[#99A1AF] rounded-xl mt-2"></div>
@@ -447,6 +449,11 @@
       </div>
     </div>
   </div>
+</div>
+</section>
+<!-- Banner ended -->
+ <!-- Ai faces section started -->
+ <section class="">
  </section>
 <!-- Ai faces section ended -->
 <!-- Brand images Section started -->
@@ -484,12 +491,12 @@
 <section class="section-sm">
   <div class="container flex flex-col gap-[100px]">
  <div class="flex flex-col gap-4 max-w-[790px]">
-  <h4
-    class="text-[12px] bg-[#70DB80] px-3 py-[2px] text-[#121821] inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md before:absolute before:bottom-1/2 before:-right-1 before:w-4 before:h-4 before:bg-white before:[clip-path:polygon(100%_0,0_100%,100%_100%)] before:content-['']">
-    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-[#fff]">Saves Environment</span>
-  </h4>
-  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight text-text-light">Bringing change in the industry by making impactful solutions</h1>
-  <p class="text-[18px] max-w-[600px] text-text-dark leading-[31px] tracking-wide"></p>
+<h4
+  class="text-[12px] bg-[#70DB80] px-3 py-[2px]   inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
+  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-[#fff]">Saves Environment</span>
+</h4>
+  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight  ">Bringing change in the industry by making impactful solutions</h1>
+  <p class="text-[18px] max-w-[600px]   leading-[31px] tracking-wide"></p>
 </div>
 
 <style>
@@ -499,6 +506,20 @@ p, h1, h4 {
 
 p:empty, h1:empty, h4:empty {
   display: none;
+}
+.custom-before {
+  position: relative;
+}
+.custom-before::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  width: 10px;
+  height: 12px;
+  background: #fff;
+  transform: rotate(135deg);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
 </style>
 
@@ -519,18 +540,18 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <div class="flex flex-col gap-20">
           <div class="flex flex-col gap-10">
-          <h4 class="h5 md:text-2xl text-text-light tracking-[-0.5px] font-medium leading-[33.6px]">
+          <h4 class="h5 md:text-2xl   tracking-[-0.5px] font-medium leading-[33.6px]">
             Optivus helped SiteForge to integrate advanced
             <span class="text-lime-400">AI analytics</span> to optimize their energy consumption by
             <span class="counter text-lime-400 font-bold" data-target="76">0</span><span
               class="text-lime-400 font-bold">%</span> last year.
           </h4>
-          <p class="text-text-dark leading-[27px]">
+          <p class="  leading-[27px]">
             By predicting energy demand and automating resource allocation, our tools help reduce waste and minimize
             carbon footprints.
           </p>
         </div>
-        <button class="bg-[#B9ED09] text-gray-900  px-5 py-3 font-semibold rounded-[14px] hover:bg-lime-300 transition max-w-[156px] leading-[27px]">
+        <button class="primary-button">
           Read Full Story
         </button>
         </div>
@@ -542,10 +563,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
           <!-- Text Block -->
           <div>
-            <h3 class="md:text-2xl text-text-light max-w-[220px] font-medium leading-[34px]">
+            <h3 class="md:text-2xl   max-w-[220px] font-medium leading-[34px]">
               Enabling Smarter Waste Management
             </h3>
-            <h5 class="text-sm leading-[21px] font-normal mt-2 text-text-light">
+            <h5 class="text-sm leading-[21px] font-normal mt-2  ">
               Expected Valuation
             </h5>
           </div>
@@ -573,8 +594,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <div
           class="absolute bottom-6 left-6 animate-[float_6s_ease-in-out_infinite] bg-white text-black dark:text-black p-4 rounded-3xl shadow-lg max-w-[180px]">
           <p class="text-xl font-semibold leading-[34px] text-black">Results:</p>
-          <p class="text-sm text-[#121821] mt-2 mb-4">Improvement saw in recycling rates</p>
-          <p class="text-4xl text-text-light leading-[43px] font-medium bg-[#70DB80] w-auto rounded-xl text-center mt-2 p-2">+<span class="counter"
+          <p class="text-sm   mt-2 mb-4">Improvement saw in recycling rates</p>
+          <p class="text-4xl   leading-[43px] font-medium bg-[#70DB80] w-auto rounded-xl text-center mt-2 p-2">+<span class="counter"
               data-target="400">0</span>%</p>
         </div>
       </div>
@@ -585,8 +606,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="images/icons/world.svg" alt="world icon">
           </div>
           <div class="flex flex-col gap-4">
-            <h3 class="text-2xl text-text-light font-medium tracking-[-0.5px] leading-[34px]">Analyze real-time data</h3>
-            <p class="text-base leading-[27px] text-text-dark">
+            <h3 class="text-2xl   font-medium tracking-[-0.5px] leading-[34px]">Analyze real-time data</h3>
+            <p class="text-base leading-[27px]  ">
               Through real-time analytics and smart routing, our system optimizes logistics to cut fuel usage and lower
               emissions.
             </p>
@@ -598,8 +619,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="images/icons/king.svg" alt="world icon">
           </div>
           <div class="flex flex-col gap-4">
-            <h3 class="text-2xl text-text-light font-medium tracking-[-0.5px] leading-[34px]">Global sustainability goals</h3>
-            <p class="text-base leading-[27px] text-text-dark">
+            <h3 class="text-2xl   font-medium tracking-[-0.5px] leading-[34px]">Global sustainability goals</h3>
+            <p class="text-base leading-[27px]  ">
               With AI-powered forecasting and adaptive controls, our tools ensure efficient energy use across
               facilities.
             </p>
@@ -615,12 +636,12 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="container flex flex-col gap-[64px]">
 <div>
  <div class="flex flex-col gap-4 max-w-[790px]">
-  <h4
-    class="text-[12px] bg-[#2E85FA] px-3 py-[2px] text-[#121821] inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md before:absolute before:bottom-1/2 before:-right-1 before:w-4 before:h-4 before:bg-white before:[clip-path:polygon(100%_0,0_100%,100%_100%)] before:content-['']">
-    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-[#fff]">Key Sectors</span>
-  </h4>
-  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight text-text-light">Industries we worked on</h1>
-  <p class="text-[18px] max-w-[600px] text-text-dark leading-[31px] tracking-wide">Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.</p>
+<h4
+  class="text-[12px] bg-[#2E85FA] px-3 py-[2px]   inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md custom-before">
+  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-[#fff]">Key Sectors</span>
+</h4>
+  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight  ">Industries we worked on</h1>
+  <p class="text-[18px] max-w-[600px]   leading-[31px] tracking-wide">Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.</p>
 </div>
 
 <style>
@@ -630,6 +651,20 @@ p, h1, h4 {
 
 p:empty, h1:empty, h4:empty {
   display: none;
+}
+.custom-before {
+  position: relative;
+}
+.custom-before::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  width: 10px;
+  height: 12px;
+  background: #fff;
+  transform: rotate(135deg);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
 </style>
 
@@ -653,8 +688,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <img class="w-[60px] h-[60px]" src="images/health-care.svg" alt="Healthcare Icon">
         </div>
         <div class="flex flex-col gap-4">
-                <h2 class="text-2xl font-medium text-text-light leading-[34px]">Healthcare Industry</h2>
-                <p class="text-base max-w-sm mx-auto text-text-dark leading-[27px]">AI diagnostics, patient management, and predictive health analytics.</p>
+                <h2 class="text-2xl font-medium   leading-[34px]">Healthcare Industry</h2>
+                <p class="text-base max-w-sm mx-auto   leading-[27px]">AI diagnostics, patient management, and predictive health analytics.</p>
         </div>
       </div>
     <!-- Card 2 -->
@@ -663,8 +698,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <img class="w-[60px] h-[60px]" src="images/retail.svg" alt="Healthcare Icon">
         </div>
         <div class="flex flex-col gap-4">
-                <h2 class="text-2xl font-medium text-text-light leading-[34px]">Retail Business</h2>
-                <p class="text-base max-w-sm mx-auto text-text-dark leading-[27px]">Smart logistics, supply chain automation, and real-time inventory.</p>
+                <h2 class="text-2xl font-medium   leading-[34px]">Retail Business</h2>
+                <p class="text-base max-w-sm mx-auto   leading-[27px]">Smart logistics, supply chain automation, and real-time inventory.</p>
         </div>
       </div>
      <!-- Card 3 -->
@@ -673,8 +708,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <img class="w-[60px] h-[60px]" src="images/education.svg" alt="Healthcare Icon">
         </div>
         <div class="flex flex-col gap-4">
-                <h2 class="text-2xl font-medium text-text-light leading-[34px]">Education Industry</h2>
-                <p class="text-base max-w-sm mx-auto text-text-dark leading-[27px]">Personalized learning tools, adaptive assessments, and virtual tutoring.</p>
+                <h2 class="text-2xl font-medium   leading-[34px]">Education Industry</h2>
+                <p class="text-base max-w-sm mx-auto   leading-[27px]">Personalized learning tools, adaptive assessments, and virtual tutoring.</p>
         </div>
       </div>
  <!-- Card 4 -->
@@ -683,8 +718,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <img class="w-[60px] h-[60px]" src="images/finance.svg" alt="Healthcare Icon">
         </div>
         <div class="flex flex-col gap-4">
-                <h2 class="text-2xl font-medium text-text-light leading-[34px]">Finance Management</h2>
-                <p class="text-base max-w-sm mx-auto text-text-dark leading-[27px]">Renewable energy grids, emission monitoring, and sustainable resources.</p>
+                <h2 class="text-2xl font-medium   leading-[34px]">Finance Management</h2>
+                <p class="text-base max-w-sm mx-auto   leading-[27px]">Renewable energy grids, emission monitoring, and sustainable resources.</p>
         </div>
       </div>
     </div>
@@ -699,12 +734,12 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="container flex flex-col gap-20">
 <div class="flex flex-col gap-10">
  <div class="flex flex-col gap-4 max-w-[790px]">
-  <h4
-    class="text-[12px] bg-[#C4FC00] px-3 py-[2px] text-[#121821] inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md before:absolute before:bottom-1/2 before:-right-1 before:w-4 before:h-4 before:bg-white before:[clip-path:polygon(100%_0,0_100%,100%_100%)] before:content-['']">
-    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-[#121821]">Featured Technologies</span>
-  </h4>
-  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight text-text-light">Technologies we’ve built</h1>
-  <p class="text-[18px] max-w-[600px] text-text-dark leading-[31px] tracking-wide">Using machine learning to track usage patterns, our platform reduces energy overuse and improves operational sustainability.</p>
+<h4
+  class="text-[12px] bg-[#C4FC00] px-3 py-[2px]   inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md custom-before">
+  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg]  ">Featured Technologies</span>
+</h4>
+  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight  ">Technologies we’ve built</h1>
+  <p class="text-[18px] max-w-[600px]   leading-[31px] tracking-wide">Using machine learning to track usage patterns, our platform reduces energy overuse and improves operational sustainability.</p>
 </div>
 
 <style>
@@ -714,6 +749,20 @@ p, h1, h4 {
 
 p:empty, h1:empty, h4:empty {
   display: none;
+}
+.custom-before {
+  position: relative;
+}
+.custom-before::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  width: 10px;
+  height: 12px;
+  background: #fff;
+  transform: rotate(135deg);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
 </style>
 
@@ -729,7 +778,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 <div>
-<button class="text-[#121821] px-5 py-3 font-semibold rounded-[14px] secondary-button bg-white transition leading-[27px]">
+<button class="  px-5 py-3 font-semibold rounded-[14px] secondary-button bg-white transition leading-[27px]">
   View All Products
 </button>
 
@@ -947,12 +996,12 @@ document.addEventListener("DOMContentLoaded", () => {
 <section class="section-sm">
   <div class="container">
     <div class="flex flex-col gap-4 max-w-[790px]">
-  <h4
-    class="text-[12px] @@bg-color px-3 py-[2px] text-[#121821] inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md before:absolute before:bottom-1/2 before:-right-1 before:w-4 before:h-4 before:bg-white before:[clip-path:polygon(100%_0,0_100%,100%_100%)] before:content-['']">
-    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color">Get Started</span>
-  </h4>
-  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight text-text-light">Getting started is super simple</h1>
-  <p class="text-[18px] max-w-[600px] text-text-dark leading-[31px] tracking-wide">By automating equipment schedules and monitoring consumption, we help businesses lower utility costs and environmental impact.</p>
+<h4
+  class="text-[12px] @@bg-color px-3 py-[2px]   inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
+  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color">Get Started</span>
+</h4>
+  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight  ">Getting started is super simple</h1>
+  <p class="text-[18px] max-w-[600px]   leading-[31px] tracking-wide">By automating equipment schedules and monitoring consumption, we help businesses lower utility costs and environmental impact.</p>
 </div>
 
 <style>
@@ -962,6 +1011,20 @@ p, h1, h4 {
 
 p:empty, h1:empty, h4:empty {
   display: none;
+}
+.custom-before {
+  position: relative;
+}
+.custom-before::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  width: 10px;
+  height: 12px;
+  background: #fff;
+  transform: rotate(135deg);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
 </style>
 
@@ -1159,12 +1222,12 @@ document.addEventListener("DOMContentLoaded", () => {
 <section class="section-sm py-16">
   <div class="container overflow-x-visible">
     <div class="flex flex-col gap-4 max-w-[790px]">
-  <h4
-    class="text-[12px] @@bg-color px-3 py-[2px] text-[#121821] inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md before:absolute before:bottom-1/2 before:-right-1 before:w-4 before:h-4 before:bg-white before:[clip-path:polygon(100%_0,0_100%,100%_100%)] before:content-['']">
-    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color">Testimonials</span>
-  </h4>
-  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight text-text-light">Trusted by 5900+ businesses</h1>
-  <p class="text-[18px] max-w-[600px] text-text-dark leading-[31px] tracking-wide">Leveraging data-driven insights, we streamline resource distribution and support your path to a greener footprint.</p>
+<h4
+  class="text-[12px] @@bg-color px-3 py-[2px]   inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md custom-before">
+  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color">Testimonials</span>
+</h4>
+  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight  ">Trusted by 5900+ businesses</h1>
+  <p class="text-[18px] max-w-[600px]   leading-[31px] tracking-wide">Leveraging data-driven insights, we streamline resource distribution and support your path to a greener footprint.</p>
 </div>
 
 <style>
@@ -1174,6 +1237,20 @@ p, h1, h4 {
 
 p:empty, h1:empty, h4:empty {
   display: none;
+}
+.custom-before {
+  position: relative;
+}
+.custom-before::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  width: 10px;
+  height: 12px;
+  background: #fff;
+  transform: rotate(135deg);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
 </style>
 

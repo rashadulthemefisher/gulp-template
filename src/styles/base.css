@@ -8,7 +8,7 @@ html {
 
 body {
  font-family: 'Rethink Sans', sans-serif;
-  @apply bg-body text-text-light font-primary font-normal tracking-normal opacity-800;
+  @apply bg-body text-text-light font-primary font-normal tracking-normal;
 }
 
 h1,
@@ -17,7 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-primary font-medium text-text-dark;
+  @apply font-primary font-medium  ;
 }
 
 h1,
@@ -58,8 +58,9 @@ strong {
 code {
   @apply after:border-none;
 }
-p{
-  @apply opacity-80 font-normal tracking-normal text-text-dark;
+p,
+.p{
+  @apply text-default;
 }
 
 blockquote > p {
