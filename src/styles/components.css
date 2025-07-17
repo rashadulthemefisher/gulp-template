@@ -19,7 +19,7 @@
  @apply pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 rotate-[19deg] w-[400px] h-[200px] bg-white/15 blur-3xl rounded-full z-0}
 
 .card-header{
-@apply   text-[24px] font-medium tracking-[-0.5px];
+@apply  text-[24px] leading-[34px] font-medium tracking-[-0.5px];
 }
 
 /* Image brand css */
@@ -28,7 +28,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 27px;
+  gap: 32px 27px;
+  row-gap: 32px;
 }
 
 /* Image styles same */

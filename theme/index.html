@@ -257,7 +257,7 @@
 <!-- Banner started -->
   <section  class="section relative overflow-hidden">
   <!-- 🔄 Background image with horizontal width animation -->
-  <div class="absolute top-0 inset-0 w-full h-full bg-cover bg-center animate-horizontal-expand origin-center -z-10"
+  <div class="absolute top-0 inset-0 w-full h-[50%] bg-cover bg-center animate-horizontal-expand origin-center -z-10"
        style="background-image: url('images/banner.svg');">
   </div>
   <!-- Glow Layers: all absolute inside section -->
@@ -303,8 +303,8 @@
 
           <!-- Watch Video Button -->
           <button @click="open = true"
-            class="text-lg font-semibold leading-[31px] transition flex items-center gap-[10px] cursor-pointer">
-            <div class="text-[8px] h-5 w-5">
+            class="text-lg font-semibold leading-[30px] transition flex items-center gap-[10px] cursor-pointer">
+            <div class="text-[12px] h-5 w-5">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--token-ce3aeeb3-0c3f-4ec5-b949-664887120135, rgb(255, 255, 255))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
             </div>
             Watch our video
@@ -313,7 +313,7 @@
           <!-- ✅ Modal -->
           <div x-show="open" x-transition
             class="fixed inset-0 bg-black/50 bg-opacity-80 z-50 flex items-center justify-center">
-            <div class="relative bg-white rounded-xl max-w-2xl w-full shadow-xl">
+            <div class="relative bg-text-light rounded-xl max-w-2xl w-full shadow-xl">
               <!-- Close Button -->
               <button @click="open = false"
                 class="absolute -top-1/4 left-1/2 text-3xl font-normal text-gray-200 cursor-pointer">
@@ -334,27 +334,32 @@
       </div>
     </div>
   </div>
+   <!-- Ai faces section started -->
     <div class=" flex flex-col md:flex-row  gap-[22px]">
         <!-- Chart Card -->
-      <div class="border-border/75 border-[2px] border bg-secondary-bg rounded-3xl overflow-hidden flex flex-col gap-[10px] justify-between pt-[15px] md:min-w-[320px]">
-        <div class="max-w-[260px] tracking-[-0.5px] mx-auto pt-3">
-          <p class="text-text-light text-sm leading-[21px] opacity-[0.6]">Real-time analytics</p>
-          <h5 class="card-header">
-            AI market is expected to grow by
-            <span class="counter text-[#B6F312]" data-target="59">0</span><span class="text-[#B6F312]">%</span> in 2025
-          </h5>
-        </div>
-        <div class="mt-auto">
-          <img src="images/30B.svg" alt="" class="w-full object-cover">
-        </div>
-      </div>
+<div class="border-border/75 border bg-secondary-bg rounded-3xl flex flex-col gap-[10px] justify-between pt-[15px] min-w-[320px] h-[464px] overflow-visible">
+  <div class="max-w-[256px] mx-auto pt-3">
+    <p class="text-text-light text-sm leading-[21px] opacity-[0.6]">Real-time analytics</p>
+    <h5 class="card-header">
+      AI market is expected to grow by
+      <span class="counter text-[#B6F312]" data-target="59">0</span><span class="text-[#B6F312]">%</span> in 2025
+    </h5>
+  </div>
+  <div class="w-[320px] overflow-visible">
+    <img 
+      src="images/30B.svg" 
+      alt="30b image" 
+      class="w-full h-[350px] object-cover object-center rounded-none"
+    />
+  </div>
+</div>
          <!-- Face Scan Card -->
-      <div class="relative overflow-hidden rounded-3xl border-border shadow h-[463px] min-w-[320px]">
+      <div class="relative overflow-hidden rounded-3xl border-border shadow h-[464px] min-w-[320px]">
         <!-- Background Image -->
         <img src="images/ai-face.avif" alt="AI Face" class="w-full h-full object-cover">
 
         <!-- Face dots -->
-        <div class="absolute top-[10px] left-1/2 -translate-x-1/2 z-10 mt-2">
+        <div class="absolute max-w-[260px] top-5 left-1/2 -translate-x-1/2 z-20">
           <div class="flex flex-row items-center gap-2">
             <h2 class="text-[28px] font-extrabold tracking-tight text-gray-900"><span class="counter" data-target="100">0</span><span class="italic">%</span></h2>
             <p class="text-xs text-text-dark opacity-[0.6] leading-[14px]">Face has been Matched</p>
@@ -370,14 +375,15 @@
         <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10"></div>
         <!-- Bottom Gradient Overlay with Text -->
         <div
-          class="absolute bottom-0 pb-4 left-0 w-full h-[158px] bg-gradient-to-t from-white to-transparent z-10 flex justify-center items-end pb-2">
+          class="absolute bottom-0 pb-4 left-0 w-full h-[158px] bg-gradient-to-t from-white to-transparent z-10 flex justify-center items-end">
           <div class="w-[240px] text-left ml-14">
             <h2 class="text-2xl tracking-[-0.5px] font-medium leading-[34px] text-gray-900">AI Face Detection</h2>
             <p class="text-sm  ">Identity Verification</p>
           </div>
         </div>
       </div>
-    <div class="flex flex-col justify-between border-border bg-secondary-bg rounded-3xl pt-8 pl-8 pr-7 pb-10 md:min-w-[592px]">
+      <!-- With a 75% project success rate -->
+    <div class="flex flex-col justify-between border-border bg-secondary-bg rounded-3xl pt-8 pl-8 pr-[39px] pb-10 md:min-w-[592px]">
         <!-- Heading -->
       <h2 class="card-header max-w-[541px]">
         With a <span class="counter text-[#B6F312]" data-target="75">0</span><span class="text-[#B6F312]">%</span>
@@ -388,29 +394,29 @@
       <!-- Bottom Section (Success Rate Info) -->
       <div class="flex flex-col gap-[28px]">
         <!-- Success Label -->
-        <h3 class="text-xl   font-semibold">Our Success Rate</h3>
+        <h3 class="text-xl leading-[34px] font-semibold">Our Success Rate</h3>
 
        <!-- Success Cards Row -->
       <div class="flex flex-col md:flex-row justify-between">
         <!-- Succeed Card -->
-        <div class="w-full md:max-w-[240px] text-start pl-[4px] text-[12px] dark:text-gray-200 text-gray-800 font-bold relative"
+        <div class="w-full md:max-w-[240px] text-start px-1 text-[12px] dark:text-gray-200 text-gray-800 font-bold relative"
         >
           <div
             class="absolute top-0 left-0 h-full w-[1px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
           ></div>
          <div class="flex flex-col gap-[27px]">
            <div>
-            <span class="text-sm  ">Succeed</span><br />
-            <span class="text-4xl   font-medium"><span class="counter" data-target="63">0</span>%</span>
+            <span class="text-sm text-default leading-[21px] font-normal opacity-[1]">Succeed</span><br />
+            <span class="text-4xl font-medium leading-[43px] text-text-light opacity-[1]"><span class="counter" data-target="63">0</span>%</span>
           </div>
           <div>
             <div class="max-w-[236px] h-10 bg-[#70DB80] rounded-xl mt-2"></div>
-            <div class="absolute h-6 w-[11px] bg-white rounded-sm right-2 bottom-[10px]"></div>
+            <div class="absolute h-6 w-[11px] bg-text-light rounded-sm right-2 bottom-[10px]"></div>
           </div>
          </div>
         </div>
         <!-- In Progress Card -->
-         <div class="w-full md:max-w-[156px] text-start pl-1 text-[12px] dark:text-gray-200 text-gray-800 font-bold relative"
+         <div class="w-full md:max-w-[156px] text-start px-1 text-[12px] dark:text-gray-200 text-gray-800 font-bold relative"
         >
 
           <div
@@ -418,17 +424,17 @@
           ></div>
          <div class="flex flex-col gap-[27px]">
            <div>
-            <span class="text-sm  ">In Progress</span><br />
-            <span class="text-4xl   font-medium"><span class="counter" data-target="24">0</span>%</span>
+            <span class="text-sm text-default leading-[21px] font-normal opacity-[1]">In Progress</span><br />
+            <span class="text-4xl font-medium leading-[43px] text-text-light opacity-[1]"><span class="counter" data-target="24">0</span>%</span>
           </div>
           <div>
             <div class="max-w-[152px] h-10 bg-[#2E85FA] rounded-xl mt-2"></div>
-            <div class="absolute h-6 w-[11px] bg-white rounded-sm right-2 bottom-[10px]"></div>
+            <div class="absolute h-6 w-[11px] bg-text-light rounded-sm right-2 bottom-[10px]"></div>
           </div>
          </div>
         </div>
          <!-- Failed Card -->
-         <div class="w-full md:max-w-[125px] text-start pl-[5px] text-[12px] dark:text-gray-200 text-gray-800 font-bold relative"
+         <div class="w-full md:max-w-[125px] text-start px-1 text-[12px] dark:text-gray-200 text-gray-800 font-bold relative"
         >
 
           <div
@@ -436,12 +442,12 @@
           ></div>
          <div class="flex flex-col gap-[27px]">
            <div>
-            <span class="text-sm  ">Failed</span><br />
-            <span class="text-4xl   font-medium"><span class="counter" data-target="13">0</span>%</span>
+            <span class="text-sm text-default leading-[21px] font-normal opacity-[1]">Failed</span><br />
+            <span class="text-4xl font-medium leading-[43px] text-text-light opacity-[1]"><span class="counter" data-target="13">0</span>%</span>
           </div>
           <div>
             <div class="max-w-[120px] h-10 bg-[#99A1AF] rounded-xl mt-2"></div>
-            <div class="absolute h-6 w-[11px] bg-white rounded-sm right-2 bottom-[10px]"></div>
+            <div class="absolute h-6 w-[11px] bg-text-light rounded-sm right-2 bottom-[10px]"></div>
           </div>
          </div>
         </div>
@@ -449,37 +455,44 @@
       </div>
     </div>
   </div>
+  <!-- Ai faces section ended -->
 </div>
 </section>
 <!-- Banner ended -->
- <!-- Ai faces section started -->
- <section class="">
- </section>
-<!-- Ai faces section ended -->
 <!-- Brand images Section started -->
-<section class="pt-[48px] pb-[100px]">
-  <div class="container">
-    <div class="brand-wrapper">
-      <img src="images/brands/brand1.svg" alt="Brand Logo" class="brand-logo" />
+<section class="pt-[50px] pb-[100px] px-[30px]">
+  <div class="container ">
+    <div class="brand-wrapper px-12">
+      <div>
+        <img src="images/brands/brand1.svg" alt="Brand Logo" class="brand-logo" />
+      </div>
 
-      <div class="flex items-center relative px-7">
+      <div>
+        <div class="flex items-center relative px-7">
         <div class="brand-separator"></div>
         <img src="images/brands/brand2.svg" alt="Brand Logo" class="brand-logo" />
       </div>
+      </div>
 
-      <div class="flex items-center relative px-7">
+      <div>
+        <div class="flex items-center relative px-7">
         <div class="brand-separator"></div>
         <img src="images/brands/brand3.svg" alt="Brand Logo" class="brand-logo" />
       </div>
+      </div>
 
-      <div class="flex items-center relative px-7">
+      <div>
+        <div class="flex items-center relative px-7">
         <div class="brand-separator"></div>
         <img src="images/brands/brand4.svg" alt="Brand Logo" class="brand-logo" />
       </div>
+      </div>
 
-      <div class="flex items-center relative px-7">
+      <div>
+        <div class="flex items-center relative px-7">
         <div class="brand-separator"></div>
         <img src="images/brands/brand5.svg" alt="Brand Logo" class="brand-logo" />
+      </div>
       </div>
     </div>
   </div>
@@ -492,8 +505,8 @@
   <div class="container flex flex-col gap-[100px]">
  <div class="flex flex-col gap-4 max-w-[790px]">
 <h4
-  class="text-[12px] bg-[#70DB80] px-3 py-[2px]   inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
-  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-[#fff]">Saves Environment</span>
+  class="text-[12px] bg-[#70DB80] px-3 inline-block w-fit transform skew-x-[-20deg] -rotate-[6deg] shadow-md custom-before">
+  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-text-dark opacity-[1]">Saves Environment</span>
 </h4>
   <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight  ">Bringing change in the industry by making impactful solutions</h1>
   <p class="text-[18px] max-w-[600px]   leading-[31px] tracking-wide"></p>
@@ -574,25 +587,24 @@ document.addEventListener("DOMContentLoaded", () => {
               <!-- Arrow Button -->
                <!-- Arrow Button -->
           <button
-            class="relative min-w-[60px] min-h-[60px] bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-[60px] min-h-[60px] bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
           </button>
 
         </div>
         <!-- Animated floating card -->
         <div
-          class="absolute bottom-6 left-6 animate-[float_6s_ease-in-out_infinite] bg-white text-black dark:text-black p-4 rounded-3xl shadow-lg max-w-[180px]">
+          class="absolute bottom-6 left-6 animate-[float_6s_ease-in-out_infinite] bg-text-light text-black dark:text-black p-4 rounded-3xl shadow-lg max-w-[180px]">
           <p class="text-xl font-semibold leading-[34px] text-black">Results:</p>
           <p class="text-sm   mt-2 mb-4">Improvement saw in recycling rates</p>
           <p class="text-4xl   leading-[43px] font-medium bg-[#70DB80] w-auto rounded-xl text-center mt-2 p-2">+<span class="counter"
@@ -632,13 +644,13 @@ document.addEventListener("DOMContentLoaded", () => {
 </section>
 <!-- Smartermanagement Section Ended -->
 <!-- Industries Work Section started -->
-<section class="section-sm">
+<section class="section-sm pb-[70px]">
   <div class="container flex flex-col gap-[64px]">
 <div>
  <div class="flex flex-col gap-4 max-w-[790px]">
 <h4
-  class="text-[12px] bg-[#2E85FA] px-3 py-[2px]   inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md custom-before">
-  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-[#fff]">Key Sectors</span>
+  class="text-[12px] bg-[#2E85FA] px-3 inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md custom-before">
+  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-[#fff] opacity-[1]">Key Sectors</span>
 </h4>
   <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight  ">Industries we worked on</h1>
   <p class="text-[18px] max-w-[600px]   leading-[31px] tracking-wide">Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.</p>
@@ -730,13 +742,13 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- Industries Work Section ended -->
 
 <!-- Product Section Started -->
-<section class="section-sm">
+<section class="section-sm pb-[65px]">
   <div class="container flex flex-col gap-20">
 <div class="flex flex-col gap-10">
  <div class="flex flex-col gap-4 max-w-[790px]">
 <h4
-  class="text-[12px] bg-[#C4FC00] px-3 py-[2px]   inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md custom-before">
-  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg]  ">Featured Technologies</span>
+  class="text-[12px] bg-[#C4FC00] px-3 inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md custom-before">
+  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-text-dark opacity-[1]">Featured Technologies</span>
 </h4>
   <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight  ">Technologies we’ve built</h1>
   <p class="text-[18px] max-w-[600px]   leading-[31px] tracking-wide">Using machine learning to track usage patterns, our platform reduces energy overuse and improves operational sustainability.</p>
@@ -776,229 +788,164 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-
 <div>
-<button class="  px-5 py-3 font-semibold rounded-[14px] secondary-button bg-white transition leading-[27px]">
+<button class="  px-5 py-3 font-semibold rounded-[14px] secondary-button bg-text-light transition leading-[27px]">
   View All Products
 </button>
 
 </div>
 </div>
-    <!-- FLEX CONTAINER -->
-    <div class="flex flex-col md:flex-row gap-6 overflow-y-auto overflow-x-auto" id="cardContainer">
-
-      <!-- CARD 1 -->
-      <div class="card group relative rounded-[40px] overflow-hidden flex-shrink-0 bg-white transition-all duration-900 shadow-md md:w-[282px] md:hover:w-[363px] h-[280px] hover:h-[363px] md:h-[650px] md:hover:h-[650px]"
-        data-card>
-        <!-- Background Image -->
-        <img src="images/technologies/technologies1.avif" alt="Predictive Analytics"
-          class="w-full h-full object-cover" />
-            <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 bg-gradient-to-t from-white/90 via-white/70 to-transparent text-black transition-colors duration-900 flex flex-col justify-between">
-              <!-- Top Section -->
-              <div class="flex justify-between items-center w-full">
-                <!-- Left: Buttons -->
-              <div id="tagButtons"
-                class="flex space-x-2 opacity-0 pointer-events-none translate-x-36 transition-all duration-900
-                  group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-x-10
-                  group-[.active]:opacity-100 group-[.active]:pointer-events-auto group-[.active]:translate-x-0">
-                  <button
-                    class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition-transform duration-900 delay-100 transform group-hover:translate-x-0 translate-x-4">
-                    AI
-                  </button>
-                  <button
-                    class="bg-gray-200 text-gray-900 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition-transform duration-900 delay-200 transform group-hover:translate-x-0 translate-x-4">
-                    Technology
-                  </button>
-                </div>
-
-        <!-- Arrow Button -->
-                   <!-- Arrow Button -->
+<!-- FLEX CONTAINER -->
+<div class="flex flex-col md:flex-row gap-6 overflow-hidden" id="cardContainer">
+  <!-- CARD 1 -->
+<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md flex-[1_1_285px] h-[285px] hover:h-[353px] md:h-[650px] md:hover:h-[650px]" data-card>
+    <img src="images/technologies/technologies1.avif" alt="Predictive Analytics" class="w-full h-full object-cover" />
+    <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 text-text-dark transition-colors duration-900 flex flex-col justify-between">
+      <div class="flex justify-between items-center w-full">
+        <div id="tagButtons" class="flex flex-row gap-2 opacity-0 pointer-events-none translate-x-36 transition-all duration-900 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-x-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto group-[.active]:translate-x-0">
+          <button class="py-1 px-4 rounded-full bg-text-light leading-[27px]">AI</button>
+          <button class="py-1 px-4 rounded-full bg-text-light leading-[27px]">Technology</button>
+        </div>
+           <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
           </button>
 
-              </div>
-              <!-- Bottom Content -->
-              <div class="bg-gradient-to-t from-white/90 via-white/70 to-transparent text-black transition-colors duration-900">
-                <h3 class="text-[32px] font-normal text-gray-800 transition-colors duration-900">
-                  Predictive Analytics Engine
-                </h3>
-                <p class="text-sm text-gray-500 transition-colors duration-900 mt-3">Expected Valuation</p>
-              </div>
       </div>
-      </div>
-      <!-- CARD 2 -->
-      <div class="card group relative rounded-[40px] overflow-hidden flex-shrink-0 bg-white transition-all duration-900 shadow-md md:w-[280px] md:hover:w-[363px] h-[280px] hover:h-[363px] md:h-[620px] md:hover:h-[620px]"
-        data-card>
-        <img src="images/technologies/technologies2.avif" alt="Cloud AI Integration"
-          class="w-full h-full object-cover" />
-
-        <div
-          class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-white/90 via-white/70 to-transparent text-black transition-colors duration-900">
-          <h3 class="text-[32px] font-normal text-gray-800 transition-colors duration-900">
-            Cloud AI Integration
-          </h3>
-          <p class="text-sm text-gray-500 transition-colors duration-900 mt-3">Revenue Forecast</p>
-        </div>
-
-        <div class="absolute top-0 left-0 right-0 p-4 flex justify-between items-center w-full">
-          <div id="tagButtons"
-            class="flex space-x-2 opacity-0 pointer-events-none translate-x-36 transition-all duration-900
-            group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-x-0
-            group-[.active]:opacity-100 group-[.active]:pointer-events-auto group-[.active]:translate-x-0">
-            <button
-              class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition-transform duration-900 delay-100 transform group-hover:translate-x-0 translate-x-4">
-              ML
-            </button>
-            <button
-              class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition-transform duration-900 delay-200 transform group-hover:translate-x-0 translate-x-4">
-              Cybersecurity
-            </button>
-          </div>
-
-          <!-- Arrow Button -->
-               <!-- Arrow Button -->
-          <button
-            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
-            aria-label="Go to details">
-            <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
-              transition-all duration-900
-              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
-
-            <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
-              -translate-x-1/2 translate-y-16 opacity-0
-              transition-all duration-900
-              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
-          </button>
-
-        </div>
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="card group relative rounded-[40px] overflow-hidden flex-shrink-0 bg-white transition-all duration-900 shadow-md md:w-[280px] md:hover:w-[363px] h-[280px] hover:h-[363px] md:h-[620px] md:hover:h-[620px]"
-        data-card>
-        <img src="images/technologies/technologies3.avif" alt="Optivus AI Assistant"
-          class="w-full h-full object-cover" />
-
-        <div
-          class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-white/90 via-white/70 to-transparent text-black transition-colors duration-900">
-          <h3 class="text-[32px] font-normal text-gray-800 transition-colors duration-900">
-            Optivus AI Assistant
-          </h3>
-          <p class="text-sm text-gray-500 transition-colors duration-900 mt-3">Market Potential</p>
-        </div>
-
-        <div class="absolute top-0 left-0 right-0 p-4 flex justify-between items-center w-full">
-          <div id="tagButtons"
-            class="flex space-x-2 opacity-0 pointer-events-none translate-x-36 transition-all duration-900
-            group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-x-0
-            group-[.active]:opacity-100 group-[.active]:pointer-events-auto group-[.active]:translate-x-0">
-            <button
-              class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition-transform duration-900 delay-100 transform group-hover:translate-x-0 translate-x-4">
-              Data Science
-            </button>
-            <button
-              class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition-transform duration-900 delay-200 transform group-hover:translate-x-0 translate-x-4">
-              Blockchain
-            </button>
-          </div>
-
-          <!-- Arrow Button -->
-               <!-- Arrow Button -->
-          <button
-            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
-            aria-label="Go to details">
-            <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
-              transition-all duration-900
-              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
-
-            <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
-              -translate-x-1/2 translate-y-16 opacity-0
-              transition-all duration-900
-              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
-          </button>
-
-        </div>
-      </div>
-
-      <!-- CARD 4 -->
-      <div class="card group relative rounded-[40px] overflow-hidden flex-shrink-0 bg-white transition-all duration-900 shadow-md md:w-[280px] md:hover:w-[363px] h-[280px] hover:h-[363px] md:h-[620px] md:hover:h-[620px]"
-        data-card>
-        <img src="images/technologies/technologies4.avif" alt="Cloud Computing" class="w-full h-full object-cover" />
-
-        <div
-          class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-white/90 via-white/70 to-transparent text-black transition-colors duration-900">
-          <h3 class="text-[32px] font-normal text-gray-800 transition-colors duration-900">
-            Cloud Computing
-          </h3>
-          <p class="text-sm text-gray-500 transition-colors duration-900 mt-3">Growth Projections</p>
-        </div>
-
-        <div class="absolute top-0 left-0 right-0 p-4 flex justify-between items-center w-full">
-          <div id="tagButtons"
-            class="flex space-x-2 opacity-0 pointer-events-none translate-x-36 transition-all duration-900
-            group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-x-0
-            group-[.active]:opacity-100 group-[.active]:pointer-events-auto group-[.active]:translate-x-0">
-            <button
-              class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition-transform duration-900 delay-100 transform group-hover:translate-x-0 translate-x-4">
-              IoT
-            </button>
-            <button
-              class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition-transform duration-900 delay-200 transform group-hover:translate-x-0 translate-x-4">
-              Mobile Development
-            </button>
-          </div>
-
-          <!-- Arrow Button like 1st card -->
-                <!-- Arrow Button -->
-          <button
-            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
-            aria-label="Go to details">
-            <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
-              transition-all duration-900
-              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
-
-            <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
-              -translate-x-1/2 translate-y-16 opacity-0
-              transition-all duration-900
-              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
-          </button>
-
-        </div>
+      <div class="absolute bottom-0 left-0 w-full h-[250px] bg-gradient-to-t from-white via-white/70 to-transparent z-10 pointer-events-none"></div>
+      <div class="z-10 opacity-[1] flex flex-col gap-2">
+        <h3 class="text-[36px] leading-[43px] tracking-[-1px] font-medium duration-900">Predictive Analytics Engine</h3>
+        <p class="text-sm text-text-dark duration-900 leading-[21px] opacity-[0.36]">Expected Valuation</p>
       </div>
     </div>
+  </div>
 
+  <!-- CARD 2 -->
+<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md flex-[1_1_285px] h-[285px] hover:h-[353px] md:h-[650px] md:hover:h-[650px]" data-card>
+
+    <img src="images/technologies/technologies2.avif" alt="Cloud AI Integration" class="w-full h-full object-cover" />
+    <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 text-text-dark transition-colors duration-900 flex flex-col justify-between">
+     <div class="flex justify-between items-center w-full">
+        <div id="tagButtons" class="flex flex-row gap-2 opacity-0 pointer-events-none translate-x-36 transition-all duration-900 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-x-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto group-[.active]:translate-x-0">
+          <button class="py-1 px-4 rounded-full bg-text-light leading-[27px]">AI</button>
+          <button class="py-1 px-4 rounded-full bg-text-light leading-[27px]">Technology</button>
+        </div>
+           <!-- Arrow Button -->
+          <button
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            aria-label="Go to details">
+            <!-- Outgoing Icon -->
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
+              transition-all duration-900
+              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
+
+            <!-- Incoming Icon -->
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl
+              -translate-x-1/2 translate-y-16 opacity-0
+              transition-all duration-900
+              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
+          </button>
+
+      </div>
+      <div class="absolute bottom-0 left-0 w-full h-[250px] bg-gradient-to-t from-white via-white/70 to-transparent z-10 pointer-events-none"></div>
+      <div class="z-10 opacity-[1] flex flex-col gap-2">
+        <h3 class="text-[36px] leading-[43px] tracking-[-1px] font-medium duration-900">Cloud AI Integration</h3>
+        <p class="text-sm text-text-dark duration-900 leading-[21px] opacity-[0.36]">Revenue Forecast</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD 3 -->
+<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md flex-[1_1_285px] h-[285px] hover:h-[353px] md:h-[650px] md:hover:h-[650px]" data-card>
+    <img src="images/technologies/technologies3.avif" alt="Optivus AI Assistant" class="w-full h-full object-cover" />
+    <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 text-text-dark transition-colors duration-900 flex flex-col justify-between">
+        <div class="flex justify-between items-center w-full">
+        <div id="tagButtons" class="flex flex-row gap-2 opacity-0 pointer-events-none translate-x-36 transition-all duration-900 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-x-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto group-[.active]:translate-x-0">
+          <button class="py-1 px-4 rounded-full bg-text-light leading-[27px]">AI</button>
+          <button class="py-1 px-4 rounded-full bg-text-light leading-[27px]">Technology</button>
+        </div>
+           <!-- Arrow Button -->
+          <button
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            aria-label="Go to details">
+            <!-- Outgoing Icon -->
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
+              transition-all duration-900
+              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
+
+            <!-- Incoming Icon -->
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl
+              -translate-x-1/2 translate-y-16 opacity-0
+              transition-all duration-900
+              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
+          </button>
+
+      </div>
+      <div class="absolute bottom-0 left-0 w-full h-[250px] bg-gradient-to-t from-white via-white/70 to-transparent z-10 pointer-events-none"></div>
+      <div class="z-10 opacity-[1] flex flex-col gap-2">
+        <h3 class="text-[36px] leading-[43px] tracking-[-1px] font-medium duration-900">Optivus AI Assistant</h3>
+        <p class="text-sm text-text-dark duration-900 leading-[21px] opacity-[0.36]">Market Potential</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD 4 -->
+<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md flex-[1_1_285px] h-[285px] hover:h-[353px] md:h-[650px] md:hover:h-[650px]" data-card>
+
+    <img src="images/technologies/technologies4.avif" alt="Cloud Computing" class="w-full h-full object-cover" />
+    <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 text-text-dark transition-colors duration-900 flex flex-col justify-between">
+      <div class="flex justify-between items-center w-full">
+        <div id="tagButtons" class="flex flex-row gap-2 opacity-0 pointer-events-none translate-x-36 transition-all duration-900 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-x-0 group-[.active]:opacity-100 group-[.active]:pointer-events-auto group-[.active]:translate-x-0">
+          <button class="py-1 px-4 rounded-full bg-text-light leading-[27px]">IoT</button>
+          <button class="py-1 px-4 rounded-full bg-text-light leading-[27px]">Mobile Dev</button>
+        </div>
+           <!-- Arrow Button -->
+          <button
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            aria-label="Go to details">
+            <!-- Outgoing Icon -->
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
+              transition-all duration-900
+              group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
+
+            <!-- Incoming Icon -->
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl
+              -translate-x-1/2 translate-y-16 opacity-0
+              transition-all duration-900
+              group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
+          </button>
+
+      </div>
+      <div class="absolute bottom-0 left-0 w-full h-[250px] bg-gradient-to-t from-white via-white/70 to-transparent z-10 pointer-events-none"></div>
+      <div class="z-10 opacity-[1] flex flex-col gap-2">
+        <h3 class="text-[36px] leading-[43px] tracking-[-1px] font-medium duration-900">Cloud Computing</h3>
+        <p class="text-sm text-text-dark duration-900 leading-[21px] opacity-[0.36]">Growth Projections</p>
+      </div>
+    </div>
+  </div>
+
+</div>
   </div>
 </section>
 <!-- Product Section ended -->
  <!-- Getting started is super simple section started -->
-<section class="section-sm">
-  <div class="container">
+<section class="section-sm pb-[65px]">
+  <div class="container flex flex-col gap-20">
     <div class="flex flex-col gap-4 max-w-[790px]">
 <h4
-  class="text-[12px] @@bg-color px-3 py-[2px]   inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
-  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color">Get Started</span>
+  class="text-[12px] bg-[#2E85FA] px-3 inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
+  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-text-light opacity-[1]">Get Started</span>
 </h4>
   <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight  ">Getting started is super simple</h1>
   <p class="text-[18px] max-w-[600px]   leading-[31px] tracking-wide">By automating equipment schedules and monitoring consumption, we help businesses lower utility costs and environmental impact.</p>
@@ -1039,31 +986,29 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
   <div>
-      <div class="">
+      <div class="flex flex-col gap-[60px]">
           <!-- FAQ Item 1 -->
-          <div class="faq-item group border-b border-b-gray-300 dark:border-gray-700 pb-6">
+          <div class="faq-item group border-b border-b-gray-300 dark:border-gray-700">
             <!-- Question -->
-            <button class="flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-6 md:gap-10 cursor-pointer transition-all">
-              <!-- Left Block: Step + Heading -->
-              <div class="w-full md:w-[40%] text-start">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+             <div>
+              <div class="flex flex-col gap-4 min-w-[1050px]">
                 <h4 class="text-[20px] bg-[#C4FC00] text-gray-800 px-6 py-2 max-w-[180px] inline-block transform skew-x-[-20deg] -rotate-6 shadow-md">
                   <span class="inline-block transform skew-x-[12deg]">Step 01</span>
                 </h4>
-                <h1 class="text-2xl md:text-[36px] font-normal mt-5 text-gray-800 dark:text-white">
+                <div class="flex flex-row justify-between">
+                  <h3 class="max-w-[445px] text-[36px] leading-[43px] font-medium">
                   Book a free meeting with our experts
-                </h1>
+                </h3>
+                <p class="max-w-[534px]">We begin by understanding your business challenges and objectives. Our team collaborates with you to identify areas where AI can make the most impact, ensuring tailored solutions for your needs.</p>
+                </div>
               </div>
-
-              <!-- Middle Text -->
-              <div class="w-full md:w-[43%] text-gray-600 dark:text-gray-300 mt-2 md:mt-14 opacity-80 text-start">
-                We begin by understanding your business challenges and objectives. Our team collaborates with you to identify areas where AI can make the most impact, ensuring tailored solutions for your needs.
-              </div>
-
+             </div>
               <!-- Icon -->
-              <div class="w-full md:w-[17%] flex md:justify-end mt-4 md:mt-0">
+              <div class="">
                 <i class="fa fa-arrow-up text-[22px] bg-gray-800 text-white px-6 py-5 rounded-full rotate-180 group-[.open]:rotate-0 group-[.open]:bg-gray-100 group-[.open]:text-gray-900 dark:group-[.open]:bg-white dark:group-[.open]:text-gray-900 transform transition-all duration-900 ease-in-out"></i>
               </div>
-            </button>
+            </div>
 
             <!-- Answer/Image -->
             <div class="overflow-hidden max-h-0 group-[.open]:max-h-[1000px] w-full transition-all duration-900 ease-in-out relative">
@@ -1084,29 +1029,27 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
           <!-- FAQ Item 2 -->
-          <div class="faq-item group border-b border-b-gray-300 dark:border-gray-700 pb-6 mt-6">
+          <div class="faq-item group border-b border-b-gray-300 dark:border-gray-700">
             <!-- Question -->
-            <button class="flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-6 md:gap-10 cursor-pointer transition-all">
-              <!-- Left Block: Step + Heading -->
-              <div class="w-full md:w-[40%] text-start">
-                <h4 class="text-[20px] bg-[#70DB80] text-gray-800 px-6 py-2 max-w-[180px] inline-block transform skew-x-[-20deg] rotate-6 shadow-md">
-                  <span class="inline-block transform skew-x-[12deg]">Step 02</span>
+            <div class="flex flex-col md:flex-row items-center justify-between">
+             <div>
+              <div class="flex flex-col gap-4 min-w-[1050px]">
+                <h4 class="text-[20px] bg-[#C4FC00] text-gray-800 px-6 py-2 max-w-[180px] inline-block transform skew-x-[-20deg] -rotate-6 shadow-md">
+                  <span class="inline-block transform skew-x-[12deg]">Step 01</span>
                 </h4>
-                <h1 class="text-2xl md:text-[36px] font-normal mt-5 text-gray-800 dark:text-white">
-                  Discover the opportunity together
-                </h1>
+                <div class="flex flex-row justify-between">
+                  <h3 class="max-w-[445px] text-[36px] leading-[43px] font-medium">
+                  Book a free meeting with our experts
+                </h3>
+                <p class="max-w-[534px]">We begin by understanding your business challenges and objectives. Our team collaborates with you to identify areas where AI can make the most impact, ensuring tailored solutions for your needs.</p>
+                </div>
               </div>
-
-              <!-- Middle Text -->
-              <div class="w-full md:w-[43%] text-gray-600 dark:text-gray-300 mt-2 md:mt-14 opacity-80 text-start">
-                Choose from our range of cutting-edge products and services. Whether it’s predictive analytics, computer vision, or custom AI solutions, we help you find the perfect match for your goals.
-              </div>
-
+             </div>
               <!-- Icon -->
-              <div class="w-full md:w-[17%] flex md:justify-end mt-4 md:mt-0">
+              <div class="">
                 <i class="fa fa-arrow-up text-[22px] bg-gray-800 text-white px-6 py-5 rounded-full rotate-180 group-[.open]:rotate-0 group-[.open]:bg-gray-100 group-[.open]:text-gray-900 dark:group-[.open]:bg-white dark:group-[.open]:text-gray-900 transform transition-all duration-900 ease-in-out"></i>
               </div>
-            </button>
+            </div>
 
             <!-- Answer/Image -->
             <div class="overflow-hidden max-h-0 group-[.open]:max-h-[1000px] w-full transition-all duration-900 ease-in-out relative">
@@ -1127,29 +1070,27 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
           <!-- FAQ Item 3 -->
-          <div class="faq-item group border-b border-b-gray-300 dark:border-gray-700 pb-6 mt-6">
+          <div class="faq-item group border-b border-b-gray-300 dark:border-gray-700">
             <!-- Question -->
-            <button class="flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-6 md:gap-10 cursor-pointer transition-all">
-              <!-- Left Block: Step + Heading -->
-              <div class="w-full md:w-[40%] text-start">
-                <h4 class="text-[20px] bg-[#2E85FA] text-gray-800 px-6 py-2 max-w-[180px] inline-block transform skew-x-[-20deg] -rotate-6 shadow-md">
-                  <span class="inline-block transform skew-x-[12deg]">Step 03</span>
+            <div class="flex flex-col md:flex-row items-center justify-between">
+             <div>
+              <div class="flex flex-col gap-4 min-w-[1050px]">
+                <h4 class="text-[20px] bg-[#C4FC00] text-gray-800 px-6 py-2 max-w-[180px] inline-block transform skew-x-[-20deg] -rotate-6 shadow-md">
+                  <span class="inline-block transform skew-x-[12deg]">Step 01</span>
                 </h4>
-                <h1 class="text-2xl md:text-[36px] font-normal mt-5 text-gray-800 dark:text-white">
-                  Implement AI without disruptions to your workflow
-                </h1>
+                <div class="flex flex-row justify-between">
+                  <h3 class="max-w-[445px] text-[36px] leading-[43px] font-medium">
+                  Book a free meeting with our experts
+                </h3>
+                <p class="max-w-[534px]">We begin by understanding your business challenges and objectives. Our team collaborates with you to identify areas where AI can make the most impact, ensuring tailored solutions for your needs.</p>
+                </div>
               </div>
-
-              <!-- Middle Text -->
-              <div class="w-full md:w-[43%] text-gray-600 dark:text-gray-300 mt-2 md:mt-14 opacity-80 text-start">
-                Our experts guide you through the integration process, ensuring that our AI solutions are seamlessly embedded into your existing systems with minimal downtime or disruption.
-              </div>
-
+             </div>
               <!-- Icon -->
-              <div class="w-full md:w-[17%] flex md:justify-end mt-4 md:mt-0">
+              <div class="">
                 <i class="fa fa-arrow-up text-[22px] bg-gray-800 text-white px-6 py-5 rounded-full rotate-180 group-[.open]:rotate-0 group-[.open]:bg-gray-100 group-[.open]:text-gray-900 dark:group-[.open]:bg-white dark:group-[.open]:text-gray-900 transform transition-all duration-900 ease-in-out"></i>
               </div>
-            </button>
+            </div>
 
             <!-- Answer/Image -->
             <div class="overflow-hidden max-h-0 group-[.open]:max-h-[1000px] w-full transition-all duration-900 ease-in-out relative">
@@ -1170,29 +1111,27 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
           <!-- FAQ Item 4 -->
-          <div class="faq-item group border-b border-b-gray-300 dark:border-gray-700 pb-6 mt-6">
+          <div class="faq-item group border-b border-b-gray-300 dark:border-gray-700">
             <!-- Question -->
-            <button class="flex flex-col md:flex-row items-start md:items-center justify-between w-full gap-6 md:gap-10 cursor-pointer transition-all">
-              <!-- Left Block: Step + Heading -->
-              <div class="w-full md:w-[40%] text-start">
-                <h4 class="text-[20px] bg-[#FFE44B] text-gray-800 px-6 py-2 max-w-[180px] inline-block transform skew-x-[-20deg] rotate-6 shadow-md">
-                  <span class="inline-block transform skew-x-[12deg]">Step 04</span>
+            <div class="flex flex-col md:flex-row items-center justify-between">
+             <div>
+              <div class="flex flex-col gap-4 min-w-[1050px]">
+                <h4 class="text-[20px] bg-[#C4FC00] text-gray-800 px-6 py-2 max-w-[180px] inline-block transform skew-x-[-20deg] -rotate-6 shadow-md">
+                  <span class="inline-block transform skew-x-[12deg]">Step 01</span>
                 </h4>
-                <h1 class="text-2xl md:text-[36px] font-normal mt-5 text-gray-800 dark:text-white">
-                  Track your success and continuously improve
-                </h1>
+                <div class="flex flex-row justify-between">
+                  <h3 class="max-w-[445px] text-[36px] leading-[43px] font-medium">
+                  Book a free meeting with our experts
+                </h3>
+                <p class="max-w-[534px]">We begin by understanding your business challenges and objectives. Our team collaborates with you to identify areas where AI can make the most impact, ensuring tailored solutions for your needs.</p>
+                </div>
               </div>
-
-              <!-- Middle Text -->
-              <div class="w-full md:w-[43%] text-gray-600 dark:text-gray-300 mt-2 md:mt-14 opacity-80 text-start">
-                Once implemented, we provide ongoing support and analytics to measure your success. Using data-driven insights, we help you fine-tune and expand your AI capabilities as your business grows.
-              </div>
-
+             </div>
               <!-- Icon -->
-              <div class="w-full md:w-[17%] flex md:justify-end mt-4 md:mt-0">
+              <div class="">
                 <i class="fa fa-arrow-up text-[22px] bg-gray-800 text-white px-6 py-5 rounded-full rotate-180 group-[.open]:rotate-0 group-[.open]:bg-gray-100 group-[.open]:text-gray-900 dark:group-[.open]:bg-white dark:group-[.open]:text-gray-900 transform transition-all duration-900 ease-in-out"></i>
               </div>
-            </button>
+            </div>
 
             <!-- Answer/Image -->
             <div class="overflow-hidden max-h-0 group-[.open]:max-h-[1000px] w-full transition-all duration-900 ease-in-out relative">
@@ -1223,8 +1162,8 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="container overflow-x-visible">
     <div class="flex flex-col gap-4 max-w-[790px]">
 <h4
-  class="text-[12px] @@bg-color px-3 py-[2px]   inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md custom-before">
-  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color">Testimonials</span>
+  class="text-[12px] @@bg-color px-3 inline-block w-fit transform skew-x-[-20deg] -rotate-6 shadow-md custom-before">
+  <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color opacity-[1]">Testimonials</span>
 </h4>
   <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight  ">Trusted by 5900+ businesses</h1>
   <p class="text-[18px] max-w-[600px]   leading-[31px] tracking-wide">Leveraging data-driven insights, we streamline resource distribution and support your path to a greener footprint.</p>
@@ -1427,19 +1366,18 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="absolute top-0 right-0 p-4">
          <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
           </button>
 
     </div>
@@ -1462,19 +1400,18 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="absolute top-0 right-0 p-4">
                 <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
           </button>
 
           </div>
@@ -1496,19 +1433,18 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="absolute top-0 right-0 p-4">
                  <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
           </button>
 
           </div>
@@ -1529,19 +1465,18 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="absolute top-0 right-0 p-4">
                 <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
           </button>
 
           </div>
@@ -1563,19 +1498,18 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="absolute top-0 right-0 p-4">
                 <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
           </button>
 
           </div>
@@ -1597,19 +1531,18 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="absolute top-0 right-0 p-4">
                  <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
           </button>
 
           </div>
@@ -1630,19 +1563,18 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="absolute top-0 right-0 p-4">
                  <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
           </button>
 
           </div>
@@ -1664,19 +1596,18 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="absolute top-0 right-0 p-4">
                  <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
           </button>
 
           </div>
@@ -1698,19 +1629,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="absolute top-0 right-0 p-4">
                        <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-[#FFFFFF] rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl text-gray-800     -translate-x-1/2 -translate-y-1/2
+            <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
               transition-all duration-900
               group-hover/icon:-translate-y-16 group-hover/icon:opacity-0" aria-hidden="true"></i>
 
             <!-- Incoming Icon -->
-            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl text-gray-800
+            <i class="fa fa-arrow-right -rotate-90 absolute top-[20px] left-1/2 font-normal text-2xl
               -translate-x-1/2 translate-y-16 opacity-0
               transition-all duration-900
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
-
           </button>
 
                 </div>

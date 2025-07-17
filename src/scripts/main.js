@@ -202,45 +202,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //-------------------industries-----------------------------
 //..................
-  const cards = document.querySelectorAll("[data-card]");
+const cards = document.querySelectorAll("[data-card]");
 
-  cards.forEach((card, index) => {
-    // ✅ Default active for first card (both mobile and desktop)
-    // if (index === 0) {
-    //   card.classList.add("hover:h-[363px]", "md:w-[363px]", "md:hover:h-[620px]");
-    //   card.classList.remove("h-[280px]", "md:w-[280px]");
-    // }
+// Individual expanded widths (in flex form)
+const expandedFlexes = [
+  "md:flex-[0_0_400px]",   // Card 1
+  "md:flex-[0_0_353.4px]", // Card 2
+  "md:flex-[0_0_359.4px]", // Card 3
+  "md:flex-[0_0_353.58px]" // Card 4
+];
+
+const defaultFlex = "md:flex-[1_1_285px]";
+const expandedHeight = "md:h-[620px]";
+const defaultHeight = "md:h-[620px]";
+
+cards.forEach((card, index) => {
+  // Initial active card
   if (index === 0) {
-      card.classList.add("md:w-[363px]", "md:h-[650px]");
-      card.classList.remove("md:w-[282px]");
+    card.classList.add(expandedFlexes[0], expandedHeight);
+    card.classList.remove(defaultFlex);
+  }
+
+  card.addEventListener("mouseenter", () => {
+    if (window.innerWidth >= 768) {
+      cards.forEach((c, i) => {
+        c.classList.remove(...expandedFlexes);
+        c.classList.remove("active");
+        c.classList.add(defaultFlex, defaultHeight);
+      });
+
+      card.classList.remove(defaultFlex);
+      card.classList.add(expandedFlexes[index], "active", expandedHeight);
     }
-
-    // ✅ Desktop: Hover effect
-    card.addEventListener("mouseenter", () => {
-      if (window.innerWidth >= 768) {
-        cards.forEach((c) => {
-          c.classList.remove("md:w-[363px]", "md:h-[620px]");
-          c.classList.add("md:w-[280px]", "md:h-[620px]");
-          c.classList.remove("active");
-        });
-        card.classList.add("md:w-[363px]", "md:h-[620px]");
-        card.classList.remove("md:w-[280px]");
-        card.classList.add("active");
-      }
-    });
-
-    // ✅ Mobile: Tap effect
-    card.addEventListener("click", () => {
-      if (window.innerWidth < 768) {
-        cards.forEach((c) => {
-          c.classList.remove("h-[363px]");
-          c.classList.add("h-[280px]");
-        });
-        card.classList.remove("h-[280px]");
-        card.classList.add("h-[363px]");
-      }
-    });
   });
+
+  card.addEventListener("click", () => {
+    if (window.innerWidth < 768) {
+      cards.forEach((c) => {
+        c.classList.remove("h-[353px]");
+        c.classList.add("h-[285px]");
+      });
+      card.classList.remove("h-[285px]");
+      card.classList.add("h-[353px]");
+    }
+  });
+});
+
 
 // FAQ
 document.querySelectorAll(".faq-item").forEach((item) => {
