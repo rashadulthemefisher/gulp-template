@@ -258,17 +258,12 @@ cards.forEach((card, index) => {
 
 // FAQ
 document.querySelectorAll(".faq-item").forEach((item) => {
-  const button = item.querySelector("button");
-
-  button.addEventListener("click", () => {
-    // Close all other open items
+  item.addEventListener("click", () => {
     document.querySelectorAll(".faq-item.open").forEach((openItem) => {
       if (openItem !== item) {
         openItem.classList.remove("open");
       }
     });
-
-    // Toggle current item
     item.classList.toggle("open");
   });
 });
