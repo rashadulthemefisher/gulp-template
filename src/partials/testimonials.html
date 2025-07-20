@@ -1,34 +1,152 @@
-<section class="section-sm">
-  <div class="container overflow-x-visible">
- @@include('components/left-section-header.html', {
+
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    .swiper-pagination-bullet {
+      width: 0.5rem;       /* 12px */
+      height: 0.5rem;
+      opacity: 0.5;
+      border-radius: 9999px; /* rounded-full */
+      margin: 0 0.25rem;    /* mx-1 */
+      transition: all 0.3s ease-in-out;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #ffffff; /* Tailwind indigo-600 */
+      opacity: 1;
+    }
+  </style>
+<div class="section-sm">
+
+  <div class="container flex flex-col gap-20">
+@@include('components/left-section-header.html', {
     "title": "Trusted by 5900+ businesses",
     "subtitle": "Leveraging data-driven insights, we streamline resource distribution and support your path to a greener footprint.",
     "skewText": "Testimonials",
-    "bg-color": "bg-[#2E85FA]",
-    "text-color": "text-text-light",
+    "bg-color": "bg-[#70DB80]",
+    "text-color": "text-text-dark",
     "skewRotate": "rotate-6"
     })
-    <div class="flex flex-col lg:flex-row gap-10 mt-10">
-     <!-- Testimonials Slider -->
-      <div class="lg:w-[70%] w-full rounded-3xl h-full">
-        <div class="swiper testimonial-slider h-full">
-          <div class="swiper-wrapper h-full">
-            <div class="swiper-slide rounded-3xl h-full">
-              @@include('components/testimonial-card.html')
+   <div class="flex flex-col md:flex-row gap-8">
+     <!-- Swiper slider on left -->
+    <div class="max-w-[924px] w-full">
+      <div class="swiper w-full h-auto">
+        <div class="swiper-wrapper rounded-3xl">
+          <!-- Slide 1 -->
+          <div class="swiper-slide px-10 py-[60px] flex flex-col justify-center select-none border border-border bg-secondary-bg rounded-3xl cursor-pointer">
+            <div class="flex flex-col gap-6">
+             <div class="flex items-center space-x-1">
+                <div class="text-yellow-500">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-[24px] leading-[34px] font-medium tracking-[-0.5px]">“Optivus transformed our data analysis process with their AI tools. We’re now making smarter decisions faster than ever before!”</h3>
+              <p class="text-base leading-[27px] opacity-[1]">“Their face detection technology improved our security systems beyond expectations. The accuracy and reliability are unmatched.”</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src="images/avatar.png" alt="avatar" class="rounded-full w-[50px] h-[50px]" />
+                <div class="">
+                  <h3 class="text-base leading-[27px] font-semibold">Ronald Richards</h3>
+                  <p class="text-[14px] leading-[21px] font-normal">Project Manager</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="testimonial-slider-pagination mt-6 flex items-center justify-center"></div>
-        </div>
-      </div>
 
-      <!-- Facts & Numbers -->
-      <div class="lg:w-[30%] w-full md:h-[350px] bg-[#C4FC00] p-8 rounded-3xl text-gray-900 flex flex-col justify-between">
-        <h3 class="text-xl font-normal mb-2 text-gray-800">Facts and Numbers</h3>
-        <div>
-          <h1 class="text-[80px] font-normal mb-4 text-gray-800">7200+</h1>
-          <p class="text-lg leading-relaxed opacity-80">Deployments in healthcare, retail, and finance industries.</p>
+          <!-- Slide 2 -->
+            <div class="swiper-slide px-10 py-[60px] flex flex-col justify-center select-none border border-border bg-secondary-bg rounded-3xl cursor-pointer">
+            <div class="flex flex-col gap-6">
+             <div class="flex items-center space-x-1">
+                <div class="text-yellow-500">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-[24px] leading-[34px] font-medium tracking-[-0.5px]">“Optivus transformed our data analysis process with their AI tools. We’re now making smarter decisions faster than ever before!”</h3>
+              <p class="text-base leading-[27px] opacity-[1]">“Their face detection technology improved our security systems beyond expectations. The accuracy and reliability are unmatched.”</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src="images/avatar.png" alt="avatar" class="rounded-full w-[50px] h-[50px]" />
+                <div class="">
+                  <h3 class="text-base leading-[27px] font-semibold">Ronald Richards</h3>
+                  <p class="text-[14px] leading-[21px] font-normal">Project Manager</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+           <div class="swiper-slide px-10 py-[60px] flex flex-col justify-center select-none border border-border bg-secondary-bg rounded-3xl cursor-pointer">
+            <div class="flex flex-col gap-6">
+             <div class="flex items-center space-x-1">
+                <div class="text-yellow-500">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-[24px] leading-[34px] font-medium tracking-[-0.5px]">“Optivus transformed our data analysis process with their AI tools. We’re now making smarter decisions faster than ever before!”</h3>
+              <p class="text-base leading-[27px] opacity-[1]">“Their face detection technology improved our security systems beyond expectations. The accuracy and reliability are unmatched.”</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src="images/avatar.png" alt="avatar" class="rounded-full w-[50px] h-[50px]" />
+                <div class="">
+                  <h3 class="text-base leading-[27px] font-semibold">Ronald Richards</h3>
+                  <p class="text-[14px] leading-[21px] font-normal">Project Manager</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Pagination dots -->
+        <div class="swiper-pagination mb-2"></div>
       </div>
     </div>
+
+    <!-- Facts & Numbers on right -->
+    <div class="lg:max-w-[356px] w-full bg-[#C4FC00] rounded-3xl px-8 py-[40px] flex flex-col justify-between text-text-dark">
+      <h3 class="text-xl leading-[34px] font-semibold">Facts and Numbers</h3>
+      <div>
+        <h1 class="text-[80px] leading-[92px] font-medium tracking-[-2px] opacity-[1]">7200+</h1>
+        <p class="text-lg leading-[31px] opacity-[0.8] font-medium text-text-dark">
+          Deployments in healthcare, retail, and finance industries.
+        </p>
+      </div>
+    </div>
+   </div>
+
   </div>
-</section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      loop: true,
+      speed: 900,
+      autoplay: {
+        delay: 5500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
+</div>
+

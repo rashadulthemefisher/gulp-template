@@ -301,43 +301,71 @@
     </div>
 <!-- Product Blog Started -->
 <div class="w-full my-20">
-    <div class="text-center">
-      <h4
-        class="text-[12px] bg-[#2E85FA] dark:text-gray-100 px-4 py-1 text-gray-800 @@text-margin max-w-[180px] inline-block transform skew-x-[-20deg] rotate-6 shadow-md">
-        <span class="inline-block transform skew-x-[12deg]">Blogs</span>
-      </h4>
-      <h1 class="text-4xl md:text-[60px] font-normal tracking-wide mt-5">Other blogs & insights</h1>
-      <p class="text-[18px] mx-auto max-w-[600px] tracking-wide my-5">Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.</p>
-    </div>
+  <div class="flex flex-col items-center text-center gap-4 max-w-[790px] mx-auto">
+  <h4
+    class="text-[12px] @@bg-color px-12 inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
+    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color opacity-[1]">Blogs</span>
+  </h4>
+  <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-[-1.5px] opacity-[1]">Other blogs & insights</h1>
+  <p class="text-[18px] max-w-[600px] leading-[31px] opacity-[1]">Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.</p>
+</div>
+
+<style>
+p, h1, h4 {
+  display: block;
+}
+p:empty, h1:empty, h4:empty {
+  display: none;
+}
+.custom-before {
+  position: relative;
+}
+.custom-before::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  width: 10px;
+  height: 12px;
+  background: #fff;
+  transform: rotate(135deg);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('p, h1, h4').forEach(el => {
+    if (!el.textContent.trim()) {
+      el.style.display = 'none';
+    }
+  });
+});
+</script>
 
 <div id="blog-page">
 
     <!-- FLEX CONTAINER -->
-      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- CARD 1 -->
+<!-- CARD 1 -->
 <a href="blog-details.html" class="flex-1 min-w-[300px]">
-  <div class="blog-card group relative h-[560px] rounded-3xl bg-white transition-all duration-700 shadow-md overflow-hidden">
+  <div class="blog-card group relative h-[550px] rounded-3xl bg-white shadow-md overflow-hidden transition-all duration-700">
 
-    <!-- Image -->
-    <img src="images/blogs/technology.avif" alt="Predictive Analytics"
-      class="w-full h-full object-cover rounded-3xl" />
+    <!-- Background Image -->
+    <img src="images/blogs/technology.avif" alt="Predictive Analytics" class="w-full h-full object-cover rounded-3xl" />
 
-    <!-- Content Overlay -->
-    <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-white/90 via-white/90 to-transparent text-black rounded-3xl">
-      <button class="py-1 px-4 bg-gray-200 rounded-full mb-4 text-[14px]">Technology</button>
-      <h3 class="text-xl font-semibold text-gray-800 max-w-[310px]">
-        AI for Startups: Cost-Effective Tools to Accelerate Growth
-      </h3>
-      <p class="text-sm text-gray-500 max-w-[310px] mt-5">
-        Exploring the intersection of AI and environmental real-world applications.
-      </p>
-    </div>
+    <!-- Overlay Gradient -->
+    <div class="absolute inset-x-0 bottom-0 h-[227px] bg-gradient-to-t from-white/90 via-white/90 to-transparent z-10"></div>
 
-    <!-- Top Right Arrow Button -->
-    <div class="absolute top-0 right-0 p-4">
-         <!-- Arrow Button -->
+    <!-- Content + Arrow Button Wrapper -->
+    <div class="absolute inset-0 z-20 flex flex-col justify-between p-10">
+      
+      <!-- Top Arrow Button -->
+      <div>
+           <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -351,10 +379,25 @@
               group-hover/icon:translate-y-0 group-hover/icon:opacity-100" aria-hidden="true"></i>
           </button>
 
-    </div>
+      </div>
 
+      <!-- Bottom Content -->
+      <div class="mt-auto">
+        <button class="py-1 px-4 bg-gray-200 rounded-full mb-4 text-[14px]">
+          Technology
+        </button>
+        <h3 class="text-xl font-semibold text-gray-800 max-w-[310px]">
+          AI for Startups: Cost-Effective Tools to Accelerate Growth
+        </h3>
+        <p class="text-sm text-gray-500 max-w-[310px] mt-3">
+          Exploring the intersection of AI and environmental real-world applications.
+        </p>
+      </div>
+
+    </div>
   </div>
 </a>
+
         <!-- CARD 2 -->
 <a href="blog-details.html">
         <div class="blog-card group relative flex-1 min-w-[300px] h-[560px] bg-white transition-all duration-900 shadow-md rounded-3xl">
@@ -371,7 +414,7 @@
           <div class="absolute top-0 right-0 p-4">
                 <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -404,7 +447,7 @@
           <div class="absolute top-0 right-0 p-4">
                  <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -436,7 +479,7 @@
           <div class="absolute top-0 right-0 p-4">
                 <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -469,7 +512,7 @@
           <div class="absolute top-0 right-0 p-4">
                 <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -502,7 +545,7 @@
           <div class="absolute top-0 right-0 p-4">
                  <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -534,7 +577,7 @@
           <div class="absolute top-0 right-0 p-4">
                  <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -567,7 +610,7 @@
           <div class="absolute top-0 right-0 p-4">
                  <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -600,7 +643,7 @@
                 <div class="absolute top-0 right-0 p-4">
                        <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer"
+            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2

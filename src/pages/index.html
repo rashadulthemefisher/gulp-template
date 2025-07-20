@@ -462,17 +462,19 @@
 @@include('Testimonials.html')
 <!-- Product Blog Started -->
 <section class="section-sm">
-<div class="container">
+<div class="container flex flex-col gap-[64px]">
   @@include('components/middle-section-header.html', {
       "title": "Latest news from the industry",
       "subtitle": "By analyzing historical trends and real-time data, our solution enables smarter energy planning and reduced overhead.",
       "skewText": "Blogs",
+      "text-color": "text-text-light",
       "skewRotate": "rotate-6",
+      "bg-color": "bg-[#2E85FA]",
       "text-size": "text-[60px]"
       })
-<div id="blog-page">
-@@include('Blog.html')
-</div>
+    <div id="blog-page">
+    @@include('Blog.html')
+    </div>
 </div>
 </section>
 <!-- Product Blog Ended -->
@@ -482,9 +484,6 @@
 <!-- Ready to transform Started -->
 @@include('components/transform-ai.html')
 <!-- Ready to transform Ended -->
-
-
-
 
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
