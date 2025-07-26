@@ -10,7 +10,7 @@
 <html lang="zxx" class="scroll-smooth">
 <head>
   <!-- favicon -->
-  <link rel="shortcut icon" href="images/fav-icon.svg" />
+  <link rel="shortcut icon" href="https://framerusercontent.com/images/9ZXf6QrqB9hmrJqimbrHnhwpAn8.svg" />
   <!-- theme meta -->
   <meta name="theme-name" content="themeplate" />
   <meta name="msapplication-TileColor" content="#000000" />
@@ -672,13 +672,12 @@
 <!-- Industries Work Section started -->
 <section class="section-sm">
   <div class="container">
-    <div class="flex flex-col gap-4 max-w-[790px]">
-<h4
-  class="text-[12px] @@bg-color px-6 inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
+    <div class="flex flex-col gap-4 max-w-[790px] mx-auto lg:mx-0 text-center lg:text-left">
+<h4 class="text-[12px] @@bg-color px-6 inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before mx-auto lg:mx-0">
   <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color opacity-[1]">Key Sectors</span>
 </h4>
   <h1 class="text-3xl md:text-6xl md:leading-[72px] font-semibold tracking-tight  ">Industries we worked on</h1>
-  <p class="text-[18px] max-w-[600px]   leading-[31px] tracking-wide">Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.</p>
+  <p class="text-[18px] max-w-[600px] mx-auto lg:mx-0 leading-[31px] tracking-wide">Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.</p>
 </div>
 
 <style>
@@ -762,185 +761,206 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 </section>
 <!-- Industries Work Section ended -->
-<section class="section-sm">
+<section class="section-sm py-16">
   <div class="container">
-    <div class="py-16">
-      <div class="flex flex-col lg:flex-row items-start gap-16">
-
-        <!-- Left Side -->
-        <div class="lg:w-1/2">
-          <div class="">
-              <h4
-                class="text-[12px] bg-[#70DB80] dark:text-gray-100 px-4 py-1 text-gray-800 max-w-[180px] inline-block transform skew-x-[-20deg] -rotate-6 shadow-md">
-                <span class="inline-block transform skew-x-[12deg] px-6">FAQ</span>
-              </h4>
-              <h1 class="text-4xl md:text-6xl font-normal mt-5">Answers to your common queries</h1>
-              <p class="text-[18px] max-w-[540px] tracking-tight my-5">For any unanswered questions, reach out to our support team via email. We'll respond as soon as possible to assist you.</p>
-            </div>
-          <button class="mt-6 bg-white dark:bg-gray-200 text-black dark:text-gray-800 border border-gray-300 dark:border-gray-600 px-6 py-3 rounded-2xl font-medium shadow hover:shadow-md transition">
+    <div class="flex flex-col lg:flex-row items-start gap-[60px]">
+      <!-- Left Side -->
+      <div class="w-full md:max-w-[594px] mx-auto lg:text-left text-center">
+        <div class="flex flex-col gap-8">
+          <div class="flex flex-col gap-4">
+            <h4
+            class="text-[12px] bg-[#70DB80] px-12 inline-block w-fit transform skew-x-[-20deg] shadow-md custom-before -rotate-4 mx-auto lg:mx-0">
+            <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] opacity-[1]">FAQ</span>
+          </h4>
+            <h1 class="text-5xl lg:text-6xl font-semibold leading-12 md:leading-[72px] tracking-[-1.5px]">
+              Answers to your common queries
+            </h1>
+            <p class="text-[18px] max-w-[594px] leading-9 md:leading-[31px]">
+              For any unanswered questions, reach out to our support team via email. We'll respond as soon as possible to assist you.
+            </p>
+          </div>
+          <button class="px-6 py-3 font-semibold rounded-[14px] bg-text-light text-black leading-[27px] max-w-[130px] mx-auto lg:mx-0">
             Contact us
           </button>
         </div>
+      </div>
 
-        <!-- Right Side: FAQ Accordion -->
-        <div class="lg:w-1/2 w-full space-y-2" id="faqContainer">
+      <!-- Right Side: FAQ Accordion -->
+      <div class="w-full lg:w-[600px] ml-auto">
 
-          <!-- FAQ Item -->
-          <div class="group faq-item p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-transparent dark:bg-transparent" onclick="toggleFAQ(this)">
-            <div class="flex justify-between items-center">
-              <h3 class="font-normal text-lg text-gray-200 question">
-                What industries does Optivus serve?
-              </h3>
-              <span class="text-2xl text-gray-500 transition-transform duration-300 toggle-icon">+</span>
-            </div>
-            <div class="mt-2 text-gray-600 dark:text-gray-300 overflow-hidden max-h-0 transition-all duration-500 ease-in-out answer text-[16px] opacity-60 max-w-[482px]">
-              Yes, SalesFlow seamlessly integrates with a wide range of CRM, email, and marketing automation tools to ensure a smooth workflow and data synchronization across platforms.
-            </div>
+        <!-- FAQ Item 1 -->
+         <div class="group faq-item faq-item-fix" onclick="toggleFaqItem(this)">
+
+          <div class="faq-item-question">
+            <h3 class="question">
+              What industries does Optivus serve?
+            </h3>
+            <span class="toggle-icon">+</span>
           </div>
-
-          <!-- FAQ Item -->
-          <div class="group faq-item p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-transparent dark:bg-transparent" onclick="toggleFAQ(this)">
-            <div class="flex justify-between items-center">
-              <h3 class="font-normal text-lg text-gray-200 question">
-                What is Optivus, and what does the company do?
-              </h3>
-              <span class="text-2xl text-gray-500 transition-transform duration-300 toggle-icon">+</span>
-            </div>
-            <div class="mt-2 text-gray-600 dark:text-gray-300 overflow-hidden max-h-0 transition-all duration-500 ease-in-out answer text-[16px] opacity-60 max-w-[482px]">
-              Optivus is an AI-powered technology company that develops smart automation and data intelligence tools for businesses.
-            </div>
+          <div class="faq-answer faq-item-answer">
+            Yes, SalesFlow seamlessly integrates with a wide range of CRM, email, and marketing automation tools to ensure a smooth workflow and data synchronization across platforms.
           </div>
-
-          <!-- FAQ Item -->
-          <div class="group faq-item p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-transparent dark:bg-transparent" onclick="toggleFAQ(this)">
-            <div class="flex justify-between items-center">
-              <h3 class="font-normal text-lg text-gray-200 question">
-                How can I get started with Optivus solutions?
-              </h3>
-              <span class="text-2xl text-gray-500 transition-transform duration-300 toggle-icon">+</span>
-            </div>
-            <div class="mt-2 text-gray-600 dark:text-gray-300 overflow-hidden max-h-0 transition-all duration-500 ease-in-out answer text-[16px] opacity-60 max-w-[482px]">
-              You can schedule a free demo or consultation through our website to explore the best solutions for your business needs.
-            </div>
-          </div>
-
-          <!-- FAQ Item -->
-          <div class="group faq-item p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-transparent dark:bg-transparent" onclick="toggleFAQ(this)">
-            <div class="flex justify-between items-center">
-              <h3 class="font-normal text-lg text-gray-200 question">
-                What makes Optivus’ AI solutions unique?
-              </h3>
-              <span class="text-2xl text-gray-500 transition-transform duration-300 toggle-icon">+</span>
-            </div>
-            <div class="mt-2 text-gray-600 dark:text-gray-300 overflow-hidden max-h-0 transition-all duration-500 ease-in-out answer text-[16px] opacity-60 max-w-[482px]">
-              Our AI is trained on industry-specific data and continually learns from user behavior, providing highly personalized and accurate insights.
-            </div>
-          </div>
-
-          <!-- FAQ Item -->
-          <div class="group faq-item p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-transparent dark:bg-transparent" onclick="toggleFAQ(this)">
-            <div class="flex justify-between items-center">
-              <h3 class="font-normal text-lg text-gray-200 question">
-                Do you provide ongoing support after implementation?
-              </h3>
-              <span class="text-2xl text-gray-500 transition-transform duration-300 toggle-icon">+</span>
-            </div>
-            <div class="mt-2 text-gray-600 dark:text-gray-300 overflow-hidden max-h-0 transition-all duration-500 ease-in-out answer text-[16px] opacity-60 max-w-[482px]">
-              Yes, we offer 24/7 customer support, regular updates, and dedicated account managers to ensure long-term success.
-            </div>
-          </div>
-
         </div>
+
+       <!-- FAQ Item 2 -->
+        <div class="group faq-item faq-item-fix" onclick="toggleFaqItem(this)">
+          <div class="faq-item-question">
+            <h3 class="question">
+              What is Optivus, and what does the company do?
+            </h3>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer faq-item-answer">
+            Optivus is an AI-powered technology company that develops smart automation and data intelligence tools for businesses.
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="group faq-item faq-item-fix" onclick="toggleFaqItem(this)">
+          <div class="faq-item-question">
+            <h3 class="question">
+              How can I get started with Optivus solutions?
+            </h3>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer faq-item-answer">
+            You can schedule a free demo or consultation through our website to explore the best solutions for your business needs.
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="group faq-item faq-item-fix" onclick="toggleFaqItem(this)">
+          <div class="faq-item-question">
+            <h3 class="question">
+              What makes Optivus' AI solutions unique?
+            </h3>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer faq-item-answer">
+            Our AI is trained on industry-specific data and continually learns from user behavior, providing highly personalized and accurate insights.
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="group faq-item faq-item-fix" onclick="toggleFaqItem(this)">
+          <div class="faq-item-question">
+            <h3 class="question">
+              Do you provide ongoing support after implementation?
+            </h3>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer faq-item-answer">
+            Yes, we offer 24/7 customer support, regular updates, and dedicated account managers to ensure long-term success.
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
-
-<style>
-  /* Active FAQ background */
-  .faq-item.active {
-    background-color: #1B212A; /* red-100 */
-  }
-  .dark .faq-item.active {
-    background-color: #1B212A; /* red-800 */
-  }
-  .faq-item.active .question {
-      max-height: 500px !important;
-      color: white;
-    }
-  /* Show answer when active */
-  .faq-item.active .answer {
-    max-height: 500px !important;
-    color: white;
-  }
-
-  /* Rotate + icon when active */
-  .faq-item.active .toggle-icon {
-    transform: rotate(45deg);
-    color: white;
-  }
-</style>
-
 <script>
-  function toggleFAQ(clickedItem) {
-    const allItems = document.querySelectorAll('.faq-item');
+  // FAQ Answers to your common queries section started
+ function toggleFaqItem(clickedItem) {
+    const allItems = document.querySelectorAll('.faq-item-fix');
+
     allItems.forEach(item => {
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.toggle-icon');
+
       if (item !== clickedItem) {
-        item.classList.remove('active');
+        answer.style.maxHeight = null;
+        answer.classList.remove('opacity-100');
+        answer.classList.add('opacity-0');
+        icon.textContent = '+';
+        item.classList.remove('bg-[#1B212A]', 'gap-2');
+        item.classList.add('bg-transparent', 'dark:bg-transparent', 'gap-0');
       }
     });
-    clickedItem.classList.toggle('active');
+
+    const answer = clickedItem.querySelector('.faq-answer');
+    const icon = clickedItem.querySelector('.toggle-icon');
+
+    if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+      answer.style.maxHeight = null;
+      answer.classList.remove('opacity-100');
+      answer.classList.add('opacity-0');
+      icon.textContent = '+';
+      clickedItem.classList.remove('bg-[#1B212A]', 'gap-2');
+      clickedItem.classList.add('bg-transparent', 'dark:bg-transparent', 'gap-0');
+    } else {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      answer.classList.remove('opacity-0');
+      answer.classList.add('opacity-100');
+      icon.textContent = '-';
+      clickedItem.classList.remove('bg-transparent', 'dark:bg-transparent', 'gap-0');
+      clickedItem.classList.add('bg-[#1B212A]', 'gap-2');
+    }
   }
+// FAQ Answers to your common queries section ended
 </script>
-
 <!-- Ready to transform Started -->
-<section class="section-sm">
-  <div class="container md:p-10 rounded-3xl border border-gray-800 md:h-[480px] relative overflow-hidden">
+<section class="section-sm pb-[120px]">
+  <div class="container rounded-4xl border border-border relative overflow-hidden">
 
-    <!-- Background with animation -->
-    <div class="absolute inset-0 bg-cover bg-center animate-bgZoom" style="background-image: url('images/ai-bg.svg'); z-index: 0;"></div>
+  <!-- Background with animation -->
+<div class="absolute inset-0 bg-cover bg-center animate-bgzoom" style="background-image: url('images/ai-bg.svg'); z-index: 0;">
+  <!-- Light white overlay -->
+  <div class="absolute inset-0 bg-white/40 opacity-5"></div>
+</div>
+
 
     <!-- Content on top -->
-    <div class="relative z-10 flex flex-col md:flex-row items-center justify-center p-5 md:p-10 h-full">
+    <div class="relative z-10 flex flex-col lg:flex-row gap-20 md:gap-20 lg:gap-0 items-center justify-between md:p-[60px] p-8">
 
       <!-- Left Content -->
-      <div class="flex-1 md:max-w-[520px] flex flex-col justify-center items-start text-left">
-        <h2 class="md:text-5xl font-normal">Ready to transform your business with AI?</h2>
-        <p class="text-[14px] md:max-w-[420px] my-6">Discover how Optivus can help you drive innovation, streamline operations, and achieve your goals.</p>
-        <button class="px-5 py-4 rounded-2xl text-lg font-semibold text-gray-800 bg-[#C4FC00] hover:bg-lime-300"
-          target="_blank" rel="noopener noreferrer">
-          Get Started Now
-        </button>
+      <div class="flex flex-col gap-6 max-w-[500px] text-center lg:text-left">
+        <div class="flex flex-col gap-4">
+          <h2 class="text-3xl md:text-5xl leading-9 md:leading-[58px] font-semibold tracking-[-1.5px] opacity-[1]">Ready to transform your business with AI?</h2>
+        <p class="text-lg leading-6 md:leading-[31px]">Discover how Optivus can help you drive innovation, streamline operations, and achieve your goals.</p>
+        </div>
+        <div class="">
+          <button type="button"
+            class="inline-block px-6 py-3 rounded-[14px] text-base text-text-dark bg-btn-primary leading-[27px] font-semibold cursor-pointer"
+            target="_blank" rel="noopener noreferrer">
+            Get Started Now
+          </button>
+        </div>
       </div>
 
       <!-- Right Cards -->
-      <div class="flex-1 flex flex-row items-end justify-center md:justify-end gap-5 md:gap-10 mt-10 md:mt-0">
+      <div class="flex flex-row gap-6 items-end">
         <!-- Card 1 -->
-        <div class="relative w-[110px] md:w-[142px] h-[114px] bg-[#2E85FA] rounded-3xl flex flex-col justify-end shadow-lg overflow-hidden">
-          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
-          <div class="mb-4 text-center">
-            <h3 class="text-[36px] font-normal text-gray-800">30%</h3>
-            <p class="text-sm text-gray-600">Cost Saving</p>
+        <div class="card h-[114px] bg-[#2E85FA]">
+         <div class="px-[5px] pb-4 flex flex-col justify-between">
+           <div class="card-bar"></div>
+          <div class="flex flex-col items-center">
+            <h3 class="card-heading">30%</h3>
+            <p class="card-sub">Cost Saving</p>
           </div>
+         </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="relative w-[110px] md:w-[142px] h-[285px] bg-[#70DB80] rounded-3xl flex flex-col justify-end text-white shadow-lg overflow-hidden">
-          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
-          <div class="mb-4 text-center">
-            <h3 class="text-[36px] font-normal text-gray-800">75%</h3>
-            <p class="text-sm text-gray-600">Success Rate</p>
+      <!-- Card 2 -->
+      <div class="card h-[285px] bg-[#70DB80]">
+        <div class="px-[5px] pb-4 flex flex-col justify-between">
+          <div class="card-bar"></div>
+          <div class="flex flex-col items-center">
+            <h3 class="card-heading">75%</h3>
+            <p class="card-sub">Success Rate</p>
           </div>
         </div>
+      </div>
 
-        <!-- Card 3 -->
-        <div class="relative w-[110px] md:w-[142px] h-[380px] bg-[#FDE44B] rounded-3xl flex flex-col justify-end text-white shadow-lg overflow-hidden">
-          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
-          <div class="mb-4 text-center">
-            <h3 class="text-[36px] font-normal text-gray-800">10k+</h3>
-            <p class="text-sm text-gray-600">Deployments</p>
+      <!-- Card 3 -->
+      <div class="card h-[380px] bg-[#FDE44B]">
+        <div class="px-[5px] pb-4 flex flex-col justify-between">
+          <div class="card-bar"></div>
+          <div class="flex flex-col items-center">
+            <h3 class="card-heading">10k+</h3>
+            <p class="card-sub">Deployments</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -958,83 +978,83 @@ document.addEventListener("DOMContentLoaded", () => {
   <span class="hidden 2xl:block">2xl</span>
 </div>
 
-<footer class="mt-10 px-4 md:px-0">
-<div class="container">
- <div class="pt-14 flex flex-col md:flex-row gap-5 pb-20">
-    <!-- Left side -->
-    <div class="flex-1">
-      <div class="flex items-center gap-3 mb-4">
-        <!-- Logo -->
-        <img
-          src="images/h-logo.svg"
-          alt="themeplate"
-          class="w-40 sm:w-60 md:w-72 lg:w-[328px] hidden dark:inline-block"
-          height="82"
-        />
-      </div>
-      <p class="text-gray-400 text-[18px] tracking-wider max-w-[520px]">
-        AI-driven optimization tools allow teams to conserve energy without sacrificing productivity.
-      </p>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-top">
+      <!-- Left side -->
+      <div class="footer-left gap-[60px]">
+        <div class="flex flex-col gap-4">
+          <div class="footer-logo">
+            <!-- Logo -->
+            <img
+              src="images/h-logo.svg"
+              alt="themeplate"
+              class="w-[328px] h-[82px] px-4"
+            />
+          </div>
+          <p class="footer-text">
+            AI-driven optimization tools allow teams to conserve energy without sacrificing productivity.
+          </p>
+        </div>
 
-      <!-- Social icons -->
-      <div class="flex space-x-4 mt-10 text-gray-400">
-        <a href="#" aria-label="X (Twitter)" class="hover:text-white transition">
-          <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M23 3a10.9 10.9 0 01-3.14.86 4.48 4.48 0 001.98-2.48 10.94 10.94 0 01-3.48 1.33A4.52 4.52 0 0016.47 2a4.48 4.48 0 00-4.48 4.48c0 .35.04.7.11 1.03A12.74 12.74 0 013 4.27s-4 9 5 13a13.42 13.42 0 01-7 2c9 5 20 0 20-11.5 0-.18 0-.36-.01-.54A7.72 7.72 0 0023 3z"/></svg>
-        </a>
-        <a href="#" aria-label="Facebook" class="hover:text-white transition">
-          <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M22 12a10 10 0 10-11.5 9.87v-6.98h-2.5v-2.9h2.5v-2.21c0-2.48 1.48-3.86 3.75-3.86 1.08 0 2.22.19 2.22.19v2.44h-1.25c-1.23 0-1.61.76-1.61 1.54v1.9h2.75l-.44 2.9h-2.31v6.98A10 10 0 0022 12z"/></svg>
-        </a>
-        <a href="#" aria-label="Instagram" class="hover:text-white transition">
-          <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5A3.75 3.75 0 0020 16.25v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.75 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10z"/></svg>
-        </a>
-        <a href="#" aria-label="LinkedIn" class="hover:text-white transition">
-          <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2zM4 3a2 2 0 110 4 2 2 0 010-4z"/></svg>
-        </a>
+        <!-- Social icons -->
+        <div class="social-icons">
+          <a href="#"><img src="/images/footer/twitter.svg" alt="twitter" /></a>
+          <a href="#"><img src="/images/footer/facebook.svg" alt="facebook" /></a>
+          <a href="#"><img src="/images/footer/insta.svg" alt="insta" /></a>
+          <a href="#"><img src="/images/footer/linkdln.svg" alt="linkdln" /></a>
+        </div>
+      </div>
+
+      <!-- Right side -->
+      <div class="footer-links">
+        <div class="footer-links-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">404 Page</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-section">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Works</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-section gap-5 lg:max-w-[218px]">
+          <h3 class="">Address</h3>
+          <ul class="gap-[30px]">
+            <li >
+            <a class="hover:text-default">123 Innovation Drive, Tech City, CA 94016, USA</a>
+          </li>
+          <li class="hover:text-default">
+            <a href="tel:+180055556" class="hover:text-default ">
+              Phone:
+              <span class="hover:underline">+1 (800) 555-56</span>
+            </a>
+          </li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <!-- Middle Links -->
-    <div class="flex-1 flex flex-col md:flex-row gap-16 justify-end">
-      <div>
-        <h3 class="text-gray-200 font-normal mb-4 text-[16px]">Quick Links</h3>
-        <ul class="space-y-3 text-gray-400">
-          <li><a href="#" class="hover:text-white transition text-[14px] font-normal">Home</a></li>
-          <li><a href="#" class="hover:text-white transition text-[14px] font-normal">Pricing</a></li>
-          <li><a href="#" class="hover:text-white transition text-[14px] font-normal">About</a></li>
-          <li><a href="#" class="hover:text-white transition text-[14px] font-normal">404 Page</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-gray-200 font-normal mb-4 text-[16px]">Support</h3>
-        <ul class="space-y-3 text-gray-400">
-          <li><a href="#" class="hover:text-white transition text-[14px] font-normal">Contact Us</a></li>
-          <li><a href="#" class="hover:text-white transition text-[14px] font-normal">Testimonials</a></li>
-          <li><a href="#" class="hover:text-white transition text-[14px] font-normal">Team</a></li>
-          <li><a href="#" class="hover:text-white transition text-[14px] font-normal">Works</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-gray-200 font-normal mb-4 text-[16px]">Address</h3>
-        <p class="text-gray-400 md:max-w-[220px] text-[14px]">
-          123 Innovation Drive, Tech City, CA 94016, USA
-        </p>
-        <p class="text-gray-400 mt-4">
-          Phone: <a href="tel:+180055556" class="hover:text-white transition text-[14px]">+1 (800) 555-56</a>
-        </p>
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>Copyright © 2024 Optivus. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+        <span class="text-sm leading-none opacity-50 bg-default w-[1px] h-2"></span>
+        <a href="#" class="hover:text-white transition">Terms of Service</a>
       </div>
     </div>
   </div>
-
-  <div class="border-t border-gray-700 mt-8 py-6 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-    <p>Copyright © 2024 Themeplate. All Rights Reserved.</p>
-    <div class="space-x-4 mt-3 md:mt-0">
-      <a href="#" class="hover:text-white transition">Privacy Policy</a>
-      <span>|</span>
-      <a href="#" class="hover:text-white transition">Terms of Service</a>
-    </div>
-  </div>
-</div>
 </footer>
+
 <!-- jQuery -->
 <!-- <script src="plugins/jquery/jquery.min.js"></script> -->
 <!-- Swiper JS -->

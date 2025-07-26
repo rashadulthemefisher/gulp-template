@@ -94,9 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-
-
   // Testimonial Slider
   // ----------------------------------------
   new Swiper(".testimonial-slider", {
@@ -255,11 +252,10 @@ cards.forEach((card, index) => {
   });
 });
 
-
-// FAQ
-document.querySelectorAll(".faq-item").forEach((item) => {
+// FAQ V1
+document.querySelectorAll(".faq-item-v1").forEach((item) => {
   item.addEventListener("click", () => {
-    document.querySelectorAll(".faq-item.open").forEach((openItem) => {
+    document.querySelectorAll(".faq-item-v1.open").forEach((openItem) => {
       if (openItem !== item) {
         openItem.classList.remove("open");
       }
@@ -267,6 +263,7 @@ document.querySelectorAll(".faq-item").forEach((item) => {
     item.classList.toggle("open");
   });
 });
+
 
 //---------
  const arrowBtn = document.getElementById('arrowBtn');
@@ -284,7 +281,6 @@ document.querySelectorAll(".faq-item").forEach((item) => {
     tagButtons.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
   });
 //-----
-
 //............
   // Accordion
   // ----------------------------------------
@@ -296,4 +292,5 @@ document.querySelectorAll(".faq-item").forEach((item) => {
     });
   });
 // ber
+
 })();
