@@ -1,18 +1,65 @@
+<style>
+  #stars-container {
+  border: 2px dashed red;  /* temporarily see container */
+  pointer-events: none;
+}
+
+  .star {
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: fadeInOut 1.2s ease-in-out forwards;
+    background-color: #B9EF02;
+    box-shadow: 0 0 10px #fff;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: scale(0.4) rotate(35deg);
+    }
+    40% {
+      opacity: 1;
+      transform: scale(1.2) rotate(35deg);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.4) rotate(35deg);
+    }
+  }
+</style>
 <!-- Banner started -->
-  <section  class="section relative overflow-hidden">
-  <!-- 🔄 Background image with horizontal width animation -->
-  <div class="absolute top-0 inset-0 w-full h-[50%] bg-cover bg-center animate-horizontal-expand origin-center -z-10"
-       style="background-image: url('images/banner.svg');">
-  </div>
-  <!-- Glow Layers: all absolute inside section -->
-<div class="glow-layer left-1/2 -top-20"></div>
+<div class="banner-background z-[-10] absolute inset-0 bg-cover bg-center" style="background-image:url('images/banner.svg')"></div>
 
-<div class="glow-layer left-[10%] top-0"></div>
+<!-- Later you had a duplicate background with -z-10 as well -->
+<div class="absolute top-0 inset-0 w-full h-[50%] bg-cover bg-center animate-horizontal-expand origin-center -z-10"
+     style="background-image: url('images/banner.svg');">
+</div>
 
-<div class="glow-layer -right-[20%] top-[30%]"></div>
-<!-- @@include('starsvg.html') -->
+  <!-- Stars container with z-10 (above background, below content) -->
+  <div id="stars-container" class="absolute inset-0 pointer-events-none z-10"></div>
 
-<div class="container flex flex-col gap-20">
+  <!-- Remove duplicate banner.svg background here -->
+  <!-- Your glow layers and other overlays -->
+  <div class="glow-layer left-1/2 -top-20"></div>
+  <div class="glow-layer left-[10%] top-0"></div>
+  <div class="glow-layer -right-[20%] top-[30%]"></div>
+
+  <div class="container flex flex-col gap-20 relative z-20">
    <div class="z-10">
     <div class="justify-center">
       <div class="text-center flex flex-col gap-6 items-center">
@@ -204,6 +251,49 @@
 </div>
 </section>
 <!-- Banner ended -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const starsContainer = document.getElementById("stars-container");
+    if (!starsContainer) return;
+
+    const colors = ["#B9EF02", "#FFFFFF"];
+    const maxStars = 3;
+    let activeStars = [];
+
+    function createStar() {
+      if (activeStars.length >= maxStars) return;
+
+      const star = document.createElement("div");
+      star.className = "star";
+
+      const rect = starsContainer.getBoundingClientRect();
+      const x = Math.random() * rect.width;
+      const y = Math.random() * rect.height;
+
+      star.style.left = `${x}px`;
+      star.style.top = `${y}px`;
+      star.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+      starsContainer.appendChild(star);
+      activeStars.push(star);
+
+      setTimeout(() => {
+        star.remove();
+        activeStars = activeStars.filter(s => s !== star);
+      }, 1200);
+    }
+
+    function spawn() {
+      const count = Math.floor(Math.random() * maxStars) + 1;
+      for (let i = 0; i < count; i++) {
+        setTimeout(createStar, i * 250);
+      }
+      setTimeout(spawn, 1500 + Math.random() * 1500);
+    }
+
+    spawn();
+  });
+</script>
 <!-- Brand images Section started -->
 @@include('brand-images-section.html')
 <!-- Brand images Section ended -->
@@ -347,7 +437,9 @@
 <!-- FLEX CONTAINER -->
 <div class="flex flex-col md:flex-row gap-6 overflow-hidden" id="cardContainer">
   <!-- CARD 1 -->
-<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md flex-[1_1_285px] h-[285px] hover:h-[353px] md:h-[650px] md:hover:h-[650px]" data-card>
+<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md 
+  w-full h-[178px] hover:h-[400px] 
+  md:flex-[1_1_285px] md:h-[650px] md:hover:h-[650px]" data-card>
     <img src="images/technologies/technologies1.avif" alt="Predictive Analytics" class="w-full h-full object-cover" />
     <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 text-text-dark transition-colors duration-900 flex flex-col justify-between">
       <div class="flex justify-between items-center w-full">
@@ -370,7 +462,9 @@
   </div>
 
   <!-- CARD 2 -->
-<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md flex-[1_1_285px] h-[285px] hover:h-[353px] md:h-[650px] md:hover:h-[650px]" data-card>
+<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md 
+  w-full h-[178px] hover:h-[400px] 
+  md:flex-[1_1_285px] md:h-[650px] md:hover:h-[650px]" data-card>
 
     <img src="images/technologies/technologies2.avif" alt="Cloud AI Integration" class="w-full h-full object-cover" />
     <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 text-text-dark transition-colors duration-900 flex flex-col justify-between">
@@ -394,7 +488,9 @@
   </div>
 
   <!-- CARD 3 -->
-<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md flex-[1_1_285px] h-[285px] hover:h-[353px] md:h-[650px] md:hover:h-[650px]" data-card>
+<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md 
+  w-full h-[178px] hover:h-[400px] 
+  md:flex-[1_1_285px] md:h-[650px] md:hover:h-[650px]" data-card>
     <img src="images/technologies/technologies3.avif" alt="Optivus AI Assistant" class="w-full h-full object-cover" />
     <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 text-text-dark transition-colors duration-900 flex flex-col justify-between">
         <div class="flex justify-between items-center w-full">
@@ -417,7 +513,9 @@
   </div>
 
   <!-- CARD 4 -->
-<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md flex-[1_1_285px] h-[285px] hover:h-[353px] md:h-[650px] md:hover:h-[650px]" data-card>
+<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md 
+  w-full h-[178px] hover:h-[400px] 
+  md:flex-[1_1_285px] md:h-[650px] md:hover:h-[650px]" data-card>
 
     <img src="images/technologies/technologies4.avif" alt="Cloud Computing" class="w-full h-full object-cover" />
     <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 text-text-dark transition-colors duration-900 flex flex-col justify-between">

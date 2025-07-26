@@ -252,21 +252,60 @@
   });
 </script>
 
-<body class="min-h-screen"><!-- Banner started -->
-  <section  class="section relative overflow-hidden">
-  <!-- 🔄 Background image with horizontal width animation -->
-  <div class="absolute top-0 inset-0 w-full h-[50%] bg-cover bg-center animate-horizontal-expand origin-center -z-10"
-       style="background-image: url('images/banner.svg');">
-  </div>
-  <!-- Glow Layers: all absolute inside section -->
-<div class="glow-layer left-1/2 -top-20"></div>
+<body class="min-h-screen"><style>
+  .star {
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    z-index: 9999; /* Very high to appear on top */
+    pointer-events: none;
+    animation: fadeInOut 1.2s ease-in-out forwards;
+    background-color: #B9EF02;
+    box-shadow: 0 0 10px #fff; /* Glow effect */
+  }
 
-<div class="glow-layer left-[10%] top-0"></div>
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: scale(0.4) rotate(35deg);
+    }
+    40% {
+      opacity: 1;
+      transform: scale(1.2) rotate(35deg);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.4) rotate(35deg);
+    }
+  }
+</style>
+<!-- Banner started -->
+ <section class="section relative overflow-hidden">
+  <!-- One banner background, low z-index -->
+  <div class="banner-background z-[-10] absolute inset-0 bg-cover bg-center" style="background-image:url('images/banner.svg')"></div>
 
-<div class="glow-layer -right-[20%] top-[30%]"></div>
+  <!-- Stars container with z-10 (above background, below content) -->
+  <div id="stars-container" class="absolute inset-0 pointer-events-none z-10"></div>
 
+  <!-- Remove duplicate banner.svg background here -->
+  <!-- Your glow layers and other overlays -->
+  <div class="glow-layer left-1/2 -top-20"></div>
+  <div class="glow-layer left-[10%] top-0"></div>
+  <div class="glow-layer -right-[20%] top-[30%]"></div>
 
-<div class="container flex flex-col gap-20">
+  <div class="container flex flex-col gap-20 relative z-20">
    <div class="z-10">
     <div class="justify-center">
       <div class="text-center flex flex-col gap-6 items-center">
@@ -794,7 +833,9 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- FLEX CONTAINER -->
 <div class="flex flex-col md:flex-row gap-6 overflow-hidden" id="cardContainer">
   <!-- CARD 1 -->
-<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md flex-[1_1_285px] h-[285px] hover:h-[353px] md:h-[650px] md:hover:h-[650px]" data-card>
+<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md 
+  w-full h-[178px] hover:h-[400px] 
+  md:flex-[1_1_285px] md:h-[650px] md:hover:h-[650px]" data-card>
     <img src="images/technologies/technologies1.avif" alt="Predictive Analytics" class="w-full h-full object-cover" />
     <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 text-text-dark transition-colors duration-900 flex flex-col justify-between">
       <div class="flex justify-between items-center w-full">
@@ -828,7 +869,9 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 
   <!-- CARD 2 -->
-<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md flex-[1_1_285px] h-[285px] hover:h-[353px] md:h-[650px] md:hover:h-[650px]" data-card>
+<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md 
+  w-full h-[178px] hover:h-[400px] 
+  md:flex-[1_1_285px] md:h-[650px] md:hover:h-[650px]" data-card>
 
     <img src="images/technologies/technologies2.avif" alt="Cloud AI Integration" class="w-full h-full object-cover" />
     <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 text-text-dark transition-colors duration-900 flex flex-col justify-between">
@@ -863,7 +906,9 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 
   <!-- CARD 3 -->
-<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md flex-[1_1_285px] h-[285px] hover:h-[353px] md:h-[650px] md:hover:h-[650px]" data-card>
+<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md 
+  w-full h-[178px] hover:h-[400px] 
+  md:flex-[1_1_285px] md:h-[650px] md:hover:h-[650px]" data-card>
     <img src="images/technologies/technologies3.avif" alt="Optivus AI Assistant" class="w-full h-full object-cover" />
     <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 text-text-dark transition-colors duration-900 flex flex-col justify-between">
         <div class="flex justify-between items-center w-full">
@@ -897,7 +942,9 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 
   <!-- CARD 4 -->
-<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md flex-[1_1_285px] h-[285px] hover:h-[353px] md:h-[650px] md:hover:h-[650px]" data-card>
+<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md 
+  w-full h-[178px] hover:h-[400px] 
+  md:flex-[1_1_285px] md:h-[650px] md:hover:h-[650px]" data-card>
 
     <img src="images/technologies/technologies4.avif" alt="Cloud Computing" class="w-full h-full object-cover" />
     <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 text-text-dark transition-colors duration-900 flex flex-col justify-between">
@@ -980,17 +1027,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-  <div>
-      <div class="flex flex-col gap-[60px]">
-          <!-- FAQ Item 1 -->
-          <div class="faq-item group border-b border-border pb-[60px]">
-            <!-- Question -->
-            <div class="flex flex-col md:flex-row items-center justify-between cursor-pointer ">
-             <div>
-              <div class="flex flex-col gap-4 min-w-[1050px]">
-             
-                <h4
-  class=" w-fit -rotate-[6deg] custom-before bg-[#C4FC00] text-text-dark inline-block transform skew-x-[-10deg] -rotate-[6deg]">
+
+<div class="flex flex-col gap-[60px]">
+  <!-- FAQ Item 1 -->
+  <div class="faq-item-v1 group">
+    <!-- Question -->
+    <div class="faq-question-container">
+      <div class="faq-question-content">
+        <h4
+  class=" w-fit -rotate-[4deg] custom-before bg-[#C4FC00] text-text-dark inline-block transform skew-x-[-10deg] -rotate-[4deg]">
   <span class="skew-x-[12deg] opacity-[1] inline-block transform text-[24px] leading-[34px] font-medium min-w-[160px] text-center">Step 01</span>
 </h4>
 
@@ -1008,53 +1053,55 @@ document.addEventListener("DOMContentLoaded", () => {
 </style>
 
 
-                <div class="flex flex-row justify-between">
-                  <h3 class="max-w-[445px] text-[36px] leading-[43px] font-medium">
-                  Book a free meeting with our experts
-                </h3>
-                <p class="max-w-[534px]">We begin by understanding your business challenges and objectives. Our team collaborates with you to identify areas where AI can make the most impact, ensuring tailored solutions for your needs.</p>
-                </div>
-              </div>
-             </div>
-              <!-- Icon -->
-              <div class="">
-                <i class="fa fa-arrow-up text-[22px] bg-gray-800 text-white px-6 py-5 rounded-full rotate-180 group-[.open]:rotate-0 group-[.open]:bg-gray-100 group-[.open]:text-gray-900 dark:group-[.open]:bg-white dark:group-[.open]:text-gray-900 transform transition-all duration-900 ease-in-out"></i>
-              </div>
-            </div>
-
-            <!-- Answer/Image -->
-            <div class="overflow-hidden max-h-0 group-[.open]:max-h-[500px] w-full transition-all duration-900 ease-in-out relative cursor-pointer">
-              <img class="w-full h-[500px] rounded-xl mt-4 shadow-lg transition-all duration-900 ease-in-out" src="images/faq/faq-1.avif" alt="FAQ Answer" />
-              <div class="absolute -bottom-5 md:left-20 max-w-[468px]">
-               <div class="flex flex-col gap-4">
-                 <div class="flex flex-row gap-[10px] items-center">
-                  <div class="px-4 py-1 rounded-full bg-text-light opacity-[1] leading-[27px] text-gray-900">Recycle</div>
-                  <div class="px-4 py-1 rounded-full bg-text-light opacity-[1] leading-[27px] text-gray-900">Climate</div>
-                  <div class="px-4 py-1 rounded-full bg-text-light opacity-[1] leading-[27px] text-gray-900">Renewable Energy</div>
-                </div>
-                <img class="" src="images/faq/faq-1-1.avif" alt="faq" />
-               </div>
-              </div>
-             <div class="absolute bottom-8 right-8 bg-text-light pt-[20px] pr-[20px] pb-[25px] pl-[20px] max-w-[190px] rounded-3xl">
-               <div class="flex flex-col gap-4">
+        <div class="faq-question-texts">
+          <h3 class="faq-question-title">
+            Book a free meeting with our experts
+          </h3>
+          <p class="faq-question-desc">
+            We begin by understanding your business challenges and objectives. Our team collaborates with you to identify areas where AI can make the most impact, ensuring tailored solutions for your needs.
+          </p>
+        </div>
+      </div>
+      <!-- Icon -->
+      <div class="faq-icon-container">
+        <i class="faq-icon fa fa-arrow-up"></i>
+      </div>
+    </div>
+    <!-- Answer/Image -->
+    <div class="faq-answer-container">
+      <img class="faq-answer-image" src="images/faq/faq-1.avif" alt="FAQ Answer" />
+      <div class="faq-tags-wrapper">
+        <div class="faq-tags-container">
+          <div class="faq-tags-list">
+            <div class="faq-tag">Recycle</div>
+            <div class="faq-tag">Climate</div>
+            <div class="faq-tag">Renewable Energy</div>
+          </div>
+          <div class="faq-small-image-wrapper">
+            <img src="images/faq/faq-1-1.avif" alt="faq" />
+          </div>
+        </div>
+      </div>
+      <div class="faq-button-wrapper">
+                  <div class="flex flex-col gap-4">
                  <div>
                   <h3 class="text-[20px] leading-[34px] font-semibold text-text-dark">Results:</h3>
                 <p class="text-sm leading-[21px]">Improvement saw in recycling rates</p>
                 </div>
-                <button class="bg-[#70DB80] text-text-light text-[36px] rounded-2xl tracking-[-1px] opacity-[1] leading-[43px] pb-[7px] pl-[19px] pr-[21px] pt-[7px]">
+                <button class="bg-[#70DB80] text-text-light text-2xl md:text-4xl rounded-2xl tracking-[-1px] opacity-[1] leading-7 md:leading-[43px] pb-[7px] pl-[19px] pr-[21px] pt-[7px]">
                   +<span class="counter" data-target="400">0</span>%
                 </button>
                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FAQ Item 2 -->
-          <div class="faq-item group border-b border-border pb-[60px]">
-            <!-- Question -->
-            <div class="flex flex-col md:flex-row items-center justify-between cursor-pointer ">
-              <div>
-                <div class="flex flex-col gap-4 min-w-[1050px]">
-                  <h4
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ Item 2 -->
+  <div class="faq-item-v1 group">
+    <!-- Question -->
+    <div class="faq-question-container">
+      <div class="faq-question-content">
+        <h4
   class=" w-fit rotate-[6deg] custom-before bg-[#70DB80] text-text-dark inline-block transform skew-x-[-10deg] rotate-[6deg]">
   <span class="skew-x-[12deg] opacity-[1] inline-block transform text-[24px] leading-[34px] font-medium min-w-[160px] text-center">Step 02</span>
 </h4>
@@ -1073,55 +1120,55 @@ document.addEventListener("DOMContentLoaded", () => {
 </style>
 
 
-                  <div class="flex flex-row justify-between">
-                    <h3 class="max-w-[445px] text-[36px] leading-[43px] font-medium">
-                      Automate your workflow with AI tools
-                    </h3>
-                    <p class="max-w-[534px]">
-                      We help you integrate AI-powered automation into your daily operations, streamlining repetitive tasks and boosting productivity across your organization.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- Icon -->
-              <div>
-                <i class="fa fa-arrow-up text-[22px] bg-gray-800 text-white px-6 py-5 rounded-full rotate-180 group-[.open]:rotate-0 group-[.open]:bg-gray-100 group-[.open]:text-gray-900 dark:group-[.open]:bg-white dark:group-[.open]:text-gray-900 transform transition-all duration-900 ease-in-out"></i>
-              </div>
-            </div>
-            <!-- Answer/Image -->
-            <div class="overflow-hidden max-h-0 group-[.open]:max-h-[500px] w-full transition-all duration-900 ease-in-out relative cursor-pointer">
-              <img class="w-full h-[500px] rounded-xl mt-4 shadow-lg transition-all duration-900 ease-in-out" src="images/faq/faq-2.avif" alt="FAQ Answer" />
-              <div class="absolute -bottom-5 md:left-20 max-w-[468px]">
-                <div class="flex flex-col gap-4">
-                  <div class="flex flex-row gap-[10px] items-center">
-                    <div class="px-4 py-1 rounded-full bg-text-light opacity-[1] leading-[27px] text-gray-900">Automation</div>
-                    <div class="px-4 py-1 rounded-full bg-text-light opacity-[1] leading-[27px] text-gray-900">Integration</div>
-                    <div class="px-4 py-1 rounded-full bg-text-light opacity-[1] leading-[27px] text-gray-900">Optimization</div>
-                  </div>
-                  <img class="" src="images/faq/faq-2-2.avif" alt="faq" />
-                </div>
-              </div>
-              <div class="absolute bottom-8 right-8 bg-text-light pt-[20px] pr-[20px] pb-[25px] pl-[20px] max-w-[190px] rounded-3xl">
-                 <div class="flex flex-col gap-4">
+        <div class="faq-question-texts">
+          <h3 class="faq-question-title">
+            Automate your workflow with AI tools
+          </h3>
+          <p class="faq-question-desc">
+            We help you integrate AI-powered automation into your daily operations, streamlining repetitive tasks and boosting productivity across your organization.
+          </p>
+        </div>
+      </div>
+      <!-- Icon -->
+      <div class="faq-icon-container">
+        <i class="faq-icon fa fa-arrow-up"></i>
+      </div>
+    </div>
+    <!-- Answer/Image -->
+    <div class="faq-answer-container">
+      <img class="faq-answer-image" src="images/faq/faq-2.avif" alt="FAQ Answer" />
+      <div class="faq-tags-wrapper">
+        <div class="faq-tags-container">
+          <div class="faq-tags-list">
+            <div class="faq-tag">Automation</div>
+            <div class="faq-tag">Integration</div>
+            <div class="faq-tag">Optimization</div>
+          </div>
+          <div class="faq-small-image-wrapper">
+            <img src="images/faq/faq-2-2.avif" alt="faq" />
+          </div>
+        </div>
+      </div>
+      <div class="faq-button-wrapper">
+                  <div class="flex flex-col gap-4">
                  <div>
                   <h3 class="text-[20px] leading-[34px] font-semibold text-text-dark">Results:</h3>
                 <p class="text-sm leading-[21px]">Improvement saw in recycling rates</p>
                 </div>
-                <button class="bg-[#70DB80] text-text-light text-[36px] rounded-2xl tracking-[-1px] opacity-[1] leading-[43px] pb-[7px] pl-[19px] pr-[21px] pt-[7px]">
+                <button class="bg-[#70DB80] text-text-light text-2xl md:text-4xl rounded-2xl tracking-[-1px] opacity-[1] leading-7 md:leading-[43px] pb-[7px] pl-[19px] pr-[21px] pt-[7px]">
                   +<span class="counter" data-target="400">0</span>%
                 </button>
                </div>
-              </div>
-            </div>
-          </div>
+      </div>
+    </div>
+  </div>
 
-        <!-- FAQ Item 3 -->
-        <div class="faq-item group border-b border-border pb-[60px]">
-          <!-- Question -->
-          <div class="flex flex-col md:flex-row items-center justify-between cursor-pointer ">
-            <div>
-              <div class="flex flex-col gap-4 min-w-[1050px]">
-                <h4
+  <!-- FAQ Item 3 -->
+  <div class="faq-item-v1 group">
+    <!-- Question -->
+    <div class="faq-question-container">
+      <div class="faq-question-content">
+        <h4
   class=" w-fit -rotate-[6deg] custom-before bg-[#2E85FA] text-text-dark inline-block transform skew-x-[-10deg] -rotate-[6deg]">
   <span class="skew-x-[12deg] opacity-[1] inline-block transform text-[24px] leading-[34px] font-medium min-w-[160px] text-center">Step 03</span>
 </h4>
@@ -1140,55 +1187,55 @@ document.addEventListener("DOMContentLoaded", () => {
 </style>
 
 
-                <div class="flex flex-row justify-between">
-                  <h3 class="max-w-[445px] text-[36px] leading-[43px] font-medium">
-                    Analyze and optimize with real-time data
-                  </h3>
-                  <p class="max-w-[534px]">
-                    Our solutions provide actionable insights from your data, enabling you to make smarter decisions and continuously improve your business processes.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Icon -->
-            <div>
-              <i class="fa fa-arrow-up text-[22px] bg-gray-800 text-white px-6 py-5 rounded-full rotate-180 group-[.open]:rotate-0 group-[.open]:bg-gray-100 group-[.open]:text-gray-900 dark:group-[.open]:bg-white dark:group-[.open]:text-gray-900 transform transition-all duration-900 ease-in-out"></i>
-            </div>
+        <div class="faq-question-texts">
+          <h3 class="faq-question-title">
+            Analyze and optimize with real-time data
+          </h3>
+          <p class="faq-question-desc">
+            Our solutions provide actionable insights from your data, enabling you to make smarter decisions and continuously improve your business processes.
+          </p>
+        </div>
+      </div>
+      <!-- Icon -->
+      <div class="faq-icon-container">
+        <i class="faq-icon fa fa-arrow-up"></i>
+      </div>
+    </div>
+    <!-- Answer/Image -->
+    <div class="faq-answer-container">
+      <img class="faq-answer-image" src="images/faq/faq-3.webp" alt="FAQ Answer" />
+      <div class="faq-tags-wrapper">
+        <div class="faq-tags-container">
+          <div class="faq-tags-list">
+            <div class="faq-tag">Intelligence</div>
+            <div class="faq-tag">Productivity</div>
+            <div class="faq-tag">Efficiency</div>
           </div>
-          <!-- Answer/Image -->
-          <div class="overflow-hidden max-h-0 group-[.open]:max-h-[500px] w-full transition-all duration-900 ease-in-out relative cursor-pointer">
-            <img class="w-full h-[500px] rounded-xl mt-4 shadow-lg transition-all duration-900 ease-in-out" src="images/faq/faq-3.webp" alt="FAQ Answer" />
-            <div class="absolute -bottom-5 md:left-20 max-w-[468px]">
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-row gap-[10px] items-center">
-                  <div class="px-4 py-1 rounded-full bg-text-light opacity-[1] leading-[27px] text-gray-900">Intelligence</div>
-                  <div class="px-4 py-1 rounded-full bg-text-light opacity-[1] leading-[27px] text-gray-900">Productivity</div>
-                  <div class="px-4 py-1 rounded-full bg-text-light opacity-[1] leading-[27px] text-gray-900">Efficiency</div>
-                </div>
-                <img class="" src="images/faq/faq-3-3.avif" alt="faq" />
-              </div>
-            </div>
-            <div class="absolute bottom-8 right-8 bg-text-light pt-[20px] pr-[20px] pb-[25px] pl-[20px] max-w-[190px] rounded-3xl">
-               <div class="flex flex-col gap-4">
+          <div class="faq-small-image-wrapper">
+            <img src="images/faq/faq-3-3.avif" alt="faq" />
+          </div>
+        </div>
+      </div>
+      <div class="faq-button-wrapper">
+                  <div class="flex flex-col gap-4">
                  <div>
                   <h3 class="text-[20px] leading-[34px] font-semibold text-text-dark">Results:</h3>
                 <p class="text-sm leading-[21px]">Improvement saw in recycling rates</p>
                 </div>
-                <button class="bg-[#70DB80] text-text-light text-[36px] rounded-2xl tracking-[-1px] opacity-[1] leading-[43px] pb-[7px] pl-[19px] pr-[21px] pt-[7px]">
+                <button class="bg-[#70DB80] text-text-light text-2xl md:text-4xl rounded-2xl tracking-[-1px] opacity-[1] leading-7 md:leading-[43px] pb-[7px] pl-[19px] pr-[21px] pt-[7px]">
                   +<span class="counter" data-target="400">0</span>%
                 </button>
                </div>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
+  </div>
 
-        <!-- FAQ Item 4 -->
-        <div class="faq-item group border-b border-border pb-[60px]">
-          <!-- Question -->
-          <div class="flex flex-col md:flex-row items-center justify-between cursor-pointer ">
-            <div>
-              <div class="flex flex-col gap-4 min-w-[1050px]">
-                <h4
+  <!-- FAQ Item 4 -->
+  <div class="faq-item-v1 group">
+    <!-- Question -->
+    <div class="faq-question-container">
+      <div class="faq-question-content">
+        <h4
   class=" w-fit rotate-[6deg] custom-before bg-[#FDE44B] text-text-dark inline-block transform skew-x-[-10deg] rotate-[6deg]">
   <span class="skew-x-[12deg] opacity-[1] inline-block transform text-[24px] leading-[34px] font-medium min-w-[160px] text-center">Step 04</span>
 </h4>
@@ -1207,50 +1254,49 @@ document.addEventListener("DOMContentLoaded", () => {
 </style>
 
 
-                <div class="flex flex-row justify-between">
-                  <h3 class="max-w-[445px] text-[36px] leading-[43px] font-medium">
-                    Scale and evolve your AI strategy
-                  </h3>
-                  <p class="max-w-[534px]">
-                    We support you in scaling your AI initiatives, adapting to new challenges, and ensuring your business stays ahead in a rapidly changing landscape.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Icon -->
-            <div>
-              <i class="fa fa-arrow-up text-[22px] bg-gray-800 text-white px-6 py-5 rounded-full rotate-180 group-[.open]:rotate-0 group-[.open]:bg-gray-100 group-[.open]:text-gray-900 dark:group-[.open]:bg-white dark:group-[.open]:text-gray-900 transform transition-all duration-900 ease-in-out"></i>
-            </div>
+        <div class="faq-question-texts">
+          <h3 class="faq-question-title">
+            Scale and evolve your AI strategy
+          </h3>
+          <p class="faq-question-desc">
+            We support you in scaling your AI initiatives, adapting to new challenges, and ensuring your business stays ahead in a rapidly changing landscape.
+          </p>
+        </div>
+      </div>
+      <!-- Icon -->
+      <div class="faq-icon-container">
+        <i class="faq-icon fa fa-arrow-up"></i>
+      </div>
+    </div>
+    <!-- Answer/Image -->
+    <div class="faq-answer-container">
+      <img class="faq-answer-image" src="images/faq/faq-4.webp" alt="FAQ Answer" />
+      <div class="faq-tags-wrapper">
+        <div class="faq-tags-container">
+          <div class="faq-tags-list">
+            <div class="faq-tag">Scalability</div>
+            <div class="faq-tag">Continuity</div>
+            <div class="faq-tag">Adaptation</div>
           </div>
-          <!-- Answer/Image -->
-          <div class="overflow-hidden max-h-0 group-[.open]:max-h-[500px] w-full transition-all duration-900 ease-in-out relative cursor-pointer">
-            <img class="w-full h-[500px] rounded-xl mt-4 shadow-lg transition-all duration-900 ease-in-out" src="images/faq/faq-4.webp" alt="FAQ Answer" />
-            <div class="absolute -bottom-5 md:left-20 max-w-[468px]">
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-row gap-[10px] items-center">
-                  <div class="px-4 py-1 rounded-full bg-text-light opacity-[1] leading-[27px] text-gray-900">Scalability</div>
-                  <div class="px-4 py-1 rounded-full bg-text-light opacity-[1] leading-[27px] text-gray-900">Continuity</div>
-                  <div class="px-4 py-1 rounded-full bg-text-light opacity-[1] leading-[27px] text-gray-900">Adaptation</div>
-                </div>
-                <img class="" src="images/faq/faq-4-4.avif" alt="faq" />
-              </div>
-            </div>
-            <div class="absolute bottom-8 right-8 bg-text-light pt-[20px] pr-[20px] pb-[25px] pl-[20px] max-w-[190px] rounded-3xl">
-               <div class="flex flex-col gap-4">
+          <div class="faq-small-image-wrapper">
+            <img src="images/faq/faq-4-4.avif" alt="faq" />
+          </div>
+        </div>
+      </div>
+      <div class="faq-button-wrapper">
+                  <div class="flex flex-col gap-4">
                  <div>
                   <h3 class="text-[20px] leading-[34px] font-semibold text-text-dark">Results:</h3>
                 <p class="text-sm leading-[21px]">Improvement saw in recycling rates</p>
                 </div>
-                <button class="bg-[#70DB80] text-text-light text-[36px] rounded-2xl tracking-[-1px] opacity-[1] leading-[43px] pb-[7px] pl-[19px] pr-[21px] pt-[7px]">
+                <button class="bg-[#70DB80] text-text-light text-2xl md:text-4xl rounded-2xl tracking-[-1px] opacity-[1] leading-7 md:leading-[43px] pb-[7px] pl-[19px] pr-[21px] pt-[7px]">
                   +<span class="counter" data-target="400">0</span>%
                 </button>
                </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-
+  </div>
+</div>
   </div>
 </section>
 
@@ -2035,8 +2081,12 @@ document.addEventListener("DOMContentLoaded", () => {
 <section class="section-sm pb-[120px]">
   <div class="container rounded-4xl border border-border relative overflow-hidden">
 
-    <!-- Background with animation -->
-    <div class="absolute inset-0 bg-cover bg-center animate-bgzoom" style="background-image: url('images/ai-bg.svg'); z-index: 0;"></div>
+  <!-- Background with animation -->
+<div class="absolute inset-0 bg-cover bg-center animate-bgzoom" style="background-image: url('images/ai-bg.svg'); z-index: 0;">
+  <!-- Light white overlay -->
+  <div class="absolute inset-0 bg-white/40 opacity-5"></div>
+</div>
+
 
     <!-- Content on top -->
     <div class="relative z-10 flex flex-col lg:flex-row gap-20 md:gap-20 lg:gap-0 items-center justify-between md:p-[60px] p-8">

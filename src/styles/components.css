@@ -194,3 +194,58 @@
   @apply overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out text-[16px] leading-[27px] max-w-[482px] text-default;
 }
 /* FAQ Answers to your common queries ended */
+/* FAq- V1 started */
+
+ .faq-item-v1 {
+    @apply border-b border-border pb-[60px] flex flex-col gap-0 transition-all duration-500;
+  }
+  .faq-item-v1.open {
+    @apply gap-6;
+  }
+  .faq-question-container {
+    @apply flex flex-col gap-6 md:gap-0 md:flex-row items-center justify-between md:gap-x-4 cursor-pointer;
+  }
+  .faq-question-content {
+    @apply flex flex-col gap-4 w-full lg:max-w-[1050px] items-center md:items-start;
+  }
+  .faq-question-texts {
+    @apply flex flex-col md:flex-row justify-between items-center w-full;
+  }
+  .faq-question-title {
+    @apply flex-1 min-w-[308px] max-w-[445px] text-[28px] md:text-[36px] leading-[38px] md:leading-[43px] font-medium text-center md:text-left tracking-[-1px];
+  }
+  .faq-question-desc {
+    @apply flex-1 min-w-[308px] max-w-[534px] text-base leading-7 text-center md:text-left;
+  }
+  .faq-icon-container {
+    @apply mt-4 md:mt-0;
+  }
+  .faq-icon {
+    @apply text-[22px] bg-gray-800 text-white px-4 py-3 md:px-6 md:py-5 rounded-full rotate-180 group-[.open]:rotate-0 group-[.open]:bg-gray-100 group-[.open]:text-gray-900 dark:group-[.open]:bg-white dark:group-[.open]:text-gray-900 transform transition-all duration-900 ease-in-out;
+  }
+  .faq-answer-container {
+    @apply overflow-hidden max-h-0 group-[.open]:max-h-[500px] w-full transition-all duration-900 ease-in-out relative cursor-pointer;
+  }
+  .faq-answer-image {
+    @apply w-full h-[558px] md:h-[500px] rounded-xl transition-all duration-900 ease-in-out;
+  }
+  .faq-tags-wrapper {
+    @apply absolute -bottom-5 left-1/2 md:left-20 transform -translate-x-1/2 md:translate-x-0 max-w-[468px];
+  }
+  .faq-tags-container {
+    @apply flex flex-col text-center gap-4 w-[290px] md:w-[468px];
+  }
+  .faq-tags-list {
+    @apply flex flex-wrap justify-center md:justify-start md:flex-row gap-[10px] items-center;
+  }
+  .faq-tag {
+    @apply px-4 py-1 rounded-full bg-text-light opacity-[1] leading-[27px] text-gray-900;
+  }
+  .faq-small-image-wrapper {
+    @apply h-[200px] md:h-[323px];
+  }
+  .faq-button-wrapper {
+    @apply absolute left-1/2 top-2 md:top-auto md:left-auto md:bottom-8 md:right-8 transform -translate-x-1/2 md:translate-x-0 bg-text-light pt-[20px] pr-[20px] pb-[25px] pl-[20px] max-w-[190px] rounded-3xl;
+  }
+
+/* FAQ - V1 ended */

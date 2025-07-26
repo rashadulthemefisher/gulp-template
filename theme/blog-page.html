@@ -837,8 +837,12 @@ document.addEventListener("DOMContentLoaded", () => {
 <section class="section-sm pb-[120px]">
   <div class="container rounded-4xl border border-border relative overflow-hidden">
 
-    <!-- Background with animation -->
-    <div class="absolute inset-0 bg-cover bg-center animate-bgzoom" style="background-image: url('images/ai-bg.svg'); z-index: 0;"></div>
+  <!-- Background with animation -->
+<div class="absolute inset-0 bg-cover bg-center animate-bgzoom" style="background-image: url('images/ai-bg.svg'); z-index: 0;">
+  <!-- Light white overlay -->
+  <div class="absolute inset-0 bg-white/40 opacity-5"></div>
+</div>
+
 
     <!-- Content on top -->
     <div class="relative z-10 flex flex-col lg:flex-row gap-20 md:gap-20 lg:gap-0 items-center justify-between md:p-[60px] p-8">

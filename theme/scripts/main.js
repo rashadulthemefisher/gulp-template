@@ -252,11 +252,10 @@ cards.forEach((card, index) => {
   });
 });
 
-
-// FAQ
-document.querySelectorAll(".faq-item").forEach((item) => {
+// FAQ V1
+document.querySelectorAll(".faq-item-v1").forEach((item) => {
   item.addEventListener("click", () => {
-    document.querySelectorAll(".faq-item.open").forEach((openItem) => {
+    document.querySelectorAll(".faq-item-v1.open").forEach((openItem) => {
       if (openItem !== item) {
         openItem.classList.remove("open");
       }
@@ -264,6 +263,7 @@ document.querySelectorAll(".faq-item").forEach((item) => {
     item.classList.toggle("open");
   });
 });
+
 
 //---------
  const arrowBtn = document.getElementById('arrowBtn');
