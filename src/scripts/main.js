@@ -87,9 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-
-
   // Testimonial Slider
   // ----------------------------------------
   new Swiper(".testimonial-slider", {
@@ -277,7 +274,6 @@ document.querySelectorAll(".faq-item").forEach((item) => {
     tagButtons.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
   });
 //-----
-
 //............
   // Accordion
   // ----------------------------------------
@@ -289,4 +285,5 @@ document.querySelectorAll(".faq-item").forEach((item) => {
     });
   });
 // ber
+
 })();

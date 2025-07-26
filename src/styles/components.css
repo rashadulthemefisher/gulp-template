@@ -4,7 +4,7 @@
 }
 
 .section-sm {
-  @apply pt-[100px] pb-[60px] px-[30px];
+  @apply pt-[100px] pb-[60px] px-[15px] md:px-[30px];
 }
 
 /* container */
@@ -87,3 +87,110 @@
   animation: horizontalExpand 25s ease-in-out infinite;
   transform-origin: center;
 }
+
+/* Footer css Started */
+/* footer.css */
+
+.footer {
+  @apply py-20 px-8 text-center md:text-left;
+}
+.footer-container {
+  @apply flex flex-col gap-[120px] max-w-[1280px] mx-auto;
+}
+.footer-top {
+  @apply flex flex-col xl:flex-row gap-10 xl:gap-0 justify-between;
+}
+.footer-left {
+  @apply w-full md:max-w-[520px] flex flex-col gap-16;
+}
+.footer-logo {
+  @apply flex items-center max-w-[328px] mr-auto;
+}
+.footer-text {
+  @apply text-[18px] leading-[31px];
+}
+.social-icons {
+  @apply flex flex-row gap-8 mx-auto md:mx-0;
+}
+.social-icons a {
+  @apply hover:text-white transition;
+}
+.footer-links {
+  @apply flex flex-col md:flex-row justify-between w-full md:max-w-[560px] gap-10 md:gap-0;
+}
+.footer-links-section {
+  @apply min-w-[150px] flex flex-col gap-4;
+}
+.footer-links-section h3 {
+  @apply text-xl leading-[34px] font-semibold text-[#F8F4F1];
+}
+.footer-links-section ul {
+  @apply flex flex-col gap-4;
+}
+.footer-links-section ul li a {
+  @apply text-lg leading-[31px] text-default hover:text-btn-primary;
+}
+.footer-address p {
+  @apply text-lg leading-[31px];
+}
+.footer-bottom {
+  @apply pt-6 border-t border-border flex flex-col-reverse md:flex-row justify-between;
+}
+.footer-bottom p {
+  @apply text-base leading-7 opacity-[0.5];
+}
+.footer-bottom-links {
+  @apply flex flex-row gap-9 items-center text-default;
+}
+.footer-bottom-links a {
+  @apply text-lg leading-[31px];
+}
+.footer-bottom-links span {
+  @apply opacity-50;
+}
+
+/* Footer css Ended */
+
+/* transform ai section started */
+.card {
+  @apply relative w-[110px] md:w-[142px] rounded-3xl flex flex-col justify-end shadow-lg overflow-hidden;
+}
+.card-bar {
+  @apply absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl;
+}
+.card-heading {
+  @apply text-4xl leading-[43px] font-medium tracking-[-1px] text-text-dark;
+}
+.card-sub {
+  @apply text-sm leading-[21px] text-text-dark opacity-[0.6];
+}
+  @keyframes bgzoom {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.08);
+    }
+  }
+  .animate-bgzoom {
+    animation: bgzoom 8s ease-in-out infinite;
+  }
+
+/* transform ai section ended */
+/* FAQ Answers to your common queries started */
+.faq-item {
+  @apply p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-transparent dark:bg-transparent flex flex-col;
+}
+.faq-item-question{
+  @apply flex justify-between items-center;
+}
+.faq-item-question h3{
+  @apply font-medium text-lg leading-[31px];
+}
+.faq-item-question span{
+  @apply text-2xl transition-transform duration-300 text-[32px];
+}
+.faq-item-answer{
+  @apply overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out text-[16px] leading-[27px] max-w-[482px] text-default;
+}
+/* FAQ Answers to your common queries ended */

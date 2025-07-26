@@ -1,79 +1,92 @@
 <section class="section-sm py-16">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-col lg:flex-row items-start gap-12">
-
+  <div class="container">
+    <div class="flex flex-col lg:flex-row items-start gap-[60px]">
       <!-- Left Side -->
-      <div class="flex-1">
+      <div class="w-full md:max-w-[594px] mx-auto lg:text-left text-center">
         <div class="flex flex-col gap-8">
           <div class="flex flex-col gap-4">
             <h4
-              class="text-[12px] bg-[#70DB80] max-w-[180px] inline-block transform skew-x-[-20deg] -rotate-6 shadow-md">
-              <span class="inline-block transform skew-x-[12deg] px-6">FAQ</span>
-            </h4>
-            <h1 class="text-4xl md:text-6xl font-semibold leading-[72px] tracking-[-1.5px]">
+            class="text-[12px] bg-[#70DB80] px-12 inline-block w-fit transform skew-x-[-20deg] shadow-md custom-before -rotate-4 mx-auto lg:mx-0">
+            <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] opacity-[1]">FAQ</span>
+          </h4>
+            <h1 class="text-5xl lg:text-6xl font-semibold leading-12 md:leading-[72px] tracking-[-1.5px]">
               Answers to your common queries
             </h1>
-            <p class="text-[18px] max-w-[594px] leading-[31px]">
+            <p class="text-[18px] max-w-[594px] leading-9 md:leading-[31px]">
               For any unanswered questions, reach out to our support team via email. We'll respond as soon as possible to assist you.
             </p>
           </div>
-          <button class="px-6 py-3 font-semibold rounded-[14px] bg-text-light text-black leading-[27px] max-w-[130px]">
+          <button class="px-6 py-3 font-semibold rounded-[14px] bg-text-light text-black leading-[27px] max-w-[130px] mx-auto lg:mx-0">
             Contact us
           </button>
         </div>
       </div>
 
       <!-- Right Side: FAQ Accordion -->
-      <div class="flex-1 space-y-4">
+      <div class="w-full lg:w-[600px] ml-auto">
 
         <!-- FAQ Item 1 -->
-        <div class="group faq-item-fix p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-transparent dark:bg-transparent flex flex-col gap-2" onclick="toggleFaqItem(this)">
-          <div class="flex justify-between items-center">
-            <h3 class="font-normal text-lg leading-[31px] question">
+         <div class="group faq-item faq-item-fix" onclick="toggleFaqItem(this)">
+
+          <div class="faq-item-question">
+            <h3 class="question">
+              What industries does Optivus serve?
+            </h3>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="faq-answer faq-item-answer">
+            Yes, SalesFlow seamlessly integrates with a wide range of CRM, email, and marketing automation tools to ensure a smooth workflow and data synchronization across platforms.
+          </div>
+        </div>
+
+       <!-- FAQ Item 2 -->
+        <div class="group faq-item faq-item-fix" onclick="toggleFaqItem(this)">
+          <div class="faq-item-question">
+            <h3 class="question">
               What is Optivus, and what does the company do?
             </h3>
-            <span class="text-2xl transition-transform duration-300 toggle-icon">+</span>
+            <span class="toggle-icon">+</span>
           </div>
-          <div class="faq-answer overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out text-[16px] leading-[27px] max-w-[482px] text-default">
+          <div class="faq-answer faq-item-answer">
             Optivus is an AI-powered technology company that develops smart automation and data intelligence tools for businesses.
           </div>
         </div>
 
-        <!-- FAQ Item 2 -->
-        <div class="group faq-item-fix p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-transparent dark:bg-transparent flex flex-col gap-2" onclick="toggleFaqItem(this)">
-          <div class="flex justify-between items-center">
-            <h3 class="font-normal text-lg leading-[31px] question">
+        <!-- FAQ Item 3 -->
+        <div class="group faq-item faq-item-fix" onclick="toggleFaqItem(this)">
+          <div class="faq-item-question">
+            <h3 class="question">
               How can I get started with Optivus solutions?
             </h3>
-            <span class="text-2xl transition-transform duration-300 toggle-icon">+</span>
+            <span class="toggle-icon">+</span>
           </div>
-          <div class="faq-answer overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out text-[16px] leading-[27px] max-w-[482px] text-default">
+          <div class="faq-answer faq-item-answer">
             You can schedule a free demo or consultation through our website to explore the best solutions for your business needs.
           </div>
         </div>
 
-        <!-- FAQ Item 3 -->
-        <div class="group faq-item-fix p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-transparent dark:bg-transparent flex flex-col gap-2" onclick="toggleFaqItem(this)">
-          <div class="flex justify-between items-center">
-            <h3 class="font-normal text-lg leading-[31px] question">
-              What makes Optivus’ AI solutions unique?
+        <!-- FAQ Item 4 -->
+        <div class="group faq-item faq-item-fix" onclick="toggleFaqItem(this)">
+          <div class="faq-item-question">
+            <h3 class="question">
+              What makes Optivus' AI solutions unique?
             </h3>
-            <span class="text-2xl transition-transform duration-300 toggle-icon">+</span>
+            <span class="toggle-icon">+</span>
           </div>
-          <div class="faq-answer overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out text-[16px] leading-[27px] max-w-[482px] text-default">
+          <div class="faq-answer faq-item-answer">
             Our AI is trained on industry-specific data and continually learns from user behavior, providing highly personalized and accurate insights.
           </div>
         </div>
 
-        <!-- FAQ Item 4 -->
-        <div class="group faq-item-fix p-6 rounded-2xl cursor-pointer transition-all duration-300 bg-transparent dark:bg-transparent flex flex-col gap-2" onclick="toggleFaqItem(this)">
-          <div class="flex justify-between items-center">
-            <h3 class="font-normal text-lg leading-[31px] question">
+        <!-- FAQ Item 5 -->
+        <div class="group faq-item faq-item-fix" onclick="toggleFaqItem(this)">
+          <div class="faq-item-question">
+            <h3 class="question">
               Do you provide ongoing support after implementation?
             </h3>
-            <span class="text-2xl transition-transform duration-300 toggle-icon">+</span>
+            <span class="toggle-icon">+</span>
           </div>
-          <div class="faq-answer overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out text-[16px] leading-[27px] max-w-[482px] text-default">
+          <div class="faq-answer faq-item-answer">
             Yes, we offer 24/7 customer support, regular updates, and dedicated account managers to ensure long-term success.
           </div>
         </div>
@@ -82,9 +95,9 @@
     </div>
   </div>
 </section>
-
 <script>
-  function toggleFaqItem(clickedItem) {
+  // FAQ Answers to your common queries section started
+ function toggleFaqItem(clickedItem) {
     const allItems = document.querySelectorAll('.faq-item-fix');
 
     allItems.forEach(item => {
@@ -96,6 +109,8 @@
         answer.classList.remove('opacity-100');
         answer.classList.add('opacity-0');
         icon.textContent = '+';
+        item.classList.remove('bg-[#1B212A]', 'gap-2');
+        item.classList.add('bg-transparent', 'dark:bg-transparent', 'gap-0');
       }
     });
 
@@ -107,11 +122,16 @@
       answer.classList.remove('opacity-100');
       answer.classList.add('opacity-0');
       icon.textContent = '+';
+      clickedItem.classList.remove('bg-[#1B212A]', 'gap-2');
+      clickedItem.classList.add('bg-transparent', 'dark:bg-transparent', 'gap-0');
     } else {
       answer.style.maxHeight = answer.scrollHeight + "px";
       answer.classList.remove('opacity-0');
       answer.classList.add('opacity-100');
       icon.textContent = '-';
+      clickedItem.classList.remove('bg-transparent', 'dark:bg-transparent', 'gap-0');
+      clickedItem.classList.add('bg-[#1B212A]', 'gap-2');
     }
   }
+// FAQ Answers to your common queries section ended
 </script>

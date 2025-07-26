@@ -1,50 +1,61 @@
-<section class="section-sm">
-  <div class="container md:p-10 rounded-3xl border border-gray-800 md:h-[480px] relative overflow-hidden">
+<section class="section-sm pb-[120px]">
+  <div class="container rounded-4xl border border-border relative overflow-hidden">
 
     <!-- Background with animation -->
-    <div class="absolute inset-0 bg-cover bg-center animate-bgZoom" style="background-image: url('images/ai-bg.svg'); z-index: 0;"></div>
+    <div class="absolute inset-0 bg-cover bg-center animate-bgzoom" style="background-image: url('images/ai-bg.svg'); z-index: 0;"></div>
 
     <!-- Content on top -->
-    <div class="relative z-10 flex flex-col md:flex-row items-center justify-center p-5 md:p-10 h-full">
+    <div class="relative z-10 flex flex-col lg:flex-row gap-20 md:gap-20 lg:gap-0 items-center justify-between md:p-[60px] p-8">
 
       <!-- Left Content -->
-      <div class="flex-1 md:max-w-[520px] flex flex-col justify-center items-start text-left">
-        <h2 class="md:text-5xl font-normal">Ready to transform your business with AI?</h2>
-        <p class="text-[14px] md:max-w-[420px] my-6">Discover how Optivus can help you drive innovation, streamline operations, and achieve your goals.</p>
-        <button class="px-5 py-4 rounded-2xl text-lg font-semibold text-gray-800 bg-[#C4FC00] hover:bg-lime-300"
-          target="_blank" rel="noopener noreferrer">
-          Get Started Now
-        </button>
+      <div class="flex flex-col gap-6 max-w-[500px] text-center lg:text-left">
+        <div class="flex flex-col gap-4">
+          <h2 class="text-3xl md:text-5xl leading-9 md:leading-[58px] font-semibold tracking-[-1.5px] opacity-[1]">Ready to transform your business with AI?</h2>
+        <p class="text-lg leading-6 md:leading-[31px]">Discover how Optivus can help you drive innovation, streamline operations, and achieve your goals.</p>
+        </div>
+        <div class="">
+          <button type="button"
+            class="inline-block px-6 py-3 rounded-[14px] text-base text-text-dark bg-btn-primary leading-[27px] font-semibold cursor-pointer"
+            target="_blank" rel="noopener noreferrer">
+            Get Started Now
+          </button>
+        </div>
       </div>
 
       <!-- Right Cards -->
-      <div class="flex-1 flex flex-row items-end justify-center md:justify-end gap-5 md:gap-10 mt-10 md:mt-0">
+      <div class="flex flex-row gap-6 items-end">
         <!-- Card 1 -->
-        <div class="relative w-[110px] md:w-[142px] h-[114px] bg-[#2E85FA] rounded-3xl flex flex-col justify-end shadow-lg overflow-hidden">
-          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
-          <div class="mb-4 text-center">
-            <h3 class="text-[36px] font-normal text-gray-800">30%</h3>
-            <p class="text-sm text-gray-600">Cost Saving</p>
+        <div class="card h-[114px] bg-[#2E85FA]">
+         <div class="px-[5px] pb-4 flex flex-col justify-between">
+           <div class="card-bar"></div>
+          <div class="flex flex-col items-center">
+            <h3 class="card-heading">30%</h3>
+            <p class="card-sub">Cost Saving</p>
           </div>
+         </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="relative w-[110px] md:w-[142px] h-[285px] bg-[#70DB80] rounded-3xl flex flex-col justify-end text-white shadow-lg overflow-hidden">
-          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
-          <div class="mb-4 text-center">
-            <h3 class="text-[36px] font-normal text-gray-800">75%</h3>
-            <p class="text-sm text-gray-600">Success Rate</p>
+      <!-- Card 2 -->
+      <div class="card h-[285px] bg-[#70DB80]">
+        <div class="px-[5px] pb-4 flex flex-col justify-between">
+          <div class="card-bar"></div>
+          <div class="flex flex-col items-center">
+            <h3 class="card-heading">75%</h3>
+            <p class="card-sub">Success Rate</p>
           </div>
         </div>
+      </div>
 
-        <!-- Card 3 -->
-        <div class="relative w-[110px] md:w-[142px] h-[380px] bg-[#FDE44B] rounded-3xl flex flex-col justify-end text-white shadow-lg overflow-hidden">
-          <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-3xl"></div>
-          <div class="mb-4 text-center">
-            <h3 class="text-[36px] font-normal text-gray-800">10k+</h3>
-            <p class="text-sm text-gray-600">Deployments</p>
+      <!-- Card 3 -->
+      <div class="card h-[380px] bg-[#FDE44B]">
+        <div class="px-[5px] pb-4 flex flex-col justify-between">
+          <div class="card-bar"></div>
+          <div class="flex flex-col items-center">
+            <h3 class="card-heading">10k+</h3>
+            <p class="card-sub">Deployments</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
