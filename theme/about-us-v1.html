@@ -252,85 +252,57 @@
   });
 </script>
 
-<body class="min-h-screen"><section class="section-sm pt-36 relative overflow-hidden">
+<body class="min-h-screen"><section class="section-sm pt-[100px] md:pt-[178px] relative overflow-hidden">
  <div class="absolute inset-0 w-full h-[20%] bg-cover bg-center animate-bgZoom origin-center -z-10 animationdiv"
     style="background-image: url('images/ai-bg.svg');"></div>
 <div class="container">
-<div class="flex flex-col items-center text-center gap-4 max-w-[790px] mx-auto">
+  <div class="flex flex-col gap-10 md:gap-20">
+      <div class="flex flex-col items-center text-center">
   <h4
-    class="text-[12px] @@bg-color px-12 inline-block w-fit transform skew-x-[-20deg] -rotate-3 shadow-md custom-before">
-    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color opacity-[1]">About Us</span>
+    class="text-[12px] bg-[#FDE44B] px-6 inline-block w-fit transform skew-x-[-20deg] -rotate-3 shadow-md custom-before">
+    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-text-dark">About Us</span>
   </h4>
-  <h1 class="text-5xl md:text-6xl md:leading-[72px] font-semibold tracking-[-1.5px] opacity-[1]">About Us</h1>
-  <p class="text-[18px] max-w-[600px] leading-[31px] opacity-[1]">By analyzing historical trends and real-time data, our solution enables smarter energy planning and reduced overhead.</p>
+ <div class="flex flex-col gap-4">
+    <h1 class="text-5xl md:text-[80px] md:leading-[92px] font-semibold tracking-[-2px] opacity-[1]">About Us</h1>
+  <p class="text-xl mx-auto md:max-w-[670px] leading-[34px]">Join hundreds of companies who've doubled their efficiency while cutting costs by 40% through smart AI integration</p>
+ </div>
 </div>
 
-<style>
-p, h1, h4 {
-  display: block;
-}
-p:empty, h1:empty, h4:empty {
-  display: none;
-}
-.custom-before {
-  position: relative;
-}
-.custom-before::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -5px;
-  width: 10px;
-  height: 12px;
-  background: #fff;
-  transform: rotate(135deg);
-  clip-path: polygon(100% 0, 0 100%, 100% 100%);
-}
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('p, h1, h4').forEach(el => {
-    if (!el.textContent.trim()) {
-      el.style.display = 'none';
-    }
-  });
-});
-</script>
-
-      <div class="md:mx-20 my-20 flex flex-col md:flex-row gap-10 items-center justify-between">
-    <div class="w-full md:w-[80%]">
-<h2 class="font-normal text-[20px] md:text-[48px] tracking-normal opacity-90">At Optivus, we believe that technology is more <span class="text-[#C4FC00]">than just a tool</span>, it’s a catalyst for transformation. Founded with a vision to empower <span class="text-[#C4FC00]">industries</span> through AI.</h2>
-    </div>
-    <div class="w-full md:w-[20%] space-y-4 text-center md:text-end">
+   <div class="flex flex-col gap-10 md:gap-20">
+       <div class="max-w-[1140px] mx-auto flex flex-col md:flex-row gap-5 md:gap-10 justify-center">
+      <h2 class="font-semibold text-[36px] md:text-[48px] leading-11 md:leading-[58px] tracking-[-1.5px] text-center md:text-left">At Optivus, we believe that technology is more <span class="text-btn-primary">than just a tool</span>, it’s a catalyst for transformation. Founded with a vision to empower <span class="text-btn-primary">industries</span> through AI.</h2>
+    <div class="flex flex-col gap-3 md:gap-10 text-center md:text-end w-full md:min-w-[180px]">
         <div class="">
-          <h1 class="text-[#C4FC00] font-normal text-[40px] md:text-[60px]"><span class="counter text-[#B6F312]" data-target="200">0</span><span
-              class="text-[#B6F312]">+</span></h1>
-          <p class="text-[18px] mx-auto max-w-[600px] tracking-wide">Satisfied customers</p>
+          <h1 class="text-btn-primary font-medium text-[40px] md:text-[60px] leading-18"><span class="counter text-btn-primary" data-target="200">0</span><span
+              class="text-btn-primary">+</span></h1>
+          <p class="text-[18px] leading-8">Satisfied customers</p>
         </div>
         <div>
-          <h1 class="text-[#C4FC00] font-normal text-[40px] md:text-[60px]"><span class="counter text-[#B6F312]" data-target="63">0</span><span
-              class="text-[#B6F312]">%</span></h1>
-          <p class="text-[18px] mx-auto max-w-[600px] tracking-wide">Project Success Rate</p>
+          <h1 class="text-btn-primary font-normal text-[40px] md:text-[60px]"><span class="counter text-btn-primary" data-target="63">0</span><span
+              class="text-btn-primary">%</span></h1>
+          <p class="text-[18px] leading-8">Project Success Rate</p>
         </div>
     </div>
     </div>
-<!-- Images Section Started -->
-      <div class="flex flex-col md:flex-row gap-10 items-center justify-between">
+    <!-- Images Section Started -->
+      <div class="flex flex-col md:flex-row gap-10 items-center">
         <div class="flex-1">
-        <img class="rounded-3xl h-[550px] object-cover" src="images/about/about-v1-1.avif" alt="">
+        <img class="rounded-3xl h-[395px] md:h-[550px] object-cover" src="images/about/about-v1-1.avif" alt="">
         </div>
         <div class="flex-1">
-        <img class="rounded-3xl h-[550px] object-cover" src="images/about/about-v1-2.avif" alt="">
+        <img class="rounded-3xl h-[395px] md:h-[550px] object-cover" src="images/about/about-v1-2.avif" alt="">
         </div>
       </div>
 <!-- Images Section Ended -->
-    <!-- Brand images Section started -->
-      <div class="my-10">
-      <section class="pt-[50px] pb-[100px] px-[30px]">
-  <div class="container ">
-    <div class="brand-wrapper px-12">
-      <div>
+   </div>
+  </div>
+</div>
+</section>
+   <!-- Brand images Section started -->
+      <section class="pt-[50px]  pb-[60px] px-[30px]">
+  <div class="container">
+    <div class="brand-wrapper ">
+      <div class="flex items-center relative px-7">
         <img src="images/brands/brand1.svg" alt="Brand Logo" class="brand-logo" />
       </div>
 
@@ -365,132 +337,103 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 </section>
 
-      </div>
     <!-- Brand images Section ended -->
     <!-- Our mission Section started -->
-  <div class="flex flex-col md:flex-row gap-10 justify-start items-start my-20">
-
-    <!-- Left Section Header -->
-    <div class="w-full md:w-[30%]">
-      <h4
-        class="text-[12px] bg-[#2E85FA] dark:text-gray-100 px-4 py-1 text-gray-800 @@text-margin max-w-[180px] inline-block transform skew-x-[-20deg] rotate-3 shadow-md">
-        <span class="inline-block transform skew-x-[12deg]">Mission</span>
-      </h4>
-      <h1 class="text-4xl md:text-6xl font-normal tracking-tight mt-5">Our Mission</h1>
+  <section class="section-sm">
+    <div class="container flex flex-col md:flex-row gap-[64px]">
+        <!-- Left Section Header -->
+    <div class="min-w-[355px] flex flex-col gap-4 items-center md:items-start">
+       <h4
+    class="text-[12px] bg-[#70DB80] px-6 inline-block w-fit transform skew-x-[-20deg] -rotate-3 shadow-md custom-before">
+    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-text-dark">Mission</span>
+  </h4>
+      <h1 class="text-4xl md:text-6xl font-semibold leading-18 tracking-[-1.5px]">Our Mission</h1>
     </div>
 
     <!-- Right Text Content -->
-    <div class="text-[16px] md:text-[20px] text-gray-200 tracking-normal font-normal leading-[34px] opacity-60 space-y-6 flex-1 max-w-[702px]">
-      <p>
+    <div class="max-w-[722px] flex flex-col gap-9 text-center md:text-left">
+      <p class="text-xl leading-[34px]">
         To lead the future of AI innovation and inspire global progress through intelligent solutions. By pushing the boundaries of AI, we aim to create a world where technology enhances lives, businesses, and the environment.
       </p>
-      <p>
+      <p class="text-xl leading-[34px]">
         To enable businesses to harness the full potential of AI for innovation, growth, and impact. We are dedicated to creating AI technologies that are ethical, scalable, and impactful, bridging the gap between human ingenuity and technological excellence.
       </p>
     </div>
-
-  </div>
+    </div>
+  </section>
 <!-- Our Mission Section ended -->
 
 <!-- Rated Section Started -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<section class="section-sm pt-10">
+  <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center md:text-left">
       <!-- Card 1 -->
-      <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
-        <h2 class="text-[80px] text-[#C4FC00] font-medium"><span class="counter text-[#B6F312]" data-target="12">0</span><span
-              class="text-[#B6F312]">k+</span></h2>
-        <p class="text-[18px] mt-1 opacity-80">Successful Projects</p>
+      <div class="rounded-4xl border border-border bg-card-bg-v2 flex flex-col justify-center px-[25px] py-[30px] md:py-[60px]">
+        <h2 class="text-5xl md:text-[80px] text-btn-primary font-medium leading-[55px] md:leading-[92px] tracking-[-2px]"><span class="counter text-btn-primary" data-target="12">0</span><span
+              class="text-btn-primary">k+</span></h2>
+        <p class="text-[18px] leading-8">Successful Projects</p>
       </div>
 
-      <!-- Card 2 -->
-        <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
-        <h2 class="text-[80px] text-[#C4FC00] font-medium"><span class="counter text-[#B6F312]" data-target="30">0</span><span
-              class="text-[#B6F312]">%</span></h2>
-        <p class="text-[18px] mt-1 opacity-80">Efficiency Gains</p>
-      </div>
-
-      <!-- Card 3 -->
-     <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
-        <h2 class="text-[80px] text-[#C4FC00] font-medium"><span class="counter text-[#B6F312]" data-target="24">0</span><span
-              class="text-[#B6F312]">%</span></h2>
-        <p class="text-[18px] mt-1 opacity-80">Contribution to AI Growth</p>
-      </div>
-
-      <!-- Card 4 -->
-        <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
-        <h2 class="text-[80px] text-[#C4FC00] font-medium"><span class="counter text-[#B6F312]" data-target="98">0</span><span
-              class="text-[#B6F312]">%</span></h2>
-        <p class="text-[18px] mt-1 opacity-80">Client Satisfaction Rate</p>
-      </div>
+    <!-- Card 2 -->
+    <div class="rounded-4xl border border-border bg-card-bg-v2 flex flex-col justify-center px-[25px] py-[30px] md:py-[60px]">
+      <h2 class="text-5xl md:text-[80px] text-btn-primary font-medium leading-[55px] md:leading-[92px] tracking-[-2px]">
+        <span class="counter text-btn-primary" data-target="30">0</span><span class="text-btn-primary">%</span>
+      </h2>
+      <p class="text-[18px] leading-8">Efficiency Gains</p>
     </div>
+
+    <!-- Card 3 -->
+    <div class="rounded-4xl border border-border bg-card-bg-v2 flex flex-col justify-center px-[25px] py-[30px] md:py-[60px]">
+      <h2 class="text-5xl md:text-[80px] text-btn-primary font-medium leading-[55px] md:leading-[92px] tracking-[-2px]">
+        <span class="counter text-btn-primary" data-target="24">0</span><span class="text-btn-primary">%</span>
+      </h2>
+      <p class="text-[18px] leading-8">Contribution to AI Growth</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="rounded-4xl border border-border bg-card-bg-v2 flex flex-col justify-center px-[25px] py-[30px] md:py-[60px]">
+  <h2 class="text-5xl md:text-[80px] text-btn-primary font-medium leading-[55px] md:leading-[92px] tracking-[-2px]">
+    <span class="counter text-btn-primary" data-target="98">0</span><span class="text-btn-primary">%</span>
+  </h2>
+  <p class="text-[18px] leading-8">Client
+    </div>
+  </div>
+</section>
 <!-- Rated Section ended -->
 <!-- Meet our team Section Started -->
-<div class="my-20">
-    <div class="flex flex-col items-center text-center gap-4 max-w-[790px] mx-auto">
+<section class="section-sm pt-10">
+  <div class="container">
+    <div class="flex flex-col gap-10 md:gap-20">
+      <div class="flex flex-col items-center text-center gap-4 max-w-[790px] mx-auto">
   <h4
-    class="text-[12px] @@bg-color px-12 inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
-    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color opacity-[1]">Team</span>
+    class="text-[12px] bg-[#70DB80] px-10 inline-block w-fit transform skew-x-[-20deg] -rotate-3 shadow-md custom-before">
+    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-text-dark opacity-[1]">Team</span>
   </h4>
-  <h1 class="text-5xl md:text-6xl md:leading-[72px] font-semibold tracking-[-1.5px] opacity-[1]">Meet our team</h1>
-  <p class="text-[18px] max-w-[600px] leading-[31px] opacity-[1]">Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.</p>
+  <h1 class="text-5xl md:text-6xl md:leading-[72px] font-semibold tracking-[-1.5px]">Meet our team</h1>
+  <p class="text-[18px] max-w-[590px] leading-[31px]">Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.</p>
 </div>
-
-<style>
-p, h1, h4 {
-  display: block;
-}
-p:empty, h1:empty, h4:empty {
-  display: none;
-}
-.custom-before {
-  position: relative;
-}
-.custom-before::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -5px;
-  width: 10px;
-  height: 12px;
-  background: #fff;
-  transform: rotate(135deg);
-  clip-path: polygon(100% 0, 0 100%, 100% 100%);
-}
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('p, h1, h4').forEach(el => {
-    if (!el.textContent.trim()) {
-      el.style.display = 'none';
-    }
-  });
-});
-</script>
-
 <div id="home-page">
     <!-- FLEX CONTAINER -->
-      <div class="w-full flex flex-wrap gap-6 mt-10">
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- CARD 1 -->
-        <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
-
-            <!-- Image (grayscale to color) -->
-            <img
-              src="images/team/team-1.avif"
-              alt="Predictive Analytics"
-              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 -z-10"
-            />
-
-            <!-- Hover Border (inner, top of image) -->
-            <div class="absolute inset-0 rounded-3xl ring-0 group-hover:ring-4 group-hover:ring-white transition-all duration-500 pointer-events-none z-50"></div>
-
-            <!-- Gradient Overlay Content -->
-            <div class="absolute inset-x-0 bottom-0 z-20 p-6 bg-gradient-to-t from-black/90 via-black/70 to-transparent text-white">
-              <h3 class="text-xl font-semibold">Floyd Miles</h3>
-              <p class="text-sm mt-2 opacity-80">Web Designer</p>
-            </div>
+        <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md hover:border-[4px]">
+          <!-- Image (grayscale to color) -->
+          <img
+            src="images/team/team-1.avif"
+            alt="Predictive Analytics"
+            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 -z-10"
+          />
+          <!-- Gradient Overlay Content -->
+          <div class="absolute inset-x-0 bottom-0 z-20 p-6"
+              style="height:154px; background: linear-gradient(0deg, var(--token-38a26b60-fa6e-456a-8416-ad2cf18d4051, rgb(41, 48, 57)) 19.317713379859924%, rgba(35, 41, 48, 0) 100%);">
           </div>
+          <div class="absolute inset-x-0 bottom-0 z-20 p-6 text-left">
+             <h3 class="text-2xl leading-[34px] font-medium tracking-[-0.5px] text-white">Floyd Miles</h3>
+            <p class="text-sm leading-5 text-white">Web Designer</p>
+          </div>
+        </div>
         <!-- CARD 2 -->
-          <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+          <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -510,7 +453,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
         <!-- CARD 3 -->
-         <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+         <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -529,7 +472,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
         <!-- CARD 4 -->
-          <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+          <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -548,7 +491,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
     <!-- CARD 5 -->
-        <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+        <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -567,7 +510,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
         <!-- CARD 6 -->
-          <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+          <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -587,7 +530,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
         <!-- CARD 7 -->
-         <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+         <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -606,7 +549,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
         <!-- CARD 8 -->
-          <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+          <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -631,14 +574,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </div>
 </div>
+  </div>
+</section>
 <!-- Meet our team Section ended -->
 <!-- Product Blog Started -->
-<section class="section-sm">
-<div class="container">
+<section class="section-sm pt-[60px]">
+<div class="container flex flex-col gap-[64px]">
   <div class="flex flex-col items-center text-center gap-4 max-w-[790px] mx-auto">
   <h4
-    class="text-[12px] @@bg-color px-12 inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
-    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color opacity-[1]">Blogs</span>
+    class="text-[12px] bg-[#2E85FA] px-8 inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
+    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-text-light opacity-[1]">Blogs</span>
   </h4>
   <h1 class="text-5xl md:text-6xl md:leading-[72px] font-semibold tracking-[-1.5px] opacity-[1]">Latest news from the industry</h1>
   <p class="text-[18px] max-w-[600px] leading-[31px] opacity-[1]">By analyzing historical trends and real-time data, our solution enables smarter energy planning and reduced overhead.</p>
@@ -677,10 +622,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-<div id="blog-page">
-
+    <div id="blog-page">
+    
     <!-- FLEX CONTAINER -->
-      <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-[80px]">
         <!-- CARD 1 -->
 <!-- CARD 1 -->
 <a href="blog-details.html" class="flex-1 min-w-[300px]">
@@ -700,7 +645,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -744,7 +689,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -786,7 +731,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -828,7 +773,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -870,7 +815,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -912,7 +857,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -954,7 +899,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -996,7 +941,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -1038,7 +983,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -1069,21 +1014,88 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 </a>
       </div>
-<div class="text-center mt-8" id="blog-load-more-wrapper">
+<div class="text-center" id="blog-load-more-wrapper">
   <button id="blog-load-more-btn"
-    class="bg-gray-200 text-[18px] cursor-pointer text-black font-medium px-6 py-3 rounded-md hover:bg-[#a9d60e] transition">
+    class="bg-text-light text-lg cursor-pointer text-text-dark font-semibold leading-8 px-[30px] py-3 rounded-[14px] transition">
     Load More
   </button>
 </div>
 
 
 
-</div>
+    </div>
 </div>
 </section>
 <!-- Product Blog Ended -->
+ <!-- Ready to transform Started -->
+<section class="section-sm pb-[120px]">
+  <div class="container rounded-4xl border border-border relative overflow-hidden">
+
+  <!-- Background with animation -->
+<div class="absolute inset-0 bg-cover bg-center animate-bgzoom" style="background-image: url('images/ai-bg.svg'); z-index: 0;">
+  <!-- Light white overlay -->
+  <div class="absolute inset-0 bg-white/40 opacity-5"></div>
 </div>
+
+
+    <!-- Content on top -->
+    <div class="relative z-10 flex flex-col lg:flex-row gap-20 md:gap-20 lg:gap-0 items-center justify-between md:p-[60px] p-8">
+
+      <!-- Left Content -->
+      <div class="flex flex-col gap-6 max-w-[500px] text-center lg:text-left">
+        <div class="flex flex-col gap-4">
+          <h2 class="text-3xl md:text-5xl leading-9 md:leading-[58px] font-semibold tracking-[-1.5px] opacity-[1]">Ready to transform your business with AI?</h2>
+        <p class="text-lg leading-6 md:leading-[31px]">Discover how Optivus can help you drive innovation, streamline operations, and achieve your goals.</p>
+        </div>
+        <div class="">
+          <button type="button"
+            class="inline-block px-6 py-3 rounded-[14px] text-base text-text-dark bg-btn-primary leading-[27px] font-semibold cursor-pointer"
+            target="_blank" rel="noopener noreferrer">
+            Get Started Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Cards -->
+      <div class="flex flex-row gap-6 items-end">
+        <!-- Card 1 -->
+        <div class="card h-[114px] bg-[#2E85FA]">
+         <div class="px-[5px] pb-4 flex flex-col justify-between">
+           <div class="card-bar"></div>
+          <div class="flex flex-col items-center">
+            <h3 class="card-heading">30%</h3>
+            <p class="card-sub">Cost Saving</p>
+          </div>
+         </div>
+        </div>
+
+      <!-- Card 2 -->
+      <div class="card h-[285px] bg-[#70DB80]">
+        <div class="px-[5px] pb-4 flex flex-col justify-between">
+          <div class="card-bar"></div>
+          <div class="flex flex-col items-center">
+            <h3 class="card-heading">75%</h3>
+            <p class="card-sub">Success Rate</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card h-[380px] bg-[#FDE44B]">
+        <div class="px-[5px] pb-4 flex flex-col justify-between">
+          <div class="card-bar"></div>
+          <div class="flex flex-col items-center">
+            <h3 class="card-heading">10k+</h3>
+            <p class="card-sub">Deployments</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<!-- Ready to transform Ended -->
 
 <script>
 

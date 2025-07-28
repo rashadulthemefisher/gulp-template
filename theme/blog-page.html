@@ -253,76 +253,49 @@
 </script>
 
 <body class="min-h-screen"><!-- Blog -->
-<section class="section pt-36 relative overflow-hidden">
+<section class="section-sm pt-[100px] md:pt-[178px] relative overflow-hidden">
   <div class="absolute inset-0 w-full h-[20%] bg-cover bg-center animate-bgZoom origin-center -z-10 animationdiv"
     style="background-image: url('images/ai-bg.svg');"></div>
   <div class="container">
-    <div class="flex flex-col items-center text-center gap-4 max-w-[790px] mx-auto">
+    <div class="flex flex-col gap-10 md:gap-20">
+      <div class="flex flex-col items-center text-center">
   <h4
-    class="text-[12px] @@bg-color px-12 inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
-    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color opacity-[1]">Blogs</span>
+    class="text-[12px] bg-[#FDE44B] px-6 inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
+    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-text-dark">Blogs</span>
   </h4>
-  <h1 class="text-5xl md:text-6xl md:leading-[72px] font-semibold tracking-[-1.5px] opacity-[1]">Latest news from the industry</h1>
-  <p class="text-[18px] max-w-[600px] leading-[31px] opacity-[1]">Last updated on: October 12, 2024</p>
+ <div class="flex flex-col gap-4">
+    <h1 class="text-5xl md:text-[80px] md:leading-[92px] font-semibold tracking-[-2px] opacity-[1]">Latest news from the industry</h1>
+  <p class="text-xl mx-auto md:max-w-[670px] leading-[34px]">Last updated on: October 12, 2024</p>
+ </div>
 </div>
 
-<style>
-p, h1, h4 {
-  display: block;
-}
-p:empty, h1:empty, h4:empty {
-  display: none;
-}
-.custom-before {
-  position: relative;
-}
-.custom-before::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -5px;
-  width: 10px;
-  height: 12px;
-  background: #fff;
-  transform: rotate(135deg);
-  clip-path: polygon(100% 0, 0 100%, 100% 100%);
-}
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('p, h1, h4').forEach(el => {
-    if (!el.textContent.trim()) {
-      el.style.display = 'none';
-    }
-  });
-});
-</script>
-
-    <div>
+    
       <!-- Blog Section -->
       <div class="w-full relative cursor-pointer">
         <div class="swiper default-carousel">
           <!-- Slides -->
-          <div class="swiper-wrapper mt-10">
+          <div class="swiper-wrapper">
+            <!-- swiper-slide 1 -->
             <div class="swiper-slide">
-              <div class="bg-indigo-50 rounded-3xl h-[550px] flex justify-center items-center">
+              <div class="bg-text-light rounded-3xl h-[550px] flex justify-center items-center">
                 <img class="h-[550px] w-full rounded-3xl object-cover relative" src="images/blogs/data.avif" alt="">
-                <div class="absolute bottom-0 p-32 shadow-3xl bg-black/50 rounded-b-3xl transform w-full"></div>
-                <div class="absolute top-0 left-0 p-6 text-white">
+                <div class="absolute bottom-0 p-32 shadow-3xl bg-text-dark/80 rounded-b-3xl transform w-full"></div>
+                <div class="absolute top-0 left-0 p-6">
                   <div class="flex flex-row gap-2">
-                    <p class="text-[14px] bg-gray-200 px-4 py-1 rounded-full text-gray-800 font-normal tracking-wider">
+                    <p class="text-sm bg-text-light px-4 py-1 rounded-full text-text-dark font-normal tracking-wider">
                       Technology</p>
-                    <p class="text-[14px] bg-gray-200 px-4 py-1 rounded-full text-gray-800 font-normal tracking-wider">
+                    <p class="text-sm bg-text-light px-4 py-1 rounded-full text-text-dark font-normal tracking-wider">
                       Artificial Intelligence</p>
                   </div>
                 </div>
-                <div class="absolute bottom-10 left-5 p-6 ">
-                  <div class="max-w-[800px] space-y-2">
-                    <h3 class="text-[40px]">AI for Startups: Cost-Effective Tools to Accelerate Growth</h3>
-                    <p class="text-[14px] opacity-90 tracking-wider">Exploring the intersection of AI and environmental
+                <div class="absolute bottom-5 left-5 p-6 ">
+                  <div class="max-w-[800px] flex flex-col gap-[35px]">
+                   <div class="flex flex-col gap-2">
+                     <h3 class="text-5xl leading-[58px] font-semibold tracking-[-1.5px]">AI for Startups: Cost-Effective Tools to Accelerate Growth</h3>
+                    <p class="text-sm opacity-[0.64] tracking-wider">Exploring the intersection of AI and environmental
                       real-world applications.</p>
-                    <a class="inline-block mt-2 bg-black font-normal dark:bg-white text-white dark:text-black py-2 px-4 rounded-[10px]"
+                   </div>
+                    <a class="py-3 max-w-[145px] px-6 rounded-[14px] bg-btn-secondary text-text-dark leading-7 font-semibold"
                       href="blog-details.html">
                       Read full blog
                     </a>
@@ -330,24 +303,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
               </div>
             </div>
+            <!-- swiper-slide 2 -->
             <div class="swiper-slide">
-              <div class="bg-indigo-50 rounded-3xl h-[550px] flex justify-center items-center">
+              <div class="bg-text-light rounded-3xl h-[550px] flex justify-center items-center relative">
                 <img class="h-[550px] w-full rounded-3xl object-cover relative" src="images/blogs/machine.avif" alt="">
-                <div class="absolute bottom-0 p-32 shadow-3xl bg-black/50 rounded-b-3xl transform w-full"></div>
-                <div class="absolute top-0 left-0 p-6 text-white">
+                <div class="absolute bottom-0 p-32 shadow-3xl bg-text-dark/80 rounded-b-3xl transform w-full"></div>
+                <div class="absolute top-0 left-0 p-6">
                   <div class="flex flex-row gap-2">
-                    <p class="text-[14px] bg-gray-200 px-4 py-1 rounded-full text-gray-800 font-normal tracking-wider">
-                      Technology</p>
-                    <p class="text-[14px] bg-gray-200 px-4 py-1 rounded-full text-gray-800 font-normal tracking-wider">
-                      Artificial Intelligence</p>
+                    <p class="text-sm bg-text-light px-4 py-1 rounded-full text-text-dark font-normal tracking-wider">
+                      Machine Learning</p>
+                    <p class="text-sm bg-text-light px-4 py-1 rounded-full text-text-dark font-normal tracking-wider">
+                      Data Science</p>
                   </div>
                 </div>
-                <div class="absolute bottom-10 left-5 p-6 ">
-                  <div class="max-w-[800px] space-y-2">
-                    <h3 class="text-[40px]">AI for Startups: Cost-Effective Tools to Accelerate Growth</h3>
-                    <p class="text-[14px] opacity-90 tracking-wider">Exploring the intersection of AI and environmental
-                      real-world applications.</p>
-                    <a class="inline-block mt-2 bg-black font-normal dark:bg-white text-white dark:text-black py-2 px-4 rounded-[10px]"
+                <div class="absolute bottom-5 left-5 p-6 ">
+                  <div class="max-w-[800px] flex flex-col gap-[35px]">
+                    <div class="flex flex-col gap-2">
+                      <h3 class="text-5xl leading-[58px] font-semibold tracking-[-1.5px]">Machine Learning Trends to Watch in 2025</h3>
+                      <p class="text-sm opacity-[0.64] tracking-wider">Discover the latest advancements and predictions in machine learning for the coming year.</p>
+                    </div>
+                    <a class="py-3 max-w-[145px] px-6 rounded-[14px] bg-btn-secondary text-text-dark leading-7 font-semibold"
                       href="blog-details.html">
                       Read full blog
                     </a>
@@ -355,24 +330,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
               </div>
             </div>
+            <!-- swiper-slide 3 -->
             <div class="swiper-slide">
-             <div class="bg-indigo-50 rounded-3xl h-[550px] flex justify-center items-center">
+              <div class="bg-text-light rounded-3xl h-[550px] flex justify-center items-center relative">
                 <img class="h-[550px] w-full rounded-3xl object-cover relative" src="images/blogs/technology.avif" alt="">
-                <div class="absolute bottom-0 p-32 shadow-3xl bg-black/50 rounded-b-3xl transform w-full"></div>
-                <div class="absolute top-0 left-0 p-6 text-white">
+                <div class="absolute bottom-0 p-32 shadow-3xl bg-text-dark/80 rounded-b-3xl transform w-full"></div>
+                <div class="absolute top-0 left-0 p-6">
                   <div class="flex flex-row gap-2">
-                    <p class="text-[14px] bg-gray-200 px-4 py-1 rounded-full text-gray-800 font-normal tracking-wider">
+                    <p class="text-sm bg-text-light px-4 py-1 rounded-full text-text-dark font-normal tracking-wider">
                       Technology</p>
-                    <p class="text-[14px] bg-gray-200 px-4 py-1 rounded-full text-gray-800 font-normal tracking-wider">
-                      Artificial Intelligence</p>
+                    <p class="text-sm bg-text-light px-4 py-1 rounded-full text-text-dark font-normal tracking-wider">
+                      Innovation</p>
                   </div>
                 </div>
-                <div class="absolute bottom-10 left-5 p-6 ">
-                  <div class="max-w-[800px] space-y-2">
-                    <h3 class="text-[40px]">AI for Startups: Cost-Effective Tools to Accelerate Growth</h3>
-                    <p class="text-[14px] opacity-90 tracking-wider">Exploring the intersection of AI and environmental
-                      real-world applications.</p>
-                    <a class="inline-block mt-2 bg-black font-normal dark:bg-white text-white dark:text-black py-2 px-4 rounded-[10px]"
+                <div class="absolute bottom-5 left-5 p-6 ">
+                  <div class="max-w-[800px] flex flex-col gap-[35px]">
+                    <div class="flex flex-col gap-2">
+                      <h3 class="text-5xl leading-[58px] font-semibold tracking-[-1.5px]">The Future of Tech: How AI is Shaping Tomorrow</h3>
+                      <p class="text-sm opacity-[0.64] tracking-wider">A look at how artificial intelligence is transforming industries and daily life.</p>
+                    </div>
+                    <a class="py-3 max-w-[145px] px-6 rounded-[14px] bg-btn-secondary text-text-dark leading-7 font-semibold"
                       href="blog-details.html">
                       Read full blog
                     </a>
@@ -386,11 +363,15 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
     </div>
-<!-- Product Blog Started -->
-<div class="w-full mt-20">
+  </div>
+</section>
+<section class="section-sm pt-[70px]">
+  <div class="container">
+    <!-- Product Blog Started -->
+<div class="flex flex-col gap-10 md:gap-20">
   <div class="flex flex-col items-center text-center gap-4 max-w-[790px] mx-auto">
   <h4
-    class="text-[12px] @@bg-color px-12 inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
+    class="text-[12px] bg-[#2E85FA] px-8 inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
     <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color opacity-[1]">Blogs</span>
   </h4>
   <h1 class="text-5xl md:text-6xl md:leading-[72px] font-semibold tracking-[-1.5px] opacity-[1]">Other blogs & insights</h1>
@@ -433,7 +414,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div id="blog-section">
 
     <!-- FLEX CONTAINER -->
-      <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-[80px]">
         <!-- CARD 1 -->
 <!-- CARD 1 -->
 <a href="blog-details.html" class="flex-1 min-w-[300px]">
@@ -453,7 +434,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -497,7 +478,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -539,7 +520,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -581,7 +562,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -623,7 +604,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -665,7 +646,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -707,7 +688,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -749,7 +730,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -791,7 +772,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-end">
            <!-- Arrow Button -->
           <button
-            class="relative min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
+            class="relative p-4 min-w-16 min-h-16 bg-text-light rounded-full overflow-hidden group/icon transition rotate-45 cursor-pointer text-text-dark"
             aria-label="Go to details">
             <!-- Outgoing Icon -->
             <i class="fa fa-arrow-right -rotate-90 absolute top-1/2 left-1/2 font-thin text-2xl -translate-x-1/2 -translate-y-1/2
@@ -822,9 +803,9 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 </a>
       </div>
-<div class="text-center mt-8" id="blog-load-more-wrapper">
+<div class="text-center" id="blog-load-more-wrapper">
   <button id="blog-load-more-btn"
-    class="bg-gray-200 text-[18px] cursor-pointer text-black font-medium px-6 py-3 rounded-md hover:bg-[#a9d60e] transition">
+    class="bg-text-light text-lg cursor-pointer text-text-dark font-semibold leading-8 px-[30px] py-3 rounded-[14px] transition">
     Load More
   </button>
 </div>

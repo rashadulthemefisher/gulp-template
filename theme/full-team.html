@@ -259,7 +259,7 @@
     <!-- Meet our team Section Started -->
     <div class="flex flex-col items-center text-center gap-4 max-w-[790px] mx-auto">
   <h4
-    class="text-[12px] @@bg-color px-12 inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
+    class="text-[12px] @@bg-color px-8 inline-block w-fit transform skew-x-[-20deg] rotate-6 shadow-md custom-before">
     <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] @@text-color opacity-[1]">Team</span>
   </h4>
   <h1 class="text-5xl md:text-6xl md:leading-[72px] font-semibold tracking-[-1.5px] opacity-[1]">Meet the amazing team</h1>
@@ -301,28 +301,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <div id="team-page">
           <!-- FLEX CONTAINER -->
-      <div class="w-full flex flex-wrap gap-6 mt-10">
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- CARD 1 -->
-        <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
-
-            <!-- Image (grayscale to color) -->
-            <img
-              src="images/team/team-1.avif"
-              alt="Predictive Analytics"
-              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 -z-10"
-            />
-
-            <!-- Hover Border (inner, top of image) -->
-            <div class="absolute inset-0 rounded-3xl ring-0 group-hover:ring-4 group-hover:ring-white transition-all duration-500 pointer-events-none z-50"></div>
-
-            <!-- Gradient Overlay Content -->
-            <div class="absolute inset-x-0 bottom-0 z-20 p-6 bg-gradient-to-t from-black/90 via-black/70 to-transparent text-white">
-              <h3 class="text-xl font-semibold">Floyd Miles</h3>
-              <p class="text-sm mt-2 opacity-80">Web Designer</p>
-            </div>
+        <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md hover:border-[4px]">
+          <!-- Image (grayscale to color) -->
+          <img
+            src="images/team/team-1.avif"
+            alt="Predictive Analytics"
+            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 -z-10"
+          />
+          <!-- Gradient Overlay Content -->
+          <div class="absolute inset-x-0 bottom-0 z-20 p-6"
+              style="height:154px; background: linear-gradient(0deg, var(--token-38a26b60-fa6e-456a-8416-ad2cf18d4051, rgb(41, 48, 57)) 19.317713379859924%, rgba(35, 41, 48, 0) 100%);">
           </div>
+          <div class="absolute inset-x-0 bottom-0 z-20 p-6 text-left">
+             <h3 class="text-2xl leading-[34px] font-medium tracking-[-0.5px] text-white">Floyd Miles</h3>
+            <p class="text-sm leading-5 text-white">Web Designer</p>
+          </div>
+        </div>
         <!-- CARD 2 -->
-          <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+          <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -342,7 +340,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
         <!-- CARD 3 -->
-         <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+         <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -361,7 +359,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
         <!-- CARD 4 -->
-          <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+          <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -380,7 +378,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
     <!-- CARD 5 -->
-        <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+        <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -399,7 +397,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
         <!-- CARD 6 -->
-          <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+          <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -419,7 +417,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
         <!-- CARD 7 -->
-         <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+         <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -438,7 +436,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
         <!-- CARD 8 -->
-          <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+          <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -530,7 +528,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-    
+   
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Card 1 -->
       <div class="rounded-4xl flex flex-col gap-6 border border-border p-8 shadow-md bg-[#171D26]">
@@ -539,7 +537,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="flex flex-col gap-4">
                 <h2 class="text-2xl font-medium   leading-[34px]">Healthcare Industry</h2>
-                <p class="text-base max-w-sm mx-auto   leading-[27px]">AI diagnostics, patient management, and predictive health analytics.</p>
+                <p class="text-base md:max-w-sm md:mx-auto leading-[27px]">AI diagnostics, patient management, and predictive health analytics.</p>
         </div>
       </div>
     <!-- Card 2 -->
@@ -549,7 +547,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="flex flex-col gap-4">
                 <h2 class="text-2xl font-medium   leading-[34px]">Retail Business</h2>
-                <p class="text-base max-w-sm mx-auto   leading-[27px]">Smart logistics, supply chain automation, and real-time inventory.</p>
+                <p class="text-base md:max-w-sm md:mx-auto leading-[27px]">Smart logistics, supply chain automation, and real-time inventory.</p>
         </div>
       </div>
      <!-- Card 3 -->
@@ -559,7 +557,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="flex flex-col gap-4">
                 <h2 class="text-2xl font-medium   leading-[34px]">Education Industry</h2>
-                <p class="text-base max-w-sm mx-auto   leading-[27px]">Personalized learning tools, adaptive assessments, and virtual tutoring.</p>
+                <p class="text-base md:max-w-sm md:mx-auto  leading-[27px]">Personalized learning tools, adaptive assessments, and virtual tutoring.</p>
         </div>
       </div>
  <!-- Card 4 -->
@@ -569,7 +567,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="flex flex-col gap-4">
                 <h2 class="text-2xl font-medium   leading-[34px]">Finance Management</h2>
-                <p class="text-base max-w-sm mx-auto   leading-[27px]">Renewable energy grids, emission monitoring, and sustainable resources.</p>
+                <p class="text-base md:max-w-sm md:mx-auto leading-[27px]">Renewable energy grids, emission monitoring, and sustainable resources.</p>
         </div>
       </div>
     </div>

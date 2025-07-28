@@ -12,8 +12,8 @@
 .button-custom {
   @apply  gap-[20px] transform transition-transform ;
 }
-.primary-button{
-@apply flex items-center bg-btn-primary text-text-dark justify-center gap-2 px-6 py-3 text-[16px] rounded-[14px] font-semibold  transition cursor-pointer opacity-[1]
+.primary-button {
+  @apply inline-flex items-center bg-btn-primary text-text-dark justify-center gap-2 px-6 py-3 text-[16px] leading-[27px] rounded-[14px] font-semibold transition cursor-pointer opacity-[1];
 }
 .secondary-button{
 @apply flex items-center bg-btn-secondary text-text-dark justify-center gap-2 px-6 py-3 text-[16px] rounded-[14px] font-semibold  transition cursor-pointer opacity-[1]
