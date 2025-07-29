@@ -250,50 +250,6 @@
   <!-- Ai faces section ended -->
 </div>
 </section>
-<!-- Banner ended -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const starsContainer = document.getElementById("stars-container");
-    if (!starsContainer) return;
-
-    const colors = ["#B9EF02", "#FFFFFF"];
-    const maxStars = 3;
-    let activeStars = [];
-
-    function createStar() {
-      if (activeStars.length >= maxStars) return;
-
-      const star = document.createElement("div");
-      star.className = "star";
-
-      const rect = starsContainer.getBoundingClientRect();
-      const x = Math.random() * rect.width;
-      const y = Math.random() * rect.height;
-
-      star.style.left = `${x}px`;
-      star.style.top = `${y}px`;
-      star.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-
-      starsContainer.appendChild(star);
-      activeStars.push(star);
-
-      setTimeout(() => {
-        star.remove();
-        activeStars = activeStars.filter(s => s !== star);
-      }, 1200);
-    }
-
-    function spawn() {
-      const count = Math.floor(Math.random() * maxStars) + 1;
-      for (let i = 0; i < count; i++) {
-        setTimeout(createStar, i * 250);
-      }
-      setTimeout(spawn, 1500 + Math.random() * 1500);
-    }
-
-    spawn();
-  });
-</script>
 <!-- Brand images Section started -->
 @@include('brand-images-section.html')
 <!-- Brand images Section ended -->
