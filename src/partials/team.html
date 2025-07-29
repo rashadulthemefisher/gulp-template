@@ -1,24 +1,26 @@
     <!-- FLEX CONTAINER -->
-      <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="w-full flex flex-wrap gap-6 mt-10">
         <!-- CARD 1 -->
-        <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md hover:border-[4px]">
-          <!-- Image (grayscale to color) -->
-          <img
-            src="images/team/team-1.avif"
-            alt="Predictive Analytics"
-            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 -z-10"
-          />
-          <!-- Gradient Overlay Content -->
-          <div class="absolute inset-x-0 bottom-0 z-20 p-6"
-              style="height:154px; background: linear-gradient(0deg, var(--token-38a26b60-fa6e-456a-8416-ad2cf18d4051, rgb(41, 48, 57)) 19.317713379859924%, rgba(35, 41, 48, 0) 100%);">
+        <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+
+            <!-- Image (grayscale to color) -->
+            <img
+              src="images/team/team-1.avif"
+              alt="Predictive Analytics"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 -z-10"
+            />
+
+            <!-- Hover Border (inner, top of image) -->
+            <div class="absolute inset-0 rounded-3xl ring-0 group-hover:ring-4 group-hover:ring-white transition-all duration-500 pointer-events-none z-50"></div>
+
+            <!-- Gradient Overlay Content -->
+            <div class="absolute inset-x-0 bottom-0 z-20 p-6 bg-gradient-to-t from-black/90 via-black/70 to-transparent text-white">
+              <h3 class="text-xl font-semibold">Floyd Miles</h3>
+              <p class="text-sm mt-2 opacity-80">Web Designer</p>
+            </div>
           </div>
-          <div class="absolute inset-x-0 bottom-0 z-20 p-6 text-left">
-             <h3 class="text-2xl leading-[34px] font-medium tracking-[-0.5px] text-white">Floyd Miles</h3>
-            <p class="text-sm leading-5 text-white">Web Designer</p>
-          </div>
-        </div>
         <!-- CARD 2 -->
-          <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+          <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -38,7 +40,7 @@
           </div>
 
         <!-- CARD 3 -->
-         <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+         <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -57,7 +59,7 @@
             </div>
           </div>
         <!-- CARD 4 -->
-          <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+          <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -76,7 +78,7 @@
             </div>
           </div>
     <!-- CARD 5 -->
-        <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+        <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -95,7 +97,7 @@
             </div>
           </div>
         <!-- CARD 6 -->
-          <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+          <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -115,7 +117,7 @@
           </div>
 
         <!-- CARD 7 -->
-         <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+         <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img
@@ -134,7 +136,7 @@
             </div>
           </div>
         <!-- CARD 8 -->
-          <div class="team-card group relative flex-1 w-full md:max-w-[302px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
+          <div class="team-card group relative flex-1 min-w-[300px] h-[400px] rounded-3xl overflow-hidden bg-white shadow-md">
 
             <!-- Image (grayscale to color) -->
             <img

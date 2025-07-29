@@ -1,9 +1,59 @@
+<style>
+  #stars-container {
+  border: 2px dashed red;  /* temporarily see container */
+  pointer-events: none;
+}
+
+  .star {
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: fadeInOut 1.2s ease-in-out forwards;
+    background-color: #B9EF02;
+    box-shadow: 0 0 10px #fff;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: scale(0.4) rotate(35deg);
+    }
+    40% {
+      opacity: 1;
+      transform: scale(1.2) rotate(35deg);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.4) rotate(35deg);
+    }
+  }
+</style>
 <!-- Banner started -->
-<section class="section-sm pt-[100px] md:pt-[140px] mt-auto relative overflow-hidden">
-<div class="absolute top-0 inset-0 w-full h-[70%] bg-cover bg-center animate-horizontal-expand origin-center -z-10"
+<div class="banner-background z-[-10] absolute inset-0 bg-cover bg-center" style="background-image:url('images/banner.svg')"></div>
+
+<!-- Later you had a duplicate background with -z-10 as well -->
+<div class="absolute top-0 inset-0 w-full h-[50%] bg-cover bg-center animate-horizontal-expand origin-center -z-10"
      style="background-image: url('images/banner.svg');">
 </div>
 
+  <!-- Stars container with z-10 (above background, below content) -->
+  <div id="stars-container" class="absolute inset-0 pointer-events-none z-10"></div>
+
+  <!-- Remove duplicate banner.svg background here -->
   <!-- Your glow layers and other overlays -->
   <div class="glow-layer left-1/2 -top-20"></div>
   <div class="glow-layer left-[10%] top-0"></div>
@@ -77,154 +127,180 @@
     </div>
   </div>
    <!-- Ai faces section started -->
-<div
-  class="cards-wrapper flex flex-wrap lg:flex-nowrap gap-[22px] mx-auto max-w-full"
->
-  <!-- Chart Card -->
-  <div
-    class="border-border/75 border bg-secondary-bg rounded-3xl flex flex-col gap-[10px] justify-between pt-[15px] min-w-[320px] flex-grow flex-shrink lg:h-[464px] overflow-visible"
-  >
-    <div class="max-w-[256px] mx-auto pt-3">
-      <p class="text-text-light text-sm leading-[21px] opacity-[0.6]">
-        Real-time analytics
-      </p>
-      <h5 class="card-header">
-        AI market is expected to grow by
-        <span class="counter text-[#B6F312]" data-target="59">0</span
-        ><span class="text-[#B6F312]">%</span> in 2025
-      </h5>
-    </div>
-    <div class="w-full overflow-visible">
-      <img
-        src="images/30B.svg"
-        alt="30b image"
-        class="w-full h-[350px] object-cover object-center rounded-none"
-      />
-    </div>
+    <div class=" flex flex-col md:flex-row  gap-[22px]">
+        <!-- Chart Card -->
+<div class="border-border/75 border bg-secondary-bg rounded-3xl flex flex-col gap-[10px] justify-between pt-[15px] min-w-[320px] h-[464px] overflow-visible">
+  <div class="max-w-[256px] mx-auto pt-3">
+    <p class="text-text-light text-sm leading-[21px] opacity-[0.6]">Real-time analytics</p>
+    <h5 class="card-header">
+      AI market is expected to grow by
+      <span class="counter text-[#B6F312]" data-target="59">0</span><span class="text-[#B6F312]">%</span> in 2025
+    </h5>
   </div>
-
-  <!-- Face Scan Card -->
-  <div
-    class="relative overflow-hidden rounded-3xl border-border shadow h-[478px] lg:h-[467px] lg:min-w-[320px] lg:max-w-[320px] flex-grow flex-shrink"
-  >
-    <img
-      src="images/ai-face.avif"
-      alt="AI Face"
-      class="w-full h-[478px] object-cover"
+  <div class="w-[320px] overflow-visible">
+    <img 
+      src="images/30B.svg" 
+      alt="30b image" 
+      class="w-full h-[350px] object-cover object-center rounded-none"
     />
-
-    <div class="absolute max-w-[260px] top-5 left-1/2 -translate-x-1/2 z-20">
-      <div class="flex flex-row items-center gap-2">
-        <h2 class="text-[28px] font-extrabold tracking-tight text-gray-900">
-          <span class="counter" data-target="100">0</span><span class="italic">%</span>
-        </h2>
-        <p class="text-xs text-text-dark opacity-[0.6] leading-[14px]">
-          Face has been Matched
-        </p>
-      </div>
-    </div>
-    <img
-      class="absolute top-[70px] left-1/2 -translate-x-1/2 z-10"
-      src="images/ai-face-dot.svg"
-      alt="Face Dots"
-    />
-    <div
-      id="scan-bar"
-      class="absolute top-full left-1/2 -translate-x-1/2 w-[260px] h-[80px] bg-orange-200/90 rounded-md z-20 pointer-events-none blur-sm transition-transform duration-300"
-    ></div>
-    <div
-      class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10"
-    ></div>
-    <div
-      class="absolute bottom-0 pb-4 left-0 w-full h-[158px] bg-gradient-to-t from-white to-transparent z-10 flex justify-center items-end"
-    >
-      <div class="w-[240px] text-left ml-14">
-        <h2 class="text-2xl tracking-[-0.5px] font-medium leading-[34px] text-gray-900">
-          AI Face Detection
-        </h2>
-        <p class="text-sm">Identity Verification</p>
-      </div>
-    </div>
-  </div>
-  <!-- Success Rate Card -->
-<!-- Fix here -->
-<div class="flex flex-col justify-between border-border bg-secondary-bg rounded-3xl pt-8 pl-8 pr-[39px] pb-10 lg:min-w-[350px] lg:max-w-[592px] w-full md:w-full lg:w-auto flex-shrink min-w-0">
-
-  <h2 class="card-header w-full lg:max-w-[541px]">
-    With a <span class="counter text-[#B6F312]" data-target="75">0</span><span class="text-[#B6F312]">%</span>
-    project success rate, Optivus redefining the possibilities of AI
-    in every industry.
-  </h2>
-
-  <div class="flex flex-col gap-[28px] mt-8">
-    <h3 class="text-xl leading-[34px] font-semibold">Our Success Rate</h3>
-
-    <!-- New Flex Container for Dynamic Width Cards -->
-    <div class="flex flex-row w-full">
-      <!-- Succeed Card (63%) -->
-      <div class="flex flex-col gap-[27px] px-1 text-[12px] font-bold relative" style="flex-grow: 63">
-        <div class="absolute top-0 left-0 h-full w-[1px] bg-[repeating-linear-gradient(to_bottom,#cbd5e1_0px,#cbd5e1_8px,transparent_8px,transparent_14px)] opacity-30"></div>
-        <div>
-          <span class="text-sm text-default leading-[21px] font-normal opacity-[1]">Succeed</span><br />
-          <span class="text-4xl font-medium leading-[43px] text-text-light opacity-[1]">
-            <span class="counter" data-target="63">0</span>%
-          </span>
-        </div>
-        <div>
-          <div class="w-full h-10 bg-[#70DB80] rounded-xl mt-2"></div>
-          <div class="absolute h-6 w-[11px] bg-text-light rounded-sm right-2 bottom-[10px]"></div>
-        </div>
-      </div>
-
-      <!-- In Progress Card (24%) -->
-      <div class="flex flex-col gap-[27px] px-1 text-[12px] font-bold relative" style="flex-grow: 24">
-        <div class="absolute top-0 left-0 h-full w-[1px] bg-[repeating-linear-gradient(to_bottom,#cbd5e1_0px,#cbd5e1_8px,transparent_8px,transparent_14px)] opacity-30"></div>
-        <div>
-          <span class="text-sm text-default leading-[21px] font-normal opacity-[1]">In Progress</span><br />
-          <span class="text-4xl font-medium leading-[43px] text-text-light opacity-[1]">
-            <span class="counter" data-target="24">0</span>%
-          </span>
-        </div>
-        <div>
-          <div class="w-full h-10 bg-[#2E85FA] rounded-xl mt-2"></div>
-          <div class="absolute h-6 w-[11px] bg-text-light rounded-sm right-2 bottom-[10px]"></div>
-        </div>
-      </div>
-
-      <!-- Failed Card (13%) -->
-      <div class="flex flex-col gap-[27px] px-1 text-[12px] font-bold relative" style="flex-grow: 13">
-        <div class="absolute top-0 left-0 h-full w-[1px] bg-[repeating-linear-gradient(to_bottom,#cbd5e1_0px,#cbd5e1_8px,transparent_8px,transparent_14px)] opacity-30"></div>
-        <div>
-          <span class="text-sm text-default leading-[21px] font-normal opacity-[1]">Failed</span><br />
-          <span class="text-4xl font-medium leading-[43px] text-text-light opacity-[1]">
-            <span class="counter" data-target="13">0</span>%
-          </span>
-        </div>
-        <div>
-          <div class="w-full h-10 bg-[#99A1AF] rounded-xl mt-2"></div>
-          <div class="absolute h-6 w-[11px] bg-text-light rounded-sm right-2 bottom-[10px]"></div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
+         <!-- Face Scan Card -->
+      <div class="relative overflow-hidden rounded-3xl border-border shadow h-[464px] min-w-[320px]">
+        <!-- Background Image -->
+        <img src="images/ai-face.avif" alt="AI Face" class="w-full h-full object-cover">
 
-</div>
+        <!-- Face dots -->
+        <div class="absolute max-w-[260px] top-5 left-1/2 -translate-x-1/2 z-20">
+          <div class="flex flex-row items-center gap-2">
+            <h2 class="text-[28px] font-extrabold tracking-tight text-gray-900"><span class="counter" data-target="100">0</span><span class="italic">%</span></h2>
+            <p class="text-xs text-text-dark opacity-[0.6] leading-[14px]">Face has been Matched</p>
+          </div>
+        </div>
+        <img class="absolute top-[70px] left-1/2 -translate-x-1/2 z-10" src="images/ai-face-dot.svg" alt="Face Dots">
+
+        <!-- Yellow scan bar -->
+        <div id="scan-bar"
+          class="absolute top-full left-1/2 -translate-x-1/2 w-[260px] h-[80px] bg-orange-200/90 rounded-md z-20 pointer-events-none blur-sm transition-transform duration-300">
+        </div>
+        <!-- White bottom gradient overlay -->
+        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10"></div>
+        <!-- Bottom Gradient Overlay with Text -->
+        <div
+          class="absolute bottom-0 pb-4 left-0 w-full h-[158px] bg-gradient-to-t from-white to-transparent z-10 flex justify-center items-end">
+          <div class="w-[240px] text-left ml-14">
+            <h2 class="text-2xl tracking-[-0.5px] font-medium leading-[34px] text-gray-900">AI Face Detection</h2>
+            <p class="text-sm  ">Identity Verification</p>
+          </div>
+        </div>
+      </div>
+      <!-- With a 75% project success rate -->
+    <div class="flex flex-col justify-between border-border bg-secondary-bg rounded-3xl pt-8 pl-8 pr-[39px] pb-10 md:min-w-[592px]">
+        <!-- Heading -->
+      <h2 class="card-header max-w-[541px]">
+        With a <span class="counter text-[#B6F312]" data-target="75">0</span><span class="text-[#B6F312]">%</span>
+        project success rate, Optivus redefining the possibilities of AI
+        in every industry.
+      </h2>
+
+      <!-- Bottom Section (Success Rate Info) -->
+      <div class="flex flex-col gap-[28px]">
+        <!-- Success Label -->
+        <h3 class="text-xl leading-[34px] font-semibold">Our Success Rate</h3>
+
+       <!-- Success Cards Row -->
+      <div class="flex flex-col md:flex-row justify-between">
+        <!-- Succeed Card -->
+        <div class="w-full md:max-w-[240px] text-start px-1 text-[12px] dark:text-gray-200 text-gray-800 font-bold relative"
+        >
+          <div
+            class="absolute top-0 left-0 h-full w-[1px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
+          ></div>
+         <div class="flex flex-col gap-[27px]">
+           <div>
+            <span class="text-sm text-default leading-[21px] font-normal opacity-[1]">Succeed</span><br />
+            <span class="text-4xl font-medium leading-[43px] text-text-light opacity-[1]"><span class="counter" data-target="63">0</span>%</span>
+          </div>
+          <div>
+            <div class="max-w-[236px] h-10 bg-[#70DB80] rounded-xl mt-2"></div>
+            <div class="absolute h-6 w-[11px] bg-text-light rounded-sm right-2 bottom-[10px]"></div>
+          </div>
+         </div>
+        </div>
+        <!-- In Progress Card -->
+         <div class="w-full md:max-w-[156px] text-start px-1 text-[12px] dark:text-gray-200 text-gray-800 font-bold relative"
+        >
+
+          <div
+            class="absolute top-0 left-0 h-full w-[1px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
+          ></div>
+         <div class="flex flex-col gap-[27px]">
+           <div>
+            <span class="text-sm text-default leading-[21px] font-normal opacity-[1]">In Progress</span><br />
+            <span class="text-4xl font-medium leading-[43px] text-text-light opacity-[1]"><span class="counter" data-target="24">0</span>%</span>
+          </div>
+          <div>
+            <div class="max-w-[152px] h-10 bg-[#2E85FA] rounded-xl mt-2"></div>
+            <div class="absolute h-6 w-[11px] bg-text-light rounded-sm right-2 bottom-[10px]"></div>
+          </div>
+         </div>
+        </div>
+         <!-- Failed Card -->
+         <div class="w-full md:max-w-[125px] text-start px-1 text-[12px] dark:text-gray-200 text-gray-800 font-bold relative"
+        >
+
+          <div
+            class="absolute top-0 left-0 h-full w-[1px] bg-[repeating-linear-gradient(to_bottom,_#cbd5e1_0px,_#cbd5e1_8px,_transparent_8px,_transparent_14px)] opacity-30"
+          ></div>
+         <div class="flex flex-col gap-[27px]">
+           <div>
+            <span class="text-sm text-default leading-[21px] font-normal opacity-[1]">Failed</span><br />
+            <span class="text-4xl font-medium leading-[43px] text-text-light opacity-[1]"><span class="counter" data-target="13">0</span>%</span>
+          </div>
+          <div>
+            <div class="max-w-[120px] h-10 bg-[#99A1AF] rounded-xl mt-2"></div>
+            <div class="absolute h-6 w-[11px] bg-text-light rounded-sm right-2 bottom-[10px]"></div>
+          </div>
+         </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
   <!-- Ai faces section ended -->
 </div>
 </section>
 <!-- Banner ended -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const starsContainer = document.getElementById("stars-container");
+    if (!starsContainer) return;
 
+    const colors = ["#B9EF02", "#FFFFFF"];
+    const maxStars = 3;
+    let activeStars = [];
+
+    function createStar() {
+      if (activeStars.length >= maxStars) return;
+
+      const star = document.createElement("div");
+      star.className = "star";
+
+      const rect = starsContainer.getBoundingClientRect();
+      const x = Math.random() * rect.width;
+      const y = Math.random() * rect.height;
+
+      star.style.left = `${x}px`;
+      star.style.top = `${y}px`;
+      star.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+      starsContainer.appendChild(star);
+      activeStars.push(star);
+
+      setTimeout(() => {
+        star.remove();
+        activeStars = activeStars.filter(s => s !== star);
+      }, 1200);
+    }
+
+    function spawn() {
+      const count = Math.floor(Math.random() * maxStars) + 1;
+      for (let i = 0; i < count; i++) {
+        setTimeout(createStar, i * 250);
+      }
+      setTimeout(spawn, 1500 + Math.random() * 1500);
+    }
+
+    spawn();
+  });
+</script>
 <!-- Brand images Section started -->
- @@include('brand-images-section.html', {
-        "padding-b": "pb-[100px]",
-        "padding-t": "pt-[50px]",
-      })
+@@include('brand-images-section.html')
 <!-- Brand images Section ended -->
 
 <!-- Smartermanagement Section Started -->
 <section class="section-sm">
-  <div class="container flex flex-col gap-10 md:gap-[100px]">
+  <div class="container flex flex-col gap-[100px]">
  @@include('components/left-section-header.html', {
     "title": "Bringing change in the industry by making impactful solutions",
     "subtitle": "",
@@ -233,15 +309,14 @@
     "text-color": "text-text-dark",
     "skewRotate": "-rotate-[6deg]",
     })
-    <div class="flex flex-col md:flex-wrap lg:flex-row lg:justify-between md:justify-center items-center gap-6 lg:gap-0">
-      <!-- left content -->
-      <div class="max-w-[380px] text-center md:text-left w-full flex flex-col gap-8 md:gap-[60px]">
-          <div class="mx-auto md:mx-0">
+    <div class="flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-0">
+      <div class="md:max-w-[380px] w-full flex flex-col gap-[60px]">
+          <div>
           <img src="images/siteforge.svg" alt="">
           </div>
-          <div class="flex flex-col gap-10 md:gap-20">
+          <div class="flex flex-col gap-20">
           <div class="flex flex-col gap-10">
-          <h4 class="h5 md:text-2xl text-[18px]  tracking-[-0.5px] font-medium leading-[33.6px]">
+          <h4 class="h5 md:text-2xl   tracking-[-0.5px] font-medium leading-[33.6px]">
             Optivus helped SiteForge to integrate advanced
             <span class="text-lime-400">AI analytics</span> to optimize their energy consumption by
             <span class="counter text-lime-400 font-bold" data-target="76">0</span><span
@@ -252,19 +327,19 @@
             carbon footprints.
           </p>
         </div>
-        <button class="primary-button max-w-[156px] mx-auto md:mx-0">
+        <button class="primary-button">
           Read Full Story
         </button>
         </div>
       </div>
-<!-- middle content -->
-      <div class="max-w-[420px] w-full relative overflow-hidden rounded-[40px]">
+
+      <div class="md:max-w-[420px] w-full relative overflow-hidden rounded-[40px]">
         <img src="images/smarter.avif" alt="Green Tree" class="w-full object-cover rounded-3xl" />
-        <div class="absolute top-0 flex flex-row items-start justify-between gap-6 p-8 w-full">
+        <div class="absolute top-0 text-black flex flex-row items-start justify-between gap-6 p-8 w-full">
 
           <!-- Text Block -->
           <div>
-            <h3 class="text-2xl max-w-[220px] font-medium leading-[34px]">
+            <h3 class="md:text-2xl   max-w-[220px] font-medium leading-[34px]">
               Enabling Smarter Waste Management
             </h3>
             <h5 class="text-sm leading-[21px] font-normal mt-2  ">
@@ -288,8 +363,8 @@
               data-target="400">0</span>%</p>
         </div>
       </div>
-<!-- Right content -->
-      <div class="max-w-[302px] w-full flex flex-col xl:flex-col md:flex-row lg:flex-row md:max-w-full xl:max-w-[302px]  gap-[60px]">
+
+      <div class="md:max-w-[302px] w-full flex flex-col gap-[60px]">
         <div class="flex flex-col items-start p-8 gap-6">
           <div class="w-14 h-14 bg-[#1B212A] rounded-full flex items-center justify-center">
             <img src="images/icons/world.svg" alt="world icon">
@@ -321,7 +396,23 @@
 </section>
 <!-- Smartermanagement Section Ended -->
 <!-- Industries Work Section started -->
-@@include('industries.html')
+<section class="section-sm pb-[70px]">
+  <div class="container flex flex-col gap-[64px]">
+<div>
+ @@include('components/left-section-header.html', {
+    "title": "Industries we worked on",
+    "subtitle": "Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.",
+    "skewText": "Key Sectors",
+    "bg-color": "bg-[#2E85FA]",
+    "text-color": "text-[#fff]",
+    "skewRotate": "-rotate-6"
+    })
+</div>
+<div>
+@@include('Industries.html')
+</div>
+  </div>
+</section>
 <!-- Industries Work Section ended -->
 
 <!-- Product Section Started -->
@@ -337,17 +428,18 @@
     "skewRotate": "-rotate-6"
     })
 <div>
-<button class="px-5 py-3 font-semibold rounded-[14px] secondary-button bg-text-light transition leading-[27px] mx-auto lg:mx-0">
+<button class="  px-5 py-3 font-semibold rounded-[14px] secondary-button bg-text-light transition leading-[27px]">
   View All Products
 </button>
 
 </div>
 </div>
 <!-- FLEX CONTAINER -->
-<div class="flex flex-col lg:flex-row gap-6 overflow-hidden" id="cardContainer">
+<div class="flex flex-col md:flex-row gap-6 overflow-hidden" id="cardContainer">
   <!-- CARD 1 -->
-<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light
-  w-full h-[178px] hover:h-[400px] md:flex-[1_1_285px] lg:h-[650px] lg:hover:h-[650px]" data-card>
+<div class="card group relative rounded-[40px] overflow-hidden flex-shrink transition-all duration-700 ease-in-out bg-text-light shadow-md 
+  w-full h-[178px] hover:h-[400px] 
+  md:flex-[1_1_285px] md:h-[650px] md:hover:h-[650px]" data-card>
     <img src="images/technologies/technologies1.avif" alt="Predictive Analytics" class="w-full h-full object-cover" />
     <div class="absolute inset-x-0 top-0 h-[650px] px-6 py-8 text-text-dark transition-colors duration-900 flex flex-col justify-between">
       <div class="flex justify-between items-center w-full">
