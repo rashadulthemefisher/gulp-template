@@ -1,272 +1,344 @@
-<section class="section-sm pt-[100px] md:pt-[178px] relative overflow-hidden">
+<section class="section-sm min-h-screen relative overflow-hidden pt-36">
 <div class="absolute inset-0 w-full h-[25%] bg-cover bg-center animate-bgZoom origin-center -z-10 animationdiv"
     style="background-image: url('images/ai-bg.svg');"></div>
-<div class="container flex flex-col items-center gap-20">
-  <div class="flex flex-col items-center text-center gap-4">
-      @@include('components/page-header.html', {
-      "title": "Our products & services",
-      "subtitle": "Join hundreds of companies who've doubled their efficiency while cutting costs by 40% through smart AI integration",
-      "skewText": "Products & Services",
-      "skewRotate": "-rotate-3",
-      "padding": "px-3",
-      "bg-color": "bg-[#70DB80]"
-      })
-   <button
-      class="secondary-button mx-auto block text-center justify-center leading-7"
-    >
-      Get Started Now
-    </button>
-  </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="container">
+<div class="text-center">
+      <h4
+        class="text-[12px] bg-[#70DB80] px-4 py-1 text-gray-800 @@text-margin max-w-[200px] inline-block transform skew-x-[-20deg] -rotate-3 shadow-md">
+        <span class="inline-block transform skew-x-[12deg] font-normal">Products & Services</span>
+      </h4>
+      <h1 class="text-4xl md:text-[80px] font-normal tracking-tight mt-5">Our products & services</h1>
+      <p class="text-[18px] mx-auto max-w-[600px] tracking-wide my-5 block">Join hundreds of companies who've doubled their efficiency while cutting costs by 40% through smart AI integration</p>
+  <a
+         class="inline-block mt-2 font-normal bg-[#F4F4F5] text-white dark:text-black py-3 px-6 rounded-[12px]"
+         href="contact.html"
+       >
+        Get Started Now
+       </a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
     <!-- card 1 -->
-    <div class="card group relative rounded-3xl w-full max-w-[628px] h-[550px]">
+    <div class="card group relative rounded-3xl overflow-hidden transition-all duration-900 w-full max-w-[628px] h-[550px]">
             <!-- Background Image -->
             <img src="images/services/services-1.avif" alt="Predictive Analytics"
               class="w-full h-full object-cover" />
-              <div class="absolute left-0 right-0 bottom-0 h-[220px] pointer-events-none z-10"
-              style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 55.6238%, rgba(0, 0, 0, 0) 100%);">
-          </div>
+
             <!-- Bottom Content -->
-          <div class="p-6 absolute top-0 flex flex-col justify-between h-full w-full z-20">
-              <!-- Top Section -->
-            <div class="flex justify-between items-center w-full">
+            <div
+              class="absolute inset-x-0 bottom-0 py-6 px-3 bg-gradient-to-t from-black/90 via-black/70 to-transparent text-black transition-colors duration-900">
+              <h3 class="text-[32px] font-normal text-gray-200 transition-colors duration-900">
+                Predictive Analytics Engine
+              </h3>
+              <p class="text-sm text-gray-400 transition-colors duration-900 mt-3">Exploring the intersection of AI and environmental conservation, highlightingreal-world applications. A detailed look at.</p>
+            </div>
+
+            <!-- Top Section -->
+            <div class="absolute top-0 -left-2 right-0 py-4 px-1 flex justify-between items-center w-full">
               <!-- Left: Buttons -->
             <div
               class="flex flex-row items-center gap-2">
                 <button
-                  class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">
+                  class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-100 transform translate-x-4">
                   New
                 </button>
                 <button
-                  class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">
+                  class="bg-gray-200 text-gray-900 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-200 transform translate-x-4">
                   Urban Innovation
                 </button>
               </div>
 
       <!-- Arrow Button -->
             @@include('components/arrow-button.html', {
-              "min-w": "min-w-[40px]",
-              "min-h": "min-h-[40px]",
-              "bottom-top": "top-[8px]"
+              "min-w": "min-w-12",
+              "min-h": "min-h-12",
+              "bottom-top": "top-[12px]"
             })
             </div>
-              <!-- Bottom Content -->
-            <div class="flex flex-col gap-2">
-              <h3 class="text-4xl leading-11 font-medium tracking-[-1px] text-text-light">
-                HealthAI: AI-Powered Diagnostics
+      </div>
+    <!-- card 2 -->
+ <div class="card group relative rounded-3xl overflow-hidden transition-all duration-900 w-full max-w-[628px] h-[550px]">
+            <!-- Background Image -->
+            <img src="images/services/services-2.avif" alt="Predictive Analytics"
+              class="w-full h-full object-cover" />
+
+            <!-- Bottom Content -->
+            <div
+              class="absolute inset-x-0 bottom-0 py-6 px-3 bg-gradient-to-t from-black/90 via-black/70 to-transparent text-black transition-colors duration-900">
+              <h3 class="text-[32px] font-normal text-gray-200 transition-colors duration-900">
+                Predictive Analytics Engine
               </h3>
-              <p class="text-sm leading-[21px] text-text-light opacity-[0.9]">Exploring the intersection of AI and environmental conservation, highlightingreal-world applications. A detailed look at.</p>
+              <p class="text-sm text-gray-400 transition-colors duration-900 mt-3">Exploring the intersection of AI and environmental conservation, highlightingreal-world applications. A detailed look at.</p>
             </div>
-          </div>
-      </div>
- <!-- card 2 -->
-<div class="card group relative rounded-3xl w-full max-w-[628px] h-[550px] overflow-hidden">
-  <!-- Background Image -->
-  <img src="images/services/services-2.avif" alt="Predictive Analytics" class="w-full h-full object-cover" />
-  <!-- Gradient Overlay -->
-  <div class="absolute left-0 right-0 bottom-0 h-[220px] pointer-events-none z-10"
-    style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 55.6238%, rgba(0, 0, 0, 0) 100%);"></div>
-  <!-- Bottom Content -->
-  <div class="p-6 absolute top-0 flex flex-col justify-between h-full w-full z-20">
-    <!-- Top Section -->
-    <div class="flex justify-between items-center w-full">
-      <!-- Left: Buttons -->
-      <div class="flex flex-row items-center gap-2">
-        <button class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">New</button>
-        <button class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">Urban Innovation</button>
-      </div>
+
+            <!-- Top Section -->
+            <div class="absolute top-0 -left-2 right-0 py-4 px-1 flex justify-between items-center w-full">
+              <!-- Left: Buttons -->
+            <div
+              class="flex flex-row items-center gap-2">
+                <button
+                  class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-100 transform translate-x-4">
+                  New
+                </button>
+                <button
+                  class="bg-gray-200 text-gray-900 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-200 transform translate-x-4">
+                  Urban Innovation
+                </button>
+              </div>
+
       <!-- Arrow Button -->
-      @@include('components/arrow-button.html', {
-        "min-w": "min-w-[40px]",
-        "min-h": "min-h-[40px]",
-        "bottom-top": "top-[8px]"
-      })
-    </div>
-    <!-- Bottom Content -->
-    <div class="flex flex-col gap-2">
-      <h3 class="text-4xl leading-11 font-medium tracking-[-1px] text-text-light">
-        Predictive Analytics Engine
-      </h3>
-      <p class="text-sm leading-[21px] text-text-light opacity-[0.9]">
-        Unlock future trends and business insights with our advanced predictive analytics platform.
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- card 3 -->
-<div class="card group relative rounded-3xl w-full max-w-[628px] h-[550px] overflow-hidden">
-  <img src="images/services/services-3.avif" alt="AI Chatbot Suite" class="w-full h-full object-cover" />
-  <div class="absolute left-0 right-0 bottom-0 h-[220px] pointer-events-none z-10"
-    style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 55.6238%, rgba(0, 0, 0, 0) 100%);"></div>
-  <div class="p-6 absolute top-0 flex flex-col justify-between h-full w-full z-20">
-    <div class="flex justify-between items-center w-full">
-      <div class="flex flex-row items-center gap-2">
-        <button class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">New</button>
-        <button class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">Customer Support</button>
+            @@include('components/arrow-button.html', {
+              "min-w": "min-w-12",
+              "min-h": "min-h-12",
+              "bottom-top": "top-[12px]"
+            })
+            </div>
       </div>
-      @@include('components/arrow-button.html', {
-        "min-w": "min-w-[40px]",
-        "min-h": "min-h-[40px]",
-        "bottom-top": "top-[8px]"
-      })
-    </div>
-    <div class="flex flex-col gap-2">
-      <h3 class="text-4xl leading-11 font-medium tracking-[-1px] text-text-light">
-        AI Chatbot Suite
-      </h3>
-      <p class="text-sm leading-[21px] text-text-light opacity-[0.9]">
-        Automate customer interactions and boost satisfaction with intelligent, 24/7 chatbots.
-      </p>
-    </div>
-  </div>
-</div>
 
-<!-- card 4 -->
-<div class="card group relative rounded-3xl w-full max-w-[628px] h-[550px] overflow-hidden">
-  <img src="images/services/services-4.avif" alt="Smart Vision System" class="w-full h-full object-cover" />
-  <div class="absolute left-0 right-0 bottom-0 h-[220px] pointer-events-none z-10"
-    style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 55.6238%, rgba(0, 0, 0, 0) 100%);"></div>
-  <div class="p-6 absolute top-0 flex flex-col justify-between h-full w-full z-20">
-    <div class="flex justify-between items-center w-full">
-      <div class="flex flex-row items-center gap-2">
-        <button class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">New</button>
-        <button class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">Computer Vision</button>
-      </div>
-      @@include('components/arrow-button.html', {
-        "min-w": "min-w-[40px]",
-        "min-h": "min-h-[40px]",
-        "bottom-top": "top-[8px]"
-      })
-    </div>
-    <div class="flex flex-col gap-2">
-      <h3 class="text-4xl leading-11 font-medium tracking-[-1px] text-text-light">
-        Smart Vision System
-      </h3>
-      <p class="text-sm leading-[21px] text-text-light opacity-[0.9]">
-        Enhance security and automation with real-time image and video analysis powered by AI.
-      </p>
-    </div>
-  </div>
-</div>
+    <!-- card 3 -->
+          <div class="card group relative rounded-3xl overflow-hidden transition-all duration-900 w-full max-w-[628px] h-[550px]">
+            <!-- Background Image -->
+            <img src="images/services/services-3.avif" alt="Predictive Analytics"
+              class="w-full h-full object-cover" />
 
-<!-- card 5 -->
-<div class="card group relative rounded-3xl w-full max-w-[628px] h-[550px] overflow-hidden">
-  <img src="images/services/services-5.avif" alt="Natural Language Insights" class="w-full h-full object-cover" />
-  <div class="absolute left-0 right-0 bottom-0 h-[220px] pointer-events-none z-10"
-    style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 55.6238%, rgba(0, 0, 0, 0) 100%);"></div>
-  <div class="p-6 absolute top-0 flex flex-col justify-between h-full w-full z-20">
-    <div class="flex justify-between items-center w-full">
-      <div class="flex flex-row items-center gap-2">
-        <button class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">New</button>
-        <button class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">Language AI</button>
-      </div>
-      @@include('components/arrow-button.html', {
-        "min-w": "min-w-[40px]",
-        "min-h": "min-h-[40px]",
-        "bottom-top": "top-[8px]"
-      })
-    </div>
-    <div class="flex flex-col gap-2">
-      <h3 class="text-4xl leading-11 font-medium tracking-[-1px] text-text-light">
-        Natural Language Insights
-      </h3>
-      <p class="text-sm leading-[21px] text-text-light opacity-[0.9]">
-        Extract meaning and trends from text data using advanced natural language processing.
-      </p>
-    </div>
-  </div>
-</div>
+            <!-- Bottom Content -->
+            <div
+              class="absolute inset-x-0 bottom-0 py-6 px-3 bg-gradient-to-t from-black/90 via-black/70 to-transparent text-black transition-colors duration-900">
+              <h3 class="text-[32px] font-normal text-gray-200 transition-colors duration-900">
+                Predictive Analytics Engine
+              </h3>
+              <p class="text-sm text-gray-400 transition-colors duration-900 mt-3">Exploring the intersection of AI and environmental conservation, highlightingreal-world applications. A detailed look at.</p>
+            </div>
 
-<!-- card 6 -->
-<div class="card group relative rounded-3xl w-full max-w-[628px] h-[550px] overflow-hidden">
-  <img src="images/services/services-6.avif" alt="AI Recommendation Engine" class="w-full h-full object-cover" />
-  <div class="absolute left-0 right-0 bottom-0 h-[220px] pointer-events-none z-10"
-    style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 55.6238%, rgba(0, 0, 0, 0) 100%);"></div>
-  <div class="p-6 absolute top-0 flex flex-col justify-between h-full w-full z-20">
-    <div class="flex justify-between items-center w-full">
-      <div class="flex flex-row items-center gap-2">
-        <button class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">New</button>
-        <button class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">Personalization</button>
-      </div>
-      @@include('components/arrow-button.html', {
-        "min-w": "min-w-[40px]",
-        "min-h": "min-h-[40px]",
-        "bottom-top": "top-[8px]"
-      })
-    </div>
-    <div class="flex flex-col gap-2">
-      <h3 class="text-4xl leading-11 font-medium tracking-[-1px] text-text-light">
-        AI Recommendation Engine
-      </h3>
-      <p class="text-sm leading-[21px] text-text-light opacity-[0.9]">
-        Deliver personalized experiences and boost engagement with smart recommendations.
-      </p>
-    </div>
-  </div>
-</div>
+            <!-- Top Section -->
+            <div class="absolute top-0 -left-2 right-0 py-4 px-1 flex justify-between items-center w-full">
+              <!-- Left: Buttons -->
+            <div
+              class="flex flex-row items-center gap-2">
+                <button
+                  class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-100 transform translate-x-4">
+                  New
+                </button>
+                <button
+                  class="bg-gray-200 text-gray-900 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-200 transform translate-x-4">
+                  Urban Innovation
+                </button>
+              </div>
 
-<!-- card 7 -->
-<div class="card group relative rounded-3xl w-full max-w-[628px] h-[550px] overflow-hidden">
-  <img src="images/services/services-7.avif" alt="Workflow Automation" class="w-full h-full object-cover" />
-  <div class="absolute left-0 right-0 bottom-0 h-[220px] pointer-events-none z-10"
-    style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 55.6238%, rgba(0, 0, 0, 0) 100%);"></div>
-  <div class="p-6 absolute top-0 flex flex-col justify-between h-full w-full z-20">
-    <div class="flex justify-between items-center w-full">
-      <div class="flex flex-row items-center gap-2">
-        <button class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">New</button>
-        <button class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">Productivity</button>
+      <!-- Arrow Button -->
+            @@include('components/arrow-button.html', {
+              "min-w": "min-w-12",
+              "min-h": "min-h-12",
+              "bottom-top": "top-[12px]"
+            })
+            </div>
       </div>
-      @@include('components/arrow-button.html', {
-        "min-w": "min-w-[40px]",
-        "min-h": "min-h-[40px]",
-        "bottom-top": "top-[8px]"
-      })
-    </div>
-    <div class="flex flex-col gap-2">
-      <h3 class="text-4xl leading-11 font-medium tracking-[-1px] text-text-light">
-        Workflow Automation
-      </h3>
-      <p class="text-sm leading-[21px] text-text-light opacity-[0.9]">
-        Streamline operations and reduce manual work with intelligent workflow automation.
-      </p>
-    </div>
-  </div>
-</div>
+    <!-- card 4 -->
+          <div class="card group relative rounded-3xl overflow-hidden transition-all duration-900 w-full max-w-[628px] h-[550px]">
+            <!-- Background Image -->
+            <img src="images/services/services-4.avif" alt="Predictive Analytics"
+              class="w-full h-full object-cover" />
 
-<!-- card 8 -->
-<div class="card group relative rounded-3xl w-full max-w-[628px] h-[550px] overflow-hidden">
-  <img src="images/services/services-8.avif" alt="Data Security AI" class="w-full h-full object-cover" />
-  <div class="absolute left-0 right-0 bottom-0 h-[220px] pointer-events-none z-10"
-    style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 55.6238%, rgba(0, 0, 0, 0) 100%);"></div>
-  <div class="p-6 absolute top-0 flex flex-col justify-between h-full w-full z-20">
-    <div class="flex justify-between items-center w-full">
-      <div class="flex flex-row items-center gap-2">
-        <button class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">New</button>
-        <button class="py-1 px-4 bg-text-light text-text-dark rounded-full leading-7">Security</button>
+            <!-- Bottom Content -->
+            <div
+              class="absolute inset-x-0 bottom-0 py-6 px-3 bg-gradient-to-t from-black/90 via-black/70 to-transparent text-black transition-colors duration-900">
+              <h3 class="text-[32px] font-normal text-gray-200 transition-colors duration-900">
+                Predictive Analytics Engine
+              </h3>
+              <p class="text-sm text-gray-400 transition-colors duration-900 mt-3">Exploring the intersection of AI and environmental conservation, highlightingreal-world applications. A detailed look at.</p>
+            </div>
+
+            <!-- Top Section -->
+            <div class="absolute top-0 -left-2 right-0 py-4 px-1 flex justify-between items-center w-full">
+              <!-- Left: Buttons -->
+            <div
+              class="flex flex-row items-center gap-2">
+                <button
+                  class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-100 transform translate-x-4">
+                  New
+                </button>
+                <button
+                  class="bg-gray-200 text-gray-900 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-200 transform translate-x-4">
+                  Urban Innovation
+                </button>
+              </div>
+
+      <!-- Arrow Button -->
+            @@include('components/arrow-button.html', {
+              "min-w": "min-w-12",
+              "min-h": "min-h-12",
+              "bottom-top": "top-[12px]"
+            })
+            </div>
       </div>
-      @@include('components/arrow-button.html', {
-        "min-w": "min-w-[40px]",
-        "min-h": "min-h-[40px]",
-        "bottom-top": "top-[8px]"
-      })
+  <!-- card 5 -->
+    <div class="card group relative rounded-3xl overflow-hidden transition-all duration-900 w-full max-w-[628px] h-[550px]">
+            <!-- Background Image -->
+            <img src="images/services/services-5.avif" alt="Predictive Analytics"
+              class="w-full h-full object-cover" />
+
+            <!-- Bottom Content -->
+            <div
+              class="absolute inset-x-0 bottom-0 py-6 px-3 bg-gradient-to-t from-black/90 via-black/70 to-transparent text-black transition-colors duration-900">
+              <h3 class="text-[32px] font-normal text-gray-200 transition-colors duration-900">
+                Predictive Analytics Engine
+              </h3>
+              <p class="text-sm text-gray-400 transition-colors duration-900 mt-3">Exploring the intersection of AI and environmental conservation, highlightingreal-world applications. A detailed look at.</p>
+            </div>
+
+            <!-- Top Section -->
+            <div class="absolute top-0 -left-2 right-0 py-4 px-1 flex justify-between items-center w-full">
+              <!-- Left: Buttons -->
+            <div
+              class="flex flex-row items-center gap-2">
+                <button
+                  class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-100 transform translate-x-4">
+                  New
+                </button>
+                <button
+                  class="bg-gray-200 text-gray-900 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-200 transform translate-x-4">
+                  Urban Innovation
+                </button>
+              </div>
+
+      <!-- Arrow Button -->
+            @@include('components/arrow-button.html', {
+              "min-w": "min-w-12",
+              "min-h": "min-h-12",
+              "bottom-top": "top-[12px]"
+            })
+            </div>
+      </div>
+    <!-- card 6 -->
+ <div class="card group relative rounded-3xl overflow-hidden transition-all duration-900 w-full max-w-[628px] h-[550px]">
+            <!-- Background Image -->
+            <img src="images/services/services-6.avif" alt="Predictive Analytics"
+              class="w-full h-full object-cover" />
+
+            <!-- Bottom Content -->
+            <div
+              class="absolute inset-x-0 bottom-0 py-6 px-3 bg-gradient-to-t from-black/90 via-black/70 to-transparent text-black transition-colors duration-900">
+              <h3 class="text-[32px] font-normal text-gray-200 transition-colors duration-900">
+                Predictive Analytics Engine
+              </h3>
+              <p class="text-sm text-gray-400 transition-colors duration-900 mt-3">Exploring the intersection of AI and environmental conservation, highlightingreal-world applications. A detailed look at.</p>
+            </div>
+
+            <!-- Top Section -->
+            <div class="absolute top-0 -left-2 right-0 py-4 px-1 flex justify-between items-center w-full">
+              <!-- Left: Buttons -->
+            <div
+              class="flex flex-row items-center gap-2">
+                <button
+                  class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-100 transform translate-x-4">
+                  New
+                </button>
+                <button
+                  class="bg-gray-200 text-gray-900 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-200 transform translate-x-4">
+                  Urban Innovation
+                </button>
+              </div>
+
+      <!-- Arrow Button -->
+            @@include('components/arrow-button.html', {
+              "min-w": "min-w-12",
+              "min-h": "min-h-12",
+              "bottom-top": "top-[12px]"
+            })
+            </div>
+      </div>
+
+    <!-- card 7 -->
+          <div class="card group relative rounded-3xl overflow-hidden transition-all duration-900 w-full max-w-[628px] h-[550px]">
+            <!-- Background Image -->
+            <img src="images/services/services-7.avif" alt="Predictive Analytics"
+              class="w-full h-full object-cover" />
+
+            <!-- Bottom Content -->
+            <div
+              class="absolute inset-x-0 bottom-0 py-6 px-3 bg-gradient-to-t from-black/90 via-black/70 to-transparent text-black transition-colors duration-900">
+              <h3 class="text-[32px] font-normal text-gray-200 transition-colors duration-900">
+                Predictive Analytics Engine
+              </h3>
+              <p class="text-sm text-gray-400 transition-colors duration-900 mt-3">Exploring the intersection of AI and environmental conservation, highlightingreal-world applications. A detailed look at.</p>
+            </div>
+
+            <!-- Top Section -->
+            <div class="absolute top-0 -left-2 right-0 py-4 px-1 flex justify-between items-center w-full">
+              <!-- Left: Buttons -->
+            <div
+              class="flex flex-row items-center gap-2">
+                <button
+                  class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-100 transform translate-x-4">
+                  New
+                </button>
+                <button
+                  class="bg-gray-200 text-gray-900 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-200 transform translate-x-4">
+                  Urban Innovation
+                </button>
+              </div>
+
+      <!-- Arrow Button -->
+            @@include('components/arrow-button.html', {
+              "min-w": "min-w-12",
+              "min-h": "min-h-12",
+              "bottom-top": "top-[12px]"
+            })
+            </div>
+      </div>
+    <!-- card 8 -->
+          <div class="card group relative rounded-3xl overflow-hidden transition-all duration-900 w-full max-w-[628px] h-[550px]">
+            <!-- Background Image -->
+            <img src="images/services/services-8.avif" alt="Predictive Analytics"
+              class="w-full h-full object-cover" />
+
+            <!-- Bottom Content -->
+            <div
+              class="absolute inset-x-0 bottom-0 py-6 px-3 bg-gradient-to-t from-black/90 via-black/70 to-transparent text-black transition-colors duration-900">
+              <h3 class="text-[32px] font-normal text-gray-200 transition-colors duration-900">
+                Predictive Analytics Engine
+              </h3>
+              <p class="text-sm text-gray-400 transition-colors duration-900 mt-3">Exploring the intersection of AI and environmental conservation, highlightingreal-world applications. A detailed look at.</p>
+            </div>
+
+            <!-- Top Section -->
+            <div class="absolute top-0 -left-2 right-0 py-4 px-1 flex justify-between items-center w-full">
+              <!-- Left: Buttons -->
+            <div
+              class="flex flex-row items-center gap-2">
+                <button
+                  class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-100 transform translate-x-4">
+                  New
+                </button>
+                <button
+                  class="bg-gray-200 text-gray-900 px-3 py-1 rounded-full text-[16px] transition-transform duration-900 delay-200 transform translate-x-4">
+                  Urban Innovation
+                </button>
+              </div>
+
+      <!-- Arrow Button -->
+            @@include('components/arrow-button.html', {
+              "min-w": "min-w-12",
+              "min-h": "min-h-12",
+              "bottom-top": "top-[12px]"
+            })
+            </div>
+      </div>
     </div>
-    <div class="flex flex-col gap-2">
-      <h3 class="text-4xl leading-11 font-medium tracking-[-1px] text-text-light">
-        Data Security AI
-      </h3>
-      <p class="text-sm leading-[21px] text-text-light opacity-[0.9]">
-        Protect sensitive information and ensure compliance with AI-driven security solutions.
-      </p>
-    </div>
-  </div>
 </div>
-    </div>
-    </div>
 </section>
 
 <!-- Industries Work Section started -->
-@@include('industries.html')
+<section class="section-sm">
+  <div class="container">
+    @@include('components/left-section-header.html', {
+    "title": "Industries we worked on",
+    "subtitle": "Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.",
+    "skewText": "Key Sectors",
+    "skewRotate": "rotate-6"
+    })
+@@include('Industries.html')
+  </div>
+</section>
 <!-- Industries Work Section ended -->
 @@include('Faq.html')
 <!-- Ready to transform Started -->
