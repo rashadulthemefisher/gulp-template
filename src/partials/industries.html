@@ -1,43 +1,19 @@
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Card 1 -->
-      <div class="rounded-4xl flex flex-col gap-6 border border-border p-8 shadow-md bg-[#171D26]">
-        <div>
-        <img class="w-[60px] h-[60px]" src="images/health-care.svg" alt="Healthcare Icon">
-        </div>
-        <div class="flex flex-col gap-4">
-                <h2 class="text-2xl font-medium   leading-[34px]">Healthcare Industry</h2>
-                <p class="text-base max-w-sm mx-auto   leading-[27px]">AI diagnostics, patient management, and predictive health analytics.</p>
-        </div>
-      </div>
-    <!-- Card 2 -->
-  <div class="rounded-4xl flex flex-col gap-6 border border-border p-8 shadow-md bg-[#171D26]">
-        <div>
-        <img class="w-[60px] h-[60px]" src="images/retail.svg" alt="Healthcare Icon">
-        </div>
-        <div class="flex flex-col gap-4">
-                <h2 class="text-2xl font-medium   leading-[34px]">Retail Business</h2>
-                <p class="text-base max-w-sm mx-auto   leading-[27px]">Smart logistics, supply chain automation, and real-time inventory.</p>
-        </div>
-      </div>
-     <!-- Card 3 -->
-  <div class="rounded-4xl flex flex-col gap-6 border border-border p-8 shadow-md bg-[#171D26]">
-        <div>
-        <img class="w-[60px] h-[60px]" src="images/education.svg" alt="Healthcare Icon">
-        </div>
-        <div class="flex flex-col gap-4">
-                <h2 class="text-2xl font-medium   leading-[34px]">Education Industry</h2>
-                <p class="text-base max-w-sm mx-auto   leading-[27px]">Personalized learning tools, adaptive assessments, and virtual tutoring.</p>
-        </div>
-      </div>
- <!-- Card 4 -->
-  <div class="rounded-4xl flex flex-col gap-6 border border-border p-8 shadow-md bg-[#171D26]">
-        <div>
-        <img class="w-[60px] h-[60px]" src="images/finance.svg" alt="Healthcare Icon">
-        </div>
-        <div class="flex flex-col gap-4">
-                <h2 class="text-2xl font-medium   leading-[34px]">Finance Management</h2>
-                <p class="text-base max-w-sm mx-auto   leading-[27px]">Renewable energy grids, emission monitoring, and sustainable resources.</p>
-        </div>
-      </div>
-    </div>
+<!-- Industries Work Section started -->
+<section class="section-sm lg:pb-[70px]">
+  <div class="container flex flex-col gap-[64px]">
+<div>
+ @@include('components/left-section-header.html', {
+    "title": "Industries we worked on",
+    "subtitle": "Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.",
+    "skewText": "Key Sectors",
+    "bg-color": "bg-[#2E85FA]",
+    "text-color": "text-[#fff]",
+    "skewRotate": "-rotate-6"
+    })
+</div>
+<div>
+@@include('components/industries.html')
+</div>
+  </div>
+</section>
+<!-- Industries Work Section ended -->

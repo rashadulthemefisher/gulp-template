@@ -178,8 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
     numberElements.forEach(element => observer.observe(element));
   }
 
-  // Run when the DOM is fully loaded
-  // document.addEventListener('DOMContentLoaded', initCountAnimations);
   // countup started
       document.addEventListener("DOMContentLoaded", () => {
       const counters = document.querySelectorAll('.counter');
@@ -215,7 +213,7 @@ const expandedFlexes = [
   "md:flex-[0_0_359.4px]", // Card 3
   "md:flex-[0_0_353.58px]" // Card 4
 ];
-
+  
 const defaultFlex = "md:flex-[1_1_285px]";
 const expandedHeight = "md:h-[620px]";
 const defaultHeight = "md:h-[620px]";

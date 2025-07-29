@@ -1,134 +1,154 @@
-<section class="section-sm pt-36 relative overflow-hidden">
+<section class="section-sm pt-[100px] md:pt-[178px] relative overflow-hidden">
  <div class="absolute inset-0 w-full h-[20%] bg-cover bg-center animate-bgZoom origin-center -z-10 animationdiv"
     style="background-image: url('images/ai-bg.svg');"></div>
 <div class="container">
-@@include('components/middle-section-header.html', {
+  <div class="flex flex-col gap-10 md:gap-20">
+      @@include('components/page-header.html', {
       "title": "About Us",
-      "subtitle": "By analyzing historical trends and real-time data, our solution enables smarter energy planning and reduced overhead.",
+      "subtitle": "Join hundreds of companies who've doubled their efficiency while cutting costs by 40% through smart AI integration",
       "skewText": "About Us",
       "skewRotate": "-rotate-3",
-      "text-size": "text-[60px]"
+      "padding": "px-6",
+      "bg-color": "bg-[#FDE44B]"
       })
-      <div class="md:mx-20 my-20 flex flex-col md:flex-row gap-10 items-center justify-between">
-    <div class="w-full md:w-[80%]">
-<h2 class="font-normal text-[20px] md:text-[48px] tracking-normal opacity-90">At Optivus, we believe that technology is more <span class="text-[#C4FC00]">than just a tool</span>, it’s a catalyst for transformation. Founded with a vision to empower <span class="text-[#C4FC00]">industries</span> through AI.</h2>
-    </div>
-    <div class="w-full md:w-[20%] space-y-4 text-center md:text-end">
+   <div class="flex flex-col gap-10 md:gap-20">
+       <div class="max-w-[1140px] mx-auto flex flex-col md:flex-row gap-5 md:gap-10 justify-center">
+      <h2 class="font-semibold text-[36px] md:text-[48px] leading-11 md:leading-[58px] tracking-[-1.5px] text-center md:text-left">At Optivus, we believe that technology is more <span class="text-btn-primary">than just a tool</span>, it’s a catalyst for transformation. Founded with a vision to empower <span class="text-btn-primary">industries</span> through AI.</h2>
+    <div class="flex flex-col gap-3 md:gap-10 text-center md:text-end w-full md:min-w-[180px]">
         <div class="">
-          <h1 class="text-[#C4FC00] font-normal text-[40px] md:text-[60px]"><span class="counter text-[#B6F312]" data-target="200">0</span><span
-              class="text-[#B6F312]">+</span></h1>
-          <p class="text-[18px] mx-auto max-w-[600px] tracking-wide">Satisfied customers</p>
+          <h1 class="text-btn-primary font-medium text-[40px] md:text-[60px] leading-18"><span class="counter text-btn-primary" data-target="200">0</span><span
+              class="text-btn-primary">+</span></h1>
+          <p class="text-[18px] leading-8">Satisfied customers</p>
         </div>
         <div>
-          <h1 class="text-[#C4FC00] font-normal text-[40px] md:text-[60px]"><span class="counter text-[#B6F312]" data-target="63">0</span><span
-              class="text-[#B6F312]">%</span></h1>
-          <p class="text-[18px] mx-auto max-w-[600px] tracking-wide">Project Success Rate</p>
+          <h1 class="text-btn-primary font-normal text-[40px] md:text-[60px]"><span class="counter text-btn-primary" data-target="63">0</span><span
+              class="text-btn-primary">%</span></h1>
+          <p class="text-[18px] leading-8">Project Success Rate</p>
         </div>
     </div>
     </div>
-<!-- Images Section Started -->
-      <div class="flex flex-col md:flex-row gap-10 items-center justify-between">
+    <!-- Images Section Started -->
+      <div class="flex flex-col md:flex-row gap-10 items-center">
         <div class="flex-1">
-        <img class="rounded-3xl h-[550px] object-cover" src="images/about/about-v1-1.avif" alt="">
+        <img class="rounded-3xl h-[395px] md:h-[550px] object-cover" src="images/about/about-v1-1.avif" alt="">
         </div>
         <div class="flex-1">
-        <img class="rounded-3xl h-[550px] object-cover" src="images/about/about-v1-2.avif" alt="">
+        <img class="rounded-3xl h-[395px] md:h-[550px] object-cover" src="images/about/about-v1-2.avif" alt="">
         </div>
       </div>
 <!-- Images Section Ended -->
-    <!-- Brand images Section started -->
-      <div class="my-10">
-      @@include('brand-images-section.html')
-      </div>
+   </div>
+  </div>
+</div>
+</section>
+   <!-- Brand images Section started -->
+      @@include('brand-images-section.html', {
+        "padding-b": "pb-[60px]",
+        "padding-t": "pt-[50px]",
+      })
     <!-- Brand images Section ended -->
     <!-- Our mission Section started -->
-  <div class="flex flex-col md:flex-row gap-10 justify-start items-start my-20">
-
-    <!-- Left Section Header -->
-    <div class="w-full md:w-[30%]">
-      <h4
-        class="text-[12px] bg-[#2E85FA] dark:text-gray-100 px-4 py-1 text-gray-800 @@text-margin max-w-[180px] inline-block transform skew-x-[-20deg] rotate-3 shadow-md">
-        <span class="inline-block transform skew-x-[12deg]">Mission</span>
-      </h4>
-      <h1 class="text-4xl md:text-6xl font-normal tracking-tight mt-5">Our Mission</h1>
+  <section class="section-sm">
+    <div class="container flex flex-col md:flex-row gap-[64px]">
+        <!-- Left Section Header -->
+    <div class="min-w-[355px] flex flex-col gap-4 items-center md:items-start">
+       <h4
+    class="text-[12px] bg-[#70DB80] px-6 inline-block w-fit transform skew-x-[-20deg] -rotate-3 shadow-md custom-before">
+    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-text-dark">Mission</span>
+  </h4>
+      <h1 class="text-4xl md:text-6xl font-semibold leading-18 tracking-[-1.5px]">Our Mission</h1>
     </div>
 
     <!-- Right Text Content -->
-    <div class="text-[16px] md:text-[20px] text-gray-200 tracking-normal font-normal leading-[34px] opacity-60 space-y-6 flex-1 max-w-[702px]">
-      <p>
+    <div class="max-w-[722px] flex flex-col gap-9 text-center md:text-left">
+      <p class="text-xl leading-[34px]">
         To lead the future of AI innovation and inspire global progress through intelligent solutions. By pushing the boundaries of AI, we aim to create a world where technology enhances lives, businesses, and the environment.
       </p>
-      <p>
+      <p class="text-xl leading-[34px]">
         To enable businesses to harness the full potential of AI for innovation, growth, and impact. We are dedicated to creating AI technologies that are ethical, scalable, and impactful, bridging the gap between human ingenuity and technological excellence.
       </p>
     </div>
-
-  </div>
+    </div>
+  </section>
 <!-- Our Mission Section ended -->
 
 <!-- Rated Section Started -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<section class="section-sm pt-10">
+  <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center md:text-left">
       <!-- Card 1 -->
-      <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
-        <h2 class="text-[80px] text-[#C4FC00] font-medium"><span class="counter text-[#B6F312]" data-target="12">0</span><span
-              class="text-[#B6F312]">k+</span></h2>
-        <p class="text-[18px] mt-1 opacity-80">Successful Projects</p>
+      <div class="rounded-4xl border border-border bg-card-bg-v2 flex flex-col justify-center px-[25px] py-[30px] md:py-[60px]">
+        <h2 class="text-5xl md:text-[80px] text-btn-primary font-medium leading-[55px] md:leading-[92px] tracking-[-2px]"><span class="counter text-btn-primary" data-target="12">0</span><span
+              class="text-btn-primary">k+</span></h2>
+        <p class="text-[18px] leading-8">Successful Projects</p>
       </div>
 
-      <!-- Card 2 -->
-        <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
-        <h2 class="text-[80px] text-[#C4FC00] font-medium"><span class="counter text-[#B6F312]" data-target="30">0</span><span
-              class="text-[#B6F312]">%</span></h2>
-        <p class="text-[18px] mt-1 opacity-80">Efficiency Gains</p>
-      </div>
-
-      <!-- Card 3 -->
-     <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
-        <h2 class="text-[80px] text-[#C4FC00] font-medium"><span class="counter text-[#B6F312]" data-target="24">0</span><span
-              class="text-[#B6F312]">%</span></h2>
-        <p class="text-[18px] mt-1 opacity-80">Contribution to AI Growth</p>
-      </div>
-
-      <!-- Card 4 -->
-        <div class="rounded-3xl border border-gray-800 flex flex-col justify-center shadow-md bg-[#171D26] px-[25px] py-[60px]">
-        <h2 class="text-[80px] text-[#C4FC00] font-medium"><span class="counter text-[#B6F312]" data-target="98">0</span><span
-              class="text-[#B6F312]">%</span></h2>
-        <p class="text-[18px] mt-1 opacity-80">Client Satisfaction Rate</p>
-      </div>
+    <!-- Card 2 -->
+    <div class="rounded-4xl border border-border bg-card-bg-v2 flex flex-col justify-center px-[25px] py-[30px] md:py-[60px]">
+      <h2 class="text-5xl md:text-[80px] text-btn-primary font-medium leading-[55px] md:leading-[92px] tracking-[-2px]">
+        <span class="counter text-btn-primary" data-target="30">0</span><span class="text-btn-primary">%</span>
+      </h2>
+      <p class="text-[18px] leading-8">Efficiency Gains</p>
     </div>
+
+    <!-- Card 3 -->
+    <div class="rounded-4xl border border-border bg-card-bg-v2 flex flex-col justify-center px-[25px] py-[30px] md:py-[60px]">
+      <h2 class="text-5xl md:text-[80px] text-btn-primary font-medium leading-[55px] md:leading-[92px] tracking-[-2px]">
+        <span class="counter text-btn-primary" data-target="24">0</span><span class="text-btn-primary">%</span>
+      </h2>
+      <p class="text-[18px] leading-8">Contribution to AI Growth</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="rounded-4xl border border-border bg-card-bg-v2 flex flex-col justify-center px-[25px] py-[30px] md:py-[60px]">
+  <h2 class="text-5xl md:text-[80px] text-btn-primary font-medium leading-[55px] md:leading-[92px] tracking-[-2px]">
+    <span class="counter text-btn-primary" data-target="98">0</span><span class="text-btn-primary">%</span>
+  </h2>
+  <p class="text-[18px] leading-8">Client
+    </div>
+  </div>
+</section>
 <!-- Rated Section ended -->
 <!-- Meet our team Section Started -->
-<div class="my-20">
-    @@include('components/middle-section-header.html', {
-    "title": "Meet our team",
-    "subtitle": "Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.",
-    "skewText": "Team",
-    "skewRotate": "rotate-6",
-    "text-size": "text-[60px]"
-    })
+<section class="section-sm pt-10">
+  <div class="container">
+    <div class="flex flex-col gap-10 md:gap-20">
+      <div class="flex flex-col items-center text-center gap-4 max-w-[790px] mx-auto">
+  <h4
+    class="text-[12px] bg-[#70DB80] px-10 inline-block w-fit transform skew-x-[-20deg] -rotate-3 shadow-md custom-before">
+    <span class="inline-block transform text-sm font-medium leading-[24px] skew-x-[12deg] text-text-dark opacity-[1]">Team</span>
+  </h4>
+  <h1 class="text-5xl md:text-6xl md:leading-[72px] font-semibold tracking-[-1.5px]">Meet our team</h1>
+  <p class="text-[18px] max-w-[590px] leading-[31px]">Revolutionizing the Tech Landscape with AI-Driven Solutions That Power Innovation and Scale Beyond Limits.</p>
+</div>
 <div id="home-page">
 @@include('Team.html')
 </div>
 </div>
+  </div>
+</section>
 <!-- Meet our team Section ended -->
 <!-- Product Blog Started -->
-<section class="section-sm">
-<div class="container">
+<section class="section-sm pt-[60px]">
+<div class="container flex flex-col gap-[64px]">
   @@include('components/middle-section-header.html', {
       "title": "Latest news from the industry",
       "subtitle": "By analyzing historical trends and real-time data, our solution enables smarter energy planning and reduced overhead.",
       "skewText": "Blogs",
+      "text-color": "text-text-light",
       "skewRotate": "rotate-6",
+      "bg-color": "bg-[#2E85FA]",
       "text-size": "text-[60px]"
       })
-<div id="blog-page">
-@@include('Blog.html')
-</div>
+    <div id="blog-page">
+    @@include('Blog.html')
+    </div>
 </div>
 </section>
 <!-- Product Blog Ended -->
-</div>
-</section>
+ <!-- Ready to transform Started -->
+@@include('components/transform-ai.html')
+<!-- Ready to transform Ended -->
 
 <script>
 
