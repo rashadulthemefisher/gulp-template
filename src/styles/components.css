@@ -4,7 +4,7 @@
 }
 
 .section-sm {
-  @apply lg:pt-[100px] lg:pb-[60px]  lg:my-auto px-[15px] lg:px-[30px];
+  @apply pt-[100px] pb-[60px] px-[15px] md:px-[30px];
 }
 
 /* container */
@@ -12,7 +12,7 @@
   @apply mx-auto xl:!max-w-[1280px];
 }
 .header-text{
-@apply md:text-[116px] font-medium leading-14 md:leading-[116px] tracking-[-2px]
+@apply md:text-[116px]   font-medium md:leading-[116px] tracking-[-2px]
 }
 /* glow layer */
 .glow-layer{
@@ -21,30 +21,44 @@
 .card-header{
 @apply  text-[24px] leading-[34px] font-medium tracking-[-0.5px];
 }
-/* image css */
-/* Brand Wrapper */
+
+/* Image brand css */
 .brand-wrapper {
-  @apply flex flex-wrap justify-center items-center gap-y-8 gap-x-[27px];
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 32px 27px;
+  row-gap: 32px;
 }
 
-/* Brand Logo */
+/* Image styles same */
 .brand-logo {
-  @apply block w-[165px] h-[32px] object-contain object-center text-[12px] opacity-40 antialiased;
-  aspect-ratio: auto; /* Keep manually since Tailwind doesn't yet support this directly */
+  display: block;
+  width: 165px;
+  height: 32px;
+  object-fit: contain;
+  object-position: 50% 50%;
+  font-size: 12px;
+  aspect-ratio: auto;
+  opacity: 0.4;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Vertical Line Separator */
+/* Vertical line separator */
 .brand-separator {
-  @apply hidden;
+  display: none;
 }
-
 @media (min-width: 768px) {
   .brand-separator {
-    @apply block absolute h-[20px] w-px bg-gray-400/30;
-    left: -13.5px; /* Custom property, keep manually */
+    display: block;
+    position: absolute;
+    left: -13.5px;
+    height: 20px;
+    width: 1px;
+    background-color: rgba(156, 163, 175, 0.3);
   }
 }
-
 /* <!-- Floating animation keyframe --> */
     @keyframes float {
 
